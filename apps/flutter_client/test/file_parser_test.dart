@@ -111,5 +111,15 @@ void main() {
       expect(result.format, equals(DocumentFormat.txt));
     });
   });
+
+  group('FileParserService Rust Bridge interface', () {
+    final service = FileParserService();
+
+    test('exposes init and parseFile methods', () {
+      expect(service.init, isA<Function>());
+      expect(service.parseFile, isA<Function>());
+    });
+  });
 }
+
 

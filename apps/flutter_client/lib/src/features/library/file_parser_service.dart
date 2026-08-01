@@ -1,6 +1,10 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import '../../rust/api.dart' as rust;
+import '../../rust/frb_generated.dart';
+import '../../rust/parser.dart' as rust;
+
 enum DocumentFormat { txt, markdown, pdf, epub }
 
 class ParsedDocument {
@@ -16,6 +20,14 @@ class ParsedDocument {
 }
 
 class FileParserService {
+  Future<void> init() async {
+    await RustLib.init();
+  }
+
+  Future<rust.ParsedDocument> parseFile(String filePath) async {
+    return await rust.parseFile(path: filePath);
+  }
+
   DocumentFormat _determineFormat(String fileName) {
     final lower = fileName.toLowerCase();
     if (lower.endsWith('.md') || lower.endsWith('.markdown')) {
@@ -75,4 +87,5 @@ class FileParserService {
     );
   }
 }
+
 
