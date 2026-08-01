@@ -631,6 +631,17 @@
       "norm_label": "static const"
     },
     {
+      "label": "_peers",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/analytics/analytics_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_analytics_analytics_view_peers",
+      "community": 48,
+      "community_name": "analytics_view.dart",
+      "norm_label": "_peers"
+    },
+    {
       "label": "_totalWords",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/analytics/analytics_view.dart",
@@ -1495,8 +1506,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_libraryview",
-      "community": 57,
-      "community_name": "State",
+      "community": 61,
+      "community_name": "LibraryView",
       "norm_label": "libraryview"
     },
     {
@@ -1506,8 +1517,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_libraryviewstate",
-      "community": 57,
-      "community_name": "State",
+      "community": 61,
+      "community_name": "LibraryView",
       "norm_label": "_libraryviewstate"
     },
     {
@@ -11076,6 +11087,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_analytics_analytics_view",
       "target": "apps_flutter_client_lib_src_features_analytics_analytics_view_metriccard"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/analytics/analytics_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_analytics_analytics_view",
+      "target": "apps_flutter_client_lib_src_features_analytics_analytics_view_peers"
     },
     {
       "relation": "defines",
@@ -21980,5 +22002,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "4d92c977d703307252f48a20ae7272d2b3f5accf"
+  "built_at_commit": "5d9812f735127714df972bcacb0e7d2295fea270"
 }
