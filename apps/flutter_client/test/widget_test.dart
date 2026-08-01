@@ -8,6 +8,7 @@ import 'package:flutter_client/src/features/reader/bionic_fixation_view.dart';
 import 'package:flutter_client/src/features/flashcards/flashcard_view.dart';
 
 import 'package:flutter_client/src/features/sync/sync_view.dart';
+import 'package:flutter_client/src/features/analytics/analytics_view.dart';
 
 void main() {
   testWidgets('AgamaApp launches LibraryView with title', (WidgetTester tester) async {
@@ -86,6 +87,18 @@ void main() {
     expect(find.text('Zero-Backend E2EE Sync'), findsOneWidget);
     expect(find.text('Pending Outbox Deltas'), findsOneWidget);
   });
+
+  testWidgets('AnalyticsView renders reading metrics and CCI score', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: AnalyticsView(),
+      ),
+    );
+
+    expect(find.text('Comprehension & WPM Analytics'), findsOneWidget);
+    expect(find.text('Comprehension Calibration Index (CCI)'), findsOneWidget);
+  });
 }
+
 
 

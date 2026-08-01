@@ -5,6 +5,7 @@ import '../reader/bionic_fixation_view.dart';
 import '../annotations/annotation_view.dart';
 import '../flashcards/flashcard_view.dart';
 import '../sync/sync_view.dart';
+import '../analytics/analytics_view.dart';
 
 class LibraryView extends StatelessWidget {
   const LibraryView({super.key});
@@ -21,6 +22,16 @@ class LibraryView extends StatelessWidget {
         title: const Text('Agama AI Platform'),
         centerTitle: false,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.bar_chart),
+            tooltip: 'CCI Analytics Dashboard',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AnalyticsView()),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.highlight),
             tooltip: 'Highlights & Notes',
