@@ -381,10 +381,10 @@ zero-backend-agama/
 - [x] Initialize enterprise monorepo structure with `flutter_rust_bridge` v2.
 - [x] Build Rust document extraction engine (`pdfium-render`, `epub-parser`, `tree-sitter`).
 - [x] Configure embedded `rusqlite` with `SQLCipher` encryption, `sqlite-vec`, and `histvon`/`histbis` historization triggers (Refer to [`docs/schema.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/schema.md)).
-- [ ] Implement zero-copy FFI streaming between Rust and Dart.
+- [x] Implement zero-copy FFI streaming between Rust and Dart.
 
 ### Phase 2: On-Device AI & Adaptive Pacing Engine (Weeks 5–8)
-- [ ] Integrate ONNX Runtime (`ort`) in Rust with quantized `MiniLM-L6-v2` models.
+- [x] Integrate ONNX Runtime (`ort`) in Rust with quantized `MiniLM-L6-v2` models.
 - [x] Implement Adaptive Intelligent Pacing (AIP) algorithm with dynamic delay calculations.
 - [x] Connect Riverpod application state to async Rust Streams.
 
@@ -397,7 +397,7 @@ zero-backend-agama/
 ### Phase 4: Decentralized Sync, Comprehension Scaffolding & Hardening (Weeks 13–16)
 - [x] Integrate `Yrs` (Rust Yjs CRDTs) for decentralized delta sync over WebDAV (Priority 1), iCloud, and local P2P networks (Refer to [`docs/decentralized_sync_architecture.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/decentralized_sync_architecture.md)).
 - [x] Build on-device AI comprehension quiz generator and spaced repetition flashcard scheduler.
-- [ ] Execute end-to-end performance benchmarks, zero-copy memory verification, and cross-platform native builds (iOS, Android, macOS, Windows).
+- [x] Execute end-to-end performance benchmarks, zero-copy memory verification, and cross-platform native builds (iOS, Android, macOS, Windows).
 
 ---
 
