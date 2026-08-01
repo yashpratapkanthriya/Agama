@@ -65,13 +65,13 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785602600.1891215,
-    "ast_hash": "5386bb10a6cc7ec25b8116ad696763ec",
+    "mtime": 1785603663.15204,
+    "ast_hash": "2f0df8d048a925d424c76e1326bd7dcf",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
-    "mtime": 1785591158.5135677,
-    "ast_hash": "243a911c204ef10dd58451ea64530232",
+    "mtime": 1785603626.3781297,
+    "ast_hash": "7586df8d855a19d47450582dfcd70637",
     "semantic_hash": ""
   },
   "native/rust_core/src/ai/mod.rs": {
@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/annotations/annotation_view.dart": {
-    "mtime": 1785601834.003627,
-    "ast_hash": "89b00928a1763aa92d402bb26e0e0cfd",
+    "mtime": 1785603645.346405,
+    "ast_hash": "2fc0238e48fec425f7e7d99ab6ee2905",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/guided_highlight_view.dart": {
-    "mtime": 1785591179.6886852,
-    "ast_hash": "73301598c6ada62c8605da0668190e1a",
+    "mtime": 1785603626.4639266,
+    "ast_hash": "4a2fa5aea183ec7c6ea31c9004e775d0",
     "semantic_hash": ""
   },
   "docs/SAD.md": {

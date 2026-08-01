@@ -254,8 +254,10 @@ class _LibraryTab extends StatelessWidget {
                         const sampleText = 'Instapaper Sync: "How to Build Zero-Backend Apps" by Local-First Web';
                         final bytes = Uint8List.fromList(utf8.encode(sampleText));
                         final parsed = parser.parseBytes(bytes, 'instapaper_article.txt');
-                        ctrl.text = parsed.content;
-                        setModalState(() {});
+                        Navigator.pop(context);
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (_) => RsvpCanvasView(text: parsed.content),
+                        ));
                       },
                       icon: const Icon(Icons.bookmark_border, size: 16, color: Colors.blueGrey),
                       label: const Text('Instapaper', style: TextStyle(fontSize: 12)),
@@ -268,8 +270,10 @@ class _LibraryTab extends StatelessWidget {
                         const sampleText = 'Pocket Sync: "The Future of Offline-First AI" by Agama Labs';
                         final bytes = Uint8List.fromList(utf8.encode(sampleText));
                         final parsed = parser.parseBytes(bytes, 'pocket_article.txt');
-                        ctrl.text = parsed.content;
-                        setModalState(() {});
+                        Navigator.pop(context);
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (_) => RsvpCanvasView(text: parsed.content),
+                        ));
                       },
                       icon: const Icon(Icons.save_outlined, size: 16, color: Colors.red),
                       label: const Text('Pocket', style: TextStyle(fontSize: 12)),
@@ -282,8 +286,10 @@ class _LibraryTab extends StatelessWidget {
                         const sampleText = 'RSS Sync: "Hacker News Frontpage Dump"';
                         final bytes = Uint8List.fromList(utf8.encode(sampleText));
                         final parsed = parser.parseBytes(bytes, 'rss_feed.txt');
-                        ctrl.text = parsed.content;
-                        setModalState(() {});
+                        Navigator.pop(context);
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (_) => RsvpCanvasView(text: parsed.content),
+                        ));
                       },
                       icon: const Icon(Icons.rss_feed, size: 16, color: Colors.orange),
                       label: const Text('RSS Feed', style: TextStyle(fontSize: 12)),

@@ -48,6 +48,10 @@ class _GuidedHighlightViewState extends State<GuidedHighlightView> {
   }
 
   void _saveHighlight() {
+    if (_playing) {
+      setState(() => _playing = false);
+    }
+
     final ctxStart = (_idx - 5).clamp(0, _words.length);
     final ctxEnd = (_idx + 6).clamp(0, _words.length);
     final text = _words.sublist(ctxStart, ctxEnd).join(' ');

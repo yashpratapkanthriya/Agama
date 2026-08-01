@@ -285,6 +285,50 @@ class _AnnotationViewState extends State<AnnotationView> {
     }
   }
 
+  void _showFlashcardDialog(AnnotationItem a) {
+    final qCtrl = TextEditingController(text: 'Recall the context and meaning of:\n\n"${a.selectedText}"');
+    final aCtrl = TextEditingController(text: a.note ?? 'Review the highlight again.');
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Create Flashcard'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextField(
+              controller: qCtrl,
+              maxLines: 3,
+              decoration: const InputDecoration(labelText: 'Question', border: OutlineInputBorder()),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: aCtrl,
+              maxLines: 3,
+              decoration: const InputDecoration(labelText: 'Answer', border: OutlineInputBorder()),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          FilledButton(
+            onPressed: () {
+              FlashcardStore.items.add(FlashcardItem(
+                id: DateTime.now().millisecondsSinceEpoch.toString(),
+                question: qCtrl.text,
+                answer: aCtrl.text,
+              ));
+              Navigator.pop(ctx);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Flashcard created for active recall!')),
+              );
+            },
+            child: const Text('Save'),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -435,22 +479,7 @@ class _AnnotationViewState extends State<AnnotationView> {
                                       icon: const Icon(Icons.style_outlined, size: 20),
                                       tooltip: 'Create Flashcard',
                                       color: theme.colorScheme.onSurfaceVariant,
-                                      onPressed: () {
-                                        FlashcardStore.items.add(FlashcardItem(
-                                          id: DateTime.now().millisecondsSinceEpoch.toString(),
-                                          question: 'Recall the context and meaning of:\n\n"${a.selectedText}"',
-                                          answer: a.note ?? 'Review the highlight again.',
-                                        ));
-                                        ScaffoldMessenger.of(context).showSnackBar(
-                                          SnackBar(
-                                            content: const Text('Flashcard created for active recall!'),
-                                            action: SnackBarAction(
-                                              label: 'View',
-                                              onPressed: () {},
-                                            ),
-                                          ),
-                                        );
-                                      },
+                                      onPressed: () => _showFlashcardDialog(a),
                                     ),
                                   ],
                                 ),

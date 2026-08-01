@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785590249.7319744,
-    "ast_hash": "840c1929c4861abdf616c5cda6a2bc66",
+    "mtime": 1785602600.1891215,
+    "ast_hash": "5386bb10a6cc7ec25b8116ad696763ec",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/analytics/analytics_view.dart": {
-    "mtime": 1785577954.9299812,
-    "ast_hash": "1ed751367263e6967336b5502992588a",
+    "mtime": 1785602033.435978,
+    "ast_hash": "10afbfe2c9a9a148791b2b0ce18b48ee",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-01-performance-benchmarks-and-analytics.md": {

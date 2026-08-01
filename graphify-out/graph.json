@@ -983,6 +983,17 @@
       "norm_label": "_showsheet"
     },
     {
+      "label": "_showFlashcardDialog",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/annotations/annotation_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_annotations_annotation_view_showflashcarddialog",
+      "community": 27,
+      "community_name": "annotation_view.dart",
+      "norm_label": "_showflashcarddialog"
+    },
+    {
       "label": "build",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/annotations/annotation_view.dart",
@@ -1506,8 +1517,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_libraryview",
-      "community": 61,
-      "community_name": "LibraryView",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "libraryview"
     },
     {
@@ -1517,8 +1528,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_libraryviewstate",
-      "community": 61,
-      "community_name": "LibraryView",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_libraryviewstate"
     },
     {
@@ -11504,6 +11515,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_annotations_annotation_view",
       "target": "apps_flutter_client_lib_src_features_annotations_annotation_view_showcreateonlaunch"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/annotations/annotation_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_annotations_annotation_view",
+      "target": "apps_flutter_client_lib_src_features_annotations_annotation_view_showflashcarddialog"
     },
     {
       "relation": "defines",
@@ -22002,5 +22024,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "5d9812f735127714df972bcacb0e7d2295fea270"
+  "built_at_commit": "eb98b4e444c349c0326629cea359ce29c30b155d"
 }

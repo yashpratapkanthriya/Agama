@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 78 files · ~65,014 words
+- 78 files · ~65,279 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 904 nodes · 1063 edges · 62 communities (49 shown, 13 thin omitted)
+- 905 nodes · 1064 edges · 61 communities (49 shown, 12 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5d9812f7`
+- Built from commit: `eb98b4e4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -75,7 +75,6 @@
 - bionic_fixation_view.dart
 - Design Spec: Agama Sub-project 1 — Document Ingestion & Reading Engine Overhaul
 - Global Constraints
-- LibraryView
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
@@ -109,7 +108,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (62 total, 13 thin omitted)
+## Communities (61 total, 12 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -180,8 +179,8 @@ Cohesion: 0.09
 Nodes (22): 1. Executive Data Architecture Summary, 1. Schema Version Tracking (`PRAGMA user_version`), 2.1 Timestamp Format Specification, 2.2 Standard Mutation Workflow Rules, 2.3 Database Schema Versioning, Upgrades & Rollback Procedures, 2. Historization Pattern & Specification (`histvon` / `histbis`), 2. Migration Execution Pipeline (`native/rust_core/src/db/mod.rs`), 3. Complete DDL Schema (+14 more)
 
 ### Community 27 - "annotation_view.dart"
-Cohesion: 0.11
-Nodes (18): AnnotationItem, AnnotationStore, build, color, createState, id, initState, items (+10 more)
+Cohesion: 0.10
+Nodes (19): AnnotationItem, AnnotationStore, build, color, createState, id, initState, items (+11 more)
 
 ### Community 28 - "Decentralized Sync Architecture Specification"
 Cohesion: 0.12
@@ -288,8 +287,8 @@ Cohesion: 0.13
 Nodes (14): 1. Process & Skill Activation Rules (Superpowers Plugin), 2. Token & Architecture Optimization Modes, 3. Knowledge Graph Navigation (Graphify), 4. Branching, PR per Feature & Semantic Commits, 5. Interactive Requirement Alignment & Pre-Merge Confirmation Protocol, 6. Build, Testing & Code Linting Verification, 7. Single Source of Truth (SSOT) Architecture References, 8. Platform & Build State (current) (+6 more)
 
 ### Community 57 - "State"
-Cohesion: 0.24
-Nodes (11): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, _EngineChooser, _EngineChooserState, _LivePulse, _LivePulseState (+3 more)
+Cohesion: 0.21
+Nodes (13): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, _EngineChooser, _EngineChooserState, LibraryView, _LibraryViewState (+5 more)
 
 ### Community 58 - "bionic_fixation_view.dart"
 Cohesion: 0.20
@@ -304,9 +303,9 @@ Cohesion: 0.33
 Nodes (5): Global Constraints, Reading Engine Overhaul Implementation Plan, Task 1: Reader Settings Provider, Task 2: Update File Parser Service, Task 3: Update RSVP Canvas UI
 
 ## Knowledge Gaps
-- **519 isolated node(s):** `main`, `themeModeNotifier`, `_getInitialHome`, `build`, `AgamaTheme` (+514 more)
+- **520 isolated node(s):** `main`, `themeModeNotifier`, `_getInitialHome`, `build`, `AgamaTheme` (+515 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -316,7 +315,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `main`, `themeModeNotifier`, `_getInitialHome` to the rest of the system?**
-  _519 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _520 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
