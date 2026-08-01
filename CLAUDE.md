@@ -40,7 +40,14 @@ This file defines the mandatory workflows, agent behaviors, coding rules, and ve
 
 ---
 
-## 5. Build, Testing & Code Linting Verification
+## 5. Interactive Requirement Alignment & Pre-Merge Confirmation Protocol
+- **Pre-PR Merge Confirmation**: Before merging any feature branch or finalizing a Pull Request (PR), ALWAYS present a summary of changes and explicitly ask the user for confirmation to verify if any adjustments are needed.
+- **Interactive Requirement Interviewing (`/grill-me`)**: Whenever new instructions or feature requests are given, trigger interactive clarification questions to drill down on requirements, resolve ambiguities, and ensure the correct behavior is designed before writing code.
+- **Graphify Dependency Coverage Audit**: Use `graphify query` / `query_graph` to inspect all dependent code nodes, callers, tests, and linked documentation pages. Ensure 100% of linked dependencies, related code files, tests, and documentation pages are fully updated and synchronized.
+
+---
+
+## 6. Build, Testing & Code Linting Verification
 All changes MUST pass clean static analysis and unit tests with 0 errors and 0 failures:
 
 ```bash
@@ -55,8 +62,10 @@ flutter test
 
 ---
 
-## 6. Single Source of Truth (SSOT) Architecture References
+## 7. Single Source of Truth (SSOT) Architecture References
 - **Master Implementation Spec**: [`docs/complete_end_to_end_implementation.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/complete_end_to_end_implementation.md)
+- **Interactive Web Manual**: [`docs/internal_manual.html`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/internal_manual.html)
+- **Internal User Manual**: [`docs/internal_user_manual.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/internal_user_manual.md)
 - **Database & Historization Schema**: [`docs/schema.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/schema.md) (`histvon` 17-char timestamp, `histbis = '9999'` active marker)
 - **Decentralized Sync Architecture**: [`docs/decentralized_sync_architecture.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/decentralized_sync_architecture.md)
 - **Software Architecture Description**: [`docs/SAD.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/SAD.md)

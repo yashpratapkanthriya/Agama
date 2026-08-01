@@ -240,8 +240,13 @@
     "semantic_hash": ""
   },
   "docs/internal_user_manual.md": {
-    "mtime": 1785572300.7669039,
-    "ast_hash": "414f395ee7848cba4b637b887deffdde",
+    "mtime": 1785572384.483772,
+    "ast_hash": "64a1a73fd084fcb79b6dd45409c6121c",
+    "semantic_hash": ""
+  },
+  "docs/internal_manual.html": {
+    "mtime": 1785573923.3927252,
+    "ast_hash": "1ef09a3d8cae563e16a745e131dd4c2e",
     "semantic_hash": ""
   }
 }

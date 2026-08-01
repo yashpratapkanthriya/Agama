@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1785570989.9249785,
-    "ast_hash": "70296eefe2b5e9f61f7360cc9d7a742c",
+    "mtime": 1785574148.7106123,
+    "ast_hash": "b4b6f270ea0bdb98733f91689c4d865e",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/sync/sync_view.dart": {
@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   "docs/internal_manual.html": {
-    "mtime": 1785572381.487583,
-    "ast_hash": "052e72373de9177806e9383672fffd3f",
+    "mtime": 1785573923.3927252,
+    "ast_hash": "1ef09a3d8cae563e16a745e131dd4c2e",
     "semantic_hash": ""
   }
 }
