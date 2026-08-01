@@ -4,6 +4,7 @@ import '../reader/guided_highlight_view.dart';
 import '../reader/bionic_fixation_view.dart';
 import '../annotations/annotation_view.dart';
 import '../flashcards/flashcard_view.dart';
+import '../sync/sync_view.dart';
 
 class LibraryView extends StatelessWidget {
   const LibraryView({super.key});
@@ -37,6 +38,16 @@ class LibraryView extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const FlashcardView()),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.cloud_sync),
+            tooltip: 'Decentralized Sync',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SyncView()),
               );
             },
           ),

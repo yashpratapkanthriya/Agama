@@ -7,6 +7,8 @@ import 'package:flutter_client/src/features/reader/guided_highlight_view.dart';
 import 'package:flutter_client/src/features/reader/bionic_fixation_view.dart';
 import 'package:flutter_client/src/features/flashcards/flashcard_view.dart';
 
+import 'package:flutter_client/src/features/sync/sync_view.dart';
+
 void main() {
   testWidgets('AgamaApp launches LibraryView with title', (WidgetTester tester) async {
     await tester.pumpWidget(
@@ -72,5 +74,18 @@ void main() {
     expect(find.text('SM-2 Active Recall Flashcards'), findsOneWidget);
     expect(find.text('QUESTION'), findsOneWidget);
   });
+
+  testWidgets('SyncView renders WebDAV and outbox status', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: SyncView(),
+      ),
+    );
+
+    expect(find.text('Decentralized Sync Settings'), findsOneWidget);
+    expect(find.text('Zero-Backend E2EE Sync'), findsOneWidget);
+    expect(find.text('Pending Outbox Deltas'), findsOneWidget);
+  });
 }
+
 
