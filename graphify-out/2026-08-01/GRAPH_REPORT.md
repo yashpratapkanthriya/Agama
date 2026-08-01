@@ -1,7 +1,7 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 25 files · ~12,772 words
+- 25 files · ~12,775 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
