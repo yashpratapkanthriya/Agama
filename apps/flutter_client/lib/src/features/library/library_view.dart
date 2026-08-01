@@ -245,6 +245,53 @@ class _LibraryTab extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 12),
+              // External Workflow Integrations
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        const sampleText = 'Instapaper Sync: "How to Build Zero-Backend Apps" by Local-First Web';
+                        final bytes = Uint8List.fromList(utf8.encode(sampleText));
+                        final parsed = parser.parseBytes(bytes, 'instapaper_article.txt');
+                        ctrl.text = parsed.content;
+                        setModalState(() {});
+                      },
+                      icon: const Icon(Icons.bookmark_border, size: 16, color: Colors.blueGrey),
+                      label: const Text('Instapaper', style: TextStyle(fontSize: 12)),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        const sampleText = 'Pocket Sync: "The Future of Offline-First AI" by Agama Labs';
+                        final bytes = Uint8List.fromList(utf8.encode(sampleText));
+                        final parsed = parser.parseBytes(bytes, 'pocket_article.txt');
+                        ctrl.text = parsed.content;
+                        setModalState(() {});
+                      },
+                      icon: const Icon(Icons.save_outlined, size: 16, color: Colors.red),
+                      label: const Text('Pocket', style: TextStyle(fontSize: 12)),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        const sampleText = 'RSS Sync: "Hacker News Frontpage Dump"';
+                        final bytes = Uint8List.fromList(utf8.encode(sampleText));
+                        final parsed = parser.parseBytes(bytes, 'rss_feed.txt');
+                        ctrl.text = parsed.content;
+                        setModalState(() {});
+                      },
+                      icon: const Icon(Icons.rss_feed, size: 16, color: Colors.orange),
+                      label: const Text('RSS Feed', style: TextStyle(fontSize: 12)),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
               TextField(
                 controller: ctrl,
                 maxLines: 5,

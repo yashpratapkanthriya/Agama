@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785590249.7319744,
-    "ast_hash": "840c1929c4861abdf616c5cda6a2bc66",
+    "mtime": 1785602600.1891215,
+    "ast_hash": "5386bb10a6cc7ec25b8116ad696763ec",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
