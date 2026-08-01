@@ -79,7 +79,42 @@ SET histbis = ? -- Current 17-char timestamp
 WHERE id = ? AND histbis = '9999';
 ```
 
----
+### 2.3 Database Schema Versioning, Upgrades & Rollback Procedures
+
+#### 1. Schema Version Tracking (`PRAGMA user_version`)
+Schema versions are tracked natively in SQLite via `PRAGMA user_version`:
+```sql
+-- Read current version
+PRAGMA user_version;
+
+-- Update to version 2
+PRAGMA user_version = 2;
+```
+
+#### 2. Migration Execution Pipeline (`native/rust_core/src/db/mod.rs`)
+- Migrations are version-ordered (`V001__initial_schema.sql`, `V002__add_reading_sessions.sql`).
+- On app launch, `DatabaseEngine::init_schema()` checks `PRAGMA user_version` and executes missing migration steps inside an atomic SQLite transaction (`BEGIN IMMEDIATE ... COMMIT`).
+
+#### 3. Data Rollback Procedure (Zero Data Loss via `histvon` / `histbis`)
+Because all entity tables use composite primary keys `(id, histvon)`, rollbacks to previous states do NOT require database backups:
+```sql
+-- Step 1: Deactivate the current unwanted active version
+UPDATE documents 
+SET histbis = '20260801133000000'
+WHERE id = 'doc_123' AND histbis = '9999';
+
+-- Step 2: Reactivate the previous historical version
+UPDATE documents 
+SET histbis = '9999'
+WHERE id = 'doc_123' AND histvon = '20260801120000000';
+```
+
+#### 4. Schema Migration Pull Request (PR) Workflow
+1. Create migration file in `native/rust_core/migrations/V<XXX>__<description>.sql`.
+2. Add migration step to Rust `DatabaseEngine::init_schema()` match block.
+3. Run `cargo test` and `flutter test` to verify migration pass rate.
+4. Commit using semantic message `feat(db): add V<XXX> migration for <feature>`.
+
 
 ## 3. Complete DDL Schema
 
