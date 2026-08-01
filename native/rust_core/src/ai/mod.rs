@@ -171,6 +171,19 @@ impl SpacedRepetitionEngine {
     }
 }
 
+pub struct OnnxInferenceEngine;
+
+impl OnnxInferenceEngine {
+    pub fn infer_complexity(text: &str) -> f64 {
+        AdaptivePacingEngine::calculate_complexity_score(text)
+    }
+
+    pub fn generate_embedding(text: &str) -> Vec<f32> {
+        AdaptivePacingEngine::generate_embedding(text)
+    }
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;

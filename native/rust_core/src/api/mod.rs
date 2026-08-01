@@ -16,3 +16,8 @@ pub fn calculate_sm2_review(quality: u8, current_interval: i64, current_ef: f64,
     SpacedRepetitionEngine::calculate_sm2(quality, current_interval, current_ef, current_time_sec)
 }
 
+pub fn stream_rsvp_timings(text: String, target_wpm: u32, paragraph_complexity: f64) -> Vec<WordTiming> {
+    generate_rsvp_timings(text, target_wpm, paragraph_complexity)
+}
+
+
