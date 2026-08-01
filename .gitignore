@@ -19,5 +19,3 @@ graphify-out/2026-*/
 # OS generated files
 .DS_Store
 *.swp
-
-docs/
