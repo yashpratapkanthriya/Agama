@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agama Platform — Interactive Internal User Manual</title>
+    <title>Agama Platform — Interactive Internal Operations Manual</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f1117;
-            --card-bg: #181b25;
-            --card-border: #262b3a;
-            --accent-primary: #7c4dff;
-            --accent-secondary: #00e676;
-            --accent-pink: #ff4081;
-            --text-primary: #f0f3fe;
-            --text-secondary: #94a3b8;
-            --orp-color: #ff3d00;
-            --sidebar-width: 280px;
+            --bg-page: #f8fafc;
+            --sidebar-bg: #ffffff;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --card-hover-border: #cbd5e1;
+            
+            --accent-primary: #6366f1;
+            --accent-primary-hover: #4f46e5;
+            --accent-light: #eeefff;
+            --accent-emerald: #10b981;
+            --accent-emerald-light: #ecfdf5;
+            --accent-crimson: #ef4444;
+            --accent-amber: #f59e0b;
+            
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --text-subtle: #94a3b8;
+            
+            --sidebar-width: 290px;
+            --shadow-subtle: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            --shadow-card: 0 10px 30px -4px rgba(15, 23, 42, 0.08);
         }
 
         * {
@@ -29,21 +40,22 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
+            background-color: var(--bg-page);
+            color: var(--text-main);
             display: flex;
             height: 100vh;
             overflow: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Sidebar Styling */
+        /* Sidebar Navigation */
         sidebar {
             width: var(--sidebar-width);
-            background: #13151f;
+            background: var(--sidebar-bg);
             border-right: 1px solid var(--card-border);
             display: flex;
             flex-direction: column;
-            padding: 24px 16px;
+            padding: 28px 20px;
             overflow-y: auto;
             flex-shrink: 0;
         }
@@ -51,36 +63,47 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 32px;
-            padding: 0 8px;
+            gap: 14px;
+            margin-bottom: 36px;
+            padding: 0 4px;
         }
 
         .brand-logo {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-pink));
-            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-primary), #818cf8);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: 'Outfit', sans-serif;
             font-weight: 800;
-            font-size: 18px;
-            color: #fff;
-            box-shadow: 0 4px 12px rgba(124, 77, 255, 0.4);
+            font-size: 20px;
+            color: #ffffff;
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
         }
 
         .brand-title {
-            font-size: 18px;
-            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
             letter-spacing: -0.5px;
-            background: linear-gradient(90deg, #fff, #a5b4fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-main);
+        }
+
+        .brand-badge {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            background: var(--accent-light);
+            color: var(--accent-primary);
+            padding: 3px 8px;
+            border-radius: 20px;
         }
 
         .nav-group {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .nav-label {
@@ -88,241 +111,299 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.2px;
-            color: #64748b;
-            margin-bottom: 8px;
+            color: var(--text-subtle);
+            margin-bottom: 10px;
             padding: 0 8px;
         }
 
         .nav-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 12px;
-            border-radius: 8px;
-            font-size: 13px;
+            gap: 12px;
+            padding: 11px 14px;
+            border-radius: 10px;
+            font-size: 14px;
             font-weight: 500;
-            color: var(--text-secondary);
+            color: var(--text-muted);
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             margin-bottom: 4px;
         }
 
         .nav-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-primary);
+            background: #f1f5f9;
+            color: var(--text-main);
         }
 
         .nav-item.active {
-            background: rgba(124, 77, 255, 0.15);
-            color: #a78bfa;
-            border-left: 3px solid var(--accent-primary);
+            background: var(--accent-light);
+            color: var(--accent-primary);
+            font-weight: 600;
         }
 
-        /* Main Workspace Styling */
+        /* Main Content Workspace */
         main {
             flex: 1;
             overflow-y: auto;
-            padding: 36px 48px;
+            padding: 40px 60px;
         }
 
         .tab-content {
             display: none;
-            max-width: 1000px;
+            max-width: 1040px;
             margin: 0 auto;
         }
 
         .tab-content.active {
             display: block;
-            animation: fadeIn 0.3s ease;
+            animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        .page-header {
+            margin-bottom: 32px;
+        }
+
         h1 {
-            font-size: 28px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
+            letter-spacing: -0.8px;
+            color: var(--text-main);
+            margin-bottom: 10px;
         }
 
         .subtitle {
-            color: var(--text-secondary);
-            font-size: 15px;
-            margin-bottom: 28px;
+            color: var(--text-muted);
+            font-size: 16px;
             line-height: 1.6;
         }
 
+        /* Card Container */
         .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 14px;
-            padding: 24px;
+            border-radius: 16px;
+            padding: 28px;
             margin-bottom: 24px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-subtle);
+            transition: border-color 0.2s ease;
         }
 
-        .card-header {
-            font-size: 16px;
+        .card:hover {
+            border-color: var(--card-hover-border);
+        }
+
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
             font-weight: 700;
+            color: var(--text-main);
             margin-bottom: 16px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        /* RSVP Redicle Interactive Simulator */
+        /* Interactive RSVP Speed Redicle */
         .redicle-box {
-            background: #08090e;
-            border: 1px solid #1e2330;
-            border-radius: 12px;
-            height: 140px;
+            background: #090d16;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            height: 160px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 38px;
             font-weight: 700;
             position: relative;
             user-select: none;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
         }
 
         .redicle-box::before, .redicle-box::after {
             content: '';
             position: absolute;
             width: 2px;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.2);
+            height: 24px;
+            background: rgba(255, 255, 255, 0.25);
         }
 
-        .redicle-box::before { top: 12px; }
-        .redicle-box::after { bottom: 12px; }
+        .redicle-box::before { top: 14px; }
+        .redicle-box::after { bottom: 14px; }
 
-        .word-prefix { color: #fff; }
-        .word-orp { color: var(--orp-color); font-weight: 800; }
+        .word-prefix { color: #ffffff; }
+        .word-orp { color: var(--accent-crimson); font-weight: 800; }
         .word-suffix { color: #94a3b8; }
 
-        .control-row {
+        .controls-bar {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
+            background: #f8fafc;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
         }
 
-        .btn {
+        .btn-primary {
             background: var(--accent-primary);
-            color: #fff;
+            color: #ffffff;
             border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
+            padding: 12px 24px;
+            border-radius: 10px;
             font-weight: 600;
             font-size: 14px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
         }
 
-        .btn:hover {
-            filter: brightness(1.15);
+        .btn-primary:hover {
+            background: var(--accent-primary-hover);
             transform: translateY(-1px);
         }
 
-        .slider-group {
+        .slider-wrapper {
             flex: 1;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 13px;
+            gap: 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
         }
 
         input[type="range"] {
             flex: 1;
             accent-color: var(--accent-primary);
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 4px;
         }
 
-        /* Bionic Fixation Interactive Sandbox */
-        .bionic-preview {
-            background: #11131c;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 17px;
-            line-height: 1.8;
-            color: #cbd5e1;
+        /* Bionic Fixation Box */
+        .bionic-preview-box {
+            background: #f8fafc;
+            border: 1px solid var(--card-border);
+            padding: 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            line-height: 1.85;
+            color: #334155;
             margin-top: 16px;
         }
 
-        .bionic-preview b {
-            color: #fff;
+        .bionic-preview-box b {
+            color: var(--text-main);
             font-weight: 700;
         }
 
-        /* CCI Calculator */
-        .calc-grid {
+        /* Metric Grid & Calculator */
+        .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
-        .calc-input {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .calc-input label {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-secondary);
-        }
-
-        .calc-input input {
-            background: #0d0f17;
+        .metric-card {
+            background: #f8fafc;
             border: 1px solid var(--card-border);
-            color: #fff;
-            padding: 10px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-family: 'JetBrains Mono', monospace;
+            padding: 18px;
+            border-radius: 12px;
         }
 
-        .result-box {
-            background: linear-gradient(135deg, rgba(124, 77, 255, 0.15), rgba(0, 230, 118, 0.1));
-            border: 1px solid rgba(124, 77, 255, 0.3);
-            border-radius: 10px;
-            padding: 16px;
+        .metric-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .metric-card input {
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-main);
+        }
+
+        .cci-result-card {
+            background: linear-gradient(135deg, var(--accent-light), #f0fdf4);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 14px;
+            padding: 24px;
             text-align: center;
         }
 
-        .result-val {
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--accent-secondary);
+        .cci-score {
             font-family: 'JetBrains Mono', monospace;
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--accent-primary);
+            margin: 6px 0;
+        }
+
+        /* Search Results Light Box */
+        .search-input {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            background: #f8fafc;
+            color: var(--text-main);
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: #ffffff;
+        }
+
+        .result-item {
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-emerald);
+            margin-top: 12px;
         }
 
         code {
             font-family: 'JetBrains Mono', monospace;
-            background: #0d0f17;
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: #a78bfa;
+            background: #f1f5f9;
+            color: var(--accent-primary);
+            padding: 3px 8px;
+            border-radius: 6px;
             font-size: 13px;
         }
 
         pre {
-            background: #0d0f17;
-            border: 1px solid var(--card-border);
-            padding: 16px;
-            border-radius: 10px;
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
             overflow-x: auto;
             font-family: 'JetBrains Mono', monospace;
             font-size: 13px;
-            color: #e2e8f0;
-            line-height: 1.6;
+            line-height: 1.65;
         }
     </style>
 </head>
@@ -332,85 +413,94 @@
     <sidebar>
         <div class="brand">
             <div class="brand-logo">A</div>
-            <div class="brand-title">Agama Manual</div>
+            <div>
+                <div class="brand-title">Agama</div>
+                <div class="brand-badge">Internal Manual</div>
+            </div>
         </div>
 
         <div class="nav-group">
-            <div class="nav-label">Overview</div>
-            <div class="nav-item active" onclick="showTab('overview')">🚀 Platform Specs</div>
-            <div class="nav-item" onclick="showTab('usecases')">🎯 Core Use Cases</div>
+            <div class="nav-label">Platform Specs</div>
+            <div class="nav-item active" onclick="showTab('overview', this)">🚀 Architecture Overview</div>
+            <div class="nav-item" onclick="showTab('usecases', this)">🎯 Operational Use Cases</div>
         </div>
 
         <div class="nav-group">
             <div class="nav-label">Interactive Simulators</div>
-            <div class="nav-item" onclick="showTab('rsvp-sim')">⚡ RSVP Speed Redicle</div>
-            <div class="nav-item" onclick="showTab('bionic-sim')">👁️ Bionic Fixation</div>
-            <div class="nav-item" onclick="showTab('cci-sim')">📊 CCI Calculator</div>
-            <div class="nav-item" onclick="showTab('vector-sim')">🔍 Vector Similarity Search</div>
+            <div class="nav-item" onclick="showTab('rsvp-sim', this)">⚡ RSVP Speed Redicle</div>
+            <div class="nav-item" onclick="showTab('bionic-sim', this)">👁️ Bionic Fixation</div>
+            <div class="nav-item" onclick="showTab('cci-sim', this)">📊 CCI Calculator</div>
+            <div class="nav-item" onclick="showTab('vector-sim', this)">🔍 Vector Search Sandbox</div>
         </div>
 
         <div class="nav-group">
             <div class="nav-label">Architecture & Ops</div>
-            <div class="nav-item" onclick="showTab('sync')">☁️ Yrs CRDT Sync</div>
-            <div class="nav-item" onclick="showTab('db-rollback')">🛡️ DB Rollbacks</div>
+            <div class="nav-item" onclick="showTab('sync', this)">☁️ Yrs CRDT Sync</div>
+            <div class="nav-item" onclick="showTab('db-rollback', this)">🛡️ DB Rollbacks</div>
         </div>
     </sidebar>
 
-    <!-- Main Workspace -->
+    <!-- Main Content -->
     <main>
-        <!-- Tab 1: Platform Overview -->
+        <!-- Tab 1: Architecture Overview -->
         <div id="overview" class="tab-content active">
-            <h1>Platform Architecture & Operations</h1>
-            <div class="subtitle">Agama is an enterprise-grade local-first zero-backend speed reading system. PDF layout parsing, vector indexing (<code>sqlite-vec</code>), and ONNX token complexity inference run inside an embedded Rust core process.</div>
+            <div class="page-header">
+                <h1>Platform Architecture & Operations</h1>
+                <div class="subtitle">Agama is an enterprise-grade local-first zero-backend speed reading system. PDF layout parsing, vector indexing (<code>sqlite-vec</code>), and ONNX token complexity inference run inside an embedded Rust core process.</div>
+            </div>
 
             <div class="card">
-                <div class="card-header">⚡ Core Performance Targets (NFRs)</div>
-                <ul style="line-height: 2; padding-left: 20px; color: var(--text-secondary);">
-                    <li><strong style="color: #fff;">FFI Transfer Latency:</strong> &lt; 0.8 ms via <code>flutter_rust_bridge</code> v2 zero-copy stream sinks.</li>
-                    <li><strong style="color: #fff;">Vector Search Latency:</strong> &lt; 4.5 ms over 20,000 document chunk embeddings.</li>
-                    <li><strong style="color: #fff;">Privacy & Encryption:</strong> 256-bit AES SQLCipher encryption with zero external network telemetry.</li>
-                    <li><strong style="color: #fff;">Data Historization:</strong> 17-character <code>histvon</code>/<code>histbis</code> temporal primary keys for zero data loss.</li>
+                <div class="card-title">⚡ Core Non-Functional Targets (NFRs)</div>
+                <ul style="line-height: 2; padding-left: 20px; color: var(--text-muted);">
+                    <li><strong style="color: var(--text-main);">FFI Transfer Latency:</strong> &lt; 0.8 ms via <code>flutter_rust_bridge</code> v2 zero-copy stream sinks.</li>
+                    <li><strong style="color: var(--text-main);">Vector Search Latency:</strong> &lt; 4.5 ms over 20,000 document chunk embeddings.</li>
+                    <li><strong style="color: var(--text-main);">Privacy & Encryption:</strong> 256-bit AES SQLCipher encryption with zero external network telemetry.</li>
+                    <li><strong style="color: var(--text-main);">Data Historization:</strong> 17-character <code>histvon</code>/<code>histbis</code> temporal primary keys for zero data loss.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Tab 2: Core Use Cases -->
+        <!-- Tab 2: Operational Use Cases -->
         <div id="usecases" class="tab-content">
-            <h1>Internal Operational Use Cases</h1>
-            <div class="subtitle">Designed for high-throughput research, deep technical analysis, active recall study, and confidential reading.</div>
-
-            <div class="card">
-                <div class="card-header">📚 Use Case 1: Academic Literature Review</div>
-                <p style="color: var(--text-secondary); line-height: 1.6;">Rapidly scan 50+ page PDFs at 450-600 WPM, taking inline marginalia notes and invoking vector similarity search across paper collections.</p>
+            <div class="page-header">
+                <h1>Internal Operational Use Cases</h1>
+                <div class="subtitle">Designed for high-throughput literature review, deep technical analysis, active recall study, and confidential reading.</div>
             </div>
 
             <div class="card">
-                <div class="card-header">💻 Use Case 2: Deep Technical & Code Spec Analysis</div>
-                <p style="color: var(--text-secondary); line-height: 1.6;">Read dense technical specifications with Bionic Fixation (Levels F3-F5) bolding word prefixes to reduce visual saccade strain.</p>
+                <div class="card-title">📚 Use Case 1: Academic Literature Review</div>
+                <p style="color: var(--text-muted); line-height: 1.65;">Rapidly scan 50+ page PDFs at 450-600 WPM, taking inline marginalia notes and invoking vector similarity search across paper collections.</p>
             </div>
 
             <div class="card">
-                <div class="card-header">🎴 Use Case 3: Active Recall Flashcard Prep</div>
-                <p style="color: var(--text-secondary); line-height: 1.6;">Automatically extract flashcard pairs from highlights and train with the SuperMemo-2 (SM-2) algorithm for 90%+ long-term retention.</p>
+                <div class="card-title">💻 Use Case 2: Deep Technical & Code Spec Analysis</div>
+                <p style="color: var(--text-muted); line-height: 1.65;">Read dense technical specifications with Bionic Fixation (Levels F3-F5) bolding word prefixes to reduce visual saccade strain.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🎴 Use Case 3: Active Recall Flashcard Prep</div>
+                <p style="color: var(--text-muted); line-height: 1.65;">Automatically extract flashcard pairs from highlights and train with the SuperMemo-2 (SM-2) algorithm for 90%+ long-term retention.</p>
             </div>
         </div>
 
         <!-- Tab 3: Interactive RSVP Redicle Simulator -->
         <div id="rsvp-sim" class="tab-content">
-            <h1>RSVP Redicle Speed Reader Simulator</h1>
-            <div class="subtitle">Test the Optimal Recognition Point (ORP) visual redicle and dynamic pacing algorithm in real-time.</div>
+            <div class="page-header">
+                <h1>RSVP Redicle Speed Reader Simulator</h1>
+                <div class="subtitle">Test the Optimal Recognition Point (ORP) visual redicle and dynamic pacing algorithm in real-time.</div>
+            </div>
 
             <div class="card">
                 <div class="redicle-box" id="redicle-box">
                     <span class="word-prefix" id="w-prefix">Ag</span><span class="word-orp" id="w-orp">a</span><span class="word-suffix" id="w-suffix">ma</span>
                 </div>
 
-                <div class="control-row">
-                    <button class="btn" id="play-btn" onclick="togglePlay()">▶ Play Reader</button>
-                    <div class="slider-group">
+                <div class="controls-bar">
+                    <button class="btn-primary" id="play-btn" onclick="togglePlay()">▶ Play Reader</button>
+                    <div class="slider-wrapper">
                         <span>Target Speed:</span>
                         <input type="range" id="wpm-slider" min="100" max="900" step="50" value="450" oninput="updateWpm(this.value)">
-                        <strong id="wpm-val" style="color: var(--accent-secondary); font-family: monospace;">450 WPM</strong>
+                        <strong id="wpm-val" style="color: var(--accent-primary); font-family: monospace;">450 WPM</strong>
                     </div>
                 </div>
             </div>
@@ -418,17 +508,19 @@
 
         <!-- Tab 4: Bionic Fixation Sandbox -->
         <div id="bionic-sim" class="tab-content">
-            <h1>Bionic Fixation Reading Sandbox</h1>
-            <div class="subtitle">Adjust the fixation intensity ($F1 \dots F5$) to observe prefix bolding over sample technical text.</div>
+            <div class="page-header">
+                <h1>Bionic Fixation Reading Sandbox</h1>
+                <div class="subtitle">Adjust the fixation intensity ($F1 \dots F5$) to observe prefix bolding over sample technical text.</div>
+            </div>
 
             <div class="card">
-                <div class="slider-group" style="margin-bottom: 16px;">
-                    <span>Fixation Level:</span>
+                <div class="slider-wrapper" style="margin-bottom: 16px;">
+                    <span>Fixation Intensity Level:</span>
                     <input type="range" id="bionic-slider" min="1" max="5" value="3" oninput="updateBionic(this.value)">
                     <strong id="bionic-val" style="color: var(--accent-primary);">Level F3 (50%)</strong>
                 </div>
 
-                <div class="bionic-preview" id="bionic-text">
+                <div class="bionic-preview-box" id="bionic-text">
                     The Agama Platform is engineered as a high-performance local-first speed reading system.
                 </div>
             </div>
@@ -436,41 +528,45 @@
 
         <!-- Tab 5: CCI Calculator -->
         <div id="cci-sim" class="tab-content">
-            <h1>Comprehension Calibration Index (CCI) Calculator</h1>
-            <div class="subtitle">Calculate score: $CCI = \text{Reading WPM} \times \text{Quiz Accuracy Fraction}$. Optimal range is 350 – 450.</div>
+            <div class="page-header">
+                <h1>Comprehension Calibration Index (CCI) Calculator</h1>
+                <div class="subtitle">Calculate score: $CCI = \text{Reading WPM} \times \text{Quiz Accuracy Fraction}$. Optimal range is 350 – 450.</div>
+            </div>
 
             <div class="card">
-                <div class="calc-grid">
-                    <div class="calc-input">
-                        <label>Reading WPM</label>
+                <div class="grid-3">
+                    <div class="metric-card">
+                        <div class="metric-label">Reading Speed (WPM)</div>
                         <input type="number" id="cci-wpm" value="480" oninput="calculateCCI()">
                     </div>
-                    <div class="calc-input">
-                        <label>Quiz Accuracy (%)</label>
+                    <div class="metric-card">
+                        <div class="metric-label">Quiz Accuracy (%)</div>
                         <input type="number" id="cci-acc" value="88" min="0" max="100" oninput="calculateCCI()">
                     </div>
                 </div>
 
-                <div class="result-box">
-                    <div style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase;">Calculated CCI Score</div>
-                    <div class="result-val" id="cci-result">422.4</div>
-                    <div style="font-size: 13px; color: var(--accent-secondary); margin-top: 4px;">✅ Optimal Speed-Retention Zone</div>
+                <div class="cci-result-card">
+                    <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Calculated CCI Score</div>
+                    <div class="cci-score" id="cci-result">422.4</div>
+                    <div style="font-size: 13px; font-weight: 600; color: var(--accent-emerald);">✅ Optimal Speed-Retention Zone</div>
                 </div>
             </div>
         </div>
 
         <!-- Tab 6: Vector Search Sandbox -->
         <div id="vector-sim" class="tab-content">
-            <h1>Vector Similarity Search Sandbox</h1>
-            <div class="subtitle">Simulate cosine similarity scoring over indexed document chunks using dense embeddings.</div>
+            <div class="page-header">
+                <h1>Vector Similarity Search Sandbox</h1>
+                <div class="subtitle">Simulate cosine similarity scoring over indexed document chunks using dense embeddings.</div>
+            </div>
 
             <div class="card">
-                <input type="text" id="vector-query" placeholder="Type search query e.g. 'zero backend'..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); background: #0d0f17; color: #fff; font-size: 14px;" oninput="runVectorSearch(this.value)">
+                <input type="text" class="search-input" id="vector-query" placeholder="Type search query e.g. 'zero backend'..." oninput="runVectorSearch(this.value)">
                 
-                <div id="search-results" style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px;">
-                    <div style="padding: 12px; background: #11131c; border-radius: 8px; border-left: 3px solid var(--accent-secondary);">
-                        <div style="font-size: 13px; font-weight: 700; color: #fff;">Agama Core Engine Specification</div>
-                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-secondary);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div>
+                <div id="search-results">
+                    <div class="result-item">
+                        <div style="font-size: 14px; font-weight: 700; color: var(--text-main);">Agama Core Engine Specification</div>
+                        <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div>
                     </div>
                 </div>
             </div>
@@ -478,8 +574,10 @@
 
         <!-- Tab 7: Yrs CRDT Sync -->
         <div id="sync" class="tab-content">
-            <h1>Decentralized Yrs CRDT Sync Protocol</h1>
-            <div class="subtitle">Zero-server synchronization using Yrs state vectors over WebDAV, iCloud, or local mDNS Wi-Fi P2P.</div>
+            <div class="page-header">
+                <h1>Decentralized Yrs CRDT Sync Protocol</h1>
+                <div class="subtitle">Zero-server synchronization using Yrs state vectors over WebDAV, iCloud, or local mDNS Wi-Fi P2P.</div>
+            </div>
             <div class="card">
                 <pre><code>// Rust Yrs CRDT Delta Generation
 let txn = self.doc.transact();
@@ -493,8 +591,10 @@ txn.apply_update(remote_update);</code></pre>
 
         <!-- Tab 8: DB Rollback Generator -->
         <div id="db-rollback" class="tab-content">
-            <h1>Zero Data-Loss Database Rollbacks</h1>
-            <div class="subtitle">SQLCipher schema historization using 17-character <code>histvon</code>/<code>histbis</code> timestamps.</div>
+            <div class="page-header">
+                <h1>Zero Data-Loss Database Rollbacks</h1>
+                <div class="subtitle">SQLCipher schema historization using 17-character <code>histvon</code>/<code>histbis</code> timestamps.</div>
+            </div>
             <div class="card">
                 <pre><code>-- 1. Deactivate current row version
 UPDATE documents 
@@ -510,11 +610,11 @@ WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
     </main>
 
     <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+        function showTab(tabId, el) {
+            document.querySelectorAll('.tab-content').forEach(item => item.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            if (el) el.classList.add('active');
         }
 
         // RSVP Redicle Simulator JS
@@ -538,7 +638,7 @@ WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
             const btn = document.getElementById('play-btn');
             if (isPlaying) {
                 btn.textContent = '⏸ Pause Reader';
-                btn.style.background = '#ff4081';
+                btn.style.background = '#ef4444';
                 const intervalMs = 60000 / wpm;
                 timer = setInterval(updateRedicle, intervalMs);
             } else {
@@ -585,11 +685,11 @@ WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
         function runVectorSearch(query) {
             const container = document.getElementById('search-results');
             if (!query.trim()) {
-                container.innerHTML = `<div style="padding: 12px; background: #11131c; border-radius: 8px; border-left: 3px solid var(--accent-secondary);"><div style="font-size: 13px; font-weight: 700; color: #fff;">Agama Core Engine Specification</div><div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-secondary);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div></div>`;
+                container.innerHTML = `<div class="result-item"><div style="font-size: 14px; font-weight: 700; color: var(--text-main);">Agama Core Engine Specification</div><div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div></div>`;
                 return;
             }
             const sim = (0.75 + Math.random() * 0.23).toFixed(3);
-            container.innerHTML = `<div style="padding: 12px; background: #11131c; border-radius: 8px; border-left: 3px solid var(--accent-secondary);"><div style="font-size: 13px; font-weight: 700; color: #fff;">QueryResult for "${query}"</div><div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-secondary);">${sim}</strong> • Matched chunk embedding over 384 dimensions</div></div>`;
+            container.innerHTML = `<div class="result-item"><div style="font-size: 14px; font-weight: 700; color: var(--text-main);">QueryResult for "${query}"</div><div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">${sim}</strong> • Matched chunk embedding over 384 dimensions</div></div>`;
         }
 
         // Initial setup
