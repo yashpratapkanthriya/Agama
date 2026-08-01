@@ -53,5 +53,75 @@
     "mtime": 1785565369.3569472,
     "ast_hash": "6d73634a678cf1e1c71930adf80bd1f0",
     "semantic_hash": "6d73634a678cf1e1c71930adf80bd1f0"
+  },
+  "apps/flutter_client/lib/main.dart": {
+    "mtime": 1785568078.1322374,
+    "ast_hash": "c17a6ada59fb913bb55de9101d8e71e5",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/app/app.dart": {
+    "mtime": 1785568080.475441,
+    "ast_hash": "f9eba102ad6370ee6335c660f2697814",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/library/library_view.dart": {
+    "mtime": 1785568086.219532,
+    "ast_hash": "cbe67fa1526e227474939a75a06bb6ac",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
+    "mtime": 1785568083.8964434,
+    "ast_hash": "fdfa8e0e48e5b66a1946e27d3bc74057",
+    "semantic_hash": ""
+  },
+  "native/rust_core/src/ai/mod.rs": {
+    "mtime": 1785568058.3648517,
+    "ast_hash": "bf17a6b6644615d258e2de105850f2c4",
+    "semantic_hash": ""
+  },
+  "native/rust_core/src/api/mod.rs": {
+    "mtime": 1785568064.2120988,
+    "ast_hash": "2c7db08effddb61059266a0d29af3fee",
+    "semantic_hash": ""
+  },
+  "native/rust_core/src/db/mod.rs": {
+    "mtime": 1785568055.90115,
+    "ast_hash": "88d21cb4c9456a1a64561e4f812c4d48",
+    "semantic_hash": ""
+  },
+  "native/rust_core/src/lib.rs": {
+    "mtime": 1785568066.2957625,
+    "ast_hash": "80de6ba53f3c56e5bf967dba4a26e4ec",
+    "semantic_hash": ""
+  },
+  "native/rust_core/src/models/mod.rs": {
+    "mtime": 1785568053.3586738,
+    "ast_hash": "719c3f5b5126e7124649272db86abbf8",
+    "semantic_hash": ""
+  },
+  "native/rust_core/src/parser/mod.rs": {
+    "mtime": 1785568060.8642092,
+    "ast_hash": "caaec8d5a471c7a3a700ccd42d5256c5",
+    "semantic_hash": ""
+  },
+  "native/rust_core/src/sync/mod.rs": {
+    "mtime": 1785568062.776168,
+    "ast_hash": "74bf636ac5460f7698a4f406f2cf7d26",
+    "semantic_hash": ""
+  },
+  "scripts/build_native_libs.sh": {
+    "mtime": 1785568069.743347,
+    "ast_hash": "488a73215feb312b4c56fa9f60138060",
+    "semantic_hash": ""
+  },
+  "scripts/generate_frb.sh": {
+    "mtime": 1785568067.9644809,
+    "ast_hash": "9a5f80ee58d746a0595ffa812673581a",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/pubspec.yaml": {
+    "mtime": 1785568076.4062717,
+    "ast_hash": "99bfaadefe4fa121410eed400065076b",
+    "semantic_hash": ""
   }
 }

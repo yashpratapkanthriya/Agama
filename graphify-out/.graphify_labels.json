@@ -1,1 +1,21 @@
-{"0": "Core Pipeline and Extraction System", "1": "Incremental Update and Rule Integration", "2": "Semantic Extraction Specifications", "3": "Query Traversal and Vocabulary Expansion", "4": "Watch Mode System", "5": "FalkorDB Graph Export", "6": "MCP Server Integration", "7": "Neo4j Cypher Export", "8": "Token Reduction Benchmark", "9": "Monorepo Merging Workflows", "10": "Cluster-Only Execution"}
+{
+  "0": "Graphify Full Pipeline",
+  "1": "rsvp_canvas.dart",
+  "2": "Semantic Extraction Specification",
+  "3": "app.dart",
+  "4": "Graphify Watch Mode",
+  "5": "FalkorDB Export",
+  "6": "Graphify MCP Server",
+  "7": "Neo4j Cypher Export",
+  "8": "Token Reduction Benchmark",
+  "9": "Monorepo Multi-Folder Merge",
+  "10": "Cluster Only Execution",
+  "11": "AdaptivePacingEngine",
+  "12": "DatabaseEngine",
+  "13": "SyncEngine",
+  "14": "ParsedDocument",
+  "15": "models/mod.rs",
+  "16": "build_native_libs.sh",
+  "17": "generate_frb.sh",
+  "18": "lib.rs"
+}

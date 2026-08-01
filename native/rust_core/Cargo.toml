@@ -1,0 +1,50 @@
+[package]
+name = "rust_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+# FFI & Async Runtime
+flutter_rust_bridge = "2.0.0"
+tokio = { version = "1.38", features = ["full"] }
+anyhow = "1.0.86"
+thiserror = "1.0.61"
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+
+# Storage & Encryption & Historization
+rusqlite = { version = "0.31.0", features = ["bundled-sqlcipher"] }
+sqlite-vec = "0.1.1"
+zeroize = { version = "1.8.1", features = ["zeroize_derive"] }
+aes-gcm = "0.10.3"
+
+# Document Parsers
+pdfium-render = "0.8.25"
+epub-parser = "0.6.0"
+quick-xml = "0.31.0"
+tree-sitter = "0.22.6"
+tree-sitter-rust = "0.21.0"
+tree-sitter-python = "0.21.0"
+tree-sitter-javascript = "0.21.0"
+tree-sitter-typescript = "0.21.0"
+regex = "1.10.5"
+
+# On-Device AI & Tokenization
+ort = { version = "2.0.0-rc.2", features = ["download-binaries"] }
+tokenizers = "0.19.1"
+ndarray = "0.15.6"
+
+# Decentralized CRDT Sync
+yrs = "0.18.2"
+
+# Serialization & Utilities
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.120"
+uuid = { version = "1.9.1", features = ["v4", "serde"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+
+[build-dependencies]
+flutter_rust_bridge_codegen = "2.0.0"
