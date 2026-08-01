@@ -11,27 +11,89 @@ Zero-Backend AI Speed Reading & Knowledge Platform.
 
 ---
 
-## Quick Start
+## Cross-Platform Architecture Compatibility
 
-### 1. Build & Test Rust Engine
+Agama is engineered for **100% Zero-Backend Cross-Platform Compatibility** across Web, Android, iOS, macOS, Windows, and Linux.
+
+- **Flutter UI Shell**: Universal Material 3 UI (`apps/flutter_client`).
+- **Rust Core Engine**: Embedded compilation targets:
+  - **Android**: `cargo build --target aarch64-linux-android` (`.so` JNI library)
+  - **iOS**: `cargo build --target aarch64-apple-ios` (`.a` static framework)
+  - **Web**: `wasm32-unknown-unknown` (`wasm-bindgen` WebAssembly compilation)
+  - **Desktop**: macOS (`.dylib`), Windows (`.dll`), Linux (`.so`)
+
+---
+
+## Quick Start & Multi-Platform Commands
+
+### 1. Build & Test Native Rust Engine Core
 ```bash
 cd native/rust_core
 cargo test
 cargo build --release
 ```
 
-### 2. Generate FFI Bindings
+### 2. Generate Cross-Platform FFI Bindings (`flutter_rust_bridge` v2)
 ```bash
 ./scripts/generate_frb.sh
 ```
 
-### 3. Analyze & Run Flutter Application
+---
+
+### 3. Running & Testing by Platform Target
+
+#### A. Web (Chrome / WebAssembly Target)
+Test and launch the application in Google Chrome:
 ```bash
 cd apps/flutter_client
-flutter pub get
-flutter analyze
-flutter test
-flutter run
+
+# 1. Run Flutter Web application in Chrome
+flutter run -d chrome
+
+# 2. Build Web production distribution bundle
+flutter build web --release
+```
+
+#### B. Android Target (Device or Emulator)
+Launch an Android virtual device or connected device and run:
+```bash
+cd apps/flutter_client
+
+# 1. Check connected Android devices or emulators
+flutter devices
+
+# 2. Start available Android emulator (if none active)
+flutter emulators --launch <emulator_id>
+
+# 3. Build & Run on Android
+flutter run -d android
+
+# 4. Build APK / App Bundle
+flutter build apk --release
+```
+
+#### C. iOS Target (iPhone Simulator or Physical Device - macOS only)
+Launch iOS Simulator and run:
+```bash
+cd apps/flutter_client
+
+# 1. Open iOS Simulator
+open -a Simulator
+
+# 2. Check iOS Simulator device ID
+flutter devices
+
+# 3. Build & Run on iOS Simulator
+flutter run -d ios
+
+# 4. Build iOS IPA distribution bundle
+flutter build ipa --release
+```
+
+#### D. Desktop Target (macOS / Windows / Linux)
+```bash
+cd apps/flutter_client
+flutter run -d macos
 ```
 
 ---
@@ -67,6 +129,6 @@ For detailed DDL schemas and historization specs, see:
 
 ## Repository Structure
 - `native/rust_core`: Embedded Rust core (AIP pacing, ONNX complexity, ORP redicle, SQLite `histvon`/`histbis`, Yrs CRDT sync engine).
-- `apps/flutter_client`: Multi-platform Flutter Material 3 UI shell (RSVP, Guided Highlighting, Bionic Fixation, Annotations, SM-2 Flashcards).
+- `apps/flutter_client`: Multi-platform Flutter Material 3 UI shell (RSVP, Guided Highlighting, Bionic Fixation, Annotations, SM-2 Flashcards, Sync, Analytics).
 - `docs/`: Master Architecture (`SAD.md`), Master Implementation (`complete_end_to_end_implementation.md`), Database Schema (`schema.md`), Sync Spec (`decentralized_sync_architecture.md`).
 - `CLAUDE.md`: Single Source of Truth agent memory, Superpowers workflows, Caveman/Ponytail rules, and testing standards.

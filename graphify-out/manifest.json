@@ -65,7 +65,7 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785571697.8112829,
+    "mtime": 1785571774.0664406,
     "ast_hash": "67bf4e936205d7355db7119f24345b35",
     "semantic_hash": ""
   },
@@ -80,12 +80,12 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
-    "mtime": 1785571676.267228,
+    "mtime": 1785571774.0739098,
     "ast_hash": "4a613d19cd330c9699698cc4fd200ddd",
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
-    "mtime": 1785571681.7432957,
+    "mtime": 1785571774.0741584,
     "ast_hash": "aa76c528c3a54c43cd5f4703c26f430d",
     "semantic_hash": ""
   },
@@ -125,12 +125,12 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785571253.0538914,
-    "ast_hash": "ab0cdc192681e1d25a0f7d9a622055d1",
+    "mtime": 1785571987.0936298,
+    "ast_hash": "f1d88c84b0e99e82578d623a134f80e8",
     "semantic_hash": ""
   },
   "apps/flutter_client/test/widget_test.dart": {
-    "mtime": 1785571703.7429798,
+    "mtime": 1785571774.0666409,
     "ast_hash": "8c96e7cff757bc26895067fbc5323015",
     "semantic_hash": ""
   },
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "docs/complete_end_to_end_implementation.md": {
-    "mtime": 1785571622.9799376,
-    "ast_hash": "ac458e10d45ac7271e2c5b042ff29cb5",
+    "mtime": 1785571796.3310857,
+    "ast_hash": "bae26f7c78f05231b849b6134b78a138",
     "semantic_hash": ""
   },
   "docs/decentralized_sync_architecture.md": {
@@ -225,7 +225,7 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/analytics/analytics_view.dart": {
-    "mtime": 1785571690.3557417,
+    "mtime": 1785571774.0661716,
     "ast_hash": "32d171e04aef6e5733751a082559ca72",
     "semantic_hash": ""
   },

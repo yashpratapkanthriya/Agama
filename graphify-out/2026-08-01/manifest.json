@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785571253.0541534,
-    "ast_hash": "248bcbf1f8c4ff887ad018e8d5b436fb",
+    "mtime": 1785571697.8112829,
+    "ast_hash": "67bf4e936205d7355db7119f24345b35",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
@@ -75,18 +75,18 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/ai/mod.rs": {
-    "mtime": 1785571495.2079234,
+    "mtime": 1785571554.6994734,
     "ast_hash": "f3724d07eeac0e565e5304c23694ec79",
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
-    "mtime": 1785571502.145239,
-    "ast_hash": "008c15ab32e1eee67bcc5a7c2f0f0f4e",
+    "mtime": 1785571676.267228,
+    "ast_hash": "4a613d19cd330c9699698cc4fd200ddd",
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
-    "mtime": 1785571253.06226,
-    "ast_hash": "75b85059516fc671392f157fd3ff5217",
+    "mtime": 1785571681.7432957,
+    "ast_hash": "aa76c528c3a54c43cd5f4703c26f430d",
     "semantic_hash": ""
   },
   "native/rust_core/src/lib.rs": {
@@ -130,12 +130,12 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/test/widget_test.dart": {
-    "mtime": 1785571253.0545743,
-    "ast_hash": "6551ee0917f3b1fd65c8e8cf3efec1de",
+    "mtime": 1785571703.7429798,
+    "ast_hash": "8c96e7cff757bc26895067fbc5323015",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/reader_provider.dart": {
-    "mtime": 1785571513.0499754,
+    "mtime": 1785571554.693212,
     "ast_hash": "1ff64ee2bf5ddc897df433bc71c33631",
     "semantic_hash": ""
   },
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "docs/complete_end_to_end_implementation.md": {
-    "mtime": 1785571368.2092338,
-    "ast_hash": "e1f3f374c8badb113d3d451330eee74c",
+    "mtime": 1785571622.9799376,
+    "ast_hash": "ac458e10d45ac7271e2c5b042ff29cb5",
     "semantic_hash": ""
   },
   "docs/decentralized_sync_architecture.md": {
@@ -222,6 +222,21 @@
   "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md": {
     "mtime": 1785571392.7762995,
     "ast_hash": "d015ab5edc1e4da9b74cbda5652741b1",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/analytics/analytics_view.dart": {
+    "mtime": 1785571690.3557417,
+    "ast_hash": "32d171e04aef6e5733751a082559ca72",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-01-performance-benchmarks-and-analytics.md": {
+    "mtime": 1785571664.2911668,
+    "ast_hash": "727d522e0e49bbef87c163f12dd572ef",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-01-performance-benchmarks-and-analytics-design.md": {
+    "mtime": 1785571643.889646,
+    "ast_hash": "b4fc3dccce5e40e72909e6163b66faec",
     "semantic_hash": ""
   }
 }

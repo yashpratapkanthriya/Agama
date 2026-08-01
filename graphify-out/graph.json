@@ -1407,8 +1407,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "sync_view.dart"
     },
     {
@@ -1418,8 +1418,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncview",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "syncview"
     },
     {
@@ -1429,8 +1429,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncviewstate",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_syncviewstate"
     },
     {
@@ -1440,8 +1440,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_autosyncenabled",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_autosyncenabled"
     },
     {
@@ -1451,8 +1451,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_selectedprovider",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_selectedprovider"
     },
     {
@@ -1462,8 +1462,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_pendingoutboxcount",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_pendingoutboxcount"
     },
     {
@@ -1473,8 +1473,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_issyncing",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_issyncing"
     },
     {
@@ -1484,8 +1484,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_createstate",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -1495,8 +1495,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_triggersync",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_triggersync"
     },
     {
@@ -1506,8 +1506,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_build",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "build"
     },
     {
@@ -2847,54 +2847,109 @@
       "norm_label": "requirements"
     },
     {
-      "label": "Quick Start",
+      "label": "Cross-Platform Architecture Compatibility",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "readme_quick_start",
+      "id": "readme_cross_platform_architecture_compatibility",
       "community": 19,
       "community_name": "Agama",
-      "norm_label": "quick start"
+      "norm_label": "cross-platform architecture compatibility"
     },
     {
-      "label": "1. Build & Test Rust Engine",
+      "label": "Quick Start & Multi-Platform Commands",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L16",
+      "source_location": "L27",
       "_origin": "ast",
-      "id": "readme_1_build_test_rust_engine",
+      "id": "readme_quick_start_multi_platform_commands",
       "community": 19,
       "community_name": "Agama",
-      "norm_label": "1. build & test rust engine"
+      "norm_label": "quick start & multi-platform commands"
     },
     {
-      "label": "2. Generate FFI Bindings",
+      "label": "1. Build & Test Native Rust Engine Core",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L29",
       "_origin": "ast",
-      "id": "readme_2_generate_ffi_bindings",
+      "id": "readme_1_build_test_native_rust_engine_core",
       "community": 19,
       "community_name": "Agama",
-      "norm_label": "2. generate ffi bindings"
+      "norm_label": "1. build & test native rust engine core"
     },
     {
-      "label": "3. Analyze & Run Flutter Application",
+      "label": "2. Generate Cross-Platform FFI Bindings (`flutter_rust_bridge` v2)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L28",
+      "source_location": "L36",
       "_origin": "ast",
-      "id": "readme_3_analyze_run_flutter_application",
+      "id": "readme_2_generate_cross_platform_ffi_bindings_flutter_rust_bridge_v2",
       "community": 19,
       "community_name": "Agama",
-      "norm_label": "3. analyze & run flutter application"
+      "norm_label": "2. generate cross-platform ffi bindings (`flutter_rust_bridge` v2)"
+    },
+    {
+      "label": "3. Running & Testing by Platform Target",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "readme_3_running_testing_by_platform_target",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "3. running & testing by platform target"
+    },
+    {
+      "label": "A. Web (Chrome / WebAssembly Target)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "readme_a_web_chrome_webassembly_target",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "a. web (chrome / webassembly target)"
+    },
+    {
+      "label": "B. Android Target (Device or Emulator)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "readme_b_android_target_device_or_emulator",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "b. android target (device or emulator)"
+    },
+    {
+      "label": "C. iOS Target (iPhone Simulator or Physical Device - macOS only)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "readme_c_ios_target_iphone_simulator_or_physical_device_macos_only",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "c. ios target (iphone simulator or physical device - macos only)"
+    },
+    {
+      "label": "D. Desktop Target (macOS / Windows / Linux)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "readme_d_desktop_target_macos_windows_linux",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "d. desktop target (macos / windows / linux)"
     },
     {
       "label": "Database Versioning, Migrations & Rollback Workflow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L39",
+      "source_location": "L101",
       "_origin": "ast",
       "id": "readme_database_versioning_migrations_rollback_workflow",
       "community": 19,
@@ -2905,7 +2960,7 @@
       "label": "1. Schema Versioning (`PRAGMA user_version`)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "readme_1_schema_versioning_pragma_user_version",
       "community": 19,
@@ -2916,7 +2971,7 @@
       "label": "2. Pushing Schema Updates",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L47",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "readme_2_pushing_schema_updates",
       "community": 19,
@@ -2927,7 +2982,7 @@
       "label": "3. Data Rollbacks (Zero Data Loss)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L53",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "readme_3_data_rollbacks_zero_data_loss",
       "community": 19,
@@ -2938,7 +2993,7 @@
       "label": "Repository Structure",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L68",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "readme_repository_structure",
       "community": 19,
@@ -10457,7 +10512,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L39",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_agama",
+      "target": "readme_cross_platform_architecture_compatibility",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agama",
@@ -10468,18 +10534,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L14",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agama",
-      "target": "readme_quick_start",
+      "target": "readme_quick_start_multi_platform_commands",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L68",
+      "source_location": "L130",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agama",
@@ -10501,33 +10567,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L16",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_quick_start",
-      "target": "readme_1_build_test_rust_engine",
+      "source": "readme_quick_start_multi_platform_commands",
+      "target": "readme_1_build_test_native_rust_engine_core",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_quick_start",
-      "target": "readme_2_generate_ffi_bindings",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_quick_start",
-      "target": "readme_3_analyze_run_flutter_application",
+      "source": "readme_quick_start_multi_platform_commands",
+      "target": "readme_2_generate_cross_platform_ffi_bindings_flutter_rust_bridge_v2",
       "confidence_score": 1.0
     },
     {
@@ -10535,6 +10590,61 @@
       "confidence": "EXTRACTED",
       "source_file": "README.md",
       "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start_multi_platform_commands",
+      "target": "readme_3_running_testing_by_platform_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_3_running_testing_by_platform_target",
+      "target": "readme_a_web_chrome_webassembly_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_3_running_testing_by_platform_target",
+      "target": "readme_b_android_target_device_or_emulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_3_running_testing_by_platform_target",
+      "target": "readme_c_ios_target_iphone_simulator_or_physical_device_macos_only",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_3_running_testing_by_platform_target",
+      "target": "readme_d_desktop_target_macos_windows_linux",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_database_versioning_migrations_rollback_workflow",
@@ -10545,7 +10655,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L47",
+      "source_location": "L109",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_database_versioning_migrations_rollback_workflow",
@@ -10556,7 +10666,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L53",
+      "source_location": "L115",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_database_versioning_migrations_rollback_workflow",
@@ -13607,5 +13717,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "9ed4cd7b9ebbebb516143680c45ecd0c0ff3ec5f"
+  "built_at_commit": "e3a7c1d9a07d9e694692197f378e71589c86602a"
 }

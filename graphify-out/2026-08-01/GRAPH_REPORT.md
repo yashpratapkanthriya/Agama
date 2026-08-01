@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 44 files · ~38,244 words
+- 47 files · ~39,387 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 537 nodes · 634 edges · 38 communities (28 shown, 10 thin omitted)
+- 556 nodes · 653 edges · 40 communities (30 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7abfee77`
+- Built from commit: `9ed4cd7b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -46,11 +46,13 @@
 - String?
 - guided_highlight_view.dart
 - bionic_fixation_view.dart
-- sync_view.dart
+- State
 - Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
 - System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox
 - Global Constraints
 - System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration
+- Global Constraints
+- System Design Specification: Performance Benchmarks & Comprehension Analytics (CCI) Dashboard
 - Global Constraints
 
 ## God Nodes (most connected - your core abstractions)
@@ -85,23 +87,23 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (38 total, 10 thin omitted)
+## Communities (40 total, 10 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
 Nodes (24): Graphify Always On Rule, Graphify Ingestion (Add URL), Obsidian Vault Export, Confidence Score Rubric, Deterministic Node ID Format, Semantic Extraction Specification, Cross-Repo Graph Merge, CLAUDE.md Native Integration (+16 more)
 
 ### Community 1 - "rsvp_canvas.dart"
-Cohesion: 0.12
-Nodes (16): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+8 more)
+Cohesion: 0.11
+Nodes (18): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+10 more)
 
 ### Community 2 - "reader_provider.dart"
 Cohesion: 0.12
 Nodes (16): copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState (+8 more)
 
 ### Community 3 - "library_view.dart"
-Cohesion: 0.07
-Nodes (28): ../annotations/annotation_view.dart, main, AgamaApp, build, build, LibraryView, sampleText, main (+20 more)
+Cohesion: 0.05
+Nodes (41): ../analytics/analytics_view.dart, ../annotations/annotation_view.dart, main, AgamaApp, build, AnalyticsView, build, build (+33 more)
 
 ### Community 11 - "ai/mod.rs"
 Cohesion: 0.10
@@ -109,7 +111,7 @@ Nodes (18): AdaptivePacingEngine, BionicFixationEngine, OnnxInferenceEngine, Def
 
 ### Community 12 - "Result"
 Cohesion: 0.18
-Nodes (17): Connection, DatabaseEngine, Result, Self, Vec, test_annotations_and_flashcards_historization(), test_db_init_and_document_insert(), Annotation (+9 more)
+Nodes (18): Connection, DatabaseEngine, Result, Self, Vec, test_annotations_and_flashcards_historization(), test_db_init_and_document_insert(), test_performance_benchmark_and_cci_math() (+10 more)
 
 ### Community 13 - "SyncEngine"
 Cohesion: 0.22
@@ -128,8 +130,8 @@ Cohesion: 0.17
 Nodes (11): 1. Build & Test Rust Engine, 1. Schema Versioning (`PRAGMA user_version`), 2. Generate FFI Bindings, 2. Pushing Schema Updates, 3. Analyze & Run Flutter Application, 3. Data Rollbacks (Zero Data Loss), Agama, Database Versioning, Migrations & Rollback Workflow (+3 more)
 
 ### Community 20 - "flashcard_view.dart"
-Cohesion: 0.13
-Nodes (15): answer, build, _cards, createState, _currentIndex, dueSeconds, ef, FlashcardItem (+7 more)
+Cohesion: 0.14
+Nodes (13): answer, build, _cards, createState, _currentIndex, dueSeconds, ef, FlashcardItem (+5 more)
 
 ### Community 21 - "Speed Reading Apps: Comprehensive Analysis & Gap Assessment"
 Cohesion: 0.06
@@ -164,16 +166,16 @@ Cohesion: 0.12
 Nodes (15): 1. Executive Summary & Core Principles, 2.1 The Cross-Platform Challenge, 2.2 The WebDAV Solution, 2.3 Channel Comparison Matrix, 2. Why WebDAV is the Primary Sync Channel, 3.1 End-to-End Encrypted WebDAV Sync Loop, 3. Sequence & Data Flow Specifications, 4.1 Encrypted Sync File Format (`.crdt`) (+7 more)
 
 ### Community 30 - "guided_highlight_view.dart"
-Cohesion: 0.15
-Nodes (13): build, createState, GuidedHighlightView, _GuidedHighlightViewState, _highlightedIndex, initState, _isPlaying, _startHighlightStream (+5 more)
+Cohesion: 0.17
+Nodes (11): build, createState, _highlightedIndex, initState, _isPlaying, _startHighlightStream, targetWpm, text (+3 more)
 
 ### Community 31 - "bionic_fixation_view.dart"
-Cohesion: 0.16
-Nodes (14): AnnotationView, _AnnotationViewState, BionicFixationView, _BionicFixationViewState, build, createState, _fixationLevel, _fontSize (+6 more)
+Cohesion: 0.25
+Nodes (8): BionicFixationView, _BionicFixationViewState, build, createState, _fixationLevel, _fontSize, _splitBionic, text
 
-### Community 32 - "sync_view.dart"
-Cohesion: 0.22
-Nodes (9): _autoSyncEnabled, build, createState, _isSyncing, _pendingOutboxCount, _selectedProvider, SyncView, _SyncViewState (+1 more)
+### Community 32 - "State"
+Cohesion: 0.32
+Nodes (8): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, GuidedHighlightView, _GuidedHighlightViewState, State, StatefulWidget
 
 ### Community 33 - "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)"
 Cohesion: 0.25
@@ -195,8 +197,16 @@ Nodes (7): 1. Overview & Objectives, 2.1 ONNX Inference Engine (`native/rust_cor
 Cohesion: 0.40
 Nodes (4): Global Constraints, Task 1: Rust Core Zero-Copy FFI Stream Generator & ONNX Engine, Task 2: Flutter Riverpod Reader Provider & Stream Listener Integration, Zero-Copy FFI Stream Pipeline & ONNX Engine Implementation Plan
 
+### Community 38 - "System Design Specification: Performance Benchmarks & Comprehension Analytics (CCI) Dashboard"
+Cohesion: 0.29
+Nodes (6): 1. Overview & Objectives, 2.1 Performance Benchmarks (`native/rust_core/tests/benchmark_test.rs`), 2.2 Comprehension Calibration Index (CCI) & Analytics (`apps/flutter_client/lib/src/features/analytics/analytics_view.dart`), 2. Technical Architecture & Components, 3. Verification & Testing Strategy, System Design Specification: Performance Benchmarks & Comprehension Analytics (CCI) Dashboard
+
+### Community 39 - "Global Constraints"
+Cohesion: 0.40
+Nodes (4): Global Constraints, Performance Benchmarks & Comprehension Analytics Implementation Plan, Task 1: Rust Engine Performance Benchmark Suite & CCI Helper, Task 2: Flutter Comprehension Analytics (CCI) Dashboard UI
+
 ## Knowledge Gaps
-- **295 isolated node(s):** `main`, `build`, `AnnotationItem`, `id`, `selectedText` (+290 more)
+- **302 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+297 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -206,14 +216,14 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **What connects `main`, `build`, `AnnotationItem` to the rest of the system?**
-  _295 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **What connects `main`, `build`, `build` to the rest of the system?**
+  _302 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `reader_provider.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.06653225806451613 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04625346901017576 - nodes in this community are weakly interconnected._
