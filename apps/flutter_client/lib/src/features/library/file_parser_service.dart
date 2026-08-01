@@ -65,5 +65,14 @@ class FileParserService {
       format: format,
     );
   }
+
+  ParsedDocument parseUrl(String url) {
+    // Stub for URL fetch/parse
+    return ParsedDocument(
+      title: url,
+      content: 'Extracted content from $url',
+      format: DocumentFormat.markdown,
+    );
+  }
 }
 
