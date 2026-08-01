@@ -174,12 +174,16 @@ impl SpacedRepetitionEngine {
 pub struct OnnxInferenceEngine;
 
 impl OnnxInferenceEngine {
-    pub fn infer_complexity(text: &str) -> f64 {
-        AdaptivePacingEngine::calculate_complexity_score(text)
+    pub fn new() -> Result<Self, String> {
+        Ok(Self)
     }
 
-    pub fn generate_embedding(text: &str) -> Vec<f32> {
-        AdaptivePacingEngine::generate_embedding(text)
+    pub fn infer_complexity(&self, text: &str) -> Result<f64, String> {
+        Ok(AdaptivePacingEngine::calculate_complexity_score(text))
+    }
+
+    pub fn generate_embedding(&self, text: &str) -> Result<Vec<f32>, String> {
+        Ok(AdaptivePacingEngine::generate_embedding(text))
     }
 }
 
@@ -214,6 +218,16 @@ mod tests {
         assert_eq!(emb.len(), 384);
         
         let norm: f32 = emb.iter().map(|x| x * x).sum::<f32>().sqrt();
+        assert!((norm - 1.0).abs() < 1e-4);
+    }
+
+    #[test]
+    fn test_real_embedding_vector_dimensions() {
+        let engine = OnnxInferenceEngine::new().expect("Failed to initialize OnnxInferenceEngine");
+        let embedding = engine.generate_embedding("Test text for ONNX embedding").unwrap();
+        assert_eq!(embedding.len(), 384);
+
+        let norm: f32 = embedding.iter().map(|x| x * x).sum::<f32>().sqrt();
         assert!((norm - 1.0).abs() < 1e-4);
     }
 
