@@ -10,6 +10,7 @@
 
 | Document Role | File Path | Status | Description / Relationship |
 | --- | --- | --- | --- |
+| **Agent Memory Contract** | [`CLAUDE.md`](file:///Users/yashpratap/Documents/GitHub/Agama/CLAUDE.md) | **ACTIVE (SSOT)** | Mandatory Superpowers skills, Caveman/Ponytail modes, Graphify rules, PR per feature, semantic commits & testing/linting contract. |
 | **Master Implementation Spec** | [`docs/complete_end_to_end_implementation.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/complete_end_to_end_implementation.md) | **ACTIVE (SSOT)** | Master technical feature specification, Flutter Material UI design tokens, Cargo.toml & pubspec.yaml manifests. |
 | **Database Schema (SSOT)** | [`docs/schema.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/schema.md) | **ACTIVE (SSOT)** | Complete SQLite DDL, Field Dictionary, `histvon`/`histbis` Historization & Vector Indexing. |
 | **Decentralized Sync Spec** | [`docs/decentralized_sync_architecture.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/decentralized_sync_architecture.md) | **ACTIVE (SSOT)** | Specification into WebDAV, iCloud, P2P, E2EE, and Yrs CRDT delta syncing. |
