@@ -1,11 +1,11 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 65 files · ~61,256 words
+- 67 files · ~61,342 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 806 nodes · 949 edges · 56 communities (45 shown, 11 thin omitted)
+- 813 nodes · 956 edges · 57 communities (45 shown, 12 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
@@ -46,6 +46,7 @@
 - String?
 - guided_highlight_view.dart
 - 3. Operational Feature Guide
+- ffi_bridge.dart
 - Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
 - System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox
 - Global Constraints
@@ -103,7 +104,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (56 total, 11 thin omitted)
+## Communities (57 total, 12 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -123,7 +124,7 @@ Nodes (39): ../analytics/analytics_view.dart, Animation, AnimationController, ..
 
 ### Community 11 - "ai/mod.rs"
 Cohesion: 0.10
-Nodes (18): AdaptivePacingEngine, BionicFixationEngine, OnnxInferenceEngine, Default, Self, Vec, SpacedRepetitionEngine, test_bionic_fixation() (+10 more)
+Nodes (19): AdaptivePacingEngine, BionicFixationEngine, OnnxInferenceEngine, Default, Self, Vec, SpacedRepetitionEngine, test_bionic_fixation() (+11 more)
 
 ### Community 12 - "Result"
 Cohesion: 0.18
@@ -147,7 +148,7 @@ Nodes (17): 1. Build & Test Native Rust Engine Core, 1. Schema Versioning (`PRAG
 
 ### Community 20 - "flashcard_view.dart"
 Cohesion: 0.11
-Nodes (19): answer, build, _cards, color, createState, ef, FlashcardItem, FlashcardView (+11 more)
+Nodes (17): answer, build, _cards, color, createState, ef, FlashcardItem, id (+9 more)
 
 ### Community 21 - "Speed Reading Apps: Comprehensive Analysis & Gap Assessment"
 Cohesion: 0.06
@@ -174,16 +175,16 @@ Cohesion: 0.09
 Nodes (22): 1. Executive Data Architecture Summary, 1. Schema Version Tracking (`PRAGMA user_version`), 2.1 Timestamp Format Specification, 2.2 Standard Mutation Workflow Rules, 2.3 Database Schema Versioning, Upgrades & Rollback Procedures, 2. Historization Pattern & Specification (`histvon` / `histbis`), 2. Migration Execution Pipeline (`native/rust_core/src/db/mod.rs`), 3. Complete DDL Schema (+14 more)
 
 ### Community 27 - "annotation_view.dart"
-Cohesion: 0.11
-Nodes (18): AnnotationItem, AnnotationStore, AnnotationView, _AnnotationViewState, build, color, createState, id (+10 more)
+Cohesion: 0.12
+Nodes (16): AnnotationItem, AnnotationStore, build, color, createState, id, initState, items (+8 more)
 
 ### Community 28 - "Decentralized Sync Architecture Specification"
 Cohesion: 0.12
 Nodes (15): 1. Executive Summary & Core Principles, 2.1 The Cross-Platform Challenge, 2.2 The WebDAV Solution, 2.3 Channel Comparison Matrix, 2. Why WebDAV is the Primary Sync Channel, 3.1 End-to-End Encrypted WebDAV Sync Loop, 3. Sequence & Data Flow Specifications, 4.1 Encrypted Sync File Format (`.crdt`) (+7 more)
 
 ### Community 30 - "guided_highlight_view.dart"
-Cohesion: 0.14
-Nodes (14): build, createState, GuidedHighlightView, _GuidedHighlightViewState, _idx, initState, _playing, targetWpm (+6 more)
+Cohesion: 0.15
+Nodes (12): build, createState, _idx, initState, _playing, targetWpm, text, _tick (+4 more)
 
 ### Community 31 - "3. Operational Feature Guide"
 Cohesion: 0.11
@@ -223,7 +224,7 @@ Nodes (6): Design Health Score, Design Specificity Verdict, Impeccable Design Cr
 
 ### Community 41 - "sync_view.dart"
 Cohesion: 0.25
-Nodes (8): build, createState, _outbox, _sync, _syncing, SyncView, _SyncViewState, static final List
+Nodes (7): ../../app/theme.dart, build, createState, _outbox, _sync, _syncing, static final List
 
 ### Community 42 - "Design System: Agama Platform"
 Cohesion: 0.08
@@ -238,12 +239,12 @@ Cohesion: 0.07
 Nodes (27): AgamaTheme, amber, bg, border, borderStrong, _buildTextTheme, crimson, dark (+19 more)
 
 ### Community 45 - "bionic_fixation_view.dart"
-Cohesion: 0.20
-Nodes (10): ../../app/theme.dart, BionicFixationView, _BionicFixationViewState, build, createState, _fontSize, _level, _split (+2 more)
+Cohesion: 0.25
+Nodes (7): build, createState, _fontSize, _level, _split, text, package:google_fonts/google_fonts.dart
 
 ### Community 46 - "file_parser_service.dart"
-Cohesion: 0.08
-Nodes (24): content, _determineFormat, DocumentFormat, _extractTextFromBytes, FileParserService, format, parseBytes, ParsedDocument (+16 more)
+Cohesion: 0.07
+Nodes (26): content, _determineFormat, DocumentFormat, _extractTextFromBytes, FileParserService, format, parseBytes, ParsedDocument (+18 more)
 
 ### Community 47 - "AppDelegate"
 Cohesion: 0.11
@@ -278,13 +279,13 @@ Cohesion: 0.40
 Nodes (4): main, package:flutter/material.dart, package:flutter_riverpod/flutter_riverpod.dart, src/app/app.dart
 
 ### Community 57 - "State"
-Cohesion: 0.28
-Nodes (9): _EngineChooser, _EngineChooserState, LibraryView, _LibraryViewState, _LivePulse, _LivePulseState, SingleTickerProviderStateMixin, State (+1 more)
+Cohesion: 0.15
+Nodes (19): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, _EngineChooser, _EngineChooserState, LibraryView, _LibraryViewState (+11 more)
 
 ## Knowledge Gaps
-- **464 isolated node(s):** `main`, `themeModeNotifier`, `_getInitialHome`, `build`, `AgamaTheme` (+459 more)
+- **467 isolated node(s):** `main`, `themeModeNotifier`, `_getInitialHome`, `build`, `AgamaTheme` (+462 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -294,7 +295,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `main`, `themeModeNotifier`, `_getInitialHome` to the rest of the system?**
-  _464 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _467 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**

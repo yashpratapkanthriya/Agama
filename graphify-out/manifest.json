@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/annotations/annotation_view.dart": {
-    "mtime": 1785584590.0730977,
-    "ast_hash": "7ca6412def09ec736f4482150e7cc643",
+    "mtime": 1785585550.4980266,
+    "ast_hash": "dda81b3ff4e053b0cf74b6a5da35a467",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart": {
@@ -412,6 +412,16 @@
   "apps/flutter_client/test/ffi_bridge_test.dart": {
     "mtime": 1785585422.0355208,
     "ast_hash": "0feff1ae4479be58f04853e8cc3c4d59",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/annotations/vector_search_service.dart": {
+    "mtime": 1785585539.3791196,
+    "ast_hash": "333fa4e2e795d78e965c7af98cf631ea",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/vector_search_test.dart": {
+    "mtime": 1785585533.3534796,
+    "ast_hash": "0b7678ea865d9278f0d1249a403a852c",
     "semantic_hash": ""
   }
 }

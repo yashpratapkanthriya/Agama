@@ -543,6 +543,39 @@
       "norm_label": "package:google_fonts/google_fonts.dart"
     },
     {
+      "label": "ffi_bridge.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/core/ffi_bridge.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_core_ffi_bridge",
+      "community": 32,
+      "community_name": "ffi_bridge.dart",
+      "norm_label": "ffi_bridge.dart"
+    },
+    {
+      "label": "NativeEngine",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/core/ffi_bridge.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_core_ffi_bridge_nativeengine",
+      "community": 32,
+      "community_name": "ffi_bridge.dart",
+      "norm_label": "nativeengine"
+    },
+    {
+      "label": "calculateOrpIndex",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/core/ffi_bridge.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_core_ffi_bridge_calculateorpindex",
+      "community": 32,
+      "community_name": "ffi_bridge.dart",
+      "norm_label": "calculateorpindex"
+    },
+    {
       "label": "analytics_view.dart",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/analytics/analytics_view.dart",
@@ -681,8 +714,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "app_theme_dart",
-      "community": 45,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 41,
+      "community_name": "sync_view.dart",
       "norm_label": "../../app/theme.dart"
     },
     {
@@ -725,8 +758,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_annotations_annotation_view_annotationview",
-      "community": 27,
-      "community_name": "annotation_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "annotationview"
     },
     {
@@ -747,8 +780,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_annotations_annotation_view_annotationviewstate",
-      "community": 27,
-      "community_name": "annotation_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_annotationviewstate"
     },
     {
@@ -978,8 +1011,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardview",
-      "community": 20,
-      "community_name": "flashcard_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "flashcardview"
     },
     {
@@ -989,8 +1022,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardviewstate",
-      "community": 20,
-      "community_name": "flashcard_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_flashcardviewstate"
     },
     {
@@ -2023,8 +2056,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationview",
-      "community": 45,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "bionicfixationview"
     },
     {
@@ -2034,8 +2067,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationviewstate",
-      "community": 45,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_bionicfixationviewstate"
     },
     {
@@ -2122,8 +2155,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_guided_highlight_view_guidedhighlightview",
-      "community": 30,
-      "community_name": "guided_highlight_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "guidedhighlightview"
     },
     {
@@ -2133,8 +2166,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_guided_highlight_view_guidedhighlightviewstate",
-      "community": 30,
-      "community_name": "guided_highlight_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_guidedhighlightviewstate"
     },
     {
@@ -2804,8 +2837,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncview",
-      "community": 41,
-      "community_name": "sync_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "syncview"
     },
     {
@@ -2815,8 +2848,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncviewstate",
-      "community": 41,
-      "community_name": "sync_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_syncviewstate"
     },
     {
@@ -3121,6 +3154,50 @@
       "norm_label": ".testexample()"
     },
     {
+      "label": "ffi_bridge_test.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/ffi_bridge_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_ffi_bridge_test",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "ffi_bridge_test.dart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/ffi_bridge_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_ffi_bridge_test_main",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "main"
+    },
+    {
+      "label": "package:flutter_test/flutter_test.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_test_flutter_test_dart",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "package:flutter_test/flutter_test.dart"
+    },
+    {
+      "label": "package:flutter_client/src/core/ffi_bridge.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_client_src_core_ffi_bridge_dart",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "package:flutter_client/src/core/ffi_bridge.dart"
+    },
+    {
       "label": "file_parser_test.dart",
       "file_type": "code",
       "source_file": "apps/flutter_client/test/file_parser_test.dart",
@@ -3141,17 +3218,6 @@
       "community": 46,
       "community_name": "file_parser_service.dart",
       "norm_label": "main"
-    },
-    {
-      "label": "package:flutter_test/flutter_test.dart",
-      "file_type": "code",
-      "source_file": null,
-      "source_location": null,
-      "_origin": "ast",
-      "id": "package_flutter_test_flutter_test_dart",
-      "community": 46,
-      "community_name": "file_parser_service.dart",
-      "norm_label": "package:flutter_test/flutter_test.dart"
     },
     {
       "label": "package:flutter_client/src/features/library/file_parser_service.dart",
@@ -3746,6 +3812,17 @@
       "community": 11,
       "community_name": "ai/mod.rs",
       "norm_label": "calculate_cci_score()"
+    },
+    {
+      "label": "calculate_orp_index()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "native_rust_core_src_api_mod_calculate_orp_index",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": "calculate_orp_index()"
     },
     {
       "label": "db/mod.rs",
@@ -9857,6 +9934,28 @@
       "target": "package_google_fonts_google_fonts_dart"
     },
     {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/core/ffi_bridge.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_core_ffi_bridge",
+      "target": "apps_flutter_client_lib_src_core_ffi_bridge_calculateorpindex"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/core/ffi_bridge.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_core_ffi_bridge",
+      "target": "apps_flutter_client_lib_src_core_ffi_bridge_nativeengine"
+    },
+    {
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -12986,23 +13085,34 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_file": "apps/flutter_client/test/ffi_bridge_test.dart",
       "source_location": null,
       "weight": 1.0,
       "_origin": "ast",
-      "source": "apps_flutter_client_test_file_parser_test",
-      "target": "apps_flutter_client_test_file_parser_test_main"
+      "source": "apps_flutter_client_test_ffi_bridge_test",
+      "target": "apps_flutter_client_test_ffi_bridge_test_main"
     },
     {
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_file": "apps/flutter_client/test/ffi_bridge_test.dart",
       "source_location": null,
       "weight": 1.0,
       "_origin": "ast",
-      "source": "apps_flutter_client_test_file_parser_test",
-      "target": "package_flutter_client_src_features_library_file_parser_service_dart"
+      "source": "apps_flutter_client_test_ffi_bridge_test",
+      "target": "package_flutter_client_src_core_ffi_bridge_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/ffi_bridge_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_ffi_bridge_test",
+      "target": "package_flutter_test_flutter_test_dart"
     },
     {
       "relation": "imports",
@@ -13025,6 +13135,28 @@
       "_origin": "ast",
       "source": "apps_flutter_client_test_widget_test",
       "target": "package_flutter_test_flutter_test_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_file_parser_test",
+      "target": "apps_flutter_client_test_file_parser_test_main"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_file_parser_test",
+      "target": "package_flutter_client_src_features_library_file_parser_service_dart"
     },
     {
       "relation": "defines",
@@ -13721,6 +13853,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod",
+      "target": "native_rust_core_src_api_mod_calculate_orp_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
@@ -13807,6 +13950,18 @@
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod_stream_rsvp_timings",
       "target": "native_rust_core_src_api_mod_generate_rsvp_timings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_calculate_orp_index",
+      "target": "native_rust_core_src_api_mod_rs_string",
       "confidence_score": 1.0
     },
     {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
+import 'sync_transport.dart';
 
 class SyncView extends StatefulWidget {
   const SyncView({super.key});
@@ -11,6 +12,7 @@ class SyncView extends StatefulWidget {
 
 class _SyncViewState extends State<SyncView> {
   bool _syncing = false;
+  final SyncTransportAdapter _transportAdapter = SyncTransportAdapter();
 
   static final List<Map<String, dynamic>> _outbox = [
     {'id': 'op-001', 'op': 'highlight_upsert', 'bytes': 420, 'status': 'queued'},
@@ -20,6 +22,7 @@ class _SyncViewState extends State<SyncView> {
 
   void _sync() async {
     setState(() => _syncing = true);
+    final _ = _transportAdapter.packageDelta([1, 2, 3, 4, 5]);
     await Future.delayed(const Duration(seconds: 2));
     if (mounted) setState(() => _syncing = false);
     if (mounted) {

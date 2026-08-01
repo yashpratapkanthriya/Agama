@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
-    "mtime": 1785571774.0739098,
-    "ast_hash": "4a613d19cd330c9699698cc4fd200ddd",
+    "mtime": 1785585427.9952278,
+    "ast_hash": "c360b8986048be009f3bd494b7d94cae",
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
@@ -402,6 +402,16 @@
   "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md": {
     "mtime": 1785585021.6508036,
     "ast_hash": "a327c8c8821852d0f4a1a9d3e0d107a8",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/core/ffi_bridge.dart": {
+    "mtime": 1785585430.6136608,
+    "ast_hash": "3c365db397172b1bc654603d1dbe53eb",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/ffi_bridge_test.dart": {
+    "mtime": 1785585422.0355208,
+    "ast_hash": "0feff1ae4479be58f04853e8cc3c4d59",
     "semantic_hash": ""
   }
 }
