@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -56,9 +55,9 @@ class _LibraryViewState extends State<LibraryView> {
       'The Agama Platform is engineered as a high-performance local-first zero-backend speed reading system. By executing PDF parsing, vector indexing, and ONNX complexity inference inside an embedded Rust core, the system achieves absolute privacy, zero cloud costs, and instant responsiveness.';
 
   final List<_Doc> _docs = [
-    _Doc('Zero-Backend SAD Architecture', 'PDF', 5100, 0.65, AgamaTheme.indigo),
-    _Doc('Quantum Optics & Photonic Computing', 'EPUB', 2450, 0.30, AgamaTheme.emerald),
-    _Doc('ONNX Syntactic Complexity Engine', 'MD', 1820, 0.90, AgamaTheme.amber),
+    const _Doc('Zero-Backend SAD Architecture', 'PDF', 5100, 0.65, AgamaTheme.indigo),
+    const _Doc('Quantum Optics & Photonic Computing', 'EPUB', 2450, 0.30, AgamaTheme.emerald),
+    const _Doc('ONNX Syntactic Complexity Engine', 'MD', 1820, 0.90, AgamaTheme.amber),
   ];
 
   @override
@@ -182,28 +181,28 @@ class _LibraryTab extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(
-                          color: AgamaTheme.indigo.withOpacity(0.12),
+                          color: AgamaTheme.indigo.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(4),
                         ),
-                        child: Text('.PDF', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.indigo)),
+                        child: const Text('.PDF', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.indigo)),
                       ),
                       const SizedBox(width: 4),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(
-                          color: AgamaTheme.emerald.withOpacity(0.12),
+                          color: AgamaTheme.emerald.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(4),
                         ),
-                        child: Text('.EPUB', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.emerald)),
+                        child: const Text('.EPUB', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.emerald)),
                       ),
                       const SizedBox(width: 4),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(
-                          color: AgamaTheme.amber.withOpacity(0.12),
+                          color: AgamaTheme.amber.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(4),
                         ),
-                        child: Text('.MD', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.amber)),
+                        child: const Text('.MD', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.amber)),
                       ),
                     ],
                   ),
@@ -219,7 +218,7 @@ class _LibraryTab extends StatelessWidget {
                   Expanded(
                     child: OutlinedButton.icon(
                       onPressed: () {
-                        final samplePdfHeader = 'BT /F1 12 Tf 72 712 Td (Agama Platform PDF Specification: Zero-Backend Speed Reader) Tj ET';
+                        const samplePdfHeader = 'BT /F1 12 Tf 72 712 Td (Agama Platform PDF Specification: Zero-Backend Speed Reader) Tj ET';
                         final bytes = Uint8List.fromList(utf8.encode('%PDF-1.7 $samplePdfHeader'));
                         final parsed = parser.parseBytes(bytes, 'document_sample.pdf');
                         ctrl.text = parsed.content;
@@ -233,7 +232,7 @@ class _LibraryTab extends StatelessWidget {
                   Expanded(
                     child: OutlinedButton.icon(
                       onPressed: () {
-                        final sampleEpubText = 'Chapter 1: Quantum Photonic Architecture and Sub-Millisecond RSVP Fixation Engine';
+                        const sampleEpubText = 'Chapter 1: Quantum Photonic Architecture and Sub-Millisecond RSVP Fixation Engine';
                         final bytes = Uint8List.fromList(utf8.encode(sampleEpubText));
                         final parsed = parser.parseBytes(bytes, 'research_paper.epub');
                         ctrl.text = parsed.content;
@@ -361,7 +360,7 @@ class _LibraryTab extends StatelessWidget {
               const SizedBox(height: 24),
 
               // ── Engine chooser with decision guide ───────────────────
-              _SectionLabel('CHOOSE YOUR METHOD'),
+              const _SectionLabel('CHOOSE YOUR METHOD'),
               const SizedBox(height: 10),
               _EngineChooser(sampleText: sampleText),
 
@@ -371,7 +370,7 @@ class _LibraryTab extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _SectionLabel('YOUR LIBRARY'),
+                  const _SectionLabel('YOUR LIBRARY'),
                   TextButton.icon(
                     style: TextButton.styleFrom(
                       foregroundColor: AgamaTheme.indigo,

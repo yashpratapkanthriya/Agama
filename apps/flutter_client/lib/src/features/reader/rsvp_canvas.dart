@@ -100,17 +100,6 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
 
   @override
   Widget build(BuildContext context) {
-    try {
-      ProviderScope.containerOf(context, listen: false);
-    } catch (_) {
-      return ProviderScope(
-        child: RsvpCanvasView(
-          text: widget.text,
-          targetWpm: widget.targetWpm,
-        ),
-      );
-    }
-
     final theme = Theme.of(context);
     final settings = ref.watch(readerSettingsProvider);
     final wpm = _customWpm ?? settings.wpm;

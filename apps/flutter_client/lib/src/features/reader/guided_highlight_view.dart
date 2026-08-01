@@ -157,7 +157,7 @@ class _GuidedHighlightViewState extends State<GuidedHighlightView> {
                       // WPM selector
                       PopupMenuButton<int>(
                         tooltip: 'Speed',
-                        icon: Icon(Icons.speed,
+                        icon: const Icon(Icons.speed,
                             color: AgamaTheme.inkMuted, size: 20),
                         onSelected: (v) => setState(() => _wpm = v),
                         itemBuilder: (_) => [300, 450, 600, 800]
@@ -196,8 +196,8 @@ class _GuidedHighlightViewState extends State<GuidedHighlightView> {
                         child: InkWell(
                           onTap: () => setState(() => _idx = 0),
                           borderRadius: BorderRadius.circular(8),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8),
                             child: Icon(Icons.replay_rounded,
                                 size: 20, color: AgamaTheme.inkMuted),
                           ),

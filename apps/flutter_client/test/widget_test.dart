@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_client/src/app/theme.dart';
 import 'package:flutter_client/src/features/library/library_view.dart';
@@ -34,10 +35,12 @@ void main() {
 
   testWidgets('RsvpCanvasView renders ORP redicle and controls', (WidgetTester tester) async {
     await tester.pumpWidget(
-      const MaterialApp(
-        home: RsvpCanvasView(
-          text: 'Quick brown fox jumps',
-          targetWpm: 500,
+      const ProviderScope(
+        child: MaterialApp(
+          home: RsvpCanvasView(
+            text: 'Quick brown fox jumps',
+            targetWpm: 500,
+          ),
         ),
       ),
     );
