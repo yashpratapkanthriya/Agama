@@ -144,6 +144,143 @@ class _LibraryViewState extends State<LibraryView> {
   }
 }
 
+// ── Hero section with direct file & text input ───────────────────────────────
+class _HeroSection extends StatefulWidget {
+  const _HeroSection();
+
+  @override
+  State<_HeroSection> createState() => _HeroSectionState();
+}
+
+class _HeroSectionState extends State<_HeroSection> {
+  PlatformFile? _selectedFile;
+  final TextEditingController _textController = TextEditingController();
+  final FileParserService _parser = FileParserService();
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
+
+  Future<void> _pickFile() async {
+    try {
+      final result = await FilePicker.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['pdf', 'epub', 'md', 'txt'],
+        withData: true,
+      );
+      if (result != null && result.files.isNotEmpty) {
+        final file = result.files.single;
+        setState(() {
+          _selectedFile = file;
+        });
+        ParsedDocument? parsed;
+        if (file.path != null) {
+          parsed = await _parser.parseFile(file.path!);
+        } else if (file.bytes != null) {
+          parsed = _parser.parseBytes(file.bytes!, file.name);
+        }
+        if (parsed != null && mounted) {
+          _textController.text = parsed.content;
+        }
+      }
+    } catch (e) {
+      debugPrint('File pick error: $e');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: AgamaTheme.rsvpBg,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Read faster. Remember more.',
+            style: GoogleFonts.outfit(
+              fontSize: 22,
+              fontWeight: FontWeight.w800,
+              color: Colors.white,
+              height: 1.2,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Agama trains your reading speed using three science-backed methods. '
+            'Select a document or paste text below to begin.',
+            style: GoogleFonts.inter(
+              fontSize: 13,
+              height: 1.55,
+              color: const Color(0xFF8A93AB),
+            ),
+          ),
+          const SizedBox(height: 16),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 16),
+                side: const BorderSide(color: AgamaTheme.indigo, width: 1.5),
+                backgroundColor: AgamaTheme.indigo.withValues(alpha: 0.15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(9),
+                ),
+              ),
+              onPressed: _pickFile,
+              icon: const Icon(Icons.upload_file, size: 18, color: Colors.white),
+              label: Text(
+                _selectedFile != null
+                    ? _selectedFile!.name
+                    : 'Select PDF, EPUB, or Markdown',
+                style: GoogleFonts.inter(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 12),
+          TextField(
+            controller: _textController,
+            maxLines: 4,
+            style: GoogleFonts.inter(fontSize: 13, color: Colors.white),
+            decoration: InputDecoration(
+              hintText: 'Paste document text here...',
+              hintStyle: GoogleFonts.inter(
+                fontSize: 13,
+                color: const Color(0xFF8A93AB),
+              ),
+              filled: true,
+              fillColor: Colors.white.withValues(alpha: 0.05),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(9),
+                borderSide: BorderSide(
+                  color: Colors.white.withValues(alpha: 0.1),
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(9),
+                borderSide: const BorderSide(
+                  color: AgamaTheme.indigo,
+                ),
+              ),
+              contentPadding: const EdgeInsets.all(12),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 // ── Tab 0: Library + Engine picker ────────────────────────────────────────
 class _LibraryTab extends StatelessWidget {
   final List<_Doc> docs;
@@ -330,50 +467,7 @@ class _LibraryTab extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // ── Hero — what is this app? ─────────────────────────────
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: AgamaTheme.rsvpBg,
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Read faster. Remember more.',
-                      style: GoogleFonts.outfit(
-                        fontSize: 22, fontWeight: FontWeight.w800,
-                        color: Colors.white, height: 1.2,
-                      )),
-                    const SizedBox(height: 8),
-                    Text(
-                      'Agama trains your reading speed using three science-backed methods. '
-                      'Paste any text below to begin.',
-                      style: GoogleFonts.inter(
-                        fontSize: 13, height: 1.55,
-                        color: const Color(0xFF8A93AB),
-                      )),
-                    const SizedBox(height: 16),
-                    SizedBox(
-                      width: double.infinity,
-                      child: FilledButton.icon(
-                        style: FilledButton.styleFrom(
-                          backgroundColor: AgamaTheme.indigo,
-                          padding: const EdgeInsets.symmetric(vertical: 13),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(9)),
-                        ),
-                        onPressed: () => _showImportSheet(context),
-                        icon: const Icon(Icons.add_rounded, size: 18, color: Colors.white),
-                        label: Text('Paste text to read',
-                          style: GoogleFonts.inter(
-                            fontSize: 14, fontWeight: FontWeight.w600,
-                            color: Colors.white)),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const _HeroSection(),
 
               const SizedBox(height: 24),
 

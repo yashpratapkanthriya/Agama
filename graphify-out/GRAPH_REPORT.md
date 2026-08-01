@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 78 files · ~65,279 words
+- 90 files · ~72,592 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 905 nodes · 1064 edges · 61 communities (49 shown, 12 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.81)
+- 1317 nodes · 1656 edges · 77 communities (66 shown, 11 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `eb98b4e4`
+- Built from commit: `926cec96`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -27,12 +27,13 @@
 - Monorepo Multi-Folder Merge
 - Cluster Only Execution
 - ai/mod.rs
-- Result
+- String
 - SyncEngine
 - ParsedDocument
 - Production-Ready AI-First Platform: Master Technical Architecture & Specification
 - build_native_libs.sh
 - generate_frb.sh
+- StatelessWidget
 - Agama
 - flashcard_view.dart
 - Speed Reading Apps: Comprehensive Analysis & Gap Assessment
@@ -43,7 +44,7 @@
 - Agama Database Schema Specification
 - annotation_view.dart
 - Decentralized Sync Architecture Specification
-- String?
+- frb_generated.dart
 - guided_highlight_view.dart
 - 3. Operational Feature Guide
 - ffi_bridge.dart
@@ -60,12 +61,12 @@
 - Product
 - theme.dart
 - file_parser_service.dart
-- package:flutter/material.dart
-- AppDelegate
+- Library UI Overhaul Design Spec
+- GeneratedPluginRegistrant.swift
 - analytics_view.dart
-- StatelessWidget
+- Global Constraints
 - manifest.json
-- MaterialPageRoute
+- .sse_decode
 - flutter_client
 - sync_transport.dart
 - vector_search_service.dart
@@ -75,18 +76,34 @@
 - bionic_fixation_view.dart
 - Design Spec: Agama Sub-project 1 — Document Ingestion & Reading Engine Overhaul
 - Global Constraints
+- Global Constraints
+- Rust Bridge Setup Design
+- frb_generated.io.dart
+- _
+- models.dart
+- package:flutter/material.dart
+- 5. Market Gaps & Unaddressed Opportunities
+- 4. User Complaints & Real-World Problems
+- RustLib
+- 2.2 Outread
+- 2.3 Bionic Reading
+- 2.4 Spritz
+- 3. Scientific & Cognitive Limitations
+- RustLibApiImplPlatform
+- RustLibWasmModule
+- RustLibWire
 
 ## God Nodes (most connected - your core abstractions)
-1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
-2. `Production-Ready Local-First Architecture: Zero-Backend Platform` - 18 edges
-3. `DatabaseEngine` - 15 edges
-4. `Graphify Full Pipeline` - 15 edges
-5. `Product` - 12 edges
-6. `4. Key Architectural Decision Records (ADRs)` - 12 edges
-7. `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` - 12 edges
-8. `Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform` - 12 edges
-9. `test_annotations_and_flashcards_historization()` - 9 edges
-10. `Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)` - 9 edges
+1. `_` - 73 edges
+2. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
+3. `Production-Ready Local-First Architecture: Zero-Backend Platform` - 18 edges
+4. `DatabaseEngine` - 15 edges
+5. `Graphify Full Pipeline` - 15 edges
+6. `()` - 13 edges
+7. `Product` - 12 edges
+8. `4. Key Architectural Decision Records (ADRs)` - 12 edges
+9. `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` - 12 edges
+10. `Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `SyncEngine` --references--> `_Doc`  [EXTRACTED]
@@ -108,7 +125,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (61 total, 12 thin omitted)
+## Communities (77 total, 11 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -119,32 +136,36 @@ Cohesion: 0.06
 Nodes (40): readerSettingsProvider, accentColor, build, createState, _customWpm, _delayForWord, dispose, _focus (+32 more)
 
 ### Community 2 - "reader_provider.dart"
-Cohesion: 0.07
-Nodes (29): copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState (+21 more)
+Cohesion: 0.12
+Nodes (16): copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState (+8 more)
 
 ### Community 3 - "library_view.dart"
-Cohesion: 0.05
-Nodes (37): ../analytics/analytics_view.dart, Animation, AnimationController, ../../app/app.dart, _ac, accent, _anim, color (+29 more)
+Cohesion: 0.04
+Nodes (48): ../analytics/analytics_view.dart, Animation, AnimationController, ../../app/app.dart, _ac, accent, _anim, build (+40 more)
 
 ### Community 11 - "ai/mod.rs"
-Cohesion: 0.10
-Nodes (19): AdaptivePacingEngine, BionicFixationEngine, OnnxInferenceEngine, Default, Self, Vec, SpacedRepetitionEngine, test_bionic_fixation() (+11 more)
+Cohesion: 0.13
+Nodes (13): AdaptivePacingEngine, BionicFixationEngine, OnnxInferenceEngine, BionicWord, Default, Self, Vec, WordTiming (+5 more)
 
-### Community 12 - "Result"
-Cohesion: 0.17
-Nodes (19): Connection, DatabaseEngine, Result, Self, Vec, test_annotations_and_flashcards_historization(), test_db_init_and_document_insert(), test_performance_benchmark_and_cci_math() (+11 more)
+### Community 12 - "String"
+Cohesion: 0.10
+Nodes (32): Connection, calculate_orp_index(), generate_bionic_words(), generate_rsvp_timings(), parse_file(), BionicWord, ParsedDocument, Result (+24 more)
 
 ### Community 13 - "SyncEngine"
-Cohesion: 0.22
-Nodes (8): _Doc, Default, Result, Self, String, Vec, SyncEngine, test_yrs_crdt_delta_generation_and_merge()
+Cohesion: 0.24
+Nodes (7): _Doc, Default, Result, Self, Vec, SyncEngine, test_yrs_crdt_delta_generation_and_merge()
 
 ### Community 14 - "ParsedDocument"
-Cohesion: 0.26
-Nodes (9): DocumentParser, EpubParser, ParsedDocument, Option, Result, String, Vec, TextParser (+1 more)
+Cohesion: 0.29
+Nodes (8): DocumentParser, EpubParser, ParsedDocument, Option, Result, Vec, TextParser, UnifiedParser
 
 ### Community 15 - "Production-Ready AI-First Platform: Master Technical Architecture & Specification"
 Cohesion: 0.04
 Nodes (48): ADR 001: Choice of Flutter for Cross-Platform Client, ADR 002: Next.js 15 App Router & Better Auth for Backend Architecture, Cache Invalidation Governance, Complete Prisma Schema Definition, Conflict Resolution Strategy: Optimistic Locking + Modified Field Level LWW, Core Architectural Guiding Principles, DFD Level 0 (Context Diagram), DFD Level 1 (Core Data Subsystems) (+40 more)
+
+### Community 18 - "StatelessWidget"
+Cohesion: 0.17
+Nodes (12): _RateBtn, _AppBarBtn, _DocumentTile, _EngineBtn, _EngineRow, _KnowledgeTab, _KnowledgeTile, _LibraryTab (+4 more)
 
 ### Community 19 - "Agama"
 Cohesion: 0.11
@@ -155,8 +176,8 @@ Cohesion: 0.10
 Nodes (19): answer, build, _cards, color, createState, ef, FlashcardItem, FlashcardStore (+11 more)
 
 ### Community 21 - "Speed Reading Apps: Comprehensive Analysis & Gap Assessment"
-Cohesion: 0.06
-Nodes (31): 1. Executive Summary, 3.1 The Subvocalization Myth, 3.2 RSVP Comprehension Problems, 3.3 Bionic Reading — The Evidence Gap, 3.4 Eye Strain & Fatigue, 3.5 Peripheral Vision Claims, 3. Scientific & Cognitive Limitations, 4.1 Content Format Destruction (+23 more)
+Cohesion: 0.18
+Nodes (10): 1. Executive Summary, 6. Competitive Feature Matrix, 7. Recommendations for Product Development, 8. Conclusion, For Existing Apps, For New Market Entrants, Sources & References, Speed Reading Apps: Comprehensive Analysis & Gap Assessment (+2 more)
 
 ### Community 22 - "Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform"
 Cohesion: 0.06
@@ -167,8 +188,8 @@ Cohesion: 0.07
 Nodes (27): Core Architectural Principles, Executive Architecture Summary, Flutter Riverpod Controller Consuming Rust Stream, High-Level Component Topology, On-Device Complexity Algorithm, PART 10: Riverpod 2.x State Management & FFI Stream Integration, PART 11: Enterprise Monorepo Structure, PART 12: Zero-Backend Security & Data Privacy Matrix (+19 more)
 
 ### Community 24 - "2.1 Spreeder"
-Cohesion: 0.08
-Nodes (25): 2.1 Spreeder, 2.2 Outread, 2.3 Bionic Reading, 2.4 Spritz, 2. App-by-App Deep Dive, Core Features, Core Features, Core Features (+17 more)
+Cohesion: 0.29
+Nodes (7): 2.1 Spreeder, 2. App-by-App Deep Dive, Core Features, Critical Gaps, Upcoming/Rumored Features, What Users Hate, What Users Love
 
 ### Community 25 - "4. Key Architectural Decision Records (ADRs)"
 Cohesion: 0.09
@@ -180,11 +201,15 @@ Nodes (22): 1. Executive Data Architecture Summary, 1. Schema Version Tracking (
 
 ### Community 27 - "annotation_view.dart"
 Cohesion: 0.10
-Nodes (19): AnnotationItem, AnnotationStore, build, color, createState, id, initState, items (+11 more)
+Nodes (21): AnnotationItem, AnnotationStore, AnnotationView, _AnnotationViewState, build, color, createState, id (+13 more)
 
 ### Community 28 - "Decentralized Sync Architecture Specification"
 Cohesion: 0.12
 Nodes (15): 1. Executive Summary & Core Principles, 2.1 The Cross-Platform Challenge, 2.2 The WebDAV Solution, 2.3 Channel Comparison Matrix, 2. Why WebDAV is the Primary Sync Channel, 3.1 End-to-End Encrypted WebDAV Sync Loop, 3. Sequence & Data Flow Specifications, 4.1 Encrypted Sync File Format (`.crdt`) (+7 more)
+
+### Community 29 - "frb_generated.dart"
+Cohesion: 0.02
+Nodes (90): ApiImplConstructor, apiImplConstructor, codegenVersion, crateApiCalculateCciScore, crateApiCalculateOrpIndex, crateApiGenerateBionicWords, crateApiGenerateRsvpTimings, crateApiParseFile (+82 more)
 
 ### Community 30 - "guided_highlight_view.dart"
 Cohesion: 0.12
@@ -243,32 +268,32 @@ Cohesion: 0.07
 Nodes (27): AgamaTheme, amber, bg, border, borderStrong, _buildTextTheme, crimson, dark (+19 more)
 
 ### Community 45 - "file_parser_service.dart"
-Cohesion: 0.11
-Nodes (16): content, _determineFormat, DocumentFormat, _extractTextFromBytes, FileParserService, format, parseBytes, ParsedDocument (+8 more)
+Cohesion: 0.07
+Nodes (27): content, _determineFormat, DocumentFormat, _extractTextFromBytes, FileParserService, format, init, parseBytes (+19 more)
 
-### Community 46 - "package:flutter/material.dart"
-Cohesion: 0.06
-Nodes (33): main, AgamaApp, build, _getInitialHome, themeModeNotifier, main, main, main (+25 more)
+### Community 46 - "Library UI Overhaul Design Spec"
+Cohesion: 0.18
+Nodes (10): 1. Hero Input Section, 2. Engine Selection Section, 3. Library Section (Recent Documents), Architecture & Layout, Context, Design Goals, Error Handling, Implementation Details (+2 more)
 
-### Community 47 - "AppDelegate"
+### Community 47 - "GeneratedPluginRegistrant.swift"
 Cohesion: 0.11
-Nodes (14): RegisterGeneratedPlugins(), AppDelegate, MainFlutterWindow, RunnerTests, Bool, Cocoa, FlutterAppDelegate, FlutterMacOS (+6 more)
+Nodes (15): RegisterGeneratedPlugins(), AppDelegate, MainFlutterWindow, RunnerTests, Bool, Cocoa, file_picker, FlutterAppDelegate (+7 more)
 
 ### Community 48 - "analytics_view.dart"
 Cohesion: 0.17
 Nodes (11): accent, AnalyticsView, build, label, _MetricCard, _peers, _sessions, _totalWords (+3 more)
 
-### Community 49 - "StatelessWidget"
-Cohesion: 0.17
-Nodes (12): _RateBtn, _AppBarBtn, _DocumentTile, _EngineBtn, _EngineRow, _KnowledgeTab, _KnowledgeTile, _LibraryTab (+4 more)
+### Community 49 - "Global Constraints"
+Cohesion: 0.40
+Nodes (4): Global Constraints, Library UI Overhaul Implementation Plan, Task 1: Expose Direct Inputs in Hero Section, Task 2: Connect Inputs to Engine Chooser and Remove Bottom Sheet
 
 ### Community 50 - "manifest.json"
 Cohesion: 0.18
 Nodes (10): background_color, description, display, icons, name, orientation, prefer_related_applications, short_name (+2 more)
 
-### Community 51 - "MaterialPageRoute"
-Cohesion: 0.50
-Nodes (4): build, _launch, _showImportSheet, MaterialPageRoute
+### Community 51 - ".sse_decode"
+Cohesion: 0.06
+Nodes (43): DartAbi, IntoDart, IntoDartExceptPrimitive, IntoIntoDart, MessagePort, (), bool, crate::models::BionicWord (+35 more)
 
 ### Community 53 - "sync_transport.dart"
 Cohesion: 0.29
@@ -288,7 +313,7 @@ Nodes (14): 1. Process & Skill Activation Rules (Superpowers Plugin), 2. Token &
 
 ### Community 57 - "State"
 Cohesion: 0.21
-Nodes (13): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, _EngineChooser, _EngineChooserState, LibraryView, _LibraryViewState (+5 more)
+Nodes (13): FlashcardView, _FlashcardViewState, _EngineChooser, _EngineChooserState, _HeroSection, _HeroSectionState, LibraryView, _LibraryViewState (+5 more)
 
 ### Community 58 - "bionic_fixation_view.dart"
 Cohesion: 0.20
@@ -302,25 +327,89 @@ Nodes (10): 1. Overview, 2.1 Document Ingestion Layer (`apps/flutter_client/lib/
 Cohesion: 0.33
 Nodes (5): Global Constraints, Reading Engine Overhaul Implementation Plan, Task 1: Reader Settings Provider, Task 2: Update File Parser Service, Task 3: Update RSVP Canvas UI
 
+### Community 61 - "Global Constraints"
+Cohesion: 0.33
+Nodes (5): Global Constraints, Rust Bridge Implementation Plan, Task 1: Add Dependencies, Task 2: Expose Parser API, Task 3: Generate Bridge and Connect Dart
+
+### Community 62 - "Rust Bridge Setup Design"
+Cohesion: 0.40
+Nodes (4): Architecture & Components, Data Flow, Purpose, Rust Bridge Setup Design
+
+### Community 63 - "frb_generated.io.dart"
+Cohesion: 0.03
+Nodes (63): dco_decode_AnyhowException, dco_decode_bionic_word, dco_decode_bool, dco_decode_f_64, dco_decode_i_64, dco_decode_list_bionic_word, dco_decode_list_prim_u_8_strict, dco_decode_list_String (+55 more)
+
+### Community 64 - "_"
+Cohesion: 0.03
+Nodes (64): api.dart, _, dco_decode_AnyhowException, dco_decode_bionic_word, dco_decode_bool, dco_decode_f_64, dco_decode_i_64, dco_decode_list_bionic_word (+56 more)
+
+### Community 65 - "models.dart"
+Cohesion: 0.05
+Nodes (44): copyWith, fontFamily, fontSize, hashCode, operator, ReaderSettings, ReaderSettingsNotifier, setFontFamily (+36 more)
+
+### Community 68 - "package:flutter/material.dart"
+Cohesion: 0.06
+Nodes (34): main, AgamaApp, build, _getInitialHome, themeModeNotifier, main, main, main (+26 more)
+
+### Community 72 - "5. Market Gaps & Unaddressed Opportunities"
+Cohesion: 0.25
+Nodes (8): 5.1 The "Adaptive Intelligent Pacing" Opportunity, 5.2 Annotation-Native Speed Reading, 5.3 Cross-Platform, Offline-First Design, 5.4 Evidence-Based Comprehension Scaffolding, 5.5 Multilingual & Script Support, 5.6 Social Reading & Accountability, 5.7 Integration with Existing Workflows, 5. Market Gaps & Unaddressed Opportunities
+
+### Community 73 - "4. User Complaints & Real-World Problems"
+Cohesion: 0.29
+Nodes (7): 4.1 Content Format Destruction, 4.2 DRM & File Import Frustrations, 4.3 Platform & Pricing Pain Points, 4.4 The "Reading Flow" Problem, 4.5 Annotation & Knowledge Management Gap, 4.6 Social & Motivation Deficit, 4. User Complaints & Real-World Problems
+
+### Community 74 - "RustLib"
+Cohesion: 0.40
+Nodes (6): RustLib, RustLibApi, RustLibApiImpl, BaseApi, BaseEntrypoint, RustLibApiImplPlatform
+
+### Community 75 - "2.2 Outread"
+Cohesion: 0.33
+Nodes (6): 2.2 Outread, Core Features, Critical Gaps, Upcoming/Rumored Features, What Users Hate, What Users Love
+
+### Community 76 - "2.3 Bionic Reading"
+Cohesion: 0.33
+Nodes (6): 2.3 Bionic Reading, Core Features, Critical Gaps, Upcoming/Rumored Features, What Users Hate, What Users Love
+
+### Community 77 - "2.4 Spritz"
+Cohesion: 0.33
+Nodes (6): 2.4 Spritz, Core Features, Critical Gaps, Upcoming/Rumored Features, What Users Hate, What Users Love
+
+### Community 78 - "3. Scientific & Cognitive Limitations"
+Cohesion: 0.33
+Nodes (6): 3.1 The Subvocalization Myth, 3.2 RSVP Comprehension Problems, 3.3 Bionic Reading — The Evidence Gap, 3.4 Eye Strain & Fatigue, 3.5 Peripheral Vision Claims, 3. Scientific & Cognitive Limitations
+
+### Community 79 - "RustLibApiImplPlatform"
+Cohesion: 0.67
+Nodes (4): RustLibApiImplPlatform, RustLibApiImplPlatform, BaseApiImpl, RustLibWire
+
+### Community 80 - "RustLibWasmModule"
+Cohesion: 0.67
+Nodes (3): @anonymous, @JS, RustLibWasmModule
+
+### Community 81 - "RustLibWire"
+Cohesion: 0.67
+Nodes (3): RustLibWire, RustLibWire, BaseWire
+
 ## Knowledge Gaps
-- **520 isolated node(s):** `main`, `themeModeNotifier`, `_getInitialHome`, `build`, `AgamaTheme` (+515 more)
+- **775 isolated node(s):** `main`, `themeModeNotifier`, `_getInitialHome`, `build`, `AgamaTheme` (+770 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `_Doc` connect `SyncEngine` to `library_view.dart`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `String` connect `String` to `.sse_decode`, `SyncEngine`, `ParsedDocument`?**
+  _High betweenness centrality (0.100) - this node is a cross-community bridge._
+- **Why does `_` connect `_` to `models.dart`, `file_parser_service.dart`, `RustLibApiImplPlatform`, `RustLibWasmModule`, `RustLibWire`, `frb_generated.io.dart`?**
+  _High betweenness centrality (0.079) - this node is a cross-community bridge._
 - **What connects `main`, `themeModeNotifier`, `_getInitialHome` to the rest of the system?**
-  _520 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _775 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.05609756097560976 - nodes in this community are weakly interconnected._
 - **Should `reader_provider.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.06881720430107527 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04251700680272109 - nodes in this community are weakly interconnected._
