@@ -3,7 +3,6 @@ import 'dart:typed_data';
 
 import '../../rust/api.dart' as rust;
 import '../../rust/frb_generated.dart';
-import '../../rust/parser.dart' as rust_parser;
 
 enum DocumentFormat { txt, markdown, pdf, epub }
 

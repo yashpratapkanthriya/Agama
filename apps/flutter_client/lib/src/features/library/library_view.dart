@@ -1,7 +1,7 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:file_picker/file_picker.dart';
 import '../../app/app.dart';
 import '../../app/theme.dart';
 import '../reader/rsvp_canvas.dart';
@@ -212,97 +212,62 @@ class _LibraryTab extends StatelessWidget {
               Text('Paste text or select a PDF / EPUB / Markdown file below.',
                   style: Theme.of(context).textTheme.bodySmall),
               const SizedBox(height: 12),
-              // Preset PDF / EPUB Quick Import Bar
-              Row(
+              // File Picker Button
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    side: const BorderSide(color: AgamaTheme.indigo, width: 1.5),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                  onPressed: () async {
+                    try {
+                      final result = await FilePicker.pickFiles(
+                        type: FileType.custom,
+                        allowedExtensions: ['pdf', 'epub', 'md', 'txt'],
+                        withData: true,
+                      );
+                      if (result != null) {
+                        final file = result.files.single;
+                        ParsedDocument? parsed;
+                        
+                        if (file.path != null) {
+                          parsed = await parser.parseFile(file.path!);
+                        } else if (file.bytes != null) {
+                          parsed = parser.parseBytes(file.bytes!, file.name);
+                        }
+
+                        if (parsed != null && context.mounted) {
+                          ctrl.text = parsed.content;
+                          setModalState(() {});
+                        }
+                      }
+                    } catch (e) {
+                      debugPrint('File pick error: \$e');
+                    }
+                  },
+                  icon: const Icon(Icons.upload_file, color: AgamaTheme.indigo),
+                  label: Text('Browse Files (.pdf, .epub, .md)', style: GoogleFonts.inter(fontWeight: FontWeight.w600, color: AgamaTheme.indigo)),
+                ),
+              ),
+              const SizedBox(height: 16),
+              const Row(
                 children: [
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      onPressed: () {
-                        const samplePdfHeader = 'BT /F1 12 Tf 72 712 Td (Agama Platform PDF Specification: Zero-Backend Speed Reader) Tj ET';
-                        final bytes = Uint8List.fromList(utf8.encode('%PDF-1.7 $samplePdfHeader'));
-                        final parsed = parser.parseBytes(bytes, 'document_sample.pdf');
-                        ctrl.text = parsed.content;
-                        setModalState(() {});
-                      },
-                      icon: const Icon(Icons.picture_as_pdf_outlined, size: 16, color: Colors.redAccent),
-                      label: const Text('Sample .PDF', style: TextStyle(fontSize: 12)),
-                    ),
+                  Expanded(child: Divider()),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    child: Text('OR', style: TextStyle(color: AgamaTheme.inkFaint, fontSize: 12)),
                   ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      onPressed: () {
-                        const sampleEpubText = 'Chapter 1: Quantum Photonic Architecture and Sub-Millisecond RSVP Fixation Engine';
-                        final bytes = Uint8List.fromList(utf8.encode(sampleEpubText));
-                        final parsed = parser.parseBytes(bytes, 'research_paper.epub');
-                        ctrl.text = parsed.content;
-                        setModalState(() {});
-                      },
-                      icon: const Icon(Icons.book_outlined, size: 16, color: Colors.teal),
-                      label: const Text('Sample .EPUB', style: TextStyle(fontSize: 12)),
-                    ),
-                  ),
+                  Expanded(child: Divider()),
                 ],
               ),
-              const SizedBox(height: 12),
-              // External Workflow Integrations
-              Row(
-                children: [
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      onPressed: () {
-                        const sampleText = 'Instapaper Sync: "How to Build Zero-Backend Apps" by Local-First Web';
-                        final bytes = Uint8List.fromList(utf8.encode(sampleText));
-                        final parsed = parser.parseBytes(bytes, 'instapaper_article.txt');
-                        Navigator.pop(context);
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (_) => RsvpCanvasView(text: parsed.content),
-                        ));
-                      },
-                      icon: const Icon(Icons.bookmark_border, size: 16, color: Colors.blueGrey),
-                      label: const Text('Instapaper', style: TextStyle(fontSize: 12)),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      onPressed: () {
-                        const sampleText = 'Pocket Sync: "The Future of Offline-First AI" by Agama Labs';
-                        final bytes = Uint8List.fromList(utf8.encode(sampleText));
-                        final parsed = parser.parseBytes(bytes, 'pocket_article.txt');
-                        Navigator.pop(context);
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (_) => RsvpCanvasView(text: parsed.content),
-                        ));
-                      },
-                      icon: const Icon(Icons.save_outlined, size: 16, color: Colors.red),
-                      label: const Text('Pocket', style: TextStyle(fontSize: 12)),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      onPressed: () {
-                        const sampleText = 'RSS Sync: "Hacker News Frontpage Dump"';
-                        final bytes = Uint8List.fromList(utf8.encode(sampleText));
-                        final parsed = parser.parseBytes(bytes, 'rss_feed.txt');
-                        Navigator.pop(context);
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (_) => RsvpCanvasView(text: parsed.content),
-                        ));
-                      },
-                      icon: const Icon(Icons.rss_feed, size: 16, color: Colors.orange),
-                      label: const Text('RSS Feed', style: TextStyle(fontSize: 12)),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 16),
               TextField(
                 controller: ctrl,
                 maxLines: 5,
                 decoration: const InputDecoration(
-                  hintText: 'Paste document text or click Sample .PDF / .EPUB above…',
+                  hintText: 'Paste document text...',
                 ),
               ),
               const SizedBox(height: 16),
