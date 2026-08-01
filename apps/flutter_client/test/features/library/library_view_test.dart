@@ -14,8 +14,8 @@ void main() {
   testWidgets('Typing custom text in hero section updates engine chooser and launches reader with custom text', (WidgetTester tester) async {
     await tester.pumpWidget(const ProviderScope(child: MaterialApp(home: LibraryView())));
 
-    // Initially shows default sample text launch button label
-    expect(find.text('Try with sample text'), findsOneWidget);
+    // Initially shows default launch button label
+    expect(find.text('Start Reading'), findsOneWidget);
 
     // Type custom text into hero text field
     const customInput = 'Agama zero-backend AI speed reader test content';
@@ -23,7 +23,7 @@ void main() {
     await tester.enterText(textField, customInput);
     await tester.pump(const Duration(milliseconds: 100));
 
-    // Verify engine launch button label updates to reflect custom text input
+    // Verify engine launch button label reflects custom text input
     expect(find.text('Start Reading'), findsOneWidget);
 
     // Scroll into view and tap Start Reading button to launch RSVP engine
@@ -36,5 +36,26 @@ void main() {
 
     // Verify reader canvas is opened with the custom text
     expect(find.byType(RsvpCanvasView), findsOneWidget);
+  });
+
+  testWidgets('Engine click triggers validation if no input', (WidgetTester tester) async {
+    await tester.pumpWidget(const ProviderScope(child: MaterialApp(home: LibraryView())));
+    await tester.tap(find.text('RSVP'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(find.text('Please select a file or paste text first'), findsOneWidget);
+  });
+
+  testWidgets('Tapping document tile launches RSVP reader with document text', (WidgetTester tester) async {
+    await tester.pumpWidget(const ProviderScope(child: MaterialApp(home: LibraryView())));
+    
+    final docTile = find.text('Zero-Backend SAD Architecture');
+    await tester.ensureVisible(docTile);
+    await tester.tap(docTile);
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+
+    expect(find.byType(RsvpCanvasView), findsOneWidget);
+    expect(find.text('Zero-Backend'), findsWidgets);
   });
 }

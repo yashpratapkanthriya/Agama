@@ -55,9 +55,30 @@ class _LibraryViewState extends State<LibraryView> {
       'The Agama Platform is engineered as a high-performance local-first zero-backend speed reading system. By executing PDF parsing, vector indexing, and ONNX complexity inference inside an embedded Rust core, the system achieves absolute privacy, zero cloud costs, and instant responsiveness.';
 
   final List<_Doc> _docs = [
-    const _Doc('Zero-Backend SAD Architecture', 'PDF', 5100, 0.65, AgamaTheme.indigo),
-    const _Doc('Quantum Optics & Photonic Computing', 'EPUB', 2450, 0.30, AgamaTheme.emerald),
-    const _Doc('ONNX Syntactic Complexity Engine', 'MD', 1820, 0.90, AgamaTheme.amber),
+    const _Doc(
+      'Zero-Backend SAD Architecture',
+      'PDF',
+      5100,
+      0.65,
+      AgamaTheme.indigo,
+      'Zero-Backend SAD Architecture. The Agama Platform is engineered as a high-performance local-first zero-backend speed reading system. By executing PDF parsing, vector indexing, and ONNX complexity inference inside an embedded Rust core, the system achieves absolute privacy, zero cloud costs, and instant responsiveness.',
+    ),
+    const _Doc(
+      'Quantum Optics & Photonic Computing',
+      'EPUB',
+      2450,
+      0.30,
+      AgamaTheme.emerald,
+      'Quantum Optics & Photonic Computing. Photonic quantum information processing uses single photons to encode qubit states. Integrated optical circuits enable high-fidelity quantum logic operations at room temperature.',
+    ),
+    const _Doc(
+      'ONNX Syntactic Complexity Engine',
+      'MD',
+      1820,
+      0.90,
+      AgamaTheme.amber,
+      'ONNX Syntactic Complexity Engine. Syntactic parsing models analyze sentence structure to calculate cognitive load metrics. Real-time adaptation dynamically adjusts RSVP presentation speed based on syntactic clause depth.',
+    ),
   ];
 
   @override
@@ -318,176 +339,8 @@ class _LibraryTabState extends State<_LibraryTab> {
   void _navigate(BuildContext ctx, Widget page) =>
       Navigator.push(ctx, MaterialPageRoute(builder: (_) => page));
 
-  void _showImportSheet(BuildContext context) {
-    final ctrl = TextEditingController();
-    final parser = FileParserService();
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Theme.of(context).colorScheme.surface,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      ),
-      builder: (_) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.fromLTRB(20, 20, 20,
-              MediaQuery.of(context).viewInsets.bottom + 24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Import & Read Document',
-                      style: Theme.of(context).textTheme.titleMedium),
-                  Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                        decoration: BoxDecoration(
-                          color: AgamaTheme.indigo.withValues(alpha: 0.12),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: const Text('.PDF', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.indigo)),
-                      ),
-                      const SizedBox(width: 4),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                        decoration: BoxDecoration(
-                          color: AgamaTheme.emerald.withValues(alpha: 0.12),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: const Text('.EPUB', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.emerald)),
-                      ),
-                      const SizedBox(width: 4),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                        decoration: BoxDecoration(
-                          color: AgamaTheme.amber.withValues(alpha: 0.12),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: const Text('.MD', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.amber)),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              const SizedBox(height: 4),
-              Text('Paste text or select a PDF / EPUB / Markdown file below.',
-                  style: Theme.of(context).textTheme.bodySmall),
-              const SizedBox(height: 12),
-              // File Picker Button
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton.icon(
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    side: const BorderSide(color: AgamaTheme.indigo, width: 1.5),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  ),
-                  onPressed: () async {
-                    try {
-                      final result = await FilePicker.pickFiles(
-                        type: FileType.custom,
-                        allowedExtensions: ['pdf', 'epub', 'md', 'txt'],
-                        withData: true,
-                      );
-                      if (result != null) {
-                        final file = result.files.single;
-                        ParsedDocument? parsed;
-                        
-                        if (file.path != null) {
-                          parsed = await parser.parseFile(file.path!);
-                        } else if (file.bytes != null) {
-                          parsed = parser.parseBytes(file.bytes!, file.name);
-                        }
-
-                        if (parsed != null && context.mounted) {
-                          ctrl.text = parsed.content;
-                          setModalState(() {});
-                        }
-                      }
-                    } catch (e) {
-                      debugPrint('File pick error: $e');
-                    }
-                  },
-                  icon: const Icon(Icons.upload_file, color: AgamaTheme.indigo),
-                  label: Text('Browse Files (.pdf, .epub, .md)', style: GoogleFonts.inter(fontWeight: FontWeight.w600, color: AgamaTheme.indigo)),
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Row(
-                children: [
-                  Expanded(child: Divider()),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 12),
-                    child: Text('OR', style: TextStyle(color: AgamaTheme.inkFaint, fontSize: 12)),
-                  ),
-                  Expanded(child: Divider()),
-                ],
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: ctrl,
-                maxLines: 5,
-                decoration: const InputDecoration(
-                  hintText: 'Paste document text...',
-                ),
-              ),
-              const SizedBox(height: 16),
-              // Engine choice inline
-              Text('Choose reading mode:',
-                  style: Theme.of(context).textTheme.labelMedium),
-              const SizedBox(height: 10),
-              Row(children: [
-                Expanded(child: _EngineBtn(
-                  label: 'RSVP', sub: 'Fastest', color: AgamaTheme.indigo,
-                  onTap: () {
-                    final parsed = parser.parseRawText(ctrl.text, 'imported_document.pdf');
-                    if (parsed.content.isEmpty) return;
-                    Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (_) => RsvpCanvasView(text: parsed.content),
-                    ));
-                  },
-                )),
-                const SizedBox(width: 8),
-                Expanded(child: _EngineBtn(
-                  label: 'Sweep', sub: 'Natural', color: AgamaTheme.emerald,
-                  onTap: () {
-                    final parsed = parser.parseRawText(ctrl.text, 'imported_document.pdf');
-                    if (parsed.content.isEmpty) return;
-                    Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (_) => GuidedHighlightView(text: parsed.content),
-                    ));
-                  },
-                )),
-                const SizedBox(width: 8),
-                Expanded(child: _EngineBtn(
-                  label: 'Bionic', sub: 'Full text', color: AgamaTheme.amber,
-                  onTap: () {
-                    final parsed = parser.parseRawText(ctrl.text, 'imported_document.pdf');
-                    if (parsed.content.isEmpty) return;
-                    Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (_) => BionicFixationView(text: parsed.content),
-                    ));
-                  },
-                )),
-              ]),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    final activeText = _customText.trim().isNotEmpty ? _customText.trim() : widget.sampleText;
-
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Center(
@@ -508,34 +361,19 @@ class _LibraryTabState extends State<_LibraryTab> {
               // ── Engine chooser with decision guide ───────────────────
               const _SectionLabel('CHOOSE YOUR METHOD'),
               const SizedBox(height: 10),
-              _EngineChooser(sampleText: activeText),
+              _EngineChooser(customText: _customText.trim()),
 
               const SizedBox(height: 24),
 
               // ── Document library ─────────────────────────────────────
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const _SectionLabel('YOUR LIBRARY'),
-                  TextButton.icon(
-                    style: TextButton.styleFrom(
-                      foregroundColor: AgamaTheme.indigo,
-                      textStyle: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600),
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                    ),
-                    onPressed: () => _showImportSheet(context),
-                    icon: const Icon(Icons.add, size: 15),
-                    label: const Text('Import'),
-                  ),
-                ],
-              ),
+              const _SectionLabel('YOUR LIBRARY'),
               const SizedBox(height: 10),
 
               ...widget.docs.map((d) => Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: _DocumentTile(
                   doc: d,
-                  onTap: () => _navigate(context, RsvpCanvasView(text: activeText)),
+                  onTap: () => _navigate(context, RsvpCanvasView(text: d.content)),
                 ),
               )),
 
@@ -624,8 +462,8 @@ class _KnowledgeTab extends StatelessWidget {
 
 // ── Engine chooser — decision guide ──────────────────────────────────────
 class _EngineChooser extends StatefulWidget {
-  final String sampleText;
-  const _EngineChooser({required this.sampleText});
+  final String customText;
+  const _EngineChooser({required this.customText});
 
   @override
   State<_EngineChooser> createState() => _EngineChooserState();
@@ -664,8 +502,25 @@ class _EngineChooserState extends State<_EngineChooser> {
     ),
   ];
 
+  void _selectEngine(int index) {
+    setState(() => _selected = index);
+    if (widget.customText.isEmpty) {
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please select a file or paste text first')),
+      );
+    }
+  }
+
   void _launch(BuildContext context) {
-    final text = widget.sampleText;
+    if (widget.customText.isEmpty) {
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please select a file or paste text first')),
+      );
+      return;
+    }
+    final text = widget.customText;
     Widget page = switch (_selected) {
       0 => RsvpCanvasView(text: text),
       1 => GuidedHighlightView(text: text),
@@ -689,7 +544,7 @@ class _EngineChooserState extends State<_EngineChooser> {
             child: Padding(
               padding: EdgeInsets.only(right: i < 2 ? 8 : 0),
               child: GestureDetector(
-                onTap: () => setState(() => _selected = i),
+                onTap: () => _selectEngine(i),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 160),
                   padding: const EdgeInsets.symmetric(vertical: 10),
@@ -771,9 +626,7 @@ class _EngineChooserState extends State<_EngineChooser> {
                     onPressed: () => _launch(context),
                     icon: const Icon(Icons.play_arrow_rounded, size: 16, color: Colors.white),
                     label: Text(
-                      widget.sampleText == _LibraryViewState._sampleText
-                          ? 'Try with sample text'
-                          : 'Start Reading',
+                      'Start Reading',
                       style: GoogleFonts.inter(
                         fontSize: 13, fontWeight: FontWeight.w600,
                         color: Colors.white)),
@@ -821,13 +674,52 @@ class _EngineInfo {
   });
 }
 
+// ── Shared AppBar button ──────────────────────────────────────────────────
+class _AppBarBtn extends StatelessWidget {
+  final IconData icon;
+  final String tooltip;
+  final VoidCallback onTap;
+  const _AppBarBtn({required this.icon, required this.tooltip, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltip,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(8),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+          child: Icon(icon, size: 20, color: AgamaTheme.inkMuted),
+        ),
+      ),
+    );
+  }
+}
+
+// ── Section label ─────────────────────────────────────────────────────────
+class _SectionLabel extends StatelessWidget {
+  final String text;
+  const _SectionLabel(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text,
+      style: GoogleFonts.jetBrainsMono(
+        fontSize: 10, fontWeight: FontWeight.w700,
+        letterSpacing: 1.5, color: AgamaTheme.inkFaint,
+      ));
+  }
+}
+
 // ── Document data model ───────────────────────────────────────────────────
 class _Doc {
   final String title, format;
   final int words;
   final double progress;
   final Color accent;
-  const _Doc(this.title, this.format, this.words, this.progress, this.accent);
+  final String content;
+  const _Doc(this.title, this.format, this.words, this.progress, this.accent, this.content);
 }
 
 // ── Document tile ─────────────────────────────────────────────────────────
@@ -947,74 +839,6 @@ class _KnowledgeTile extends StatelessWidget {
               size: 18, color: theme.colorScheme.onSurfaceVariant),
           ],
         ),
-      ),
-    );
-  }
-}
-
-// ── Shared AppBar button ──────────────────────────────────────────────────
-class _AppBarBtn extends StatelessWidget {
-  final IconData icon;
-  final String tooltip;
-  final VoidCallback onTap;
-  const _AppBarBtn({required this.icon, required this.tooltip, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return Tooltip(
-      message: tooltip,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(8),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-          child: Icon(icon, size: 20, color: AgamaTheme.inkMuted),
-        ),
-      ),
-    );
-  }
-}
-
-// ── Section label ─────────────────────────────────────────────────────────
-class _SectionLabel extends StatelessWidget {
-  final String text;
-  const _SectionLabel(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(text,
-      style: GoogleFonts.jetBrainsMono(
-        fontSize: 10, fontWeight: FontWeight.w700,
-        letterSpacing: 1.5, color: AgamaTheme.inkFaint,
-      ));
-  }
-}
-
-// ── Engine launch button (used in import sheet) ───────────────────────────
-class _EngineBtn extends StatelessWidget {
-  final String label, sub;
-  final Color color;
-  final VoidCallback onTap;
-  const _EngineBtn({required this.label, required this.sub,
-    required this.color, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        decoration: BoxDecoration(
-          color: color.withAlpha(15),
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: color.withAlpha(50)),
-        ),
-        child: Column(children: [
-          Text(label, style: GoogleFonts.inter(
-            fontSize: 13, fontWeight: FontWeight.w700, color: color)),
-          Text(sub, style: GoogleFonts.inter(
-            fontSize: 10, color: color.withAlpha(180))),
-        ]),
       ),
     );
   }

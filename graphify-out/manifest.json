@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785607840.580368,
-    "ast_hash": "2b5e1e6f4774bdbf01859fe883613259",
+    "mtime": 1785608104.079658,
+    "ast_hash": "6fc543f6b3a4f80a053c7f40edd7c43f",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/test/features/library/library_view_test.dart": {
-    "mtime": 1785607819.8458607,
-    "ast_hash": "427362189115842a8e018e12860b699d",
+    "mtime": 1785608119.8892422,
+    "ast_hash": "d30e5e6b15a7f7d81794f761f8b9c25f",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-01-library-ui-design.md": {
