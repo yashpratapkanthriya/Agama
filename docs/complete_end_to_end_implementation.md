@@ -389,13 +389,13 @@ zero-backend-agama/
 
 ### Phase 3: High-Performance Canvas UI & Annotation System (Weeks 9–12)
 - [x] Build 60/120 FPS RSVP Redicle player using Flutter `CustomPainter` and Material 3 theme.
-- [ ] Implement Guided Highlighting and Bionic Fixation display modes.
-- [ ] Build non-destructive inline annotation, color highlighting, and note-taking interfaces.
+- [x] Implement Guided Highlighting and Bionic Fixation display modes.
+- [x] Build non-destructive inline annotation, color highlighting, and note-taking interfaces.
 - [ ] Implement local vector similarity search over highlights using `sqlite-vec`.
 
 ### Phase 4: Decentralized Sync, Comprehension Scaffolding & Hardening (Weeks 13–16)
 - [ ] Integrate `Yrs` (Rust Yjs CRDTs) for decentralized delta sync over WebDAV (Priority 1), iCloud, and local P2P networks (Refer to [`docs/decentralized_sync_architecture.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/decentralized_sync_architecture.md)).
-- [ ] Build on-device AI comprehension quiz generator and spaced repetition flashcard scheduler.
+- [x] Build on-device AI comprehension quiz generator and spaced repetition flashcard scheduler.
 - [ ] Execute end-to-end performance benchmarks, zero-copy memory verification, and cross-platform native builds (iOS, Android, macOS, Windows).
 
 ---
