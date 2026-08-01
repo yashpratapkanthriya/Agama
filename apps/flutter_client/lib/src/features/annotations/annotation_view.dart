@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
+import 'vector_search_service.dart';
 
 class AnnotationItem {
   final String id;
@@ -286,13 +287,28 @@ class _AnnotationViewState extends State<AnnotationView> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final filtered = _query.isEmpty
-        ? _items
-        : _items
-            .where((a) =>
-                a.selectedText.toLowerCase().contains(_query.toLowerCase()) ||
-                (a.note?.toLowerCase().contains(_query.toLowerCase()) ?? false))
-            .toList();
+    final List<AnnotationItem> filtered;
+    if (_query.isEmpty) {
+      filtered = _items;
+    } else {
+      final searchService = VectorSearchService();
+      final searchResults = searchService.search(
+        _items.map((a) => a.selectedText).toList(),
+        _query,
+      );
+      final scoredItems = <AnnotationItem>[];
+      for (final res in searchResults) {
+        final item = _items.firstWhere((a) => a.selectedText == res.text);
+        if (res.score > 0 ||
+            item.selectedText.toLowerCase().contains(_query.toLowerCase()) ||
+            (item.note?.toLowerCase().contains(_query.toLowerCase()) ?? false)) {
+          if (!scoredItems.contains(item)) {
+            scoredItems.add(item);
+          }
+        }
+      }
+      filtered = scoredItems;
+    }
 
     return Scaffold(
       appBar: AppBar(
