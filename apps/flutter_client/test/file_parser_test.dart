@@ -2,8 +2,11 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_client/src/features/library/file_parser_service.dart';
+import 'package:flutter_client/src/rust/frb_generated.dart';
+import 'package:flutter_client/src/rust/parser.dart' as rust_parser;
 
 void main() {
+
   group('FileParserService parseRawText', () {
     final service = FileParserService();
 
@@ -113,13 +116,56 @@ void main() {
   });
 
   group('FileParserService Rust Bridge interface', () {
-    final service = FileParserService();
+    late MockRustLibApi mockApi;
+    late FileParserService service;
 
-    test('exposes init and parseFile methods', () {
-      expect(service.init, isA<Function>());
-      expect(service.parseFile, isA<Function>());
+    setUpAll(() {
+      mockApi = MockRustLibApi();
+      RustLib.initMock(api: mockApi);
+    });
+
+    setUp(() {
+      service = FileParserService();
+    });
+
+    test('init executes when initialized', () async {
+      await expectLater(service.init(), completes);
+    });
+
+    test('parseFile invokes crateApiParseFile on RustLib and returns ParsedDocument', () async {
+      final doc = await service.parseFile('/path/to/sample.txt');
+
+      expect(mockApi.parseFileCalled, isTrue);
+      expect(mockApi.lastPathParsed, equals('/path/to/sample.txt'));
+      expect(doc.title, equals('mock_title'));
+      expect(doc.author, equals('mock_author'));
+      expect(doc.chunks, equals(['Chunk 1', 'Chunk 2']));
+      expect(doc.wordCount, equals(BigInt.from(42)));
+      expect(doc.mimeType, equals('text/plain'));
     });
   });
+
+
+
 }
+
+class MockRustLibApi extends Fake implements RustLibApi {
+  bool parseFileCalled = false;
+  String? lastPathParsed;
+
+  @override
+  Future<rust_parser.ParsedDocument> crateApiParseFile({required String path}) async {
+    parseFileCalled = true;
+    lastPathParsed = path;
+    return rust_parser.ParsedDocument(
+      title: 'mock_title',
+      author: 'mock_author',
+      chunks: const ['Chunk 1', 'Chunk 2'],
+      wordCount: BigInt.from(42),
+      mimeType: 'text/plain',
+    );
+  }
+}
+
 
 

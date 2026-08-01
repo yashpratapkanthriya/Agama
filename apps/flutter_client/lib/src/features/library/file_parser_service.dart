@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import '../../rust/api.dart' as rust;
 import '../../rust/frb_generated.dart';
-import '../../rust/parser.dart' as rust;
+import '../../rust/parser.dart' as rust_parser;
 
 enum DocumentFormat { txt, markdown, pdf, epub }
 
@@ -21,12 +21,19 @@ class ParsedDocument {
 
 class FileParserService {
   Future<void> init() async {
-    await RustLib.init();
+    try {
+      await RustLib.init();
+    } catch (_) {
+      // Safe no-op if already initialized
+    }
   }
 
-  Future<rust.ParsedDocument> parseFile(String filePath) async {
-    return await rust.parseFile(path: filePath);
+
+
+  Future<rust_parser.ParsedDocument> parseFile(String filePath) {
+    return rust.parseFile(path: filePath);
   }
+
 
   DocumentFormat _determineFormat(String fileName) {
     final lower = fileName.toLowerCase();
