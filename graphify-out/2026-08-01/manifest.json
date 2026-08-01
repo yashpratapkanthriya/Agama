@@ -100,8 +100,8 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/parser/mod.rs": {
-    "mtime": 1785568060.8642092,
-    "ast_hash": "caaec8d5a471c7a3a700ccd42d5256c5",
+    "mtime": 1785569824.476586,
+    "ast_hash": "6ccfb6dd8951bb214f752957570a664f",
     "semantic_hash": ""
   },
   "native/rust_core/src/sync/mod.rs": {

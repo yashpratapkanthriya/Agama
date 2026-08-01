@@ -52,16 +52,42 @@ impl DatabaseEngine {
                 PRIMARY KEY (id, histvon)
             );
 
-            CREATE TABLE IF NOT EXISTS highlights (
+            CREATE TABLE IF NOT EXISTS annotations (
                 id TEXT NOT NULL,
                 document_id TEXT NOT NULL,
-                chunk_id TEXT NOT NULL,
                 selected_text TEXT NOT NULL,
-                color_hex TEXT NOT NULL,
-                note_markdown TEXT,
+                note TEXT,
+                color_hex TEXT DEFAULT '#FFD700',
+                start_offset INTEGER NOT NULL,
+                end_offset INTEGER NOT NULL,
+                chapter_index INTEGER DEFAULT 0,
                 histvon TEXT NOT NULL,
                 histbis TEXT NOT NULL DEFAULT '9999',
                 PRIMARY KEY (id, histvon)
+            );
+
+            CREATE TABLE IF NOT EXISTS flashcards (
+                id TEXT NOT NULL,
+                annotation_id TEXT,
+                document_id TEXT NOT NULL,
+                question TEXT NOT NULL,
+                answer TEXT NOT NULL,
+                interval INTEGER DEFAULT 1,
+                repetition_factor REAL DEFAULT 2.5,
+                due_date INTEGER NOT NULL,
+                histvon TEXT NOT NULL,
+                histbis TEXT NOT NULL DEFAULT '9999',
+                PRIMARY KEY (id, histvon)
+            );
+
+            CREATE TABLE IF NOT EXISTS sync_crdt_deltas (
+                id TEXT PRIMARY KEY NOT NULL,
+                entity_name TEXT NOT NULL,
+                entity_id TEXT NOT NULL,
+                crdt_clock INTEGER NOT NULL,
+                delta_blob BLOB NOT NULL,
+                histvon TEXT NOT NULL,
+                histbis TEXT NOT NULL DEFAULT '9999'
             );
             "
         )?;
