@@ -1,7 +1,7 @@
 {
   "0": "Graphify Full Pipeline",
   "1": "rsvp_canvas.dart",
-  "3": "app.dart",
+  "3": "widget_test.dart",
   "4": "Graphify Watch Mode",
   "5": "FalkorDB Export",
   "6": "Graphify MCP Server",
@@ -13,7 +13,7 @@
   "12": "DatabaseEngine",
   "13": "SyncEngine",
   "14": "ParsedDocument",
-  "15": "models/mod.rs",
+  "15": "WordTiming",
   "16": "build_native_libs.sh",
   "17": "generate_frb.sh",
   "18": "lib.rs",

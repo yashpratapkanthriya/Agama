@@ -1,6 +1,7 @@
 {
   "0": "Graphify Full Pipeline",
   "1": "rsvp_canvas.dart",
+  "2": "reader_provider.dart",
   "3": "widget_test.dart",
   "4": "Graphify Watch Mode",
   "5": "FalkorDB Export",

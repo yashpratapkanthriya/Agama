@@ -1,22 +1,23 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 26 files · ~13,198 words
+- 27 files · ~13,531 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 144 nodes · 171 edges · 19 communities (10 shown, 9 thin omitted)
+- 162 nodes · 192 edges · 20 communities (11 shown, 9 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `65b677c3`
+- Built from commit: `c686b982`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Graphify Full Pipeline
 - rsvp_canvas.dart
+- reader_provider.dart
 - widget_test.dart
 - Graphify Watch Mode
 - FalkorDB Export
@@ -36,9 +37,9 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `Graphify Full Pipeline` - 15 edges
-2. `DatabaseEngine` - 7 edges
-3. `ParsedDocument` - 7 edges
-4. `AdaptivePacingEngine` - 6 edges
+2. `AdaptivePacingEngine` - 8 edges
+3. `DatabaseEngine` - 7 edges
+4. `ParsedDocument` - 7 edges
 5. `test_db_init_and_document_insert()` - 6 edges
 6. `WordTiming` - 6 edges
 7. `SyncEngine` - 6 edges
@@ -66,7 +67,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (19 total, 9 thin omitted)
+## Communities (20 total, 9 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -76,17 +77,21 @@ Nodes (24): Graphify Always On Rule, Graphify Ingestion (Add URL), Obsidian Vaul
 Cohesion: 0.09
 Nodes (22): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+14 more)
 
+### Community 2 - "reader_provider.dart"
+Cohesion: 0.15
+Nodes (13): copyWith, currentWordIndex, isPlaying, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState, setComplexity (+5 more)
+
 ### Community 3 - "widget_test.dart"
 Cohesion: 0.10
 Nodes (17): main, AgamaApp, build, build, LibraryView, main, ../features/library/library_view.dart, MaterialPageRoute (+9 more)
 
 ### Community 11 - "AdaptivePacingEngine"
-Cohesion: 0.31
-Nodes (4): AdaptivePacingEngine, Default, Self, test_word_delay_calculation()
+Cohesion: 0.22
+Nodes (6): AdaptivePacingEngine, Default, Self, Vec, test_complexity_and_embedding(), test_word_delay_calculation()
 
 ### Community 12 - "DatabaseEngine"
-Cohesion: 0.35
-Nodes (7): Connection, DatabaseEngine, Result, Self, Vec, test_db_init_and_document_insert(), Document
+Cohesion: 0.38
+Nodes (6): Connection, DatabaseEngine, Result, Self, Vec, test_db_init_and_document_insert()
 
 ### Community 13 - "SyncEngine"
 Cohesion: 0.28
@@ -97,15 +102,15 @@ Cohesion: 0.26
 Nodes (9): DocumentParser, EpubParser, ParsedDocument, Option, Result, String, Vec, TextParser (+1 more)
 
 ### Community 15 - "WordTiming"
-Cohesion: 0.25
-Nodes (9): generate_rsvp_timings(), String, Vec, DocumentChunk, generate_histvon_timestamp(), Highlight, Option, String (+1 more)
+Cohesion: 0.26
+Nodes (10): generate_rsvp_timings(), String, Vec, Document, DocumentChunk, generate_histvon_timestamp(), Highlight, Option (+2 more)
 
 ### Community 19 - "Agama"
 Cohesion: 0.25
 Nodes (7): 1. Build Rust Engine, 2. Generate FFI Bindings, 3. Run Flutter Application, Agama, Quick Start, Requirements, Structure
 
 ## Knowledge Gaps
-- **42 isolated node(s):** `main`, `build`, `text`, `targetWpm`, `_words` (+37 more)
+- **52 isolated node(s):** `main`, `build`, `targetWpm`, `isPlaying`, `currentWordIndex` (+47 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -113,11 +118,11 @@ Nodes (7): 1. Build Rust Engine, 2. Generate FFI Bindings, 3. Run Flutter Applic
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `WordTiming` connect `WordTiming` to `AdaptivePacingEngine`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
-- **Why does `Document` connect `DatabaseEngine` to `WordTiming`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **What connects `main`, `build`, `text` to the rest of the system?**
-  _42 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `Document` connect `WordTiming` to `DatabaseEngine`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **What connects `main`, `build`, `targetWpm` to the rest of the system?**
+  _52 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
