@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
-    "mtime": 1785590971.6281054,
-    "ast_hash": "8298c1b21f2e6013aa1bc3a09ae41202",
+    "mtime": 1785591158.5135677,
+    "ast_hash": "243a911c204ef10dd58451ea64530232",
     "semantic_hash": ""
   },
   "native/rust_core/src/ai/mod.rs": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/guided_highlight_view.dart": {
-    "mtime": 1785590989.6881156,
-    "ast_hash": "88cede5a46baa6af3a187c9b0ce69096",
+    "mtime": 1785591179.6886852,
+    "ast_hash": "73301598c6ada62c8605da0668190e1a",
     "semantic_hash": ""
   },
   "docs/SAD.md": {

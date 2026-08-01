@@ -25,8 +25,8 @@ class FlashcardView extends StatefulWidget {
   State<FlashcardView> createState() => _FlashcardViewState();
 }
 
-class _FlashcardViewState extends State<FlashcardView> {
-  final List<FlashcardItem> _cards = [
+class FlashcardStore {
+  static final List<FlashcardItem> items = [
     FlashcardItem(
       id: 'c1',
       question:
@@ -47,6 +47,10 @@ class _FlashcardViewState extends State<FlashcardView> {
       answer: 'SuperMemo SM-2 — interval × EF after each quality rating 0–5',
     ),
   ];
+}
+
+class _FlashcardViewState extends State<FlashcardView> {
+  List<FlashcardItem> get _cards => FlashcardStore.items;
 
   int _idx = 0;
   bool _revealed = false;

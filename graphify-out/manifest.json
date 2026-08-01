@@ -140,13 +140,13 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/annotations/annotation_view.dart": {
-    "mtime": 1785588061.14909,
-    "ast_hash": "f61456d43e303855b4a5a7e8ce233aae",
+    "mtime": 1785601834.003627,
+    "ast_hash": "89b00928a1763aa92d402bb26e0e0cfd",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart": {
-    "mtime": 1785578004.6826215,
-    "ast_hash": "c9de96ea84f61bae5075c27cf7907a04",
+    "mtime": 1785601811.7205193,
+    "ast_hash": "9cc92d296679619bce54fcac68e510ba",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/bionic_fixation_view.dart": {

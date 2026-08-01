@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
 import 'vector_search_service.dart';
+import '../flashcards/flashcard_view.dart';
 
 class AnnotationItem {
   final String id;
@@ -429,6 +430,27 @@ class _AnnotationViewState extends State<AnnotationView> {
                                           ],
                                         ),
                                       ),
+                                    ),
+                                    IconButton(
+                                      icon: const Icon(Icons.style_outlined, size: 20),
+                                      tooltip: 'Create Flashcard',
+                                      color: theme.colorScheme.onSurfaceVariant,
+                                      onPressed: () {
+                                        FlashcardStore.items.add(FlashcardItem(
+                                          id: DateTime.now().millisecondsSinceEpoch.toString(),
+                                          question: 'Recall the context and meaning of:\n\n"${a.selectedText}"',
+                                          answer: a.note ?? 'Review the highlight again.',
+                                        ));
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                          SnackBar(
+                                            content: const Text('Flashcard created for active recall!'),
+                                            action: SnackBarAction(
+                                              label: 'View',
+                                              onPressed: () {},
+                                            ),
+                                          ),
+                                        );
+                                      },
                                     ),
                                   ],
                                 ),
