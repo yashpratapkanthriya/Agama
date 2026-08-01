@@ -27,6 +27,10 @@
             --text-muted: #64748b;
             --text-subtle: #94a3b8;
             
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            
             --sidebar-width: 290px;
             --shadow-subtle: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
             --shadow-card: 0 10px 30px -4px rgba(15, 23, 42, 0.08);
@@ -49,7 +53,7 @@
         }
 
         /* Sidebar Navigation */
-        sidebar {
+        aside {
             width: var(--sidebar-width);
             background: var(--sidebar-bg);
             border-right: 1px solid var(--card-border);
@@ -72,27 +76,27 @@
             width: 40px;
             height: 40px;
             background: linear-gradient(135deg, var(--accent-primary), #818cf8);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Outfit', sans-serif;
             font-weight: 800;
-            font-size: 20px;
+            font-size: 18px;
             color: #ffffff;
-            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
         }
 
         .brand-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 800;
             letter-spacing: -0.5px;
             color: var(--text-main);
         }
 
         .brand-badge {
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
@@ -107,7 +111,7 @@
         }
 
         .nav-label {
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.2px;
@@ -117,22 +121,29 @@
         }
 
         .nav-item {
+            width: 100%;
             display: flex;
             align-items: center;
             gap: 12px;
             padding: 11px 14px;
-            border-radius: 10px;
+            border-radius: var(--radius-md);
             font-size: 14px;
             font-weight: 500;
+            font-family: inherit;
             color: var(--text-muted);
+            background: transparent;
+            border: none;
+            text-align: left;
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             margin-bottom: 4px;
         }
 
-        .nav-item:hover {
+        .nav-item:hover, .nav-item:focus-visible {
             background: #f1f5f9;
             color: var(--text-main);
+            outline: 2px solid var(--accent-primary);
+            outline-offset: -2px;
         }
 
         .nav-item.active {
@@ -164,6 +175,15 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            .tab-content.active {
+                animation: none;
+            }
+            .nav-item, .btn-primary {
+                transition: none;
+            }
+        }
+
         .page-header {
             margin-bottom: 32px;
         }
@@ -187,7 +207,7 @@
         .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: 28px;
             margin-bottom: 24px;
             box-shadow: var(--shadow-subtle);
@@ -213,12 +233,12 @@
         .redicle-box {
             background: #090d16;
             border: 1px solid #1e293b;
-            border-radius: 14px;
+            border-radius: var(--radius-lg);
             height: 160px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 38px;
+            font-size: 32px;
             font-weight: 700;
             position: relative;
             user-select: none;
@@ -238,7 +258,7 @@
         .redicle-box::after { bottom: 14px; }
 
         .word-prefix { color: #ffffff; }
-        .word-orp { color: var(--accent-crimson); font-weight: 800; }
+        .word-orp { color: var(--accent-crimson); font-weight: 800; text-decoration: underline; }
         .word-suffix { color: #94a3b8; }
 
         .controls-bar {
@@ -247,7 +267,7 @@
             gap: 20px;
             background: #f8fafc;
             padding: 16px 20px;
-            border-radius: 12px;
+            border-radius: var(--radius-lg);
             border: 1px solid var(--card-border);
         }
 
@@ -256,20 +276,22 @@
             color: #ffffff;
             border: none;
             padding: 12px 24px;
-            border-radius: 10px;
+            border-radius: var(--radius-md);
             font-weight: 600;
             font-size: 14px;
+            font-family: inherit;
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
         }
 
-        .btn-primary:hover {
+        .btn-primary:hover, .btn-primary:focus-visible {
             background: var(--accent-primary-hover);
-            transform: translateY(-1px);
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 2px;
         }
 
         .slider-wrapper {
@@ -287,7 +309,7 @@
             accent-color: var(--accent-primary);
             height: 6px;
             background: #e2e8f0;
-            border-radius: 4px;
+            border-radius: var(--radius-sm);
         }
 
         /* Bionic Fixation Box */
@@ -295,7 +317,7 @@
             background: #f8fafc;
             border: 1px solid var(--card-border);
             padding: 24px;
-            border-radius: 12px;
+            border-radius: var(--radius-lg);
             font-size: 18px;
             line-height: 1.85;
             color: #334155;
@@ -319,7 +341,7 @@
             background: #f8fafc;
             border: 1px solid var(--card-border);
             padding: 18px;
-            border-radius: 12px;
+            border-radius: var(--radius-lg);
         }
 
         .metric-label {
@@ -336,7 +358,7 @@
             background: #ffffff;
             border: 1px solid var(--card-border);
             padding: 10px 14px;
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             font-size: 16px;
             font-weight: 600;
             font-family: 'JetBrains Mono', monospace;
@@ -346,14 +368,14 @@
         .cci-result-card {
             background: linear-gradient(135deg, var(--accent-light), #f0fdf4);
             border: 1px solid rgba(99, 102, 241, 0.25);
-            border-radius: 14px;
+            border-radius: var(--radius-lg);
             padding: 24px;
             text-align: center;
         }
 
         .cci-score {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 42px;
+            font-size: 32px;
             font-weight: 800;
             color: var(--accent-primary);
             margin: 6px 0;
@@ -363,11 +385,11 @@
         .search-input {
             width: 100%;
             padding: 14px 18px;
-            border-radius: 10px;
+            border-radius: var(--radius-md);
             border: 1px solid var(--card-border);
             background: #f8fafc;
             color: var(--text-main);
-            font-size: 15px;
+            font-size: 16px;
             font-family: 'Inter', sans-serif;
             transition: border-color 0.2s ease;
         }
@@ -381,8 +403,8 @@
         .result-item {
             padding: 16px;
             background: #f8fafc;
-            border-radius: 10px;
-            border-left: 4px solid var(--accent-emerald);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--card-border);
             margin-top: 12px;
         }
 
@@ -391,26 +413,33 @@
             background: #f1f5f9;
             color: var(--accent-primary);
             padding: 3px 8px;
-            border-radius: 6px;
-            font-size: 13px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
         }
 
         pre {
             background: #0f172a;
             color: #f8fafc;
             padding: 20px;
-            border-radius: 12px;
+            border-radius: var(--radius-lg);
             overflow-x: auto;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.65;
+        }
+        
+        .shortcut-hint {
+            font-size: 12px;
+            color: var(--text-subtle);
+            margin-top: 12px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
     <!-- Sidebar Navigation -->
-    <sidebar>
+    <aside>
         <div class="brand">
             <div class="brand-logo">A</div>
             <div>
@@ -419,34 +448,38 @@
             </div>
         </div>
 
-        <div class="nav-group">
-            <div class="nav-label">Platform Specs</div>
-            <div class="nav-item active" onclick="showTab('overview', this)">🚀 Architecture Overview</div>
-            <div class="nav-item" onclick="showTab('usecases', this)">🎯 Operational Use Cases</div>
-        </div>
+        <nav role="tablist" aria-label="Manual Section Tabs">
+            <div class="nav-group">
+                <div class="nav-label">Platform Specs</div>
+                <button class="nav-item active" role="tab" aria-selected="true" id="tab-overview" onclick="showTab('overview', this)">🚀 Architecture Overview</button>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-usecases" onclick="showTab('usecases', this)">🎯 Operational Use Cases</button>
+            </div>
 
-        <div class="nav-group">
-            <div class="nav-label">Interactive Simulators</div>
-            <div class="nav-item" onclick="showTab('rsvp-sim', this)">⚡ RSVP Speed Redicle</div>
-            <div class="nav-item" onclick="showTab('bionic-sim', this)">👁️ Bionic Fixation</div>
-            <div class="nav-item" onclick="showTab('cci-sim', this)">📊 CCI Calculator</div>
-            <div class="nav-item" onclick="showTab('vector-sim', this)">🔍 Vector Search Sandbox</div>
-        </div>
+            <div class="nav-group">
+                <div class="nav-label">Interactive Simulators</div>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-rsvp-sim" onclick="showTab('rsvp-sim', this)">⚡ RSVP Speed Redicle</button>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-bionic-sim" onclick="showTab('bionic-sim', this)">👁️ Bionic Fixation</button>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-cci-sim" onclick="showTab('cci-sim', this)">📊 CCI Calculator</button>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-vector-sim" onclick="showTab('vector-sim', this)">🔍 Vector Search Sandbox</button>
+            </div>
 
-        <div class="nav-group">
-            <div class="nav-label">Architecture & Ops</div>
-            <div class="nav-item" onclick="showTab('sync', this)">☁️ Yrs CRDT Sync</div>
-            <div class="nav-item" onclick="showTab('db-rollback', this)">🛡️ DB Rollbacks</div>
-        </div>
-    </sidebar>
+            <div class="nav-group">
+                <div class="nav-label">Architecture & Ops</div>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-sync" onclick="showTab('sync', this)">☁️ Yrs CRDT Sync</button>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-db-rollback" onclick="showTab('db-rollback', this)">🛡️ DB Rollbacks</button>
+            </div>
+        </nav>
+        
+        <div class="shortcut-hint">💡 Hotkeys: Space (Play), ↑/↓ (WPM), 1-8 (Tabs)</div>
+    </aside>
 
     <!-- Main Content -->
     <main>
         <!-- Tab 1: Architecture Overview -->
-        <div id="overview" class="tab-content active">
+        <section id="overview" class="tab-content active" role="tabpanel" aria-labelledby="tab-overview">
             <div class="page-header">
                 <h1>Platform Architecture & Operations</h1>
-                <div class="subtitle">Agama is an enterprise-grade local-first zero-backend speed reading system. PDF layout parsing, vector indexing (<code>sqlite-vec</code>), and ONNX token complexity inference run inside an embedded Rust core process.</div>
+                <div class="subtitle">Agama is a local-first zero-backend speed reading system. PDF layout parsing, vector indexing (<code>sqlite-vec</code>), and ONNX token complexity inference run inside an embedded Rust core process.</div>
             </div>
 
             <div class="card">
@@ -458,10 +491,10 @@
                     <li><strong style="color: var(--text-main);">Data Historization:</strong> 17-character <code>histvon</code>/<code>histbis</code> temporal primary keys for zero data loss.</li>
                 </ul>
             </div>
-        </div>
+        </section>
 
         <!-- Tab 2: Operational Use Cases -->
-        <div id="usecases" class="tab-content">
+        <section id="usecases" class="tab-content" role="tabpanel" aria-labelledby="tab-usecases">
             <div class="page-header">
                 <h1>Internal Operational Use Cases</h1>
                 <div class="subtitle">Designed for high-throughput literature review, deep technical analysis, active recall study, and confidential reading.</div>
@@ -481,33 +514,33 @@
                 <div class="card-title">🎴 Use Case 3: Active Recall Flashcard Prep</div>
                 <p style="color: var(--text-muted); line-height: 1.65;">Automatically extract flashcard pairs from highlights and train with the SuperMemo-2 (SM-2) algorithm for 90%+ long-term retention.</p>
             </div>
-        </div>
+        </section>
 
         <!-- Tab 3: Interactive RSVP Redicle Simulator -->
-        <div id="rsvp-sim" class="tab-content">
+        <section id="rsvp-sim" class="tab-content" role="tabpanel" aria-labelledby="tab-rsvp-sim">
             <div class="page-header">
                 <h1>RSVP Redicle Speed Reader Simulator</h1>
                 <div class="subtitle">Test the Optimal Recognition Point (ORP) visual redicle and dynamic pacing algorithm in real-time.</div>
             </div>
 
             <div class="card">
-                <div class="redicle-box" id="redicle-box">
+                <div class="redicle-box" id="redicle-box" aria-live="polite">
                     <span class="word-prefix" id="w-prefix">Ag</span><span class="word-orp" id="w-orp">a</span><span class="word-suffix" id="w-suffix">ma</span>
                 </div>
 
                 <div class="controls-bar">
-                    <button class="btn-primary" id="play-btn" onclick="togglePlay()">▶ Play Reader</button>
+                    <button class="btn-primary" id="play-btn" aria-label="Toggle RSVP Reader Playback" onclick="togglePlay()">▶ Play Reader</button>
                     <div class="slider-wrapper">
-                        <span>Target Speed:</span>
-                        <input type="range" id="wpm-slider" min="100" max="900" step="50" value="450" oninput="updateWpm(this.value)">
+                        <label for="wpm-slider">Target Speed:</label>
+                        <input type="range" id="wpm-slider" min="100" max="900" step="25" value="450" aria-label="Adjust RSVP Speed in WPM" oninput="updateWpm(this.value)">
                         <strong id="wpm-val" style="color: var(--accent-primary); font-family: monospace;">450 WPM</strong>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Tab 4: Bionic Fixation Sandbox -->
-        <div id="bionic-sim" class="tab-content">
+        <section id="bionic-sim" class="tab-content" role="tabpanel" aria-labelledby="tab-bionic-sim">
             <div class="page-header">
                 <h1>Bionic Fixation Reading Sandbox</h1>
                 <div class="subtitle">Adjust the fixation intensity ($F1 \dots F5$) to observe prefix bolding over sample technical text.</div>
@@ -515,19 +548,19 @@
 
             <div class="card">
                 <div class="slider-wrapper" style="margin-bottom: 16px;">
-                    <span>Fixation Intensity Level:</span>
-                    <input type="range" id="bionic-slider" min="1" max="5" value="3" oninput="updateBionic(this.value)">
+                    <label for="bionic-slider">Fixation Intensity Level:</label>
+                    <input type="range" id="bionic-slider" min="1" max="5" value="3" aria-label="Bionic Fixation Level Slider" oninput="updateBionic(this.value)">
                     <strong id="bionic-val" style="color: var(--accent-primary);">Level F3 (50%)</strong>
                 </div>
 
-                <div class="bionic-preview-box" id="bionic-text">
+                <div class="bionic-preview-box" id="bionic-text" aria-live="polite">
                     The Agama Platform is engineered as a high-performance local-first speed reading system.
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Tab 5: CCI Calculator -->
-        <div id="cci-sim" class="tab-content">
+        <section id="cci-sim" class="tab-content" role="tabpanel" aria-labelledby="tab-cci-sim">
             <div class="page-header">
                 <h1>Comprehension Calibration Index (CCI) Calculator</h1>
                 <div class="subtitle">Calculate score: $CCI = \text{Reading WPM} \times \text{Quiz Accuracy Fraction}$. Optimal range is 350 – 450.</div>
@@ -536,44 +569,45 @@
             <div class="card">
                 <div class="grid-3">
                     <div class="metric-card">
-                        <div class="metric-label">Reading Speed (WPM)</div>
-                        <input type="number" id="cci-wpm" value="480" oninput="calculateCCI()">
+                        <label class="metric-label" for="cci-wpm">Reading Speed (WPM)</label>
+                        <input type="number" id="cci-wpm" value="480" aria-label="Reading Speed WPM Input" oninput="calculateCCI()">
                     </div>
                     <div class="metric-card">
-                        <div class="metric-label">Quiz Accuracy (%)</div>
-                        <input type="number" id="cci-acc" value="88" min="0" max="100" oninput="calculateCCI()">
+                        <label class="metric-label" for="cci-acc">Quiz Accuracy (%)</label>
+                        <input type="number" id="cci-acc" value="88" min="0" max="100" aria-label="Quiz Accuracy Percentage Input" oninput="calculateCCI()">
                     </div>
                 </div>
 
-                <div class="cci-result-card">
+                <div class="cci-result-card" aria-live="polite">
                     <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Calculated CCI Score</div>
                     <div class="cci-score" id="cci-result">422.4</div>
-                    <div style="font-size: 13px; font-weight: 600; color: var(--accent-emerald);">✅ Optimal Speed-Retention Zone</div>
+                    <div style="font-size: 14px; font-weight: 600; color: var(--accent-emerald);">✅ Optimal Speed-Retention Zone</div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Tab 6: Vector Search Sandbox -->
-        <div id="vector-sim" class="tab-content">
+        <section id="vector-sim" class="tab-content" role="tabpanel" aria-labelledby="tab-vector-sim">
             <div class="page-header">
                 <h1>Vector Similarity Search Sandbox</h1>
                 <div class="subtitle">Simulate cosine similarity scoring over indexed document chunks using dense embeddings.</div>
             </div>
 
             <div class="card">
-                <input type="text" class="search-input" id="vector-query" placeholder="Type search query e.g. 'zero backend'..." oninput="runVectorSearch(this.value)">
+                <label for="vector-query" style="display:none;">Search Query</label>
+                <input type="text" class="search-input" id="vector-query" aria-label="Natural Language Vector Search Query" placeholder="Type search query e.g. 'zero backend'..." oninput="runVectorSearch(this.value)">
                 
-                <div id="search-results">
+                <div id="search-results" aria-live="polite">
                     <div class="result-item">
                         <div style="font-size: 14px; font-weight: 700; color: var(--text-main);">Agama Core Engine Specification</div>
-                        <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div>
+                        <div style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Tab 7: Yrs CRDT Sync -->
-        <div id="sync" class="tab-content">
+        <section id="sync" class="tab-content" role="tabpanel" aria-labelledby="tab-sync">
             <div class="page-header">
                 <h1>Decentralized Yrs CRDT Sync Protocol</h1>
                 <div class="subtitle">Zero-server synchronization using Yrs state vectors over WebDAV, iCloud, or local mDNS Wi-Fi P2P.</div>
@@ -587,10 +621,10 @@ let delta_bytes = txn.encode_state_as_update_v1(&yrs::StateVector::default());
 let mut txn = self.doc.transact_mut();
 txn.apply_update(remote_update);</code></pre>
             </div>
-        </div>
+        </section>
 
         <!-- Tab 8: DB Rollback Generator -->
-        <div id="db-rollback" class="tab-content">
+        <section id="db-rollback" class="tab-content" role="tabpanel" aria-labelledby="tab-db-rollback">
             <div class="page-header">
                 <h1>Zero Data-Loss Database Rollbacks</h1>
                 <div class="subtitle">SQLCipher schema historization using 17-character <code>histvon</code>/<code>histbis</code> timestamps.</div>
@@ -606,16 +640,51 @@ UPDATE documents
 SET histbis = '9999' 
 WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
             </div>
-        </div>
+        </section>
     </main>
 
     <script>
+        const tabIds = ['overview', 'usecases', 'rsvp-sim', 'bionic-sim', 'cci-sim', 'vector-sim', 'sync', 'db-rollback'];
+
         function showTab(tabId, el) {
-            document.querySelectorAll('.tab-content').forEach(item => item.classList.remove('active'));
-            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            if (el) el.classList.add('active');
+            document.querySelectorAll('.tab-content').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                item.setAttribute('aria-selected', 'false');
+            });
+            
+            const targetContent = document.getElementById(tabId);
+            if (targetContent) targetContent.classList.add('active');
+            
+            const activeBtn = el || document.getElementById('tab-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+                activeBtn.setAttribute('aria-selected', 'true');
+            }
         }
+
+        // Global Keyboard Shortcut Navigation (Space, Arrow keys, 1-8)
+        document.addEventListener('keydown', function(e) {
+            if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+            
+            if (e.code === 'Space') {
+                e.preventDefault();
+                togglePlay();
+            } else if (e.code === 'ArrowUp') {
+                e.preventDefault();
+                updateWpm(Math.min(900, wpm + 25));
+                document.getElementById('wpm-slider').value = wpm;
+            } else if (e.code === 'ArrowDown') {
+                e.preventDefault();
+                updateWpm(Math.max(100, wpm - 25));
+                document.getElementById('wpm-slider').value = wpm;
+            } else if (e.key >= '1' && e.key <= '8') {
+                const idx = parseInt(e.key) - 1;
+                if (tabIds[idx]) showTab(tabIds[idx]);
+            }
+        });
 
         // RSVP Redicle Simulator JS
         const words = ["The", "Agama", "Platform", "is", "engineered", "as", "a", "high-performance", "local-first", "zero-backend", "speed", "reader."];
@@ -676,7 +745,9 @@ WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
         // CCI Calculator JS
         function calculateCCI() {
             const w = parseFloat(document.getElementById('cci-wpm').value) || 0;
-            const acc = (parseFloat(document.getElementById('cci-acc').value) || 0) / 100;
+            const rawAcc = parseFloat(document.getElementById('cci-acc').value) || 0;
+            const clampedAcc = Math.max(0, Math.min(100, rawAcc));
+            const acc = clampedAcc / 100;
             const score = w * acc;
             document.getElementById('cci-result').textContent = score.toFixed(1);
         }
@@ -685,11 +756,11 @@ WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
         function runVectorSearch(query) {
             const container = document.getElementById('search-results');
             if (!query.trim()) {
-                container.innerHTML = `<div class="result-item"><div style="font-size: 14px; font-weight: 700; color: var(--text-main);">Agama Core Engine Specification</div><div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div></div>`;
+                container.innerHTML = `<div class="result-item"><div style="font-size: 14px; font-weight: 700; color: var(--text-main);">Agama Core Engine Specification</div><div style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div></div>`;
                 return;
             }
             const sim = (0.75 + Math.random() * 0.23).toFixed(3);
-            container.innerHTML = `<div class="result-item"><div style="font-size: 14px; font-weight: 700; color: var(--text-main);">QueryResult for "${query}"</div><div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">${sim}</strong> • Matched chunk embedding over 384 dimensions</div></div>`;
+            container.innerHTML = `<div class="result-item"><div style="font-size: 14px; font-weight: 700; color: var(--text-main);">QueryResult for "${query}"</div><div style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-emerald);">${sim}</strong> • Matched chunk embedding over 384 dimensions</div></div>`;
         }
 
         // Initial setup

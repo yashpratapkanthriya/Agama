@@ -1407,8 +1407,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "sync_view.dart"
     },
     {
@@ -1418,8 +1418,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncview",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "syncview"
     },
     {
@@ -1429,8 +1429,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncviewstate",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_syncviewstate"
     },
     {
@@ -1440,8 +1440,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_autosyncenabled",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_autosyncenabled"
     },
     {
@@ -1451,8 +1451,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_selectedprovider",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_selectedprovider"
     },
     {
@@ -1462,8 +1462,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_pendingoutboxcount",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_pendingoutboxcount"
     },
     {
@@ -1473,8 +1473,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_issyncing",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_issyncing"
     },
     {
@@ -1484,8 +1484,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_createstate",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -1495,8 +1495,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_triggersync",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_triggersync"
     },
     {
@@ -1506,8 +1506,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_build",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "build"
     },
     {
@@ -2724,6 +2724,83 @@
       "community": 17,
       "community_name": "generate_frb.sh",
       "norm_label": "generate_frb.sh script"
+    },
+    {
+      "label": "docs-internal-manual-html.md",
+      "file_type": "document",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "impeccable_critique_docs_internal_manual_html",
+      "community": 40,
+      "community_name": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "norm_label": "docs-internal-manual-html.md"
+    },
+    {
+      "label": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "file_type": "document",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "impeccable_critique_docs_internal_manual_html_impeccable_design_critique_snapshot_agama_internal_manual",
+      "community": 40,
+      "community_name": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "norm_label": "impeccable design critique snapshot: agama internal manual"
+    },
+    {
+      "label": "Design Health Score",
+      "file_type": "document",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "impeccable_critique_docs_internal_manual_html_design_health_score",
+      "community": 40,
+      "community_name": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "norm_label": "design health score"
+    },
+    {
+      "label": "Design Specificity Verdict",
+      "file_type": "document",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "impeccable_critique_docs_internal_manual_html_design_specificity_verdict",
+      "community": 40,
+      "community_name": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "norm_label": "design specificity verdict"
+    },
+    {
+      "label": "Overall Impression",
+      "file_type": "document",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "impeccable_critique_docs_internal_manual_html_overall_impression",
+      "community": 40,
+      "community_name": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "norm_label": "overall impression"
+    },
+    {
+      "label": "Priority Issues",
+      "file_type": "document",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "impeccable_critique_docs_internal_manual_html_priority_issues",
+      "community": 40,
+      "community_name": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "norm_label": "priority issues"
+    },
+    {
+      "label": "Persona Red Flags",
+      "file_type": "document",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "impeccable_critique_docs_internal_manual_html_persona_red_flags",
+      "community": 40,
+      "community_name": "Impeccable Design Critique Snapshot: Agama Internal Manual",
+      "norm_label": "persona red flags"
     },
     {
       "label": "CLAUDE.md",
@@ -11050,6 +11127,72 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "impeccable_critique_docs_internal_manual_html",
+      "target": "impeccable_critique_docs_internal_manual_html_impeccable_design_critique_snapshot_agama_internal_manual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "impeccable_critique_docs_internal_manual_html_impeccable_design_critique_snapshot_agama_internal_manual",
+      "target": "impeccable_critique_docs_internal_manual_html_design_health_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "impeccable_critique_docs_internal_manual_html_impeccable_design_critique_snapshot_agama_internal_manual",
+      "target": "impeccable_critique_docs_internal_manual_html_design_specificity_verdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "impeccable_critique_docs_internal_manual_html_impeccable_design_critique_snapshot_agama_internal_manual",
+      "target": "impeccable_critique_docs_internal_manual_html_overall_impression",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "impeccable_critique_docs_internal_manual_html_impeccable_design_critique_snapshot_agama_internal_manual",
+      "target": "impeccable_critique_docs_internal_manual_html_persona_red_flags",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".impeccable/critique/docs-internal-manual-html.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "impeccable_critique_docs_internal_manual_html_impeccable_design_critique_snapshot_agama_internal_manual",
+      "target": "impeccable_critique_docs_internal_manual_html_priority_issues",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -14938,5 +15081,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "6686024b8d3b6841e208e72e9088d9e29a904b0d"
+  "built_at_commit": "482dd1ff1072e5e9342d3918118e130325f0ab6d"
 }

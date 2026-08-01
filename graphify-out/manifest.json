@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   "docs/internal_manual.html": {
-    "mtime": 1785573923.3927252,
-    "ast_hash": "1ef09a3d8cae563e16a745e131dd4c2e",
+    "mtime": 1785576105.0688326,
+    "ast_hash": "e57ad9345551b859adfe69c1d9594597",
     "semantic_hash": ""
   },
   ".impeccable/design.json": {
@@ -255,13 +255,18 @@
     "semantic_hash": ""
   },
   "DESIGN.md": {
-    "mtime": 1785575952.3110757,
-    "ast_hash": "5691074dddb31f851244a797fdd9a7b6",
+    "mtime": 1785576102.228864,
+    "ast_hash": "a73fec1df7d055d7b63c6570ff11c4a7",
     "semantic_hash": ""
   },
   "PRODUCT.md": {
     "mtime": 1785575870.3634887,
     "ast_hash": "b44341e4c469781c99a9a91cba21c3ca",
+    "semantic_hash": ""
+  },
+  ".impeccable/critique/docs-internal-manual-html.md": {
+    "mtime": 1785576051.8004844,
+    "ast_hash": "2d57a8893b29f721b9db9369e00e2108",
     "semantic_hash": ""
   }
 }

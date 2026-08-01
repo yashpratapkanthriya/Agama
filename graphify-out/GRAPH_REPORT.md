@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 51 files · ~44,886 words
+- 52 files · ~45,957 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 618 nodes · 712 edges · 44 communities (34 shown, 10 thin omitted)
+- 625 nodes · 718 edges · 44 communities (34 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6686024b`
+- Built from commit: `482dd1ff`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -54,7 +54,7 @@
 - Global Constraints
 - System Design Specification: Performance Benchmarks & Comprehension Analytics (CCI) Dashboard
 - Global Constraints
-- sync_view.dart
+- Impeccable Design Critique Snapshot: Agama Internal Manual
 - bionic_fixation_view.dart
 - Design System: Agama Platform
 - Product
@@ -106,8 +106,8 @@ Cohesion: 0.12
 Nodes (16): copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState (+8 more)
 
 ### Community 3 - "library_view.dart"
-Cohesion: 0.06
-Nodes (32): ../analytics/analytics_view.dart, ../annotations/annotation_view.dart, main, AgamaApp, build, AnalyticsView, build, build (+24 more)
+Cohesion: 0.05
+Nodes (41): ../analytics/analytics_view.dart, ../annotations/annotation_view.dart, main, AgamaApp, build, AnalyticsView, build, build (+33 more)
 
 ### Community 11 - "ai/mod.rs"
 Cohesion: 0.10
@@ -209,9 +209,9 @@ Nodes (6): 1. Overview & Objectives, 2.1 Performance Benchmarks (`native/rust_co
 Cohesion: 0.40
 Nodes (4): Global Constraints, Performance Benchmarks & Comprehension Analytics Implementation Plan, Task 1: Rust Engine Performance Benchmark Suite & CCI Helper, Task 2: Flutter Comprehension Analytics (CCI) Dashboard UI
 
-### Community 40 - "sync_view.dart"
-Cohesion: 0.22
-Nodes (9): _autoSyncEnabled, build, createState, _isSyncing, _pendingOutboxCount, _selectedProvider, SyncView, _SyncViewState (+1 more)
+### Community 40 - "Impeccable Design Critique Snapshot: Agama Internal Manual"
+Cohesion: 0.29
+Nodes (6): Design Health Score, Design Specificity Verdict, Impeccable Design Critique Snapshot: Agama Internal Manual, Overall Impression, Persona Red Flags, Priority Issues
 
 ### Community 41 - "bionic_fixation_view.dart"
 Cohesion: 0.25
@@ -226,7 +226,7 @@ Cohesion: 0.15
 Nodes (12): Accessibility & Inclusion, Brand Commitments, Capabilities and Constraints, Evidence on Hand, Operating Context, Platform, Positioning, Product (+4 more)
 
 ## Knowledge Gaps
-- **349 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+344 more)
+- **354 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+349 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -238,7 +238,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `build` to the rest of the system?**
-  _349 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _354 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
@@ -246,4 +246,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `reader_provider.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.05855855855855856 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04625346901017576 - nodes in this community are weakly interconnected._

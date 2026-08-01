@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 48 files · ~43,057 words
+- 51 files · ~44,886 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 582 nodes · 678 edges · 42 communities (32 shown, 10 thin omitted)
+- 618 nodes · 712 edges · 44 communities (34 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0ff96165`
+- Built from commit: `6686024b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,18 +56,20 @@
 - Global Constraints
 - sync_view.dart
 - bionic_fixation_view.dart
+- Design System: Agama Platform
+- Product
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
 2. `Production-Ready Local-First Architecture: Zero-Backend Platform` - 18 edges
 3. `DatabaseEngine` - 15 edges
 4. `Graphify Full Pipeline` - 15 edges
-5. `4. Key Architectural Decision Records (ADRs)` - 12 edges
-6. `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` - 12 edges
-7. `Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform` - 12 edges
-8. `test_annotations_and_flashcards_historization()` - 9 edges
-9. `AdaptivePacingEngine` - 8 edges
-10. `SyncEngine` - 8 edges
+5. `Product` - 12 edges
+6. `4. Key Architectural Decision Records (ADRs)` - 12 edges
+7. `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` - 12 edges
+8. `Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform` - 12 edges
+9. `test_annotations_and_flashcards_historization()` - 9 edges
+10. `Design System: Agama Platform` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Graphify Always On Rule` --semantically_similar_to--> `CLAUDE.md Native Integration`  [INFERRED] [semantically similar]
@@ -89,15 +91,15 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (42 total, 10 thin omitted)
+## Communities (44 total, 10 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
 Nodes (24): Graphify Always On Rule, Graphify Ingestion (Add URL), Obsidian Vault Export, Confidence Score Rubric, Deterministic Node ID Format, Semantic Extraction Specification, Cross-Repo Graph Merge, CLAUDE.md Native Integration (+16 more)
 
 ### Community 1 - "rsvp_canvas.dart"
-Cohesion: 0.11
-Nodes (18): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+10 more)
+Cohesion: 0.12
+Nodes (16): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+8 more)
 
 ### Community 2 - "reader_provider.dart"
 Cohesion: 0.12
@@ -176,8 +178,8 @@ Cohesion: 0.11
 Nodes (18): 1. Executive Summary & Core Platform Philosophy, 2. Core Internal Use Cases, 3.1 Mode 1: RSVP Redicle Speed Reader, 3.2 Mode 2: Guided Highlighting Mode, 3.3 Mode 3: Bionic Fixation Mode, 3.4 Mode 4: Inline Annotations & Local Vector Similarity Search, 3.5 Mode 5: SM-2 Active Recall Flashcard Trainer, 3.6 Mode 6: Decentralized Sync Settings (`SyncView`) (+10 more)
 
 ### Community 32 - "State"
-Cohesion: 0.32
-Nodes (8): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, GuidedHighlightView, _GuidedHighlightViewState, State, StatefulWidget
+Cohesion: 0.27
+Nodes (10): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, GuidedHighlightView, _GuidedHighlightViewState, RsvpCanvasView, _RsvpCanvasViewState (+2 more)
 
 ### Community 33 - "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)"
 Cohesion: 0.22
@@ -215,8 +217,16 @@ Nodes (9): _autoSyncEnabled, build, createState, _isSyncing, _pendingOutboxCount
 Cohesion: 0.25
 Nodes (8): BionicFixationView, _BionicFixationViewState, build, createState, _fixationLevel, _fontSize, _splitBionic, text
 
+### Community 42 - "Design System: Agama Platform"
+Cohesion: 0.09
+Nodes (22): Buttons, Cards / Containers, Colors, Components, Design System: Agama Platform, Do:, Do's and Don'ts, Don't: (+14 more)
+
+### Community 43 - "Product"
+Cohesion: 0.15
+Nodes (12): Accessibility & Inclusion, Brand Commitments, Capabilities and Constraints, Evidence on Hand, Operating Context, Platform, Positioning, Product (+4 more)
+
 ## Knowledge Gaps
-- **322 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+317 more)
+- **349 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+344 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -224,15 +234,15 @@ Nodes (8): BionicFixationView, _BionicFixationViewState, build, createState, _fi
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `build` to the rest of the system?**
-  _322 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _349 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `reader_provider.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**

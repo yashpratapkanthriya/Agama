@@ -9,6 +9,7 @@ colors:
   emerald-light: "#ecfdf5"
   crimson: "#ef4444"
   amber: "#f59e0b"
+  redicle-viewport: "#090d16"
   neutral-bg: "#f8fafc"
   surface: "#ffffff"
   text-main: "#0f172a"
@@ -21,6 +22,12 @@ typography:
     fontWeight: 800
     lineHeight: "1.2"
     letterSpacing: "-0.8px"
+  title:
+    fontFamily: "Outfit, -apple-system, sans-serif"
+    fontSize: "18px"
+    fontWeight: 700
+    lineHeight: "1.3"
+    letterSpacing: "-0.4px"
   body:
     fontFamily: "Inter, -apple-system, sans-serif"
     fontSize: "16px"
