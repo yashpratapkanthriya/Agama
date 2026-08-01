@@ -54,8 +54,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main.dart"
     },
     {
@@ -65,8 +65,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main_main",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -76,8 +76,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_material_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter/material.dart"
     },
     {
@@ -87,8 +87,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_riverpod_flutter_riverpod_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
     },
     {
@@ -98,8 +98,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "src_app_app_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "src/app/app.dart"
     },
     {
@@ -109,8 +109,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "app.dart"
     },
     {
@@ -120,8 +120,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_agamaapp",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "agamaapp"
     },
     {
@@ -142,8 +142,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_thememodenotifier",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "thememodenotifier"
     },
     {
@@ -153,8 +153,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "valuenotifier",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "valuenotifier"
     },
     {
@@ -164,8 +164,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_getinitialhome",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "_getinitialhome"
     },
     {
@@ -175,8 +175,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_build",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "build"
     },
     {
@@ -186,8 +186,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "theme_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "theme.dart"
     },
     {
@@ -197,8 +197,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_library_library_view_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "../features/library/library_view.dart"
     },
     {
@@ -208,8 +208,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_annotations_annotation_view_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "../features/annotations/annotation_view.dart"
     },
     {
@@ -219,8 +219,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "thememode",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 56,
+      "community_name": "app.dart",
       "norm_label": "thememode"
     },
     {
@@ -714,8 +714,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "app_theme_dart",
-      "community": 41,
-      "community_name": "sync_view.dart",
+      "community": 45,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "../../app/theme.dart"
     },
     {
@@ -1088,8 +1088,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardview",
-      "community": 57,
-      "community_name": "State",
+      "community": 20,
+      "community_name": "flashcard_view.dart",
       "norm_label": "flashcardview"
     },
     {
@@ -1099,8 +1099,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardviewstate",
-      "community": 57,
-      "community_name": "State",
+      "community": 20,
+      "community_name": "flashcard_view.dart",
       "norm_label": "_flashcardviewstate"
     },
     {
@@ -2573,8 +2573,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_rsvpcanvasview",
-      "community": 1,
-      "community_name": "rsvp_canvas.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "rsvpcanvasview"
     },
     {
@@ -2584,8 +2584,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_rsvpcanvasviewstate",
-      "community": 1,
-      "community_name": "rsvp_canvas.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_rsvpcanvasviewstate"
     },
     {
@@ -2980,8 +2980,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncview",
-      "community": 41,
-      "community_name": "sync_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "syncview"
     },
     {
@@ -2991,8 +2991,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncviewstate",
-      "community": 41,
-      "community_name": "sync_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_syncviewstate"
     },
     {
@@ -11443,12 +11443,34 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/library_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_library_view",
+      "target": "dart_convert"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/test/file_parser_test.dart",
       "source_location": null,
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_test_file_parser_test",
       "target": "dart_convert"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/library_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_library_view",
+      "target": "dart_typed_data"
     },
     {
       "relation": "imports",
@@ -20286,5 +20308,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "87e6d7617bc7a0e6851cf5386c07376700956922"
+  "built_at_commit": "2e8bebe1bf935dd319425367e7b6e757993f75bd"
 }

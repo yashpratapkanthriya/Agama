@@ -200,8 +200,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/sync/sync_view.dart": {
-    "mtime": 1785577926.2563643,
-    "ast_hash": "939857954de5783f69cb6c44622f88be",
+    "mtime": 1785585669.3114717,
+    "ast_hash": "d0bd069b11e612ddac0ec4bb589221eb",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-01-vector-search-and-crdt-sync.md": {
@@ -422,6 +422,16 @@
   "apps/flutter_client/test/vector_search_test.dart": {
     "mtime": 1785585533.3534796,
     "ast_hash": "0b7678ea865d9278f0d1249a403a852c",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/sync/sync_transport.dart": {
+    "mtime": 1785585661.1594055,
+    "ast_hash": "0231f90cc41fd80563febc49b96b84cd",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/sync_transport_test.dart": {
+    "mtime": 1785585649.932447,
+    "ast_hash": "4934fd23295ec926f4b108774da0febb",
     "semantic_hash": ""
   }
 }

@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 71 files · ~61,592 words
+- 71 files · ~61,837 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 835 nodes · 977 edges · 57 communities (45 shown, 12 thin omitted)
+- 835 nodes · 979 edges · 59 communities (47 shown, 12 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `87e6d761`
+- Built from commit: `2e8bebe1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -70,7 +70,9 @@
 - sync_transport.dart
 - vector_search_service.dart
 - Global Constraints
+- app.dart
 - State
+- package:flutter/material.dart
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
@@ -104,7 +106,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (57 total, 12 thin omitted)
+## Communities (59 total, 12 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -112,7 +114,7 @@ Nodes (24): Graphify Always On Rule, Graphify Ingestion (Add URL), Obsidian Vaul
 
 ### Community 1 - "rsvp_canvas.dart"
 Cohesion: 0.07
-Nodes (30): accentColor, build, createState, dispose, _focus, icon, _idx, initState (+22 more)
+Nodes (28): accentColor, build, createState, dispose, _focus, icon, _idx, initState (+20 more)
 
 ### Community 2 - "reader_provider.dart"
 Cohesion: 0.12
@@ -148,7 +150,7 @@ Nodes (17): 1. Build & Test Native Rust Engine Core, 1. Schema Versioning (`PRAG
 
 ### Community 20 - "flashcard_view.dart"
 Cohesion: 0.11
-Nodes (17): answer, build, _cards, color, createState, ef, FlashcardItem, id (+9 more)
+Nodes (19): answer, build, _cards, color, createState, ef, FlashcardItem, FlashcardView (+11 more)
 
 ### Community 21 - "Speed Reading Apps: Comprehensive Analysis & Gap Assessment"
 Cohesion: 0.06
@@ -223,8 +225,8 @@ Cohesion: 0.29
 Nodes (6): Design Health Score, Design Specificity Verdict, Impeccable Design Critique Snapshot: Agama Internal Manual, Overall Impression, Persona Red Flags, Priority Issues
 
 ### Community 41 - "sync_view.dart"
-Cohesion: 0.18
-Nodes (11): ../../app/theme.dart, build, createState, _outbox, _sync, _syncing, SyncView, _SyncViewState (+3 more)
+Cohesion: 0.22
+Nodes (8): build, createState, _outbox, _sync, _syncing, _transportAdapter, static final List, sync_transport.dart
 
 ### Community 42 - "Design System: Agama Platform"
 Cohesion: 0.08
@@ -235,12 +237,12 @@ Cohesion: 0.15
 Nodes (12): Accessibility & Inclusion, Brand Commitments, Capabilities and Constraints, Evidence on Hand, Operating Context, Platform, Positioning, Product (+4 more)
 
 ### Community 44 - "theme.dart"
-Cohesion: 0.05
-Nodes (40): main, AgamaApp, build, _getInitialHome, themeModeNotifier, AgamaTheme, amber, bg (+32 more)
+Cohesion: 0.07
+Nodes (27): AgamaTheme, amber, bg, border, borderStrong, _buildTextTheme, crimson, dark (+19 more)
 
 ### Community 45 - "bionic_fixation_view.dart"
-Cohesion: 0.22
-Nodes (9): BionicFixationView, _BionicFixationViewState, build, createState, _fontSize, _level, _split, text (+1 more)
+Cohesion: 0.20
+Nodes (10): ../../app/theme.dart, BionicFixationView, _BionicFixationViewState, build, createState, _fontSize, _level, _split (+2 more)
 
 ### Community 46 - "file_parser_service.dart"
 Cohesion: 0.06
@@ -278,9 +280,17 @@ Nodes (5): score, search, SearchResult, text, VectorSearchService
 Cohesion: 0.25
 Nodes (7): Feature Gap Remediation Implementation Plan, Global Constraints, Task 1: Native Document File Parser Integration, Task 2: Flutter-Rust FFI Core Binding Foundation, Task 3: Local Vector Index & Semantic Search Abstraction, Task 4: WebDAV & P2P Sync Transport Adapter, Task 5: Final Graphify Topology & Test Verification
 
+### Community 56 - "app.dart"
+Cohesion: 0.20
+Nodes (9): AgamaApp, build, _getInitialHome, themeModeNotifier, ../features/annotations/annotation_view.dart, ../features/library/library_view.dart, theme.dart, ThemeMode (+1 more)
+
 ### Community 57 - "State"
-Cohesion: 0.21
-Nodes (13): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, _EngineChooser, _EngineChooserState, LibraryView, _LibraryViewState (+5 more)
+Cohesion: 0.18
+Nodes (15): AnnotationView, _AnnotationViewState, _EngineChooser, _EngineChooserState, LibraryView, _LibraryViewState, _LivePulse, _LivePulseState (+7 more)
+
+### Community 58 - "package:flutter/material.dart"
+Cohesion: 0.40
+Nodes (4): main, package:flutter/material.dart, package:flutter_riverpod/flutter_riverpod.dart, src/app/app.dart
 
 ## Knowledge Gaps
 - **479 isolated node(s):** `main`, `themeModeNotifier`, `_getInitialHome`, `build`, `AgamaTheme` (+474 more)
@@ -299,7 +309,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
 - **Should `reader_provider.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
