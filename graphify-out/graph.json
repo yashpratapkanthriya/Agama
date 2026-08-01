@@ -1060,6 +1060,28 @@
       "norm_label": "readerprovider"
     },
     {
+      "label": "readerStreamProvider",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readerstreamprovider",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "readerstreamprovider"
+    },
+    {
+      "label": "notifier",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_notifier",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "notifier"
+    },
+    {
       "label": "copyWith",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
@@ -1113,6 +1135,17 @@
       "community": 2,
       "community_name": "reader_provider.dart",
       "norm_label": "setcomplexity"
+    },
+    {
+      "label": "streamWordTimings",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_streamwordtimings",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "streamwordtimings"
     },
     {
       "label": "rsvp_canvas.dart",
@@ -1709,10 +1742,43 @@
       "norm_label": ".calculate_sm2()"
     },
     {
+      "label": "OnnxInferenceEngine",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_onnxinferenceengine",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": "onnxinferenceengine"
+    },
+    {
+      "label": ".infer_complexity()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L177",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_onnxinferenceengine_infer_complexity",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": ".infer_complexity()"
+    },
+    {
+      "label": ".generate_embedding()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L181",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": ".generate_embedding()"
+    },
+    {
       "label": "test_orp_calculation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L179",
+      "source_location": "L192",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_orp_calculation",
       "community": 11,
@@ -1723,7 +1789,7 @@
       "label": "test_word_delay_calculation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L187",
+      "source_location": "L200",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_word_delay_calculation",
       "community": 11,
@@ -1734,7 +1800,7 @@
       "label": "test_complexity_and_embedding()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L196",
+      "source_location": "L209",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
       "community": 11,
@@ -1745,7 +1811,7 @@
       "label": "test_bionic_fixation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L208",
+      "source_location": "L221",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_bionic_fixation",
       "community": 11,
@@ -1756,7 +1822,7 @@
       "label": "test_sm2_algorithm()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L215",
+      "source_location": "L228",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_sm2_algorithm",
       "community": 11,
@@ -1828,6 +1894,17 @@
       "community": 11,
       "community_name": "ai/mod.rs",
       "norm_label": "calculate_sm2_review()"
+    },
+    {
+      "label": "stream_rsvp_timings()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "native_rust_core_src_api_mod_stream_rsvp_timings",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": "stream_rsvp_timings()"
     },
     {
       "label": "db/mod.rs",
@@ -2188,8 +2265,8 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_wordtiming",
-      "community": 12,
-      "community_name": "Result",
+      "community": 11,
+      "community_name": "ai/mod.rs",
       "norm_label": "wordtiming"
     },
     {
@@ -5322,6 +5399,61 @@
       "norm_label": "task 2: flutter decentralized sync view & semantic search ui"
     },
     {
+      "label": "2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine",
+      "community": 37,
+      "community_name": "Global Constraints",
+      "norm_label": "2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md"
+    },
+    {
+      "label": "Zero-Copy FFI Stream Pipeline & ONNX Engine Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_zero_copy_ffi_stream_pipeline_onnx_engine_implementation_plan",
+      "community": 37,
+      "community_name": "Global Constraints",
+      "norm_label": "zero-copy ffi stream pipeline & onnx engine implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_global_constraints",
+      "community": 37,
+      "community_name": "Global Constraints",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "Task 1: Rust Core Zero-Copy FFI Stream Generator & ONNX Engine",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_task_1_rust_core_zero_copy_ffi_stream_generator_onnx_engine",
+      "community": 37,
+      "community_name": "Global Constraints",
+      "norm_label": "task 1: rust core zero-copy ffi stream generator & onnx engine"
+    },
+    {
+      "label": "Task 2: Flutter Riverpod Reader Provider & Stream Listener Integration",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_task_2_flutter_riverpod_reader_provider_stream_listener_integration",
+      "community": 37,
+      "community_name": "Global Constraints",
+      "norm_label": "task 2: flutter riverpod reader provider & stream listener integration"
+    },
+    {
       "label": "2026-08-01-vector-search-and-crdt-sync-design.md",
       "file_type": "document",
       "source_file": "docs/superpowers/specs/2026-08-01-vector-search-and-crdt-sync-design.md",
@@ -5407,6 +5539,94 @@
       "id": "docs_superpowers_specs_2026_08_01_vector_search_and_crdt_sync_design_4_verification_testing_strategy",
       "community": 34,
       "community_name": "System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox",
+      "norm_label": "4. verification & testing strategy"
+    },
+    {
+      "label": "2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "norm_label": "2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md"
+    },
+    {
+      "label": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_system_design_specification_zero_copy_ffi_stream_pipeline_onnx_engine_integration",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "norm_label": "system design specification: zero-copy ffi stream pipeline & onnx engine integration"
+    },
+    {
+      "label": "1. Overview & Objectives",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_1_overview_objectives",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "norm_label": "1. overview & objectives"
+    },
+    {
+      "label": "2. Technical Architecture & Components",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_technical_architecture_components",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "norm_label": "2. technical architecture & components"
+    },
+    {
+      "label": "2.1 ONNX Inference Engine (`native/rust_core/src/ai/mod.rs`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_1_onnx_inference_engine_native_rust_core_src_ai_mod_rs",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "norm_label": "2.1 onnx inference engine (`native/rust_core/src/ai/mod.rs`)"
+    },
+    {
+      "label": "2.2 Zero-Copy FFI Stream Pipeline (`native/rust_core/src/api/mod.rs`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_2_zero_copy_ffi_stream_pipeline_native_rust_core_src_api_mod_rs",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "norm_label": "2.2 zero-copy ffi stream pipeline (`native/rust_core/src/api/mod.rs`)"
+    },
+    {
+      "label": "3. Data Flow & Sequence Diagram",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_3_data_flow_sequence_diagram",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+      "norm_label": "3. data flow & sequence diagram"
+    },
+    {
+      "label": "4. Verification & Testing Strategy",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_4_verification_testing_strategy",
+      "community": 36,
+      "community_name": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
       "norm_label": "4. verification & testing strategy"
     },
     {
@@ -7051,6 +7271,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_notifier"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
       "target": "apps_flutter_client_lib_src_features_reader_reader_provider_paragraphcomplexity"
     },
     {
@@ -7095,6 +7326,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_readerstreamprovider"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
       "target": "apps_flutter_client_lib_src_features_reader_reader_provider_setcomplexity"
     },
     {
@@ -7118,6 +7360,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
       "target": "apps_flutter_client_lib_src_features_reader_reader_provider_setwpm"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_streamwordtimings"
     },
     {
       "relation": "defines",
@@ -7596,6 +7849,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L174",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
       "source_location": "L145",
       "weight": 1.0,
       "_origin": "ast",
@@ -7607,7 +7871,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L208",
+      "source_location": "L221",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -7618,7 +7882,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L196",
+      "source_location": "L209",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -7629,7 +7893,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L179",
+      "source_location": "L192",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -7640,7 +7904,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L215",
+      "source_location": "L228",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -7651,7 +7915,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L187",
+      "source_location": "L200",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -7800,7 +8064,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L188",
+      "source_location": "L201",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
@@ -7824,7 +8088,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L197",
+      "source_location": "L178",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_infer_complexity",
+      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_complexity_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L210",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
@@ -7848,7 +8124,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L189",
+      "source_location": "L202",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
@@ -7868,18 +8144,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L200",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
-      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_generate_embedding",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
@@ -7888,6 +8152,18 @@
       "context": "return_type",
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_bionicfixationengine_format_text",
+      "target": "native_rust_core_src_ai_mod_rs_vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L181",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
       "target": "native_rust_core_src_ai_mod_rs_vec",
       "confidence_score": 1.0
     },
@@ -7942,7 +8218,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L209",
+      "source_location": "L222",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_bionic_fixation",
@@ -7977,11 +8253,45 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L216",
+      "source_location": "L229",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_sm2_algorithm",
       "target": "native_rust_core_src_ai_mod_spacedrepetitionengine_calculate_sm2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L181",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_infer_complexity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L213",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
       "confidence_score": 1.0
     },
     {
@@ -8015,6 +8325,17 @@
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod",
       "target": "native_rust_core_src_api_mod_generate_rsvp_timings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod",
+      "target": "native_rust_core_src_api_mod_stream_rsvp_timings",
       "confidence_score": 1.0
     },
     {
@@ -8054,6 +8375,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_stream_rsvp_timings",
+      "target": "native_rust_core_src_api_mod_generate_rsvp_timings",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
@@ -8062,6 +8395,18 @@
       "context": "parameter_type",
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod_generate_bionic_words",
+      "target": "native_rust_core_src_api_mod_rs_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_stream_rsvp_timings",
       "target": "native_rust_core_src_api_mod_rs_string",
       "confidence_score": 1.0
     },
@@ -8081,12 +8426,36 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_stream_rsvp_timings",
+      "target": "native_rust_core_src_api_mod_rs_vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
       "source_location": "L11",
       "weight": 1.0,
       "context": "generic_arg",
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod_generate_bionic_words",
       "target": "native_rust_core_src_models_mod_bionicword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_stream_rsvp_timings",
+      "target": "native_rust_core_src_models_mod_wordtiming",
       "confidence_score": 1.0
     },
     {
@@ -12330,6 +12699,50 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine",
+      "target": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_zero_copy_ffi_stream_pipeline_onnx_engine_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_zero_copy_ffi_stream_pipeline_onnx_engine_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_task_1_rust_core_zero_copy_ffi_stream_generator_onnx_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_task_2_flutter_riverpod_reader_provider_stream_listener_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/superpowers/specs/2026-08-01-vector-search-and-crdt-sync-design.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -12402,6 +12815,83 @@
       "_origin": "ast",
       "source": "docs_superpowers_specs_2026_08_01_vector_search_and_crdt_sync_design_2_technical_architecture_components",
       "target": "docs_superpowers_specs_2026_08_01_vector_search_and_crdt_sync_design_2_2_decentralized_yrs_crdt_sync_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design",
+      "target": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_system_design_specification_zero_copy_ffi_stream_pipeline_onnx_engine_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_system_design_specification_zero_copy_ffi_stream_pipeline_onnx_engine_integration",
+      "target": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_1_overview_objectives",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_system_design_specification_zero_copy_ffi_stream_pipeline_onnx_engine_integration",
+      "target": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_technical_architecture_components",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_system_design_specification_zero_copy_ffi_stream_pipeline_onnx_engine_integration",
+      "target": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_3_data_flow_sequence_diagram",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_system_design_specification_zero_copy_ffi_stream_pipeline_onnx_engine_integration",
+      "target": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_4_verification_testing_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_technical_architecture_components",
+      "target": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_1_onnx_inference_engine_native_rust_core_src_ai_mod_rs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_technical_architecture_components",
+      "target": "docs_superpowers_specs_2026_08_01_zero_copy_ffi_stream_and_onnx_engine_design_2_2_zero_copy_ffi_stream_pipeline_native_rust_core_src_api_mod_rs",
       "confidence_score": 1.0
     },
     {
@@ -12698,5 +13188,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "9391fa557c3880e47d95eef4d6a0fcdede50f326"
+  "built_at_commit": "7abfee77412421d057b0c5b3d87d77ccab9a5ba1"
 }

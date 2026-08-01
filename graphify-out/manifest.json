@@ -65,7 +65,7 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785571194.5110745,
+    "mtime": 1785571253.0541534,
     "ast_hash": "248bcbf1f8c4ff887ad018e8d5b436fb",
     "semantic_hash": ""
   },
@@ -75,17 +75,17 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/ai/mod.rs": {
-    "mtime": 1785570534.33572,
-    "ast_hash": "463c251274d493384dd50c10a4381071",
+    "mtime": 1785571495.2079234,
+    "ast_hash": "f3724d07eeac0e565e5304c23694ec79",
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
-    "mtime": 1785570546.432118,
-    "ast_hash": "3950c74ac6ff42b3392c40ef35361776",
+    "mtime": 1785571502.145239,
+    "ast_hash": "008c15ab32e1eee67bcc5a7c2f0f0f4e",
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
-    "mtime": 1785571172.5315037,
+    "mtime": 1785571253.06226,
     "ast_hash": "75b85059516fc671392f157fd3ff5217",
     "semantic_hash": ""
   },
@@ -105,7 +105,7 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/sync/mod.rs": {
-    "mtime": 1785571179.5339277,
+    "mtime": 1785571253.0624793,
     "ast_hash": "ab074f31f98c755a1141682c56317b2f",
     "semantic_hash": ""
   },
@@ -125,18 +125,18 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785571144.301012,
+    "mtime": 1785571253.0538914,
     "ast_hash": "ab0cdc192681e1d25a0f7d9a622055d1",
     "semantic_hash": ""
   },
   "apps/flutter_client/test/widget_test.dart": {
-    "mtime": 1785571202.0137198,
+    "mtime": 1785571253.0545743,
     "ast_hash": "6551ee0917f3b1fd65c8e8cf3efec1de",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/reader_provider.dart": {
-    "mtime": 1785570274.877734,
-    "ast_hash": "14c3b79889a51951af8c5ae390540544",
+    "mtime": 1785571513.0499754,
+    "ast_hash": "1ff64ee2bf5ddc897df433bc71c33631",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/annotations/annotation_view.dart": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "docs/complete_end_to_end_implementation.md": {
-    "mtime": 1785570995.5976436,
-    "ast_hash": "de2405e3d1d01d30b0b45c41df749f52",
+    "mtime": 1785571368.2092338,
+    "ast_hash": "e1f3f374c8badb113d3d451330eee74c",
     "semantic_hash": ""
   },
   "docs/decentralized_sync_architecture.md": {
@@ -190,7 +190,7 @@
     "semantic_hash": ""
   },
   "docs/schema.md": {
-    "mtime": 1785571137.247637,
+    "mtime": 1785571253.0547974,
     "ast_hash": "94689563fb4d460d16f2ada1f747ac92",
     "semantic_hash": ""
   },
@@ -200,7 +200,7 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/sync/sync_view.dart": {
-    "mtime": 1785571188.3030033,
+    "mtime": 1785571253.0543823,
     "ast_hash": "b65b0074d50160e7eb15ffa4e1f5c70d",
     "semantic_hash": ""
   },
@@ -212,6 +212,16 @@
   "docs/superpowers/specs/2026-08-01-vector-search-and-crdt-sync-design.md": {
     "mtime": 1785571068.3561776,
     "ast_hash": "18855e95e597c82812f33a0a7195df77",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-01-zero-copy-ffi-stream-and-onnx-engine.md": {
+    "mtime": 1785571483.4532459,
+    "ast_hash": "887875e96259ac0b946081494a87f418",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-01-zero-copy-ffi-stream-and-onnx-engine-design.md": {
+    "mtime": 1785571392.7762995,
+    "ast_hash": "d015ab5edc1e4da9b74cbda5652741b1",
     "semantic_hash": ""
   }
 }

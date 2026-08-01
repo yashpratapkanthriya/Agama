@@ -34,5 +34,7 @@
   "32": "sync_view.dart",
   "33": "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)",
   "34": "System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox",
-  "35": "Global Constraints"
+  "35": "Global Constraints",
+  "36": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
+  "37": "Global Constraints"
 }

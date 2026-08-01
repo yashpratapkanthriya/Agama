@@ -31,6 +31,8 @@
   "29": "String?",
   "30": "guided_highlight_view.dart",
   "31": "bionic_fixation_view.dart",
-  "32": "State",
-  "33": "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)"
+  "32": "sync_view.dart",
+  "33": "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)",
+  "34": "System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox",
+  "35": "Global Constraints"
 }
