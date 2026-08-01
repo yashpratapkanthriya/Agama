@@ -37,6 +37,19 @@ class AgamaApp extends StatelessWidget {
           themeMode: currentMode,
           theme: AgamaTheme.light(),
           darkTheme: AgamaTheme.dark(),
+          onGenerateRoute: (settings) {
+            final name = settings.name ?? '';
+            if (name.contains('knowledge')) {
+              return MaterialPageRoute(builder: (_) => const LibraryView(initialTab: 1), settings: settings);
+            }
+            if (name.contains('analytics')) {
+              return MaterialPageRoute(builder: (_) => const LibraryView(initialTab: 2), settings: settings);
+            }
+            if (name.contains('highlights')) {
+              return MaterialPageRoute(builder: (_) => const AnnotationView(), settings: settings);
+            }
+            return MaterialPageRoute(builder: (_) => const LibraryView(initialTab: 0), settings: settings);
+          },
           home: _getInitialHome(),
         );
       },
