@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
+import '../annotations/annotation_view.dart';
 
 class GuidedHighlightView extends StatefulWidget {
   final String text;
@@ -44,6 +45,29 @@ class _GuidedHighlightViewState extends State<GuidedHighlightView> {
       ms += 150.0;
     }
     return ms.round();
+  }
+
+  void _saveHighlight() {
+    final ctxStart = (_idx - 5).clamp(0, _words.length);
+    final ctxEnd = (_idx + 6).clamp(0, _words.length);
+    final text = _words.sublist(ctxStart, ctxEnd).join(' ');
+    
+    AnnotationStore.items.insert(
+      0,
+      AnnotationItem(
+        id: DateTime.now().millisecondsSinceEpoch.toString(),
+        selectedText: text,
+        note: 'Saved from Guided reader',
+        color: const Color(0xFF10B981), // AgamaTheme.emerald fallback
+      ),
+    );
+    
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Highlight saved!'),
+        duration: Duration(seconds: 1),
+      ),
+    );
   }
 
   void _tick() async {
@@ -203,6 +227,19 @@ class _GuidedHighlightViewState extends State<GuidedHighlightView> {
                         ),
                       ),
                       const SizedBox(width: 16),
+                      Tooltip(
+                        message: 'Highlight (H)',
+                        child: InkWell(
+                          onTap: _saveHighlight,
+                          borderRadius: BorderRadius.circular(8),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Icon(Icons.bookmark_add_outlined,
+                                size: 20, color: AgamaTheme.inkMuted),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
                       Tooltip(
                         message: 'Restart',
                         child: InkWell(

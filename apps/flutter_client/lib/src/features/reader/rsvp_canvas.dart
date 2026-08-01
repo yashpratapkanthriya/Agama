@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
 import 'reader_settings_provider.dart';
+import '../annotations/annotation_view.dart';
 
 typedef RSVPCanvas = RsvpCanvasView;
 
@@ -92,6 +93,30 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
     ref.read(readerSettingsProvider.notifier).setWpm(w);
   }
 
+  void _saveHighlight() {
+    final ctxStart = (_idx - 5).clamp(0, _words.length);
+    final ctxEnd = (_idx + 6).clamp(0, _words.length);
+    final text = _words.sublist(ctxStart, ctxEnd).join(' ');
+    
+    // Quick minimum-working ponytail implementation
+    AnnotationStore.items.insert(
+      0,
+      AnnotationItem(
+        id: DateTime.now().millisecondsSinceEpoch.toString(),
+        selectedText: text,
+        note: 'Saved from RSVP reader',
+        color: const Color(0xFF4F46E5), // AgamaTheme.indigo fallback
+      ),
+    );
+    
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Highlight saved!'),
+        duration: Duration(seconds: 1),
+      ),
+    );
+  }
+
   void _onKey(KeyEvent e) {
     if (e is! KeyDownEvent) return;
     final settings = ref.read(readerSettingsProvider);
@@ -107,6 +132,8 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
         _setWpm((currentWpm + 50).clamp(100, 1500));
       case LogicalKeyboardKey.arrowDown:
         _setWpm((currentWpm - 50).clamp(100, 1500));
+      case LogicalKeyboardKey.keyH:
+        _saveHighlight();
     }
   }
 
@@ -358,6 +385,12 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        _ControlBtn(
+                          icon: Icons.bookmark_add_outlined,
+                          tooltip: 'Highlight context (H)',
+                          onTap: _saveHighlight,
+                        ),
+                        const SizedBox(width: 8),
                         _ControlBtn(
                           icon: Icons.replay_rounded,
                           tooltip: 'Restart',

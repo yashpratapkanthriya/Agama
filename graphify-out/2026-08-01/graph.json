@@ -109,8 +109,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "app.dart"
     },
     {
@@ -120,8 +120,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_agamaapp",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "agamaapp"
     },
     {
@@ -142,8 +142,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_thememodenotifier",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "thememodenotifier"
     },
     {
@@ -153,8 +153,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "valuenotifier",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "valuenotifier"
     },
     {
@@ -164,8 +164,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_getinitialhome",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "_getinitialhome"
     },
     {
@@ -175,8 +175,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_build",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "build"
     },
     {
@@ -186,8 +186,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "theme_dart",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "theme.dart"
     },
     {
@@ -197,8 +197,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_library_library_view_dart",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "../features/library/library_view.dart"
     },
     {
@@ -208,8 +208,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_annotations_annotation_view_dart",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "../features/annotations/annotation_view.dart"
     },
     {
@@ -219,8 +219,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "thememode",
-      "community": 58,
-      "community_name": "app.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "thememode"
     },
     {
@@ -538,8 +538,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_google_fonts_google_fonts_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "package:google_fonts/google_fonts.dart"
     },
     {
@@ -714,8 +714,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "app_theme_dart",
-      "community": 41,
-      "community_name": "sync_view.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "../../app/theme.dart"
     },
     {
@@ -1088,8 +1088,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardview",
-      "community": 20,
-      "community_name": "flashcard_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "flashcardview"
     },
     {
@@ -1099,8 +1099,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardviewstate",
-      "community": 20,
-      "community_name": "flashcard_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_flashcardviewstate"
     },
     {
@@ -1429,8 +1429,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "dart_convert",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "dart:convert"
     },
     {
@@ -1440,8 +1440,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "dart_typed_data",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "dart:typed_data"
     },
     {
@@ -2133,8 +2133,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "bionic_fixation_view.dart"
     },
     {
@@ -2144,8 +2144,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationview",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "bionicfixationview"
     },
     {
@@ -2155,8 +2155,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationviewstate",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_bionicfixationviewstate"
     },
     {
@@ -2166,8 +2166,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_text",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "text"
     },
     {
@@ -2177,8 +2177,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_level",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_level"
     },
     {
@@ -2188,8 +2188,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_fontsize",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_fontsize"
     },
     {
@@ -2199,8 +2199,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_createstate",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -2210,8 +2210,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_split",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_split"
     },
     {
@@ -2221,8 +2221,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_build",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 58,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "build"
     },
     {
@@ -2356,6 +2356,17 @@
       "community": 30,
       "community_name": "guided_highlight_view.dart",
       "norm_label": "_toggleplay"
+    },
+    {
+      "label": "_delayForWord",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/guided_highlight_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_guided_highlight_view_delayforword",
+      "community": 30,
+      "community_name": "guided_highlight_view.dart",
+      "norm_label": "_delayforword"
     },
     {
       "label": "_tick",
@@ -3051,6 +3062,17 @@
       "norm_label": "_toggleplay"
     },
     {
+      "label": "_delayForWord",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_delayforword",
+      "community": 1,
+      "community_name": "rsvp_canvas.dart",
+      "norm_label": "_delayforword"
+    },
+    {
       "label": "_tick",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart",
@@ -3567,8 +3589,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_library_file_parser_service_test",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "file_parser_service_test.dart"
     },
     {
@@ -3578,8 +3600,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_library_file_parser_service_test_main",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -3589,8 +3611,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_test_flutter_test_dart",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_test/flutter_test.dart"
     },
     {
@@ -3600,8 +3622,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_library_file_parser_service_dart",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/library/file_parser_service.dart"
     },
     {
@@ -3688,8 +3710,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_ffi_bridge_test",
-      "community": 63,
-      "community_name": "ffi_bridge_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "ffi_bridge_test.dart"
     },
     {
@@ -3699,8 +3721,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_ffi_bridge_test_main",
-      "community": 63,
-      "community_name": "ffi_bridge_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -3710,8 +3732,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_core_ffi_bridge_dart",
-      "community": 63,
-      "community_name": "ffi_bridge_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/core/ffi_bridge.dart"
     },
     {
@@ -3721,8 +3743,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "file_parser_test.dart"
     },
     {
@@ -3732,8 +3754,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test_main",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -3743,8 +3765,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_sync_transport_test",
-      "community": 62,
-      "community_name": "sync_transport_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "sync_transport_test.dart"
     },
     {
@@ -3754,8 +3776,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_sync_transport_test_main",
-      "community": 62,
-      "community_name": "sync_transport_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -3765,8 +3787,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_sync_sync_transport_dart",
-      "community": 62,
-      "community_name": "sync_transport_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/sync/sync_transport.dart"
     },
     {
@@ -3776,8 +3798,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_vector_search_test",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "vector_search_test.dart"
     },
     {
@@ -3787,8 +3809,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_vector_search_test_main",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -3798,8 +3820,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_annotations_vector_search_service_dart",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/annotations/vector_search_service.dart"
     },
     {
@@ -3809,8 +3831,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_widget_test",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "widget_test.dart"
     },
     {
@@ -3820,8 +3842,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_widget_test_main",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -3831,8 +3853,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_app_theme_dart",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/app/theme.dart"
     },
     {
@@ -3842,8 +3864,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_library_library_view_dart",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/library/library_view.dart"
     },
     {
@@ -3853,8 +3875,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_guided_highlight_view_dart",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/reader/guided_highlight_view.dart"
     },
     {
@@ -3864,8 +3886,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_bionic_fixation_view_dart",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/reader/bionic_fixation_view.dart"
     },
     {
@@ -3875,8 +3897,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_flashcards_flashcard_view_dart",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/flashcards/flashcard_view.dart"
     },
     {
@@ -3886,8 +3908,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_sync_sync_view_dart",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/sync/sync_view.dart"
     },
     {
@@ -3897,8 +3919,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_analytics_analytics_view_dart",
-      "community": 61,
-      "community_name": "widget_test.dart",
+      "community": 46,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/analytics/analytics_view.dart"
     },
     {
@@ -9429,6 +9451,171 @@
       "norm_label": "4. verification & testing strategy"
     },
     {
+      "label": "gemini.md",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gemini",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "gemini.md"
+    },
+    {
+      "label": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "agama platform \u2014 agent guidelines & memory contract (claude.md)"
+    },
+    {
+      "label": "1. Process & Skill Activation Rules (Superpowers Plugin)",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "gemini_1_process_skill_activation_rules_superpowers_plugin",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "1. process & skill activation rules (superpowers plugin)"
+    },
+    {
+      "label": "2. Token & Architecture Optimization Modes",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "gemini_2_token_architecture_optimization_modes",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "2. token & architecture optimization modes"
+    },
+    {
+      "label": "3. Knowledge Graph Navigation (Graphify)",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "gemini_3_knowledge_graph_navigation_graphify",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "3. knowledge graph navigation (graphify)"
+    },
+    {
+      "label": "4. Branching, PR per Feature & Semantic Commits",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "gemini_4_branching_pr_per_feature_semantic_commits",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "4. branching, pr per feature & semantic commits"
+    },
+    {
+      "label": "5. Interactive Requirement Alignment & Pre-Merge Confirmation Protocol",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "gemini_5_interactive_requirement_alignment_pre_merge_confirmation_protocol",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "5. interactive requirement alignment & pre-merge confirmation protocol"
+    },
+    {
+      "label": "6. Build, Testing & Code Linting Verification",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "gemini_6_build_testing_code_linting_verification",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "6. build, testing & code linting verification"
+    },
+    {
+      "label": "7. Single Source of Truth (SSOT) Architecture References",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "gemini_7_single_source_of_truth_ssot_architecture_references",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "7. single source of truth (ssot) architecture references"
+    },
+    {
+      "label": "8. Platform & Build State (current)",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "gemini_8_platform_build_state_current",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "8. platform & build state (current)"
+    },
+    {
+      "label": "Supported Platforms",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "gemini_supported_platforms",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "supported platforms"
+    },
+    {
+      "label": "pubspec.yaml \u2014 minimal deps only",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "gemini_pubspec_yaml_minimal_deps_only",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "pubspec.yaml \u2014 minimal deps only"
+    },
+    {
+      "label": "Navigation architecture",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "gemini_navigation_architecture",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "navigation architecture"
+    },
+    {
+      "label": "DevTools & VS Code Integration",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "gemini_devtools_vs_code_integration",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "devtools & vs code integration"
+    },
+    {
+      "label": "UX invariants",
+      "file_type": "document",
+      "source_file": "gemini.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "gemini_ux_invariants",
+      "community": 56,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "ux invariants"
+    },
+    {
       "label": "Graphify Always On Rule",
       "file_type": "rationale",
       "source_file": ".agents/rules/graphify.md",
@@ -12956,6 +13143,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_guided_highlight_view",
+      "target": "apps_flutter_client_lib_src_features_reader_guided_highlight_view_delayforword"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/guided_highlight_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_guided_highlight_view",
       "target": "apps_flutter_client_lib_src_features_reader_guided_highlight_view_guidedhighlightview"
     },
     {
@@ -13545,6 +13743,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_rsvp_canvas",
       "target": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_customwpm"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_rsvp_canvas",
+      "target": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_delayforword"
     },
     {
       "relation": "defines",
@@ -21191,6 +21400,160 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini",
+      "target": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_1_process_skill_activation_rules_superpowers_plugin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_2_token_architecture_optimization_modes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_3_knowledge_graph_navigation_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_4_branching_pr_per_feature_semantic_commits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_5_interactive_requirement_alignment_pre_merge_confirmation_protocol",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_6_build_testing_code_linting_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_7_single_source_of_truth_ssot_architecture_references",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "gemini_8_platform_build_state_current",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_8_platform_build_state_current",
+      "target": "gemini_devtools_vs_code_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_8_platform_build_state_current",
+      "target": "gemini_navigation_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_8_platform_build_state_current",
+      "target": "gemini_pubspec_yaml_minimal_deps_only",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_8_platform_build_state_current",
+      "target": "gemini_supported_platforms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gemini.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "gemini_8_platform_build_state_current",
+      "target": "gemini_ux_invariants",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "semantically_similar_to",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
@@ -21484,5 +21847,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "1aea5adce384c76bd78c99ffd7e465a9ed0db16c"
+  "built_at_commit": "9cad63daf556ee4764521bf94bbac6dfe32bd492"
 }
