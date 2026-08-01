@@ -1,7 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
+import 'reader_settings_provider.dart';
+
+class RSVPCanvas extends ConsumerWidget {
+  const RSVPCanvas({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final settings = ref.watch(readerSettingsProvider);
+    return Center(
+      child: Text(
+        'RSVP WPM: ${settings.wpm}',
+        style: TextStyle(
+          fontSize: settings.fontSize,
+          fontFamily: settings.fontFamily,
+        ),
+      ),
+    );
+  }
+}
+
 
 class RsvpCanvasView extends StatefulWidget {
   final String text;
@@ -350,7 +371,7 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
                           child: Container(
                             width: 52,
                             height: 52,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: AgamaTheme.indigo,
                               shape: BoxShape.circle,
                             ),
