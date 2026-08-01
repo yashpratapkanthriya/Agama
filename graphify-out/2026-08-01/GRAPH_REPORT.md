@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 42 files · ~37,268 words
+- 44 files · ~38,244 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 517 nodes · 610 edges · 36 communities (26 shown, 10 thin omitted)
+- 537 nodes · 634 edges · 38 communities (28 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9391fa55`
+- Built from commit: `7abfee77`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,6 +50,8 @@
 - Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
 - System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox
 - Global Constraints
+- System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration
+- Global Constraints
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
@@ -68,12 +70,12 @@
   .agents/rules/graphify.md → .agents/skills/graphify/references/hooks.md
 - `Graphify Fast Path` --semantically_similar_to--> `Code-Only Update Fast Path`  [INFERRED] [semantically similar]
   .agents/skills/graphify/SKILL.md → .agents/skills/graphify/references/update.md
-- `generate_rsvp_timings()` --references--> `WordTiming`  [EXTRACTED]
-  native/rust_core/src/api/mod.rs → native/rust_core/src/models/mod.rs
 - `Graphify Full Pipeline` --references--> `Graphify Ingestion (Add URL)`  [EXTRACTED]
   .agents/skills/graphify/SKILL.md → .agents/skills/graphify/references/add-watch.md
 - `Graphify Full Pipeline` --references--> `Obsidian Vault Export`  [EXTRACTED]
   .agents/skills/graphify/SKILL.md → .agents/skills/graphify/references/exports.md
+- `Graphify Full Pipeline` --references--> `Cross-Repo Graph Merge`  [EXTRACTED]
+  .agents/skills/graphify/SKILL.md → .agents/skills/graphify/references/github-and-merge.md
 
 ## Import Cycles
 - None detected.
@@ -83,7 +85,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (36 total, 10 thin omitted)
+## Communities (38 total, 10 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -94,20 +96,20 @@ Cohesion: 0.12
 Nodes (16): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+8 more)
 
 ### Community 2 - "reader_provider.dart"
-Cohesion: 0.15
-Nodes (13): copyWith, currentWordIndex, isPlaying, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState, setComplexity (+5 more)
+Cohesion: 0.12
+Nodes (16): copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState (+8 more)
 
 ### Community 3 - "library_view.dart"
 Cohesion: 0.07
 Nodes (28): ../annotations/annotation_view.dart, main, AgamaApp, build, build, LibraryView, sampleText, main (+20 more)
 
 ### Community 11 - "ai/mod.rs"
-Cohesion: 0.11
-Nodes (15): AdaptivePacingEngine, BionicFixationEngine, Default, Self, Vec, SpacedRepetitionEngine, test_bionic_fixation(), test_complexity_and_embedding() (+7 more)
+Cohesion: 0.10
+Nodes (18): AdaptivePacingEngine, BionicFixationEngine, OnnxInferenceEngine, Default, Self, Vec, SpacedRepetitionEngine, test_bionic_fixation() (+10 more)
 
 ### Community 12 - "Result"
 Cohesion: 0.18
-Nodes (18): Connection, DatabaseEngine, Result, Self, Vec, test_annotations_and_flashcards_historization(), test_db_init_and_document_insert(), Annotation (+10 more)
+Nodes (17): Connection, DatabaseEngine, Result, Self, Vec, test_annotations_and_flashcards_historization(), test_db_init_and_document_insert(), Annotation (+9 more)
 
 ### Community 13 - "SyncEngine"
 Cohesion: 0.22
@@ -185,8 +187,16 @@ Nodes (7): 1. Overview & Objectives, 2.1 Vector Similarity Search Engine, 2.2 De
 Cohesion: 0.40
 Nodes (4): Global Constraints, Task 1: Rust Vector Search & Yrs CRDT Engine Core, Task 2: Flutter Decentralized Sync View & Semantic Search UI, Vector Search & Yrs CRDT Sync Outbox Implementation Plan
 
+### Community 36 - "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration"
+Cohesion: 0.25
+Nodes (7): 1. Overview & Objectives, 2.1 ONNX Inference Engine (`native/rust_core/src/ai/mod.rs`), 2.2 Zero-Copy FFI Stream Pipeline (`native/rust_core/src/api/mod.rs`), 2. Technical Architecture & Components, 3. Data Flow & Sequence Diagram, 4. Verification & Testing Strategy, System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration
+
+### Community 37 - "Global Constraints"
+Cohesion: 0.40
+Nodes (4): Global Constraints, Task 1: Rust Core Zero-Copy FFI Stream Generator & ONNX Engine, Task 2: Flutter Riverpod Reader Provider & Stream Listener Integration, Zero-Copy FFI Stream Pipeline & ONNX Engine Implementation Plan
+
 ## Knowledge Gaps
-- **285 isolated node(s):** `main`, `build`, `AnnotationItem`, `id`, `selectedText` (+280 more)
+- **295 isolated node(s):** `main`, `build`, `AnnotationItem`, `id`, `selectedText` (+290 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -194,16 +204,16 @@ Nodes (4): Global Constraints, Task 1: Rust Vector Search & Yrs CRDT Engine Core
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `AnnotationItem` to the rest of the system?**
-  _285 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _295 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+- **Should `reader_provider.dart` be split into smaller, more focused modules?**
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.06653225806451613 - nodes in this community are weakly interconnected._
-- **Should `ai/mod.rs` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

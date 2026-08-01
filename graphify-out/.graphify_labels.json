@@ -31,10 +31,12 @@
   "29": "String?",
   "30": "guided_highlight_view.dart",
   "31": "bionic_fixation_view.dart",
-  "32": "sync_view.dart",
+  "32": "State",
   "33": "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)",
   "34": "System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox",
   "35": "Global Constraints",
   "36": "System Design Specification: Zero-Copy FFI Stream Pipeline & ONNX Engine Integration",
-  "37": "Global Constraints"
+  "37": "Global Constraints",
+  "38": "System Design Specification: Performance Benchmarks & Comprehension Analytics (CCI) Dashboard",
+  "39": "Global Constraints"
 }
