@@ -10,6 +10,7 @@ target/
 build/
 apps/flutter_client/build/
 apps/flutter_client/.dart_tool/
+apps/flutter_client/.flutter-plugins-dependencies
 
 # Graphify temporary caches
 graphify-out/cache/
