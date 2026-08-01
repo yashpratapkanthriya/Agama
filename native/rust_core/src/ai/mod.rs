@@ -97,6 +97,80 @@ impl AdaptivePacingEngine {
     }
 }
 
+pub struct BionicFixationEngine;
+
+impl BionicFixationEngine {
+    /// Calculate Bionic Fixation word bold prefix based on level F1..F5 (30% to 70%)
+    pub fn calculate_bionic_word(word: &str, level: u8) -> crate::models::BionicWord {
+        let len = word.chars().count();
+        if len == 0 {
+            return crate::models::BionicWord {
+                full_word: String::new(),
+                prefix: String::new(),
+                suffix: String::new(),
+                bold_length: 0,
+            };
+        }
+
+        let ratio = match level.clamp(1, 5) {
+            1 => 0.30,
+            2 => 0.40,
+            3 => 0.50,
+            4 => 0.60,
+            5 => 0.70,
+            _ => 0.40,
+        };
+
+        let bold_len = ((len as f64) * ratio).ceil() as usize;
+        let bold_len = bold_len.clamp(1, len);
+
+        let prefix: String = word.chars().take(bold_len).collect();
+        let suffix: String = word.chars().skip(bold_len).collect();
+
+        crate::models::BionicWord {
+            full_word: word.to_string(),
+            prefix,
+            suffix,
+            bold_length: bold_len,
+        }
+    }
+
+    pub fn format_text(text: &str, level: u8) -> Vec<crate::models::BionicWord> {
+        text.split_whitespace()
+            .map(|w| Self::calculate_bionic_word(w, level))
+            .collect()
+    }
+}
+
+pub struct SpacedRepetitionEngine;
+
+impl SpacedRepetitionEngine {
+    /// SuperMemo SM-2 Spaced Repetition Algorithm
+    /// quality q in [0..5]
+    /// Returns (new_interval_days, new_repetition_factor, due_date_timestamp_sec)
+    pub fn calculate_sm2(
+        quality: u8,
+        current_interval: i64,
+        current_ef: f64,
+        current_time_sec: i64,
+    ) -> (i64, f64, i64) {
+        let q = quality.clamp(0, 5) as f64;
+        let new_ef = current_ef + (0.1 - (5.0 - q) * (0.08 + (5.0 - q) * 0.02));
+        let new_ef = new_ef.max(1.3);
+
+        let new_interval = if q < 3.0 {
+            1
+        } else if current_interval <= 1 {
+            6
+        } else {
+            ((current_interval as f64) * new_ef).round() as i64
+        };
+
+        let due_date = current_time_sec + new_interval * 86400;
+        (new_interval, new_ef, due_date)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -129,4 +203,20 @@ mod tests {
         let norm: f32 = emb.iter().map(|x| x * x).sum::<f32>().sqrt();
         assert!((norm - 1.0).abs() < 1e-4);
     }
+
+    #[test]
+    fn test_bionic_fixation() {
+        let bw = BionicFixationEngine::calculate_bionic_word("understanding", 3);
+        assert_eq!(bw.prefix, "underst");
+        assert_eq!(bw.suffix, "anding");
+    }
+
+    #[test]
+    fn test_sm2_algorithm() {
+        let (interval, ef, due) = SpacedRepetitionEngine::calculate_sm2(4, 1, 2.5, 100000);
+        assert_eq!(interval, 6);
+        assert!(ef >= 2.5);
+        assert_eq!(due, 100000 + 6 * 86400);
+    }
 }
+
