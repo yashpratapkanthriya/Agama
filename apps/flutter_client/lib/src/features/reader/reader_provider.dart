@@ -46,8 +46,23 @@ class ReaderNotifier extends StateNotifier<ReaderState> {
   void setComplexity(double complexity) {
     state = state.copyWith(paragraphComplexity: complexity);
   }
+
+  Stream<int> streamWordTimings(int totalWords) async* {
+    for (int i = 0; i < totalWords; i++) {
+      if (!state.isPlaying) break;
+      final delayMs = (60000 / (state.targetWpm * state.paragraphComplexity)).round();
+      await Future.delayed(Duration(milliseconds: delayMs));
+      yield i;
+    }
+  }
 }
 
 final readerProvider = StateNotifierProvider<ReaderNotifier, ReaderState>((ref) {
   return ReaderNotifier();
 });
+
+final readerStreamProvider = StreamProvider.family<int, int>((ref, totalWords) {
+  final notifier = ref.watch(readerProvider.notifier);
+  return notifier.streamWordTimings(totalWords);
+});
+
