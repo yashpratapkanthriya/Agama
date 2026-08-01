@@ -1,5 +1,6 @@
 use crate::ai::{AdaptivePacingEngine, BionicFixationEngine, SpacedRepetitionEngine};
 use crate::models::{BionicWord, WordTiming};
+use crate::parser::{ParsedDocument, UnifiedParser};
 
 pub fn generate_rsvp_timings(text: String, target_wpm: u32, paragraph_complexity: f64) -> Vec<WordTiming> {
     let engine = AdaptivePacingEngine::new();
@@ -27,6 +28,31 @@ pub fn calculate_cci_score(avg_wpm: i64, quiz_accuracy_fraction: f64) -> f64 {
 pub fn calculate_orp_index(word: String) -> usize {
     AdaptivePacingEngine::calculate_orp(&word)
 }
+
+pub fn parse_file(path: String) -> anyhow::Result<ParsedDocument> {
+    UnifiedParser::parse(&path)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_file_text() {
+        let temp_dir = std::env::temp_dir();
+        let file_path = temp_dir.join("test_api_parse.txt");
+        std::fs::write(&file_path, "Hello world\n\nSecond paragraph").unwrap();
+
+        let res = parse_file(file_path.to_str().unwrap().to_string());
+        assert!(res.is_ok());
+        let doc = res.unwrap();
+        assert_eq!(doc.title, "test_api_parse");
+        assert_eq!(doc.chunks.len(), 2);
+
+        let _ = std::fs::remove_file(file_path);
+    }
+}
+
 
 
 
