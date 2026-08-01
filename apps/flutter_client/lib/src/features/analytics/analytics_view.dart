@@ -1,140 +1,265 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../app/theme.dart';
 
 class AnalyticsView extends StatelessWidget {
   const AnalyticsView({super.key});
+
+  static const _sessions = [
+    {'doc': 'Zero-Backend SAD', 'wpm': 468, 'cci': 0.74, 'words': 820},
+    {'doc': 'Quantum Optics', 'wpm': 491, 'cci': 0.68, 'words': 1100},
+    {'doc': 'ONNX Inference', 'wpm': 512, 'cci': 0.82, 'words': 640},
+    {'doc': 'SM-2 Algorithm', 'wpm': 445, 'cci': 0.61, 'words': 290},
+  ];
+
+  double get _avgWpm {
+    final total =
+        _sessions.fold<double>(0, (s, e) => s + (e['wpm'] as int));
+    return total / _sessions.length;
+  }
+
+  double get _avgCci {
+    final total =
+        _sessions.fold<double>(0, (s, e) => s + (e['cci'] as double));
+    return total / _sessions.length;
+  }
+
+  int get _totalWords =>
+      _sessions.fold<int>(0, (s, e) => s + (e['words'] as int));
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    const int totalWordsRead = 24500;
-    const int avgWpm = 480;
-    const double quizAccuracy = 0.88; // 88%
-    final double cciScore = avgWpm * quizAccuracy;
-
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Comprehension & WPM Analytics'),
+        title: Text('Analytics', style: theme.textTheme.titleMedium),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView(
-          children: [
-            Card(
-              color: theme.colorScheme.primaryContainer,
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // ── Hero metrics ─────────────────────────────────────────
+              Row(
+                children: [
+                  Expanded(
+                    child: _MetricCard(
+                      label: 'Avg WPM',
+                      value: _avgWpm.toStringAsFixed(0),
+                      accent: AgamaTheme.indigo,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _MetricCard(
+                      label: 'Avg CCI',
+                      value: _avgCci.toStringAsFixed(2),
+                      accent: AgamaTheme.emerald,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _MetricCard(
+                      label: 'Words read',
+                      value: '$_totalWords',
+                      accent: AgamaTheme.amber,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 24),
+
+              // ── CCI gauge ────────────────────────────────────────────
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: theme.colorScheme.surface,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: theme.colorScheme.outline),
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Text('Comprehension Confidence Index',
+                        style: theme.textTheme.titleSmall),
+                    const SizedBox(height: 4),
                     Text(
-                      'Comprehension Calibration Index (CCI)',
-                      style: theme.textTheme.labelMedium?.copyWith(
-                        color: theme.colorScheme.onPrimaryContainer,
-                        letterSpacing: 1.2,
+                      'Composite reading efficiency across sessions',
+                      style: theme.textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 16),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(6),
+                      child: LinearProgressIndicator(
+                        value: _avgCci,
+                        minHeight: 10,
+                        backgroundColor: theme.colorScheme.outline,
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          _avgCci > 0.75
+                              ? AgamaTheme.emerald
+                              : _avgCci > 0.55
+                                  ? AgamaTheme.amber
+                                  : AgamaTheme.crimson,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 8),
-                    Text(
-                      cciScore.toStringAsFixed(1),
-                      style: theme.textTheme.displayMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: theme.colorScheme.onPrimaryContainer,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Target Range: 350 - 450 CCI (Optimal Speed-Retention)',
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onPrimaryContainer.withAlpha(200),
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('0.00', style: theme.textTheme.labelSmall),
+                        Text(
+                          '${(_avgCci * 100).toStringAsFixed(1)}%',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800,
+                            color: AgamaTheme.emerald,
+                          ),
+                        ),
+                        Text('1.00', style: theme.textTheme.labelSmall),
+                      ],
                     ),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 16),
-            Row(
-              children: [
-                Expanded(
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          const Icon(Icons.speed, color: Color(0xFF6750A4), size: 28),
-                          const SizedBox(height: 8),
-                          Text('$avgWpm WPM', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          Text('Average Speed', style: theme.textTheme.bodySmall),
-                        ],
-                      ),
+              const SizedBox(height: 24),
+
+              // ── Session list ─────────────────────────────────────────
+              Text('Recent sessions', style: theme.textTheme.titleSmall),
+              const SizedBox(height: 10),
+
+              ...List.generate(_sessions.length, (i) {
+                final s = _sessions[i];
+                final wpm = s['wpm'] as int;
+                final cci = s['cci'] as double;
+                final words = s['words'] as int;
+
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 14),
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surface,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: theme.colorScheme.outline),
+                    ),
+                    child: Row(
+                      children: [
+                        // Session index
+                        Container(
+                          width: 32,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            color: AgamaTheme.indigo.withAlpha(15),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(
+                            child: Text(
+                              '${i + 1}',
+                              style: GoogleFonts.jetBrainsMono(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w800,
+                                color: AgamaTheme.indigo,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+
+                        // Title
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                s['doc'] as String,
+                                style: theme.textTheme.bodyMedium?.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              Text(
+                                '$words words read',
+                                style: theme.textTheme.bodySmall,
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        const SizedBox(width: 12),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              '$wpm WPM',
+                              style: GoogleFonts.jetBrainsMono(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                                color: AgamaTheme.indigo,
+                              ),
+                            ),
+                            Text(
+                              'CCI ${cci.toStringAsFixed(2)}',
+                              style: GoogleFonts.jetBrainsMono(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w600,
+                                color: cci > 0.7
+                                    ? AgamaTheme.emerald
+                                    : AgamaTheme.amber,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          const Icon(Icons.psychology, color: Color(0xFF4CAF50), size: 28),
-                          const SizedBox(height: 8),
-                          Text('${(quizAccuracy * 100).toInt()}%', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          Text('Quiz Accuracy', style: theme.textTheme.bodySmall),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          const Icon(Icons.menu_book, color: Color(0xFFFF9800), size: 28),
-                          const SizedBox(height: 8),
-                          Text('$totalWordsRead', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                          Text('Words Read', style: theme.textTheme.bodySmall),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 24),
-            Text(
-              'Recent Reading Sessions',
-              style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 8),
-            Card(
-              child: ListTile(
-                leading: const Icon(Icons.article),
-                title: const Text('Scientific Quantum Paper'),
-                subtitle: const Text('2,450 words • 490 WPM'),
-                trailing: Chip(
-                  label: const Text('92% Score'),
-                  backgroundColor: theme.colorScheme.secondaryContainer,
-                ),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                leading: const Icon(Icons.menu_book),
-                title: const Text('Zero-Backend SAD Architecture'),
-                subtitle: const Text('5,100 words • 460 WPM'),
-                trailing: Chip(
-                  label: const Text('85% Score'),
-                  backgroundColor: theme.colorScheme.secondaryContainer,
-                ),
-              ),
-            ),
-          ],
+                );
+              }),
+            ],
+          ),
         ),
+      ),
+    );
+  }
+}
+
+class _MetricCard extends StatelessWidget {
+  final String label;
+  final String value;
+  final Color accent;
+
+  const _MetricCard(
+      {required this.label, required this.value, required this.accent});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.surface,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: theme.colorScheme.outline),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            value,
+            style: GoogleFonts.jetBrainsMono(
+              fontSize: 22,
+              fontWeight: FontWeight.w800,
+              color: accent,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(label, style: theme.textTheme.bodySmall),
+        ],
       ),
     );
   }

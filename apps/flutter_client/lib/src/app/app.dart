@@ -1,34 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'theme.dart';
 import '../features/library/library_view.dart';
+import '../features/annotations/annotation_view.dart';
+
+final ValueNotifier<ThemeMode> themeModeNotifier =
+    ValueNotifier<ThemeMode>(ThemeMode.light);
 
 class AgamaApp extends StatelessWidget {
   const AgamaApp({super.key});
 
+  Widget _getInitialHome() {
+    final uri = Uri.base;
+    final path = uri.path;
+    final fragment = uri.fragment;
+
+    if (path.contains('highlights') || fragment.contains('highlights')) {
+      return const AnnotationView();
+    }
+    if (path.contains('knowledge') || fragment.contains('knowledge')) {
+      return const LibraryView(initialTab: 1);
+    }
+    if (path.contains('analytics') || fragment.contains('analytics')) {
+      return const LibraryView(initialTab: 2);
+    }
+    return const LibraryView(initialTab: 0);
+  }
+
   @override
   Widget build(BuildContext context) {
-    const seedColor = Color(0xFF6750A4);
-
-    final darkColorScheme = ColorScheme.fromSeed(
-      seedColor: seedColor,
-      brightness: Brightness.dark,
-      surface: const Color(0xFF1C1B1F),
-      error: const Color(0xFFFFB4AB),
-    );
-
-    return MaterialApp(
-      title: 'Agama AI Speed Reader',
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        colorScheme: darkColorScheme,
-        textTheme: GoogleFonts.interTextTheme(
-          ThemeData.dark().textTheme,
-        ),
-        scaffoldBackgroundColor: const Color(0xFF1C1B1F),
-      ),
-      home: const LibraryView(),
+    return ValueListenableBuilder<ThemeMode>(
+      valueListenable: themeModeNotifier,
+      builder: (context, currentMode, _) {
+        return MaterialApp(
+          title: 'Agama',
+          debugShowCheckedModeBanner: false,
+          themeMode: currentMode,
+          theme: AgamaTheme.light(),
+          darkTheme: AgamaTheme.dark(),
+          home: _getInitialHome(),
+        );
+      },
     );
   }
 }

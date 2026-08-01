@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Agama (Chrome Web)",
+      "cwd": "apps/flutter_client",
+      "request": "launch",
+      "type": "dart",
+      "program": "apps/flutter_client/lib/main.dart",
+      "args": ["-d", "chrome"]
+    },
+    {
+      "name": "Agama (macOS Desktop)",
+      "cwd": "apps/flutter_client",
+      "request": "launch",
+      "type": "dart",
+      "program": "apps/flutter_client/lib/main.dart",
+      "args": ["-d", "macos"]
+    }
+  ]
+}

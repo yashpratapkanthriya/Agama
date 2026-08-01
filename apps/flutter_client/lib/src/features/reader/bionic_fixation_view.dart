@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../app/theme.dart';
 
 class BionicFixationView extends StatefulWidget {
   final String text;
-
-  const BionicFixationView({
-    super.key,
-    required this.text,
-  });
+  const BionicFixationView({super.key, required this.text});
 
   @override
   State<BionicFixationView> createState() => _BionicFixationViewState();
 }
 
 class _BionicFixationViewState extends State<BionicFixationView> {
-  int _fixationLevel = 3; // F1 to F5
-  double _fontSize = 20.0;
+  int _level = 3;
+  double _fontSize = 18;
 
-  Map<String, String> _splitBionic(String word, int level) {
+  ({String bold, String light}) _split(String word) {
     final len = word.length;
-    if (len == 0) return {'prefix': '', 'suffix': ''};
-
-    final ratio = switch (level.clamp(1, 5)) {
+    if (len == 0) return (bold: '', light: '');
+    final ratio = switch (_level.clamp(1, 5)) {
       1 => 0.30,
       2 => 0.40,
       3 => 0.50,
@@ -28,117 +25,176 @@ class _BionicFixationViewState extends State<BionicFixationView> {
       5 => 0.70,
       _ => 0.50,
     };
-
-    final boldLen = ((len * ratio).ceil()).clamp(1, len);
-    return {
-      'prefix': word.substring(0, boldLen),
-      'suffix': word.substring(boldLen),
-    };
+    final n = ((len * ratio).ceil()).clamp(1, len);
+    return (bold: word.substring(0, n), light: word.substring(n));
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final words = widget.text.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+    final words =
+        widget.text.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bionic Fixation Reading'),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(24.0),
-              child: Wrap(
-                spacing: 6.0,
-                runSpacing: 8.0,
-                children: words.map((w) {
-                  final parts = _splitBionic(w, _fixationLevel);
-                  return RichText(
-                    text: TextSpan(
-                      style: TextStyle(
-                        fontSize: _fontSize,
-                        height: 1.6,
-                        color: theme.colorScheme.onSurface,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: parts['prefix'],
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w900,
-                          ),
-                        ),
-                        TextSpan(
-                          text: parts['suffix'],
-                          style: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            color: theme.colorScheme.onSurfaceVariant,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }).toList(),
+        title: Text('Bionic Fixation', style: theme.textTheme.titleMedium),
+        actions: [
+          Container(
+            margin: const EdgeInsets.only(right: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              color: AgamaTheme.amber.withAlpha(15),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: AgamaTheme.amber.withAlpha(40)),
+            ),
+            child: Text(
+              'F$_level',
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: AgamaTheme.amber,
               ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(16.0),
-            color: theme.colorScheme.surfaceContainerHighest,
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Fixation Level: F$_fixationLevel',
-                        style: theme.textTheme.labelMedium,
-                      ),
-                      Slider(
-                        value: _fixationLevel.toDouble(),
-                        min: 1,
-                        max: 5,
-                        divisions: 4,
-                        label: 'F$_fixationLevel',
-                        onChanged: (val) {
-                          setState(() {
-                            _fixationLevel = val.toInt();
-                          });
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Font Size: ${_fontSize.toInt()}pt',
-                        style: theme.textTheme.labelMedium,
-                      ),
-                      Slider(
-                        value: _fontSize,
-                        min: 14,
-                        max: 32,
-                        divisions: 9,
-                        label: '${_fontSize.toInt()}pt',
-                        onChanged: (val) {
-                          setState(() {
-                            _fontSize = val;
-                          });
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
         ],
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Reading surface
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 24, vertical: 24),
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 680),
+                    child: Wrap(
+                      spacing: 5,
+                      runSpacing: 8,
+                      children: words.map((w) {
+                        final p = _split(w);
+                        return RichText(
+                          text: TextSpan(
+                            style: GoogleFonts.inter(
+                              fontSize: _fontSize,
+                              height: 1.65,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: p.bold,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                  color: theme.colorScheme.onSurface,
+                                ),
+                              ),
+                              TextSpan(
+                                text: p.light,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  color:
+                                      theme.colorScheme.onSurfaceVariant,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            // Controls
+            Container(
+              decoration: BoxDecoration(
+                color: theme.colorScheme.surface,
+                border:
+                    Border(top: BorderSide(color: theme.colorScheme.outline)),
+              ),
+              padding: const EdgeInsets.fromLTRB(20, 14, 20, 18),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Fixation level
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Fixation intensity',
+                          style: theme.textTheme.labelMedium),
+                      Text('Level F$_level',
+                          style: theme.textTheme.labelSmall),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: List.generate(5, (i) {
+                      final l = i + 1;
+                      final sel = _level == l;
+                      return Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(right: i < 4 ? 6 : 0),
+                          child: GestureDetector(
+                            onTap: () => setState(() => _level = l),
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 120),
+                              height: 36,
+                              decoration: BoxDecoration(
+                                color: sel
+                                    ? AgamaTheme.amber
+                                    : theme.colorScheme.surfaceContainerHighest,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: sel
+                                      ? AgamaTheme.amber
+                                      : theme.colorScheme.outline,
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'F$l',
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    color: sel
+                                        ? Colors.white
+                                        : theme.colorScheme.onSurfaceVariant,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+                  ),
+                  const SizedBox(height: 14),
+
+                  // Font size slider
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Text size', style: theme.textTheme.labelMedium),
+                      Text('${_fontSize.toInt()}pt',
+                          style: theme.textTheme.labelSmall),
+                    ],
+                  ),
+                  Slider(
+                    value: _fontSize,
+                    min: 14,
+                    max: 28,
+                    divisions: 7,
+                    activeColor: AgamaTheme.amber,
+                    inactiveColor: theme.colorScheme.outline,
+                    onChanged: (v) => setState(() => _fontSize = v),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

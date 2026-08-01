@@ -1,0 +1,7 @@
+{
+  "dart.openDevTools": "flutter-inspector",
+  "dart.debugSdkLibraries": false,
+  "dart.evaluateGettersInDebugViews": true,
+  "dart.showInspectorNotificationsForWidgetErrors": true,
+  "dart.flutterTrackWidgetCreation": true
+}

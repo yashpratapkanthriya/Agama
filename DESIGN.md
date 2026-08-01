@@ -2,175 +2,194 @@
 name: Agama Platform Design System
 description: High-craft, local-first speed reading & knowledge platform design specification
 colors:
-  primary: "#6366f1"
-  primary-hover: "#4f46e5"
-  primary-light: "#eeefff"
-  emerald: "#10b981"
+  primary: "#4f46e5"
+  primary-light: "#eeedfff"
+  emerald: "#059669"
   emerald-light: "#ecfdf5"
   crimson: "#ef4444"
-  amber: "#f59e0b"
-  redicle-viewport: "#090d16"
-  neutral-bg: "#f8fafc"
+  amber: "#d97706"
+  rsvp-viewport: "#0a0d17"
+  page-bg: "#f4f6fb"
   surface: "#ffffff"
-  text-main: "#0f172a"
-  text-muted: "#64748b"
-  border: "#e2e8f0"
+  surface-variant: "#f0f2f8"
+  ink: "#1c2033"
+  ink-muted: "#5a6275"
+  ink-faint: "#8c95a8"
+  border: "#e4e7ef"
+  border-strong: "#c8cede"
 typography:
   display:
     fontFamily: "Outfit, -apple-system, sans-serif"
-    fontSize: "32px"
+    fontSize: "36px"
     fontWeight: 800
-    lineHeight: "1.2"
-    letterSpacing: "-0.8px"
+    lineHeight: "1.15"
+    letterSpacing: "-1.0px"
   title:
     fontFamily: "Outfit, -apple-system, sans-serif"
     fontSize: "18px"
     fontWeight: 700
     lineHeight: "1.3"
-    letterSpacing: "-0.4px"
+    letterSpacing: "-0.3px"
   body:
     fontFamily: "Inter, -apple-system, sans-serif"
-    fontSize: "16px"
+    fontSize: "15px"
     fontWeight: 400
-    lineHeight: "1.6"
-    letterSpacing: "normal"
-  label:
-    fontFamily: "Inter, -apple-system, sans-serif"
-    fontSize: "12px"
-    fontWeight: 700
-    lineHeight: "1.3"
-    letterSpacing: "0.8px"
+    lineHeight: "1.65"
   mono:
     fontFamily: "JetBrains Mono, monospace"
-    fontSize: "14px"
-    fontWeight: 500
+    fontSize: "12px"
+    fontWeight: 600
     lineHeight: "1.5"
 rounded:
-  sm: "6px"
+  sm: "8px"
   md: "10px"
-  lg: "16px"
+  lg: "12px"
 spacing:
   sm: "8px"
-  md: "16px"
-  lg: "24px"
-  xl: "32px"
-components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "#ffffff"
-    rounded: "{rounded.md}"
-    padding: "12px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.primary-hover}"
-  card-container:
-    backgroundColor: "{colors.surface}"
-    rounded: "{rounded.lg}"
-    padding: "28px"
+  md: "14px"
+  lg: "20px"
+  xl: "28px"
 ---
 
 # Design System: Agama Platform
 
-## Overview
+## Creative Direction
 
-**Creative North Star: "The Precision Speed Reading Sanctuary"**
+**Subject world:** Precision reading instruments — optometry charts, reading rulers, typographic specimens, lab measurement systems. The aesthetic is a focused research desk, not a product landing page.
 
-The Agama design system balances high-throughput visual speed reading efficiency with intentional, serene readability. Engineered with a crisp, light alabaster palette (`#f8fafc`), deep slate typography (`#0f172a`), vibrant indigo primary accents (`#6366f1`), and crimson ORP focus redicles (`#ef4444`), the interface minimizes visual noise while keeping reader focus anchored at 600+ WPM.
+**Not:** warm/cozy (no cream, no rounded-everything). **Is:** cool, precise, instrument-grade.
 
-**Key Characteristics:**
-- **Crisp High-Contrast Light Mode**: Clean white cards layered over alabaster background with hairline slate borders (`#e2e8f0`).
-- **Optimal Recognition Point (ORP) Redicle Focus**: Vibrant crimson visual anchor positioning eyes at 35% word prefix.
-- **Expressive Geometric Typography**: Pairing `Outfit` display headings with `Inter` body prose and `JetBrains Mono` telemetry metrics.
+---
 
 ## Colors
 
-The palette uses high-contrast light neutrals with purposeful functional accents.
+### Page & Surface
+| Token | Hex | Role |
+|---|---|---|
+| `page-bg` | `#F4F6FB` | Cool pearl — instrument precision |
+| `surface` | `#FFFFFF` | Card surface |
+| `surface-variant` | `#F0F2F8` | Input fill, chip background |
 
-### Primary
-- **Indigo Accent** (`#6366f1`): Used for primary action buttons, active tab states, and key interactive controls.
-- **Indigo Hover** (`#4f46e5`): Hover state for primary buttons.
-- **Indigo Light Tint** (`#eeefff`): Background tint for active navigation items and highlighted chips.
+### Ink (Text)
+| Token | Hex | Role |
+|---|---|---|
+| `ink` | `#1C2033` | Headings — ink blue-black |
+| `ink-muted` | `#5A6275` | Body / secondary text |
+| `ink-faint` | `#8C95A8` | Section labels, hints |
 
-### Secondary
-- **Emerald Speed Green** (`#10b981`): Represents high-speed metrics, optimal CCI calibration zones, and success indicators.
-- **Emerald Light Tint** (`#ecfdf5`): Background fill for success cards and active recall score chips.
+### Border
+| Token | Hex | Role |
+|---|---|---|
+| `border` | `#E4E7EF` | Default hairline |
+| `border-strong` | `#C8CEDE` | Focused/active state |
 
-### Functional & Focus
-- **Crimson ORP Anchor** (`#ef4444`): Dedicated color for the Optimal Recognition Point (ORP) letter in the speed reader redicle.
-- **Amber Warning** (`#f59e0b`): Outbox sync alerts and pending CRDT operations.
+### Accents — each has a **single semantic role**
+| Token | Hex | Role |
+|---|---|---|
+| `indigo` | `#4F46E5` | Primary action, selection |
+| `indigo-light` | `#EEEDFF` | Hover tint, nav indicator |
+| `emerald` | `#059669` | Speed, success, live status |
+| `amber` | `#D97706` | Complexity, bionic mode |
+| `crimson` | `#EF4444` | **ORP redicle only** — never decorative |
 
-### Neutral
-- **Page Background** (`#f8fafc`): Crisp alabaster surface for main viewports.
-- **Card Surface** (`#ffffff`): Pure white elevated card surfaces.
-- **Main Text** (`#0f172a`): High-contrast deep slate for primary headings and body copy.
-- **Muted Text** (`#64748b`): Cool muted slate for secondary labels, eyebrows, and subtitles.
-- **Border / Divider** (`#e2e8f0`): Hairline border stroke for cards and dividers.
+### RSVP Viewport
+- Background: `#0A0D17` — ultra-dark for max word contrast during high-speed reading
 
-### Named Rules
-**The Single Focus Rule.** Primary accent and crimson redicle highlights are reserved strictly for active reader focus and primary call-to-action buttons. No more than 10% of any viewport contains accent saturation.
+### Named Rule: The Single Focus Rule
+Crimson (`#EF4444`) is **reserved exclusively** for the ORP anchor letter. No other element uses crimson. This makes the redicle semantically unambiguous — the eye always knows what red means.
+
+---
 
 ## Typography
 
-**Display Font:** `Outfit` (with `-apple-system, BlinkMacSystemFont, sans-serif`)
-**Body Font:** `Inter` (with `-apple-system, BlinkMacSystemFont, sans-serif`)
-**Label/Mono Font:** `JetBrains Mono` (with `monospace`)
+**Display:** `Outfit` — geometric confidence, tight tracking at large sizes
+**Body:** `Inter` — effortless legibility, 1.65 leading
+**Mono:** `JetBrains Mono` — all numeric data (WPM, CCI, latency, progress %)
 
-**Character:** Geometric confidence in display titles paired with effortless, highly-legible body prose and crisp monospace telemetry metrics.
+### Scale
+| Style | Font | Size | Weight | Tracking | Use |
+|---|---|---|---|---|---|
+| displayLarge | Outfit | 36px | 800 | -1.0px | Page heroes |
+| displayMedium | Outfit | 28px | 700 | -0.8px | Section headers |
+| titleLarge | Outfit | 18px | 700 | -0.3px | Card titles |
+| titleSmall | Outfit | 13px | 600 | 0 | Row labels |
+| bodyLarge | Inter | 15px | 400 | — | Reading content |
+| bodySmall | Inter | 12px | 400 | — | Meta / muted |
+| labelLarge | JetBrains Mono | 12px | 700 | +0.6px | Metrics |
+| labelSmall | JetBrains Mono | 10px | 500 | +0.3px | Section eyebrows |
 
-### Hierarchy
-- **Display** (`800 weight`, `32px/38px`, `letter-spacing -0.8px`): Page hero headers and section titles.
-- **Title** (`700 weight`, `18px/24px`, `letter-spacing -0.4px`): Card titles and feature headings.
-- **Body** (`400 weight`, `16px/1.6 line-height`): Reader prose, description paragraphs, and manual content.
-- **Label** (`700 weight`, `12px/1.3`, `letter-spacing 0.8px`, uppercase): Section eyebrows, badge text, and metric card labels.
-- **Mono** (`500 weight`, `14px/1.5`): WPM speed counters, CCI calculated scores, and SQL snippets.
+---
 
 ## Layout
 
-- **Sidebar Navigation**: Fixed 290px width sidebar on desktop viewports.
-- **Main Viewport**: Fluid container max-width 1040px with 40px top/bottom and 60px horizontal padding.
-- **Grid Density**: Responsive 3-column metric cards (`minmax(220px, 1fr)`).
+- **Navigation:** Persistent `NavigationBar` (bottom) — Library · Knowledge · Analytics
+- **Max content width:** `960px` — constrained for readability on wide screens
+- **Reading measure:** `680px` max for prose (Guided Sweep, Bionic Fixation)
+- **Horizontal padding:** `20px` mobile, `24px` desktop
+- **No sidebar** — bottom nav keeps one-handed mobile use
+
+---
 
 ## Elevation & Depth
 
-Surfaces rely primarily on clean tonal contrast and subtle hairline borders (`1px solid #e2e8f0`) rather than heavy drop shadows.
+Flat by default. Borders over shadows.
 
-### Shadow Vocabulary
-- **Subtle Elevation** (`box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05)`): Default card rest elevation.
-- **Card Hover** (`box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08)`): Active hover elevation.
+- **Default card:** `1px solid #E4E7EF`, no shadow
+- **Active/selected:** `1px solid accent.withAlpha(60)`, no shadow
+- **Modal / sheet:** system bottom sheet with `16px` top radius
+- **Never:** large drop shadows, heavy backdrop filters
 
-### Named Rules
-**The Flat-Border First Rule.** Surfaces rely on hairline slate borders and tonal background separation at rest. Soft ambient shadows appear only on card hover and floating modal dialogs.
+---
 
 ## Shapes
 
-- **Card Radius**: `16px` border-radius for main content cards.
-- **Control Radius**: `10px` to `12px` border-radius for buttons, inputs, and sliders.
-- **Badge Radius**: `20px` pill radius for metric tags and status chips.
+- **Cards:** `12px` radius (tighter than before — more instrument, less balloon)
+- **Buttons:** `9px` radius
+- **Chips/badges:** `8px` radius
+- **Nav indicator:** `12px` radius pill
+
+---
 
 ## Components
 
-### Buttons
-- **Shape:** `10px` rounded corners.
-- **Primary:** Background `#6366f1`, text `#ffffff`, padding `12px 24px`.
-- **Hover:** Background `#4f46e5`, subtle -1px vertical transform.
+### AppBar
+- White surface with `1px` bottom border — no elevation
+- Logo: `28×28` dark tile (`#0A0D17`) + crimson "A" in JetBrains Mono
+- Live pulse: animated emerald dot + "local" label (not cloud latency number)
 
-### Cards / Containers
-- **Corner Style:** `16px` border-radius.
-- **Background:** `#ffffff` pure white.
-- **Border:** `1px solid #e2e8f0`.
-- **Padding:** `28px` internal padding.
+### Bottom Navigation
+- `NavigationBar` height `62px`
+- Indicator: `indigoLight` fill
+- Always-show labels
 
-### RSVP Redicle Box
-- **Background:** `#090d16` ultra-dark viewport for maximum visual contrast during high-speed reading.
-- **Text Color:** `#ffffff` prefix/suffix with `#ef4444` crimson ORP center anchor letter.
+### Engine Chooser (Library tab)
+Three-tab selector (RSVP · Sweep · Bionic) with animated detail card below:
+- Tab border color changes to engine accent when selected
+- Detail card shows: tagline, WPM range badge, "best for" and "tradeoff" rows, CTA button
+
+### RSVP Reader
+- Context strip: 3 words before + 3 after current word — muted, prevents disorientation
+- Dark viewport (`#0A0D17`) with crimson ORP anchor + guide ticks
+- WPM guidance label below chips: "Good starting pace / Fast — check comprehension / Extreme"
+- Keyboard: `Space` play/pause · `←→` step · `↑↓` ±50 WPM
+
+### Document Tiles
+- Format badge (PDF/EPUB/MD): `36×36`, accent-tinted
+- Progress: `3px` track + % label in accent mono
+- WPM avg: right-aligned mono
+
+---
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** maintain crisp high contrast between deep slate text (`#0f172a`) and alabaster/white backgrounds.
-- **Do** highlight the 35% word prefix ORP letter in crimson (`#ef4444`) during RSVP speed reading.
-- **Do** use `JetBrains Mono` for telemetry values (WPM, latency, CCI scores).
+- Crimson = ORP anchor only. Period.
+- JetBrains Mono for every number (WPM, %, ms, counts)
+- Cool page background (`#F4F6FB`) not warm cream
+- 12px border radius for cards, not 16px
 
 ### Don't:
-- **Don't** clutter the reading viewport with decorative drop shadows or saturated background gradients.
-- **Don't** use dark grey body text that fails WCAG AA contrast standards against light backgrounds.
-- **Don't** use generic default system fonts when `Outfit` and `Inter` font stacks are specified.
+- Don't use warm backgrounds (no `#FAF8F4`, no `#FFF8F0`)
+- Don't decorate with crimson — it must always mean "fixation point"
+- Don't use sidebar nav — bottom nav only
+- Don't show SnackBar for actions that should navigate somewhere

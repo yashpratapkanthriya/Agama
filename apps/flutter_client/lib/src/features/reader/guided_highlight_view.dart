@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../app/theme.dart';
 
 class GuidedHighlightView extends StatefulWidget {
   final String text;
@@ -16,38 +18,32 @@ class GuidedHighlightView extends StatefulWidget {
 
 class _GuidedHighlightViewState extends State<GuidedHighlightView> {
   late List<String> _words;
-  int _highlightedIndex = 0;
-  bool _isPlaying = false;
+  int _idx = 0;
+  bool _playing = false;
+  late int _wpm;
 
   @override
   void initState() {
     super.initState();
-    _words = widget.text.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+    _wpm = widget.targetWpm;
+    _words =
+        widget.text.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
   }
 
   void _togglePlay() {
-    setState(() {
-      _isPlaying = !_isPlaying;
-    });
-    if (_isPlaying) {
-      _startHighlightStream();
-    }
+    setState(() => _playing = !_playing);
+    if (_playing) _tick();
   }
 
-  void _startHighlightStream() async {
-    if (!_isPlaying || _highlightedIndex >= _words.length - 1) {
-      setState(() => _isPlaying = false);
+  void _tick() async {
+    if (!_playing || _idx >= _words.length - 1) {
+      if (mounted) setState(() => _playing = false);
       return;
     }
-
-    final delay = (60000 / widget.targetWpm).round();
-    await Future.delayed(Duration(milliseconds: delay));
-
-    if (mounted && _isPlaying) {
-      setState(() {
-        _highlightedIndex++;
-      });
-      _startHighlightStream();
+    await Future.delayed(Duration(milliseconds: (60000 / _wpm).round()));
+    if (mounted && _playing) {
+      setState(() => _idx++);
+      _tick();
     }
   }
 
@@ -57,75 +53,163 @@ class _GuidedHighlightViewState extends State<GuidedHighlightView> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Guided Highlighting Mode'),
+        title: Text('Guided Sweep', style: theme.textTheme.titleMedium),
         actions: [
-          IconButton(
-            icon: Icon(_isPlaying ? Icons.pause : Icons.play_arrow),
-            onPressed: _togglePlay,
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(24.0),
-              child: Wrap(
-                spacing: 6.0,
-                runSpacing: 8.0,
-                children: List.generate(_words.length, (index) {
-                  final isCurrent = index == _highlightedIndex;
-                  return AnimatedContainer(
-                    duration: const Duration(milliseconds: 150),
-                    padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 2.0),
-                    decoration: BoxDecoration(
-                      color: isCurrent
-                          ? theme.colorScheme.primaryContainer
-                          : Colors.transparent,
-                      borderRadius: BorderRadius.circular(4.0),
-                      border: isCurrent
-                          ? Border.all(color: theme.colorScheme.primary, width: 1.5)
-                          : null,
-                    ),
-                    child: Text(
-                      _words[index],
-                      style: TextStyle(
-                        fontSize: 20,
-                        height: 1.6,
-                        fontWeight: isCurrent ? FontWeight.bold : FontWeight.normal,
-                        color: isCurrent
-                            ? theme.colorScheme.onPrimaryContainer
-                            : theme.colorScheme.onSurface,
-                      ),
-                    ),
-                  );
-                }),
+          Container(
+            margin: const EdgeInsets.only(right: 16),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              color: AgamaTheme.emerald.withAlpha(15),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: AgamaTheme.emerald.withAlpha(40)),
+            ),
+            child: Text(
+              '$_wpm WPM',
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: AgamaTheme.emerald,
               ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(16.0),
-            color: theme.colorScheme.surfaceContainerHighest,
-            child: Column(
-              children: [
-                Text(
-                  'Guided Pacing: ${widget.targetWpm} WPM',
-                  style: theme.textTheme.bodyMedium,
-                ),
-                Slider(
-                  value: _highlightedIndex.toDouble(),
-                  min: 0,
-                  max: (_words.length - 1).toDouble().clamp(0, double.infinity),
-                  onChanged: (val) {
-                    setState(() {
-                      _highlightedIndex = val.toInt();
-                    });
-                  },
-                ),
-              ],
-            ),
-          ),
         ],
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Progress indicator
+            LinearProgressIndicator(
+              value: (_idx + 1) / _words.length,
+              minHeight: 2,
+              backgroundColor: theme.colorScheme.outline,
+              valueColor:
+                  const AlwaysStoppedAnimation<Color>(AgamaTheme.emerald),
+            ),
+
+            // Reading surface — constrained to 65-75ch measure
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 24, vertical: 24),
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 680),
+                    child: Wrap(
+                      spacing: 5,
+                      runSpacing: 8,
+                      children: List.generate(_words.length, (i) {
+                        final isCurrent = i == _idx;
+                        return AnimatedContainer(
+                          duration: const Duration(milliseconds: 120),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: isCurrent
+                                ? AgamaTheme.emerald.withAlpha(28)
+                                : Colors.transparent,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            _words[i],
+                            style: GoogleFonts.inter(
+                              fontSize: 17,
+                              height: 1.65,
+                              fontWeight: isCurrent
+                                  ? FontWeight.w700
+                                  : FontWeight.w400,
+                              color: isCurrent
+                                  ? theme.colorScheme.onSurface
+                                  : theme.colorScheme.onSurfaceVariant,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            // Control bar
+            Container(
+              decoration: BoxDecoration(
+                color: theme.colorScheme.surface,
+                border:
+                    Border(top: BorderSide(color: theme.colorScheme.outline)),
+              ),
+              padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Slider(
+                    value: _idx.toDouble(),
+                    min: 0,
+                    max: (_words.length - 1).toDouble().clamp(0, 99999),
+                    onChanged: (v) => setState(() => _idx = v.toInt()),
+                    activeColor: AgamaTheme.emerald,
+                    inactiveColor: theme.colorScheme.outline,
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // WPM selector
+                      PopupMenuButton<int>(
+                        tooltip: 'Speed',
+                        icon: Icon(Icons.speed,
+                            color: AgamaTheme.inkMuted, size: 20),
+                        onSelected: (v) => setState(() => _wpm = v),
+                        itemBuilder: (_) => [300, 450, 600, 800]
+                            .map((v) => PopupMenuItem(
+                                  value: v,
+                                  child: Text(
+                                    '$v WPM',
+                                    style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 13),
+                                  ),
+                                ))
+                            .toList(),
+                      ),
+                      const SizedBox(width: 16),
+                      GestureDetector(
+                        onTap: _togglePlay,
+                        child: Container(
+                          width: 48,
+                          height: 48,
+                          decoration: const BoxDecoration(
+                            color: AgamaTheme.emerald,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            _playing
+                                ? Icons.pause_rounded
+                                : Icons.play_arrow_rounded,
+                            color: Colors.white,
+                            size: 24,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      Tooltip(
+                        message: 'Restart',
+                        child: InkWell(
+                          onTap: () => setState(() => _idx = 0),
+                          borderRadius: BorderRadius.circular(8),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Icon(Icons.replay_rounded,
+                                size: 20, color: AgamaTheme.inkMuted),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

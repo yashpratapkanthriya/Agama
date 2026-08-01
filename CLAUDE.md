@@ -70,3 +70,37 @@ flutter test
 - **Database & Historization Schema**: [`docs/schema.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/schema.md) (`histvon` 17-char timestamp, `histbis = '9999'` active marker)
 - **Decentralized Sync Architecture**: [`docs/decentralized_sync_architecture.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/decentralized_sync_architecture.md)
 - **Software Architecture Description**: [`docs/SAD.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/SAD.md)
+
+---
+
+## 8. Platform & Build State (current)
+
+### Supported Platforms
+- **web** (`web/`) — Chrome via `flutter run -d chrome`
+- **macOS** (`macos/`) — requires Xcode; `flutter run -d macos`
+- Android / iOS: platform dirs not yet scaffolded
+
+### pubspec.yaml — minimal deps only
+All unused native deps stripped (flutter_rust_bridge, flutter_secure_storage, file_picker, path_provider, flutter_spinkit, smooth_page_indicator, flutter_markdown, riverpod_generator, build_runner, freezed_annotation, json_annotation). Only keep:
+- `flutter_riverpod` — state
+- `google_fonts` — typography
+
+> **Rule:** Never re-add a dep without a direct import in `lib/`. Verify with: `grep -r '<dep>' apps/flutter_client/lib/`
+
+### Navigation architecture
+- **Root:** `LibraryView` (StatefulWidget) with `NavigationBar` — 3 tabs: Library · Knowledge · Analytics
+- **Library tab:** paste-text import sheet → engine chooser → push reader route
+- **Knowledge tab:** Highlights (`AnnotationView`) + Flashcards (`FlashcardView`)
+- **Analytics tab:** inline `AnalyticsView` (no push)
+- All reader routes: push from Library tab via `Navigator.push`
+
+### DevTools & VS Code Integration
+- **Flutter DevTools Reference**: [Flutter DevTools for VS Code](https://docs.flutter.dev/tools/devtools/vscode)
+- **Launch Configurations**: `.vscode/launch.json` configured for Chrome Web (`-d chrome`) and macOS (`-d macos`).
+- **DevTools Auto-Open**: `.vscode/settings.json` configured to auto-launch Flutter Inspector and widget error notifications.
+
+### UX invariants
+- No dead SnackBar for navigable actions
+- RSVP reader always shows context strip (±3 words)
+- Engine chooser always shows tradeoffs, WPM range, best-for before user commits
+- Import = paste text (no file_picker dep needed for demo)

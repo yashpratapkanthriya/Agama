@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../app/theme.dart';
 
 class AnnotationItem {
   final String id;
@@ -14,199 +16,416 @@ class AnnotationItem {
   });
 }
 
+class AnnotationStore {
+  static final List<AnnotationItem> items = [
+    const AnnotationItem(
+      id: '1',
+      selectedText:
+          'Zero-backend local-first architecture ensures 100% data sovereignty.',
+      note: 'Core principle — nothing leaves the device.',
+      color: AgamaTheme.indigo,
+    ),
+    const AnnotationItem(
+      id: '2',
+      selectedText:
+          'Adaptive Intelligent Pacing slows WPM dynamically for complex sentences.',
+      note: 'ONNX MiniLM-L6-v2 computes syntactic complexity per sentence.',
+      color: AgamaTheme.emerald,
+    ),
+    const AnnotationItem(
+      id: '3',
+      selectedText:
+          'ORP redicle positions fixation at the 35% word prefix for maximum throughput.',
+      note: null,
+      color: AgamaTheme.amber,
+    ),
+  ];
+}
+
 class AnnotationView extends StatefulWidget {
-  const AnnotationView({super.key});
+  final bool showCreateOnLaunch;
+  const AnnotationView({super.key, this.showCreateOnLaunch = false});
 
   @override
   State<AnnotationView> createState() => _AnnotationViewState();
 }
 
 class _AnnotationViewState extends State<AnnotationView> {
-  final List<AnnotationItem> _annotations = [
-    const AnnotationItem(
-      id: '1',
-      selectedText: 'Zero-backend local-first architecture ensures 100% data sovereignty.',
-      note: 'Key architecture principle for Agama platform.',
-      color: Color(0xFFFFD700), // Yellow
-    ),
-    const AnnotationItem(
-      id: '2',
-      selectedText: 'Adaptive Intelligent Pacing dynamically slows down WPM for dense sentences.',
-      note: 'ONNX MiniLM-L6-v2 syntactic complexity calculation.',
-      color: Color(0xFF4CAF50), // Green
-    ),
-  ];
+  List<AnnotationItem> get _items => AnnotationStore.items;
 
-  Color _selectedColor = const Color(0xFFFFD700);
-  final TextEditingController _textController = TextEditingController();
-  final TextEditingController _noteController = TextEditingController();
+  Color _pickedColor = AgamaTheme.indigo;
+  final _textCtrl = TextEditingController();
+  final _noteCtrl = TextEditingController();
+  String _query = '';
 
-  void _addAnnotation() {
-    if (_textController.text.trim().isEmpty) return;
-
-    setState(() {
-      _annotations.insert(
-        0,
-        AnnotationItem(
-          id: DateTime.now().millisecondsSinceEpoch.toString(),
-          selectedText: _textController.text.trim(),
-          note: _noteController.text.trim().isEmpty ? null : _noteController.text.trim(),
-          color: _selectedColor,
-        ),
-      );
-    });
-
-    _textController.clear();
-    _noteController.clear();
-    Navigator.pop(context);
+  @override
+  void initState() {
+    super.initState();
+    if (widget.showCreateOnLaunch) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _showSheet();
+      });
+    }
   }
 
-  void _showAddModal() {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      builder: (context) {
-        return Padding(
-          padding: EdgeInsets.only(
-            left: 20,
-            right: 20,
-            top: 20,
-            bottom: MediaQuery.of(context).viewInsets.bottom + 20,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Add Inline Highlight & Note',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: _textController,
-                decoration: const InputDecoration(
-                  labelText: 'Selected Text Snippet',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 12),
-              TextField(
-                controller: _noteController,
-                decoration: const InputDecoration(
-                  labelText: 'Markdown Marginalia Note (Optional)',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 16),
-              Row(
-                children: [
-                  const Text('Highlight Color: '),
-                  const SizedBox(width: 8),
-                  ...[
-                    const Color(0xFFFFD700), // Yellow
-                    const Color(0xFF4CAF50), // Green
-                    const Color(0xFF2196F3), // Blue
-                    const Color(0xFFE91E63), // Pink
-                    const Color(0xFF9C27B0), // Purple
-                  ].map((color) {
-                    final isSelected = _selectedColor == color;
-                    return GestureDetector(
-                      onTap: () => setState(() => _selectedColor = color),
-                      child: Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 4),
-                        width: 28,
-                        height: 28,
-                        decoration: BoxDecoration(
-                          color: color,
-                          shape: BoxShape.circle,
-                          border: isSelected
-                              ? Border.all(color: Colors.white, width: 3)
-                              : null,
-                        ),
+  void _showSheet() {
+    final isDesktop = MediaQuery.of(context).size.width > 600;
+    if (isDesktop) {
+      showDialog(
+        context: context,
+        useRootNavigator: false,
+        builder: (dialogCtx) => Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 480),
+            child: StatefulBuilder(
+              builder: (context, setModalState) => Padding(
+                padding: const EdgeInsets.all(24),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Add highlight', style: Theme.of(context).textTheme.titleMedium),
+                    const SizedBox(height: 16),
+                    TextField(
+                      controller: _textCtrl,
+                      maxLines: 3,
+                      autofocus: true,
+                      decoration: const InputDecoration(
+                        labelText: 'Selected passage',
+                        hintText: 'Enter text to highlight…',
+                        border: OutlineInputBorder(),
                       ),
-                    );
-                  }),
-                ],
-              ),
-              const SizedBox(height: 20),
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: _addAnnotation,
-                  child: const Text('Save Annotation'),
+                    ),
+                    const SizedBox(height: 12),
+                    TextField(
+                      controller: _noteCtrl,
+                      decoration: const InputDecoration(
+                        labelText: 'Marginalia note (optional)',
+                        hintText: 'Add your note here…',
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Text('Colour: ', style: Theme.of(context).textTheme.bodyMedium),
+                        const SizedBox(width: 8),
+                        ...[AgamaTheme.indigo, AgamaTheme.emerald, AgamaTheme.amber,
+                            AgamaTheme.crimson, const Color(0xFF7C3AED)]
+                            .map((c) {
+                          final sel = _pickedColor == c;
+                          return GestureDetector(
+                            onTap: () {
+                              setModalState(() => _pickedColor = c);
+                              setState(() => _pickedColor = c);
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 8),
+                              width: 26,
+                              height: 26,
+                              decoration: BoxDecoration(
+                                color: c,
+                                shape: BoxShape.circle,
+                                border: sel
+                                    ? Border.all(
+                                        color: Theme.of(context).colorScheme.onSurface,
+                                        width: 2.5)
+                                    : null,
+                              ),
+                            ),
+                          );
+                        }),
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(dialogCtx),
+                          child: const Text('Cancel'),
+                        ),
+                        const SizedBox(width: 8),
+                        FilledButton(
+                          onPressed: () {
+                            final text = _textCtrl.text.trim();
+                            if (text.isEmpty) return;
+                            final noteText = _noteCtrl.text.trim();
+                            setState(() {
+                              AnnotationStore.items.insert(
+                                0,
+                                AnnotationItem(
+                                  id: DateTime.now().millisecondsSinceEpoch.toString(),
+                                  selectedText: text,
+                                  note: noteText.isEmpty ? null : noteText,
+                                  color: _pickedColor,
+                                ),
+                              );
+                            });
+                            _textCtrl.clear();
+                            _noteCtrl.clear();
+                            Navigator.pop(dialogCtx);
+                          },
+                          child: const Text('Save highlight'),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
-        );
-      },
-    );
+        ),
+      );
+    } else {
+      showModalBottomSheet(
+        context: context,
+        useRootNavigator: false,
+        isScrollControlled: true,
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+        ),
+        builder: (sheetCtx) => StatefulBuilder(
+          builder: (context, setModalState) => Padding(
+            padding: EdgeInsets.only(
+              left: 20, right: 20, top: 20,
+              bottom: MediaQuery.of(context).viewInsets.bottom + 24,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Add highlight',
+                    style: Theme.of(context).textTheme.titleMedium),
+                const SizedBox(height: 16),
+                TextField(
+                  controller: _textCtrl,
+                  maxLines: 2,
+                  autofocus: true,
+                  decoration: const InputDecoration(
+                    labelText: 'Selected passage',
+                    hintText: 'Enter text to highlight…',
+                  ),
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: _noteCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Marginalia note (optional)',
+                    hintText: 'Add your note here…',
+                  ),
+                ),
+                const SizedBox(height: 14),
+                Row(
+                  children: [
+                    Text('Colour: ', style: Theme.of(context).textTheme.bodyMedium),
+                    const SizedBox(width: 8),
+                    ...[AgamaTheme.indigo, AgamaTheme.emerald, AgamaTheme.amber,
+                        AgamaTheme.crimson, const Color(0xFF7C3AED)]
+                        .map((c) {
+                      final sel = _pickedColor == c;
+                      return GestureDetector(
+                        onTap: () {
+                          setModalState(() => _pickedColor = c);
+                          setState(() => _pickedColor = c);
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.only(right: 8),
+                          width: 26,
+                          height: 26,
+                          decoration: BoxDecoration(
+                            color: c,
+                            shape: BoxShape.circle,
+                            border: sel
+                                ? Border.all(
+                                    color: Theme.of(context).colorScheme.onSurface,
+                                    width: 2.5)
+                                : null,
+                          ),
+                        ),
+                      );
+                    }),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: () {
+                      final text = _textCtrl.text.trim();
+                      if (text.isEmpty) return;
+                      final noteText = _noteCtrl.text.trim();
+                      setState(() {
+                        AnnotationStore.items.insert(
+                          0,
+                          AnnotationItem(
+                            id: DateTime.now().millisecondsSinceEpoch.toString(),
+                            selectedText: text,
+                            note: noteText.isEmpty ? null : noteText,
+                            color: _pickedColor,
+                          ),
+                        );
+                      });
+                      _textCtrl.clear();
+                      _noteCtrl.clear();
+                      Navigator.pop(sheetCtx);
+                    },
+                    child: const Text('Save highlight'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final filtered = _query.isEmpty
+        ? _items
+        : _items
+            .where((a) =>
+                a.selectedText.toLowerCase().contains(_query.toLowerCase()) ||
+                (a.note?.toLowerCase().contains(_query.toLowerCase()) ?? false))
+            .toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Highlights & Knowledge Base'),
+        title: Text('Highlights', style: theme.textTheme.titleMedium),
         actions: [
           IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('sqlite-vec 384-dim vector similarity search active')),
-              );
-            },
+            icon: const Icon(Icons.add),
+            tooltip: 'Add highlight',
+            onPressed: _showSheet,
+          ),
+          Container(
+            margin: const EdgeInsets.only(right: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              color: AgamaTheme.indigo.withAlpha(15),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: AgamaTheme.indigo.withAlpha(40)),
+            ),
+            child: Text(
+              '${_items.length} notes',
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+                color: AgamaTheme.indigo,
+              ),
+            ),
           ),
         ],
       ),
-      body: _annotations.isEmpty
-          ? const Center(child: Text('No highlights yet.'))
-          : ListView.builder(
-              padding: const EdgeInsets.all(16),
-              itemCount: _annotations.length,
-              itemBuilder: (context, index) {
-                final ann = _annotations[index];
-                return Card(
-                  margin: const EdgeInsets.only(bottom: 12),
-                  child: Container(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              // Search bar
+              TextField(
+                onChanged: (v) => setState(() => _query = v),
+                decoration: InputDecoration(
+                  hintText: 'Search highlights…',
+                  prefixIcon: const Icon(Icons.search, size: 18),
+                  suffixIcon: Container(
+                    margin: const EdgeInsets.all(6),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 7, vertical: 3),
                     decoration: BoxDecoration(
-                      border: Border(
-                        left: BorderSide(
-                          color: ann.color,
-                          width: 6,
-                        ),
+                      color: AgamaTheme.indigo.withAlpha(15),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    child: Text(
+                      '384d',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        color: AgamaTheme.indigo,
                       ),
                     ),
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '"${ann.selectedText}"',
-                          style: theme.textTheme.bodyLarge?.copyWith(
-                            fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+
+              // List
+              Expanded(
+                child: filtered.isEmpty
+                    ? Center(
+                        child: Text(
+                          _query.isEmpty
+                              ? 'No highlights yet.'
+                              : 'No matches found.',
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
                           ),
                         ),
-                        if (ann.note != null) ...[
-                          const SizedBox(height: 8),
-                          Text(
-                            ann.note!,
-                            style: theme.textTheme.bodyMedium?.copyWith(
-                              color: theme.colorScheme.onSurfaceVariant,
+                      )
+                    : ListView.separated(
+                        itemCount: filtered.length,
+                        separatorBuilder: (_, __) => const SizedBox(height: 8),
+                        itemBuilder: (_, i) {
+                          final a = filtered[i];
+                          return Container(
+                            decoration: BoxDecoration(
+                              color: theme.colorScheme.surface,
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border(
+                                left: BorderSide(color: a.color, width: 4),
+                                top: BorderSide(color: theme.colorScheme.outline),
+                                right: BorderSide(color: theme.colorScheme.outline),
+                                bottom: BorderSide(color: theme.colorScheme.outline),
+                              ),
                             ),
-                          ),
-                        ],
-                      ],
-                    ),
-                  ),
-                );
-              },
-            ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _showAddModal,
-        child: const Icon(Icons.add_comment),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 14,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '"${a.selectedText}"',
+                                  style: theme.textTheme.bodyMedium?.copyWith(
+                                    color: theme.colorScheme.onSurface,
+                                    fontWeight: FontWeight.w500,
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
+                                if (a.note != null) ...[
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    a.note!,
+                                    style: theme.textTheme.bodySmall?.copyWith(
+                                      color: theme.colorScheme.onSurfaceVariant,
+                                    ),
+                                  ),
+                                ],
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: _showSheet,
+        backgroundColor: AgamaTheme.indigo,
+        foregroundColor: Colors.white,
+        elevation: 0,
+        icon: const Icon(Icons.add_comment_outlined, size: 18),
+        label: Text(
+          'Add highlight',
+          style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w600),
+        ),
       ),
     );
   }

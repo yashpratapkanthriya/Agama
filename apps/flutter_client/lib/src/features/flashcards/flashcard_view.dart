@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../app/theme.dart';
 
 class FlashcardItem {
   final String id;
@@ -6,7 +8,6 @@ class FlashcardItem {
   final String answer;
   int interval;
   double ef;
-  int dueSeconds;
 
   FlashcardItem({
     required this.id,
@@ -14,7 +15,6 @@ class FlashcardItem {
     required this.answer,
     this.interval = 1,
     this.ef = 2.5,
-    this.dueSeconds = 0,
   });
 }
 
@@ -29,54 +29,50 @@ class _FlashcardViewState extends State<FlashcardView> {
   final List<FlashcardItem> _cards = [
     FlashcardItem(
       id: 'c1',
-      question: 'What is the core formula behind Adaptive Intelligent Pacing (AIP)?',
-      answer: 't_delay = (60000 / W_target) * C * (1 + alpha * max(0, L - 6)) + punctuation_pauses',
+      question:
+          'What is the core formula behind Adaptive Intelligent Pacing (AIP)?',
+      answer:
+          't_delay = (60000 / W_target) × C × (1 + α × max(0, L − 6)) + punctuation_pauses',
     ),
     FlashcardItem(
       id: 'c2',
-      question: 'What is the active indicator string for historized rows (histbis)?',
-      answer: "'9999' (active entry marker with 17-char timestamp histvon)",
+      question:
+          'What marks an active row in the Agama bi-temporal schema (histbis)?',
+      answer: "histvon = '9999' — a sentinel timestamp meaning 'still active'",
     ),
     FlashcardItem(
       id: 'c3',
-      question: 'Which algorithm schedules flashcards for optimal memory retention in Agama?',
-      answer: 'SuperMemo SM-2 Spaced Repetition Algorithm',
+      question:
+          'Which algorithm schedules Agama flashcards for memory retention?',
+      answer: 'SuperMemo SM-2 — interval × EF after each quality rating 0–5',
     ),
   ];
 
-  int _currentIndex = 0;
-  bool _showAnswer = false;
+  int _idx = 0;
+  bool _revealed = false;
 
-  void _rateCard(int quality) {
-    // SM-2 calculation simulation
-    final card = _cards[_currentIndex];
-    final q = quality.clamp(0, 5);
-    final newEf = (card.ef + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))).clamp(1.3, 3.5);
-    
-    int newInterval = 1;
-    if (q >= 3) {
-      if (card.interval <= 1) {
-        newInterval = 6;
-      } else {
-        newInterval = (card.interval * newEf).round();
-      }
-    }
+  void _rate(int q) {
+    final c = _cards[_idx];
+    final clamped = q.clamp(0, 5);
+    final newEf =
+        (c.ef + (0.1 - (5 - clamped) * (0.08 + (5 - clamped) * 0.02)))
+            .clamp(1.3, 3.5);
+    final newInterval =
+        clamped >= 3 ? (c.interval <= 1 ? 6 : (c.interval * newEf).round()) : 1;
 
     setState(() {
-      card.ef = newEf;
-      card.interval = newInterval;
-      _showAnswer = false;
-      if (_currentIndex < _cards.length - 1) {
-        _currentIndex++;
-      } else {
-        _currentIndex = 0;
-      }
+      c.ef = newEf;
+      c.interval = newInterval;
+      _revealed = false;
+      _idx = (_idx + 1) % _cards.length;
     });
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('SM-2 Updated: Quality $q -> Next interval $newInterval days (EF: ${newEf.toStringAsFixed(2)})'),
-        duration: const Duration(seconds: 1),
+        content: Text(
+          'Rated $clamped/5 — next in $newInterval day${newInterval == 1 ? '' : 's'} (EF ${newEf.toStringAsFixed(2)})',
+        ),
+        duration: const Duration(seconds: 2),
       ),
     );
   }
@@ -84,60 +80,163 @@ class _FlashcardViewState extends State<FlashcardView> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final card = _cards[_currentIndex];
+    final card = _cards[_idx];
+    final pct = (_idx + 1) / _cards.length;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SM-2 Active Recall Flashcards'),
+        title: Text('Flashcards', style: theme.textTheme.titleMedium),
+        actions: [
+          Container(
+            margin: const EdgeInsets.only(right: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              color: AgamaTheme.indigo.withAlpha(15),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: AgamaTheme.indigo.withAlpha(40)),
+            ),
+            child: Text(
+              '${_idx + 1} / ${_cards.length}',
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: AgamaTheme.indigo,
+              ),
+            ),
+          ),
+        ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
+      body: SafeArea(
         child: Column(
           children: [
             LinearProgressIndicator(
-              value: (_currentIndex + 1) / _cards.length,
+              value: pct,
+              minHeight: 2,
+              backgroundColor: theme.colorScheme.outline,
+              valueColor:
+                  const AlwaysStoppedAnimation<Color>(AgamaTheme.indigo),
             ),
-            const SizedBox(height: 16),
-            Text(
-              'Card ${_currentIndex + 1} of ${_cards.length}',
-              style: theme.textTheme.labelMedium,
-            ),
-            const SizedBox(height: 24),
             Expanded(
-              child: GestureDetector(
-                onTap: () => setState(() => _showAnswer = !_showAnswer),
-                child: Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(24),
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 600),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          _showAnswer ? 'ANSWER' : 'QUESTION',
-                          style: theme.textTheme.labelSmall?.copyWith(
-                            color: theme.colorScheme.primary,
-                            letterSpacing: 1.5,
+                        // EF badge
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'EF ${card.ef.toStringAsFixed(2)}',
+                            style: theme.textTheme.labelSmall,
                           ),
                         ),
-                        const SizedBox(height: 16),
-                        Text(
-                          _showAnswer ? card.answer : card.question,
-                          textAlign: TextAlign.center,
-                          style: theme.textTheme.headlineSmall?.copyWith(
-                            fontWeight: FontWeight.w600,
+                        const SizedBox(height: 10),
+
+                        // Flip card
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () =>
+                                setState(() => _revealed = !_revealed),
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 200),
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: theme.colorScheme.surface,
+                                borderRadius: BorderRadius.circular(14),
+                                border: Border.all(
+                                  color: _revealed
+                                      ? AgamaTheme.emerald.withAlpha(100)
+                                      : theme.colorScheme.outline,
+                                  width: 1.5,
+                                ),
+                              ),
+                              padding: const EdgeInsets.all(28),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  // State pill
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 4),
+                                    decoration: BoxDecoration(
+                                      color: _revealed
+                                          ? AgamaTheme.emerald.withAlpha(20)
+                                          : AgamaTheme.indigo.withAlpha(15),
+                                      borderRadius:
+                                          BorderRadius.circular(20),
+                                    ),
+                                    child: Text(
+                                      _revealed ? 'ANSWER' : 'QUESTION',
+                                      style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w700,
+                                        letterSpacing: 1.2,
+                                        color: _revealed
+                                            ? AgamaTheme.emerald
+                                            : AgamaTheme.indigo,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 24),
+                                  Text(
+                                    _revealed ? card.answer : card.question,
+                                    textAlign: TextAlign.center,
+                                    style: theme.textTheme.bodyLarge?.copyWith(
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.6,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 24),
+                                  Text(
+                                    _revealed
+                                        ? 'Tap to hide'
+                                        : 'Tap to reveal answer',
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 24),
-                        Text(
-                          _showAnswer ? 'Tap to hide' : 'Tap to reveal answer',
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant,
-                          ),
+
+                        // Rating row — only when revealed
+                        AnimatedSize(
+                          duration: const Duration(milliseconds: 200),
+                          curve: Curves.easeOut,
+                          child: _revealed
+                              ? Padding(
+                                  padding: const EdgeInsets.only(top: 16),
+                                  child: Row(
+                                    children: [
+                                      _RateBtn(
+                                          label: 'Again',
+                                          sub: '0',
+                                          color: AgamaTheme.crimson,
+                                          onTap: () => _rate(0)),
+                                      const SizedBox(width: 8),
+                                      _RateBtn(
+                                          label: 'Hard',
+                                          sub: '2',
+                                          color: AgamaTheme.amber,
+                                          onTap: () => _rate(2)),
+                                      const SizedBox(width: 8),
+                                      _RateBtn(
+                                          label: 'Good',
+                                          sub: '4',
+                                          color: AgamaTheme.indigo,
+                                          onTap: () => _rate(4)),
+                                      const SizedBox(width: 8),
+                                      _RateBtn(
+                                          label: 'Easy',
+                                          sub: '5',
+                                          color: AgamaTheme.emerald,
+                                          onTap: () => _rate(5)),
+                                    ],
+                                  ),
+                                )
+                              : const SizedBox.shrink(),
                         ),
                       ],
                     ),
@@ -145,32 +244,58 @@ class _FlashcardViewState extends State<FlashcardView> {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
-            if (_showAnswer)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(foregroundColor: Colors.red),
-                    onPressed: () => _rateCard(0),
-                    child: const Text('Again (0)'),
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(foregroundColor: Colors.orange),
-                    onPressed: () => _rateCard(2),
-                    child: const Text('Hard (2)'),
-                  ),
-                  FilledButton.tonal(
-                    onPressed: () => _rateCard(4),
-                    child: const Text('Good (4)'),
-                  ),
-                  FilledButton(
-                    onPressed: () => _rateCard(5),
-                    child: const Text('Easy (5)'),
-                  ),
-                ],
-              ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _RateBtn extends StatelessWidget {
+  final String label;
+  final String sub;
+  final Color color;
+  final VoidCallback onTap;
+
+  const _RateBtn({
+    required this.label,
+    required this.sub,
+    required this.color,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          decoration: BoxDecoration(
+            color: color.withAlpha(15),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: color.withAlpha(50)),
+          ),
+          child: Column(
+            children: [
+              Text(
+                label,
+                style: GoogleFonts.inter(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: color,
+                ),
+              ),
+              Text(
+                sub,
+                style: GoogleFonts.jetBrainsMono(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w700,
+                  color: color.withAlpha(180),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

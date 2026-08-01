@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../app/theme.dart';
 
 class SyncView extends StatefulWidget {
   const SyncView({super.key});
@@ -8,21 +10,21 @@ class SyncView extends StatefulWidget {
 }
 
 class _SyncViewState extends State<SyncView> {
-  bool _autoSyncEnabled = true;
-  String _selectedProvider = 'WebDAV (Nextcloud)';
-  int _pendingOutboxCount = 3;
-  bool _isSyncing = false;
+  bool _syncing = false;
 
-  void _triggerSync() async {
-    setState(() => _isSyncing = true);
+  static final List<Map<String, dynamic>> _outbox = [
+    {'id': 'op-001', 'op': 'highlight_upsert', 'bytes': 420, 'status': 'queued'},
+    {'id': 'op-002', 'op': 'annotation_create', 'bytes': 188, 'status': 'queued'},
+    {'id': 'op-003', 'op': 'progress_update', 'bytes': 64, 'status': 'queued'},
+  ];
+
+  void _sync() async {
+    setState(() => _syncing = true);
     await Future.delayed(const Duration(seconds: 2));
+    if (mounted) setState(() => _syncing = false);
     if (mounted) {
-      setState(() {
-        _isSyncing = false;
-        _pendingOutboxCount = 0;
-      });
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Yrs CRDT E2EE Delta Sync Complete!')),
+        const SnackBar(content: Text('3 operations replicated via CRDT merge')),
       );
     }
   }
@@ -33,82 +35,164 @@ class _SyncViewState extends State<SyncView> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Decentralized Sync Settings'),
+        title: Text('Sync', style: theme.textTheme.titleMedium),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView(
-          children: [
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Status card
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: AgamaTheme.emerald.withAlpha(10),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                      color: AgamaTheme.emerald.withAlpha(60)),
+                ),
+                child: Row(
                   children: [
-                    Row(
+                    Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: AgamaTheme.emerald.withAlpha(25),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.storage_outlined,
+                        color: AgamaTheme.emerald,
+                        size: 20,
+                      ),
+                    ),
+                    const SizedBox(width: 14),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Icon(Icons.cloud_sync, size: 32, color: Color(0xFF6750A4)),
-                        const SizedBox(width: 12),
                         Text(
-                          'Zero-Backend E2EE Sync',
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.bold,
+                          'Local-first · CRDT merge',
+                          style: theme.textTheme.titleSmall?.copyWith(
+                            color: AgamaTheme.emerald,
                           ),
                         ),
+                        const SizedBox(height: 2),
+                        Text(
+                          'All data encrypted with SQLCipher at rest',
+                          style: theme.textTheme.bodySmall,
+                        ),
                       ],
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      'User-owned state sync using Yrs CRDTs across your own cloud storage.',
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant,
-                      ),
                     ),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 16),
-            ListTile(
-              leading: const Icon(Icons.sync),
-              title: const Text('Auto-Sync Deltas'),
-              subtitle: const Text('Sync CRDT delta blobs in background'),
-              trailing: Switch(
-                value: _autoSyncEnabled,
-                onChanged: (val) => setState(() => _autoSyncEnabled = val),
-              ),
-            ),
-            const Divider(),
-            ListTile(
-              leading: const Icon(Icons.storage),
-              title: const Text('Primary Sync Channel'),
-              subtitle: Text(_selectedProvider),
-              trailing: PopupMenuButton<String>(
-                onSelected: (val) => setState(() => _selectedProvider = val),
-                itemBuilder: (context) => [
-                  const PopupMenuItem(value: 'WebDAV (Nextcloud)', child: Text('WebDAV (Nextcloud)')),
-                  const PopupMenuItem(value: 'Apple iCloud Drive', child: Text('Apple iCloud Drive')),
-                  const PopupMenuItem(value: 'Local Wi-Fi P2P', child: Text('Local Wi-Fi P2P (mDNS)')),
+              const SizedBox(height: 24),
+
+              // Outbox header
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Pending operations',
+                      style: theme.textTheme.titleSmall),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 9, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surfaceContainerHighest,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: theme.colorScheme.outline),
+                    ),
+                    child: Text(
+                      '${_outbox.length} ops',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700,
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                    ),
+                  ),
                 ],
               ),
-            ),
-            const Divider(),
-            ListTile(
-              leading: const Icon(Icons.outbox),
-              title: const Text('Pending Outbox Deltas'),
-              subtitle: Text('$_pendingOutboxCount un-synced CRDT operations'),
-              trailing: _isSyncing
-                  ? const SizedBox(
-                      width: 24,
-                      height: 24,
-                      child: CircularProgressIndicator(strokeWidth: 2.5),
-                    )
-                  : FilledButton.tonal(
-                      onPressed: _pendingOutboxCount == 0 ? null : _triggerSync,
-                      child: const Text('Sync Now'),
-                    ),
-            ),
-          ],
+              const SizedBox(height: 10),
+
+              Expanded(
+                child: ListView.separated(
+                  itemCount: _outbox.length,
+                  separatorBuilder: (_, __) => const SizedBox(height: 6),
+                  itemBuilder: (_, i) {
+                    final op = _outbox[i];
+                    return Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 13),
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.surface,
+                        borderRadius: BorderRadius.circular(10),
+                        border:
+                            Border.all(color: theme.colorScheme.outline),
+                      ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.sync_outlined,
+                              size: 16,
+                              color: theme.colorScheme.onSurfaceVariant),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  op['op'] as String,
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    color: theme.colorScheme.onSurface,
+                                  ),
+                                ),
+                                Text(
+                                  '${op['bytes']} bytes · ${op['id']}',
+                                  style: theme.textTheme.bodySmall,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: AgamaTheme.amber.withAlpha(20),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: Text(
+                              op['status'] as String,
+                              style: GoogleFonts.jetBrainsMono(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w700,
+                                color: AgamaTheme.amber,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+
+              const SizedBox(height: 20),
+              SizedBox(
+                width: double.infinity,
+                child: _syncing
+                    ? const Center(child: CircularProgressIndicator())
+                    : FilledButton.icon(
+                        onPressed: _sync,
+                        icon: const Icon(Icons.cloud_upload_outlined,
+                            size: 18),
+                        label: const Text('Replicate via CRDT'),
+                      ),
+              ),
+            ],
+          ),
         ),
       ),
     );

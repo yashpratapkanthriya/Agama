@@ -399,6 +399,34 @@ zero-backend-agama/
 - [x] Build on-device AI comprehension quiz generator and spaced repetition flashcard scheduler.
 - [x] Execute end-to-end performance benchmarks, zero-copy memory verification, and cross-platform native builds (iOS, Android, macOS, Windows).
 
+### Section 9.1: Active Operational Feature Status & Gap Remediation Roadmap
+
+#### Operational Feature Matrix
+
+| Module | Implemented UI / Logic | Operational Gaps | Target Remediation |
+| :--- | :--- | :--- | :--- |
+| **Document Ingestion** | Paste-text import sheet | Missing native PDF / EPUB file parsing & file_picker integration | Add file parser bindings & picker UI |
+| **Rust Engine FFI** | `native/rust_core` library (9 unit tests pass) | Flutter UI using Dart fallback; `flutter_rust_bridge` stripped | Wire C-FFI / `flutter_rust_bridge` to Flutter shell |
+| **Vector Search & ML** | Mock ONNX complexity calculator in Rust | Real `sqlite-vec` index & local ONNX embedding load missing | Link `sqlite-vec` C-extension & ONNX Runtime model |
+| **Reading Engines** | RSVP (ORP redicle + context strip), Bionic Fixation, Guided Highlighting | Fully functional in Flutter UI | Complete |
+| **Knowledge & Flashcards** | SM-2 flashcard review, annotation list & tags | Fully functional in Flutter UI | Complete |
+| **Decentralized Sync** | Yrs CRDT delta engine & SyncView UI | Real P2P / WebDAV network transport layer missing | Add WebDAV & P2P network transport adapter |
+| **Analytics** | CCI score, WPM speed charts, session log | Fully functional in Flutter UI | Complete |
+
+#### Gap Remediation Priority Sequence
+
+1. **Remediation Task 1: Native Document File Parser Integration**
+   - Bind file picker in Flutter UI library tab.
+   - Implement PDF/EPUB/Markdown parser service in `apps/flutter_client/lib/src/features/library/file_parser_service.dart`.
+2. **Remediation Task 2: Flutter-Rust FFI Bridge Wiring**
+   - Wire C-FFI bridge between `native/rust_core` and `apps/flutter_client`.
+   - Connect Flutter Riverpod providers to native Rust engine APIs.
+3. **Remediation Task 3: Local Vector Search (`sqlite-vec`) & ONNX Embedding**
+   - Enable `sqlite-vec` extension on SQLCipher database.
+   - Wire local ONNX embedding generator for inline semantic highlight search.
+4. **Remediation Task 4: WebDAV & P2P Sync Transport**
+   - Implement WebDAV client and local socket P2P transport for Yrs CRDT sync payloads.
+
 ---
 
 ## 10. Backward & Forward Document Linkage Matrix
