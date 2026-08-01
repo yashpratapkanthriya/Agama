@@ -3688,8 +3688,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_ffi_bridge_test",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 63,
+      "community_name": "ffi_bridge_test.dart",
       "norm_label": "ffi_bridge_test.dart"
     },
     {
@@ -3699,8 +3699,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_ffi_bridge_test_main",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 63,
+      "community_name": "ffi_bridge_test.dart",
       "norm_label": "main"
     },
     {
@@ -3710,8 +3710,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_core_ffi_bridge_dart",
-      "community": 56,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 63,
+      "community_name": "ffi_bridge_test.dart",
       "norm_label": "package:flutter_client/src/core/ffi_bridge.dart"
     },
     {
@@ -3776,8 +3776,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_vector_search_test",
-      "community": 63,
-      "community_name": "vector_search_test.dart",
+      "community": 56,
+      "community_name": "package:flutter_test/flutter_test.dart",
       "norm_label": "vector_search_test.dart"
     },
     {
@@ -3787,8 +3787,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_vector_search_test_main",
-      "community": 63,
-      "community_name": "vector_search_test.dart",
+      "community": 56,
+      "community_name": "package:flutter_test/flutter_test.dart",
       "norm_label": "main"
     },
     {
@@ -3798,8 +3798,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_annotations_vector_search_service_dart",
-      "community": 63,
-      "community_name": "vector_search_test.dart",
+      "community": 56,
+      "community_name": "package:flutter_test/flutter_test.dart",
       "norm_label": "package:flutter_client/src/features/annotations/vector_search_service.dart"
     },
     {
@@ -10096,6 +10096,17 @@
       "target": "package_flutter_riverpod_flutter_riverpod_dart"
     },
     {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -12033,17 +12044,6 @@
       "_origin": "ast",
       "source": "apps_flutter_client_test_file_parser_test",
       "target": "dart_convert"
-    },
-    {
-      "relation": "imports",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flutter_client/lib/src/features/library/library_view.dart",
-      "source_location": null,
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_flutter_client_lib_src_features_library_library_view",
-      "target": "dart_typed_data"
     },
     {
       "relation": "imports",
@@ -21484,5 +21484,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "4ba69ed6cb014d59be4916a15e053e5734da1e2e"
+  "built_at_commit": "1aea5adce384c76bd78c99ffd7e465a9ed0db16c"
 }

@@ -35,12 +35,24 @@ class _GuidedHighlightViewState extends State<GuidedHighlightView> {
     if (_playing) _tick();
   }
 
+  int _delayForWord(String w, int wpm) {
+    var ms = 60000.0 / wpm;
+    if (w.length > 6) ms += (w.length - 6) * ms * 0.08;
+    if (w.endsWith('.') || w.endsWith('!') || w.endsWith('?')) {
+      ms += 350.0;
+    } else if (w.endsWith(',') || w.endsWith(';') || w.endsWith(':')) {
+      ms += 150.0;
+    }
+    return ms.round();
+  }
+
   void _tick() async {
     if (!_playing || _idx >= _words.length - 1) {
       if (mounted) setState(() => _playing = false);
       return;
     }
-    await Future.delayed(Duration(milliseconds: (60000 / _wpm).round()));
+    final delayMs = _delayForWord(_words[_idx], _wpm);
+    await Future.delayed(Duration(milliseconds: delayMs));
     if (mounted && _playing) {
       setState(() => _idx++);
       _tick();

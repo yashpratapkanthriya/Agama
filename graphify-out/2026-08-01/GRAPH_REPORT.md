@@ -1,7 +1,7 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 77 files · ~63,633 words
+- 77 files · ~63,627 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4ba69ed6`
+- Built from commit: `1aea5adc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -77,7 +77,7 @@
 - Global Constraints
 - widget_test.dart
 - sync_transport_test.dart
-- vector_search_test.dart
+- ffi_bridge_test.dart
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
@@ -287,7 +287,7 @@ Nodes (7): Feature Gap Remediation Implementation Plan, Global Constraints, Task
 
 ### Community 56 - "package:flutter_test/flutter_test.dart"
 Cohesion: 0.20
-Nodes (8): main, main, main, dart:convert, dart:typed_data, package:flutter_client/src/core/ffi_bridge.dart, package:flutter_client/src/features/library/file_parser_service.dart, package:flutter_test/flutter_test.dart
+Nodes (8): main, main, main, dart:convert, dart:typed_data, package:flutter_client/src/features/annotations/vector_search_service.dart, package:flutter_client/src/features/library/file_parser_service.dart, package:flutter_test/flutter_test.dart
 
 ### Community 57 - "State"
 Cohesion: 0.24

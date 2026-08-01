@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
-    "mtime": 1785590203.0718954,
-    "ast_hash": "a795f3851141e0143bdce7cfb2d04b74",
+    "mtime": 1785590971.6281054,
+    "ast_hash": "8298c1b21f2e6013aa1bc3a09ae41202",
     "semantic_hash": ""
   },
   "native/rust_core/src/ai/mod.rs": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/guided_highlight_view.dart": {
-    "mtime": 1785588168.114225,
-    "ast_hash": "a9dfc268aca787ba06fb2b54bba419a2",
+    "mtime": 1785590989.6881156,
+    "ast_hash": "88cede5a46baa6af3a187c9b0ce69096",
     "semantic_hash": ""
   },
   "docs/SAD.md": {
@@ -462,6 +462,11 @@
   "apps/flutter_client/test/features/reader/rsvp_canvas_test.dart": {
     "mtime": 1785589910.1179936,
     "ast_hash": "f0d780448f6dd9a8b4063270c48d15b1",
+    "semantic_hash": ""
+  },
+  "gemini.md": {
+    "mtime": 1785590635.772911,
+    "ast_hash": "f3e22a284815864053a0831c25d905c6",
     "semantic_hash": ""
   }
 }
