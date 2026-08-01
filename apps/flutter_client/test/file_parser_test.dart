@@ -138,10 +138,8 @@ void main() {
       expect(mockApi.parseFileCalled, isTrue);
       expect(mockApi.lastPathParsed, equals('/path/to/sample.txt'));
       expect(doc.title, equals('mock_title'));
-      expect(doc.author, equals('mock_author'));
-      expect(doc.chunks, equals(['Chunk 1', 'Chunk 2']));
-      expect(doc.wordCount, equals(BigInt.from(42)));
-      expect(doc.mimeType, equals('text/plain'));
+      expect(doc.content, equals('Chunk 1\n\nChunk 2'));
+      expect(doc.format, equals(DocumentFormat.txt));
     });
   });
 

@@ -23,15 +23,21 @@ class FileParserService {
   Future<void> init() async {
     try {
       await RustLib.init();
-    } catch (_) {
+    } on StateError catch (_) {
       // Safe no-op if already initialized
+    } catch (e) {
+      rethrow;
     }
   }
 
-
-
-  Future<rust_parser.ParsedDocument> parseFile(String filePath) {
-    return rust.parseFile(path: filePath);
+  Future<ParsedDocument> parseFile(String filePath) async {
+    final rustDoc = await rust.parseFile(path: filePath);
+    final format = _determineFormat(filePath);
+    return ParsedDocument(
+      title: rustDoc.title,
+      content: rustDoc.chunks.join('\n\n'),
+      format: format,
+    );
   }
 
 

@@ -40,16 +40,23 @@ mod tests {
     #[test]
     fn test_parse_file_text() {
         let temp_dir = std::env::temp_dir();
-        let file_path = temp_dir.join("test_api_parse.txt");
+        let file_id = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_nanos();
+        let file_path = temp_dir.join(format!("test_api_parse_{}.txt", file_id));
         std::fs::write(&file_path, "Hello world\n\nSecond paragraph").unwrap();
+
+        struct Cleanup(std::path::PathBuf);
+        impl Drop for Cleanup {
+            fn drop(&mut self) {
+                let _ = std::fs::remove_file(&self.0);
+            }
+        }
+        let _cleanup = Cleanup(file_path.clone());
 
         let res = parse_file(file_path.to_str().unwrap().to_string());
         assert!(res.is_ok());
         let doc = res.unwrap();
-        assert_eq!(doc.title, "test_api_parse");
+        assert_eq!(doc.title, format!("test_api_parse_{}", file_id));
         assert_eq!(doc.chunks.len(), 2);
-
-        let _ = std::fs::remove_file(file_path);
     }
 }
 
