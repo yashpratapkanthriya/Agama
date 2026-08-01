@@ -1,7 +1,7 @@
 use anyhow::Result;
 use rusqlite::Connection;
 use crate::models::{
-    Annotation, Document, Flashcard, ReadingSession,
+    Annotation, Document, Flashcard, ReadingSession, SearchResult,
     HISTBIS_ACTIVE, generate_histvon_timestamp,
 };
 use crate::ai::SpacedRepetitionEngine;
@@ -365,7 +365,35 @@ impl DatabaseEngine {
 
         Ok(sessions)
     }
+
+    pub fn search_similar_chunks(&self, query_embedding: &[f32], limit: usize) -> Result<Vec<SearchResult>> {
+        let mut stmt = self.conn.prepare(
+            "SELECT id, document_id, content FROM document_chunks WHERE histbis = ? LIMIT ?"
+        )?;
+
+        let mut results = Vec::new();
+        let rows = stmt.query_map((HISTBIS_ACTIVE, limit as i64), |row| {
+            Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?, row.get::<_, String>(2)?))
+        })?;
+
+        for r in rows {
+            let (id, doc_id, content) = r?;
+            // Calculate cosine similarity score using text embedding
+            let chunk_emb = crate::ai::AdaptivePacingEngine::generate_embedding(&content);
+            let score: f32 = query_embedding.iter().zip(chunk_emb.iter()).map(|(a, b)| a * b).sum();
+            results.push(SearchResult {
+                chunk_id: id,
+                document_id: doc_id,
+                content,
+                score: score as f64,
+            });
+        }
+
+        results.sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap_or(std::cmp::Ordering::Equal));
+        Ok(results)
+    }
 }
+
 
 
 #[cfg(test)]
