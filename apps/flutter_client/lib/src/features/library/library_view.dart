@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -162,70 +164,139 @@ class _LibraryTab extends StatelessWidget {
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),
-      builder: (_) => Padding(
-        padding: EdgeInsets.fromLTRB(20, 20, 20,
-            MediaQuery.of(context).viewInsets.bottom + 24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Paste text to read',
-                style: Theme.of(context).textTheme.titleMedium),
-            const SizedBox(height: 4),
-            Text('Paste any article, notes, or document text below.',
-                style: Theme.of(context).textTheme.bodySmall),
-            const SizedBox(height: 14),
-            TextField(
-              controller: ctrl,
-              maxLines: 6,
-              autofocus: true,
-              decoration: const InputDecoration(
-                hintText: 'Paste your text here…',
+      builder: (_) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.fromLTRB(20, 20, 20,
+              MediaQuery.of(context).viewInsets.bottom + 24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Import & Read Document',
+                      style: Theme.of(context).textTheme.titleMedium),
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: AgamaTheme.indigo.withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text('.PDF', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.indigo)),
+                      ),
+                      const SizedBox(width: 4),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: AgamaTheme.emerald.withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text('.EPUB', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.emerald)),
+                      ),
+                      const SizedBox(width: 4),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: AgamaTheme.amber.withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text('.MD', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AgamaTheme.amber)),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ),
-            const SizedBox(height: 16),
-            // Engine choice inline
-            Text('Choose reading mode:',
-                style: Theme.of(context).textTheme.labelMedium),
-            const SizedBox(height: 10),
-            Row(children: [
-              Expanded(child: _EngineBtn(
-                label: 'RSVP', sub: 'Fastest', color: AgamaTheme.indigo,
-                onTap: () {
-                  final parsed = parser.parseRawText(ctrl.text, 'imported_document.txt');
-                  if (parsed.content.isEmpty) return;
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (_) => RsvpCanvasView(text: parsed.content),
-                  ));
-                },
-              )),
-              const SizedBox(width: 8),
-              Expanded(child: _EngineBtn(
-                label: 'Sweep', sub: 'Natural', color: AgamaTheme.emerald,
-                onTap: () {
-                  final parsed = parser.parseRawText(ctrl.text, 'imported_document.txt');
-                  if (parsed.content.isEmpty) return;
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (_) => GuidedHighlightView(text: parsed.content),
-                  ));
-                },
-              )),
-              const SizedBox(width: 8),
-              Expanded(child: _EngineBtn(
-                label: 'Bionic', sub: 'Full text', color: AgamaTheme.amber,
-                onTap: () {
-                  final parsed = parser.parseRawText(ctrl.text, 'imported_document.txt');
-                  if (parsed.content.isEmpty) return;
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (_) => BionicFixationView(text: parsed.content),
-                  ));
-                },
-              )),
-            ]),
-          ],
+              const SizedBox(height: 4),
+              Text('Paste text or select a PDF / EPUB / Markdown file below.',
+                  style: Theme.of(context).textTheme.bodySmall),
+              const SizedBox(height: 12),
+              // Preset PDF / EPUB Quick Import Bar
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        final samplePdfHeader = 'BT /F1 12 Tf 72 712 Td (Agama Platform PDF Specification: Zero-Backend Speed Reader) Tj ET';
+                        final bytes = Uint8List.fromList(utf8.encode('%PDF-1.7 $samplePdfHeader'));
+                        final parsed = parser.parseBytes(bytes, 'document_sample.pdf');
+                        ctrl.text = parsed.content;
+                        setModalState(() {});
+                      },
+                      icon: const Icon(Icons.picture_as_pdf_outlined, size: 16, color: Colors.redAccent),
+                      label: const Text('Sample .PDF', style: TextStyle(fontSize: 12)),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        final sampleEpubText = 'Chapter 1: Quantum Photonic Architecture and Sub-Millisecond RSVP Fixation Engine';
+                        final bytes = Uint8List.fromList(utf8.encode(sampleEpubText));
+                        final parsed = parser.parseBytes(bytes, 'research_paper.epub');
+                        ctrl.text = parsed.content;
+                        setModalState(() {});
+                      },
+                      icon: const Icon(Icons.book_outlined, size: 16, color: Colors.teal),
+                      label: const Text('Sample .EPUB', style: TextStyle(fontSize: 12)),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              TextField(
+                controller: ctrl,
+                maxLines: 5,
+                decoration: const InputDecoration(
+                  hintText: 'Paste document text or click Sample .PDF / .EPUB above…',
+                ),
+              ),
+              const SizedBox(height: 16),
+              // Engine choice inline
+              Text('Choose reading mode:',
+                  style: Theme.of(context).textTheme.labelMedium),
+              const SizedBox(height: 10),
+              Row(children: [
+                Expanded(child: _EngineBtn(
+                  label: 'RSVP', sub: 'Fastest', color: AgamaTheme.indigo,
+                  onTap: () {
+                    final parsed = parser.parseRawText(ctrl.text, 'imported_document.pdf');
+                    if (parsed.content.isEmpty) return;
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (_) => RsvpCanvasView(text: parsed.content),
+                    ));
+                  },
+                )),
+                const SizedBox(width: 8),
+                Expanded(child: _EngineBtn(
+                  label: 'Sweep', sub: 'Natural', color: AgamaTheme.emerald,
+                  onTap: () {
+                    final parsed = parser.parseRawText(ctrl.text, 'imported_document.pdf');
+                    if (parsed.content.isEmpty) return;
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (_) => GuidedHighlightView(text: parsed.content),
+                    ));
+                  },
+                )),
+                const SizedBox(width: 8),
+                Expanded(child: _EngineBtn(
+                  label: 'Bionic', sub: 'Full text', color: AgamaTheme.amber,
+                  onTap: () {
+                    final parsed = parser.parseRawText(ctrl.text, 'imported_document.pdf');
+                    if (parsed.content.isEmpty) return;
+                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (_) => BionicFixationView(text: parsed.content),
+                    ));
+                  },
+                )),
+              ]),
+            ],
+          ),
         ),
       ),
     );
