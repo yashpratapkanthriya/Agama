@@ -24,5 +24,10 @@ pub fn calculate_cci_score(avg_wpm: i64, quiz_accuracy_fraction: f64) -> f64 {
     (avg_wpm as f64) * quiz_accuracy_fraction.clamp(0.0, 1.0)
 }
 
+pub fn calculate_orp_index(word: String) -> usize {
+    AdaptivePacingEngine::calculate_orp(&word)
+}
+
+
 
 

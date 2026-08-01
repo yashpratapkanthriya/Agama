@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785584499.8866384,
-    "ast_hash": "8fd9c175c29ae2ed350b2e39e5843728",
+    "mtime": 1785585207.8986437,
+    "ast_hash": "6c5d1dd38c24537809ff03559306c3f7",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "docs/complete_end_to_end_implementation.md": {
-    "mtime": 1785572305.8536963,
-    "ast_hash": "0ee762f224cc4008f14dcb936512d1d0",
+    "mtime": 1785585016.6168091,
+    "ast_hash": "a2a41616dcbfb95ce93ac2fd0c66d501",
     "semantic_hash": ""
   },
   "docs/decentralized_sync_architecture.md": {
@@ -387,6 +387,21 @@
   ".vscode/settings.json": {
     "mtime": 1785584672.112307,
     "ast_hash": "c775b336a41aabf2c8741a0fc18fcd0d",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/library/file_parser_service.dart": {
+    "mtime": 1785585198.4695535,
+    "ast_hash": "fcc8ce450db201736b68f7d29972684d",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/file_parser_test.dart": {
+    "mtime": 1785585212.7190006,
+    "ast_hash": "38f321d84ee7a0a62b66a9111deb918f",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md": {
+    "mtime": 1785585021.6508036,
+    "ast_hash": "a327c8c8821852d0f4a1a9d3e0d107a8",
     "semantic_hash": ""
   }
 }

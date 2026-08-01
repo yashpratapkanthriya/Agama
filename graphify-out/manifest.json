@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785584499.8866384,
-    "ast_hash": "8fd9c175c29ae2ed350b2e39e5843728",
+    "mtime": 1785585207.8986437,
+    "ast_hash": "6c5d1dd38c24537809ff03559306c3f7",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
-    "mtime": 1785571774.0739098,
-    "ast_hash": "4a613d19cd330c9699698cc4fd200ddd",
+    "mtime": 1785585427.9952278,
+    "ast_hash": "c360b8986048be009f3bd494b7d94cae",
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
@@ -390,18 +390,28 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/file_parser_service.dart": {
-    "mtime": 1785585088.0159981,
-    "ast_hash": "ca20a21f120cfdc77304fb2a1ee50c1d",
+    "mtime": 1785585198.4695535,
+    "ast_hash": "fcc8ce450db201736b68f7d29972684d",
     "semantic_hash": ""
   },
   "apps/flutter_client/test/file_parser_test.dart": {
-    "mtime": 1785585081.891124,
-    "ast_hash": "97a71fbd91941c8de37c865178de1a42",
+    "mtime": 1785585212.7190006,
+    "ast_hash": "38f321d84ee7a0a62b66a9111deb918f",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md": {
     "mtime": 1785585021.6508036,
     "ast_hash": "a327c8c8821852d0f4a1a9d3e0d107a8",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/core/ffi_bridge.dart": {
+    "mtime": 1785585430.6136608,
+    "ast_hash": "3c365db397172b1bc654603d1dbe53eb",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/ffi_bridge_test.dart": {
+    "mtime": 1785585422.0355208,
+    "ast_hash": "0feff1ae4479be58f04853e8cc3c4d59",
     "semantic_hash": ""
   }
 }

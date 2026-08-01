@@ -54,7 +54,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main",
-      "community": 46,
+      "community": 56,
       "community_name": "package:flutter/material.dart",
       "norm_label": "main.dart"
     },
@@ -65,7 +65,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main_main",
-      "community": 46,
+      "community": 56,
       "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
@@ -76,7 +76,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_material_dart",
-      "community": 46,
+      "community": 56,
       "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter/material.dart"
     },
@@ -87,7 +87,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_riverpod_flutter_riverpod_dart",
-      "community": 46,
+      "community": 56,
       "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
     },
@@ -98,7 +98,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "src_app_app_dart",
-      "community": 46,
+      "community": 56,
       "community_name": "package:flutter/material.dart",
       "norm_label": "src/app/app.dart"
     },
@@ -109,8 +109,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "app.dart"
     },
     {
@@ -120,8 +120,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_agamaapp",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "agamaapp"
     },
     {
@@ -142,8 +142,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_thememodenotifier",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "thememodenotifier"
     },
     {
@@ -153,8 +153,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "valuenotifier",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "valuenotifier"
     },
     {
@@ -164,8 +164,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_getinitialhome",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "_getinitialhome"
     },
     {
@@ -175,8 +175,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_build",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "build"
     },
     {
@@ -186,8 +186,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "theme_dart",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "theme.dart"
     },
     {
@@ -197,8 +197,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_library_library_view_dart",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "../features/library/library_view.dart"
     },
     {
@@ -208,8 +208,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_annotations_annotation_view_dart",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "../features/annotations/annotation_view.dart"
     },
     {
@@ -219,8 +219,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "thememode",
-      "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community": 53,
+      "community_name": "app.dart",
       "norm_label": "thememode"
     },
     {
@@ -681,8 +681,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "app_theme_dart",
-      "community": 41,
-      "community_name": "sync_view.dart",
+      "community": 45,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "../../app/theme.dart"
     },
     {
@@ -725,8 +725,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_annotations_annotation_view_annotationview",
-      "community": 32,
-      "community_name": "State",
+      "community": 27,
+      "community_name": "annotation_view.dart",
       "norm_label": "annotationview"
     },
     {
@@ -736,7 +736,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "statefulwidget",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "statefulwidget"
     },
@@ -747,8 +747,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_annotations_annotation_view_annotationviewstate",
-      "community": 32,
-      "community_name": "State",
+      "community": 27,
+      "community_name": "annotation_view.dart",
       "norm_label": "_annotationviewstate"
     },
     {
@@ -758,7 +758,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "state",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "state"
     },
@@ -978,8 +978,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardview",
-      "community": 32,
-      "community_name": "State",
+      "community": 20,
+      "community_name": "flashcard_view.dart",
       "norm_label": "flashcardview"
     },
     {
@@ -989,8 +989,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardviewstate",
-      "community": 32,
-      "community_name": "State",
+      "community": 20,
+      "community_name": "flashcard_view.dart",
       "norm_label": "_flashcardviewstate"
     },
     {
@@ -1181,6 +1181,149 @@
       "norm_label": "build"
     },
     {
+      "label": "file_parser_service.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "file_parser_service.dart"
+    },
+    {
+      "label": "DocumentFormat",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_documentformat",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "documentformat"
+    },
+    {
+      "label": "ParsedDocument",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_parseddocument",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "parseddocument"
+    },
+    {
+      "label": "FileParserService",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_fileparserservice",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "fileparserservice"
+    },
+    {
+      "label": "title",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_title",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "title"
+    },
+    {
+      "label": "content",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_content",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "content"
+    },
+    {
+      "label": "format",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_format",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "format"
+    },
+    {
+      "label": "_determineFormat",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_determineformat",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "_determineformat"
+    },
+    {
+      "label": "_extractTextFromBytes",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_extracttextfrombytes",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "_extracttextfrombytes"
+    },
+    {
+      "label": "parseRawText",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_parserawtext",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "parserawtext"
+    },
+    {
+      "label": "parseBytes",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_library_file_parser_service_parsebytes",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "parsebytes"
+    },
+    {
+      "label": "dart:convert",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "dart_convert",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "dart:convert"
+    },
+    {
+      "label": "dart:typed_data",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "dart_typed_data",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "dart:typed_data"
+    },
+    {
       "label": "library_view.dart",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/library/library_view.dart",
@@ -1198,7 +1341,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_libraryview",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "libraryview"
     },
@@ -1209,7 +1352,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_libraryviewstate",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "_libraryviewstate"
     },
@@ -1242,7 +1385,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_enginechooser",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "_enginechooser"
     },
@@ -1253,7 +1396,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_enginechooserstate",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "_enginechooserstate"
     },
@@ -1352,7 +1495,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_livepulse",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "_livepulse"
     },
@@ -1363,7 +1506,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_livepulsestate",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "_livepulsestate"
     },
@@ -1374,7 +1517,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "singletickerproviderstatemixin",
-      "community": 32,
+      "community": 57,
       "community_name": "State",
       "norm_label": "singletickerproviderstatemixin"
     },
@@ -1850,6 +1993,17 @@
       "community": 3,
       "community_name": "library_view.dart",
       "norm_label": "../analytics/analytics_view.dart"
+    },
+    {
+      "label": "file_parser_service.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "file_parser_service_dart",
+      "community": 3,
+      "community_name": "library_view.dart",
+      "norm_label": "file_parser_service.dart"
     },
     {
       "label": "bionic_fixation_view.dart",
@@ -2967,25 +3121,25 @@
       "norm_label": ".testexample()"
     },
     {
-      "label": "widget_test.dart",
+      "label": "file_parser_test.dart",
       "file_type": "code",
-      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
       "source_location": null,
       "_origin": "ast",
-      "id": "apps_flutter_client_test_widget_test",
+      "id": "apps_flutter_client_test_file_parser_test",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
-      "norm_label": "widget_test.dart"
+      "community_name": "file_parser_service.dart",
+      "norm_label": "file_parser_test.dart"
     },
     {
       "label": "main",
       "file_type": "code",
-      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
       "source_location": null,
       "_origin": "ast",
-      "id": "apps_flutter_client_test_widget_test_main",
+      "id": "apps_flutter_client_test_file_parser_test_main",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -2996,8 +3150,41 @@
       "_origin": "ast",
       "id": "package_flutter_test_flutter_test_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_test/flutter_test.dart"
+    },
+    {
+      "label": "package:flutter_client/src/features/library/file_parser_service.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_client_src_features_library_file_parser_service_dart",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "package:flutter_client/src/features/library/file_parser_service.dart"
+    },
+    {
+      "label": "widget_test.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_widget_test",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "widget_test.dart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_widget_test_main",
+      "community": 46,
+      "community_name": "file_parser_service.dart",
+      "norm_label": "main"
     },
     {
       "label": "package:flutter_client/src/app/theme.dart",
@@ -3007,7 +3194,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_app_theme_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/app/theme.dart"
     },
     {
@@ -3018,7 +3205,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_library_library_view_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/library/library_view.dart"
     },
     {
@@ -3029,7 +3216,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_rsvp_canvas_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/reader/rsvp_canvas.dart"
     },
     {
@@ -3040,7 +3227,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_guided_highlight_view_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/reader/guided_highlight_view.dart"
     },
     {
@@ -3051,7 +3238,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_bionic_fixation_view_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/reader/bionic_fixation_view.dart"
     },
     {
@@ -3062,7 +3249,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_flashcards_flashcard_view_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/flashcards/flashcard_view.dart"
     },
     {
@@ -3073,7 +3260,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_sync_sync_view_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/sync/sync_view.dart"
     },
     {
@@ -3084,7 +3271,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_analytics_analytics_view_dart",
       "community": 46,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/analytics/analytics_view.dart"
     },
     {
@@ -6371,10 +6558,43 @@
       "norm_label": "phase 4: decentralized sync, comprehension scaffolding & hardening (weeks 13\u201316)"
     },
     {
-      "label": "10. Backward & Forward Document Linkage Matrix",
+      "label": "Section 9.1: Active Operational Feature Status & Gap Remediation Roadmap",
+      "file_type": "document",
+      "source_file": "docs/complete_end_to_end_implementation.md",
+      "source_location": "L402",
+      "_origin": "ast",
+      "id": "docs_complete_end_to_end_implementation_section_9_1_active_operational_feature_status_gap_remediation_roadmap",
+      "community": 22,
+      "community_name": "Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform",
+      "norm_label": "section 9.1: active operational feature status & gap remediation roadmap"
+    },
+    {
+      "label": "Operational Feature Matrix",
       "file_type": "document",
       "source_file": "docs/complete_end_to_end_implementation.md",
       "source_location": "L404",
+      "_origin": "ast",
+      "id": "docs_complete_end_to_end_implementation_operational_feature_matrix",
+      "community": 22,
+      "community_name": "Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform",
+      "norm_label": "operational feature matrix"
+    },
+    {
+      "label": "Gap Remediation Priority Sequence",
+      "file_type": "document",
+      "source_file": "docs/complete_end_to_end_implementation.md",
+      "source_location": "L416",
+      "_origin": "ast",
+      "id": "docs_complete_end_to_end_implementation_gap_remediation_priority_sequence",
+      "community": 22,
+      "community_name": "Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform",
+      "norm_label": "gap remediation priority sequence"
+    },
+    {
+      "label": "10. Backward & Forward Document Linkage Matrix",
+      "file_type": "document",
+      "source_file": "docs/complete_end_to_end_implementation.md",
+      "source_location": "L432",
       "_origin": "ast",
       "id": "docs_complete_end_to_end_implementation_10_backward_forward_document_linkage_matrix",
       "community": 22,
@@ -7865,6 +8085,94 @@
       "community": 26,
       "community_name": "Agama Database Schema Specification",
       "norm_label": "5. backward & forward document linkage matrix"
+    },
+    {
+      "label": "2026-08-01-feature-gap-remediation.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "2026-08-01-feature-gap-remediation.md"
+    },
+    {
+      "label": "Feature Gap Remediation Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_feature_gap_remediation_implementation_plan",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "feature gap remediation implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_global_constraints",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "Task 1: Native Document File Parser Integration",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_1_native_document_file_parser_integration",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "task 1: native document file parser integration"
+    },
+    {
+      "label": "Task 2: Flutter-Rust FFI Core Binding Foundation",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_2_flutter_rust_ffi_core_binding_foundation",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "task 2: flutter-rust ffi core binding foundation"
+    },
+    {
+      "label": "Task 3: Local Vector Index & Semantic Search Abstraction",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_3_local_vector_index_semantic_search_abstraction",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "task 3: local vector index & semantic search abstraction"
+    },
+    {
+      "label": "Task 4: WebDAV & P2P Sync Transport Adapter",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L240",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_4_webdav_p2p_sync_transport_adapter",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "task 4: webdav & p2p sync transport adapter"
+    },
+    {
+      "label": "Task 5: Final Graphify Topology & Test Verification",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L308",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_5_final_graphify_topology_test_verification",
+      "community": 55,
+      "community_name": "Global Constraints",
+      "norm_label": "task 5: final graphify topology & test verification"
     },
     {
       "label": "2026-08-01-performance-benchmarks-and-analytics.md",
@@ -10580,6 +10888,161 @@
       "target": "voidcallback"
     },
     {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_content"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_determineformat"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "context": "variable_type",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_documentformat"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_extracttextfrombytes"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_fileparserservice"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_format"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_parsebytes"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_parseddocument"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_parserawtext"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "apps_flutter_client_lib_src_features_library_file_parser_service_title"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "dart_convert"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/file_parser_service.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_file_parser_service",
+      "target": "dart_typed_data"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_file_parser_test",
+      "target": "dart_convert"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_file_parser_test",
+      "target": "dart_typed_data"
+    },
+    {
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -11108,6 +11571,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_library_library_view",
       "target": "apps_flutter_client_lib_src_features_library_library_view_words"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/library/library_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_library_library_view",
+      "target": "file_parser_service_dart"
     },
     {
       "relation": "imports",
@@ -12512,6 +12986,50 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_file_parser_test",
+      "target": "apps_flutter_client_test_file_parser_test_main"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_file_parser_test",
+      "target": "package_flutter_client_src_features_library_file_parser_service_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/file_parser_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_file_parser_test",
+      "target": "package_flutter_test_flutter_test_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "package_flutter_test_flutter_test_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/test/widget_test.dart",
       "source_location": null,
       "weight": 1.0,
@@ -12606,17 +13124,6 @@
       "_origin": "ast",
       "source": "apps_flutter_client_test_widget_test",
       "target": "package_flutter_client_src_features_sync_sync_view_dart"
-    },
-    {
-      "relation": "imports",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flutter_client/test/widget_test.dart",
-      "source_location": null,
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_flutter_client_test_widget_test",
-      "target": "package_flutter_test_flutter_test_dart"
     },
     {
       "relation": "contains",
@@ -16670,7 +17177,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/complete_end_to_end_implementation.md",
-      "source_location": "L404",
+      "source_location": "L432",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_complete_end_to_end_implementation_complete_end_to_end_implementation_specification_zero_backend_ai_speed_reading_knowledge_platform",
@@ -16961,6 +17468,39 @@
       "_origin": "ast",
       "source": "docs_complete_end_to_end_implementation_9_phased_implementation_roadmap",
       "target": "docs_complete_end_to_end_implementation_phase_4_decentralized_sync_comprehension_scaffolding_hardening_weeks_13_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/complete_end_to_end_implementation.md",
+      "source_location": "L402",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_complete_end_to_end_implementation_9_phased_implementation_roadmap",
+      "target": "docs_complete_end_to_end_implementation_section_9_1_active_operational_feature_status_gap_remediation_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/complete_end_to_end_implementation.md",
+      "source_location": "L416",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_complete_end_to_end_implementation_section_9_1_active_operational_feature_status_gap_remediation_roadmap",
+      "target": "docs_complete_end_to_end_implementation_gap_remediation_priority_sequence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/complete_end_to_end_implementation.md",
+      "source_location": "L404",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_complete_end_to_end_implementation_section_9_1_active_operational_feature_status_gap_remediation_roadmap",
+      "target": "docs_complete_end_to_end_implementation_operational_feature_matrix",
       "confidence_score": 1.0
     },
     {
@@ -18396,6 +18936,83 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_feature_gap_remediation",
+      "target": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_feature_gap_remediation_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_feature_gap_remediation_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_1_native_document_file_parser_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_2_flutter_rust_ffi_core_binding_foundation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_3_local_vector_index_semantic_search_abstraction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L240",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_4_webdav_p2p_sync_transport_adapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-feature-gap-remediation.md",
+      "source_location": "L308",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_feature_gap_remediation_task_5_final_graphify_topology_test_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/superpowers/plans/2026-08-01-performance-benchmarks-and-analytics.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -19039,5 +19656,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "5f75b14ca8599cbafed1b5e734ca000c5992cc09"
+  "built_at_commit": "a7687f7f38dd697bdf1216bc62eace0dc95d950d"
 }

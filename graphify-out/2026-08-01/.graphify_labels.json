@@ -31,7 +31,6 @@
   "29": "String?",
   "30": "guided_highlight_view.dart",
   "31": "3. Operational Feature Guide",
-  "32": "State",
   "33": "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)",
   "34": "System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox",
   "35": "Global Constraints",
@@ -45,11 +44,15 @@
   "43": "Product",
   "44": "theme.dart",
   "45": "bionic_fixation_view.dart",
-  "46": "package:flutter/material.dart",
+  "46": "file_parser_service.dart",
   "47": "AppDelegate",
   "48": "analytics_view.dart",
   "49": "StatelessWidget",
   "50": "manifest.json",
   "51": "MaterialPageRoute",
-  "52": "flutter_client"
+  "52": "flutter_client",
+  "53": "app.dart",
+  "55": "Global Constraints",
+  "56": "package:flutter/material.dart",
+  "57": "State"
 }
