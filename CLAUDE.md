@@ -43,6 +43,7 @@ This file defines the mandatory workflows, agent behaviors, coding rules, and ve
 ## 5. Interactive Requirement Alignment & Pre-Merge Confirmation Protocol
 - **Pre-PR Merge Confirmation**: Before merging any feature branch or finalizing a Pull Request (PR), ALWAYS present a summary of changes and explicitly ask the user for confirmation to verify if any adjustments are needed.
 - **Interactive Requirement Interviewing (`/grill-me`)**: Whenever new instructions or feature requests are given, trigger interactive clarification questions to drill down on requirements, resolve ambiguities, and ensure the correct behavior is designed before writing code.
+- **Live Browser Preview Offer**: Once any UI component, interactive dashboard, or feature tutorial/manual is built or updated, ALWAYS explicitly ask the user if they would like to launch and preview it live in action on their browser (`flutter run -d chrome` or browser preview tools).
 - **Graphify Dependency Coverage Audit**: Use `graphify query` / `query_graph` to inspect all dependent code nodes, callers, tests, and linked documentation pages. Ensure 100% of linked dependencies, related code files, tests, and documentation pages are fully updated and synchronized.
 
 ---

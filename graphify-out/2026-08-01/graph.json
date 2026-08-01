@@ -54,8 +54,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "main.dart"
     },
     {
@@ -65,8 +65,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main_main",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "main"
     },
     {
@@ -87,8 +87,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_riverpod_flutter_riverpod_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
     },
     {
@@ -98,8 +98,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "src_app_app_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "src/app/app.dart"
     },
     {
@@ -769,8 +769,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "bionic_fixation_view.dart"
     },
     {
@@ -780,8 +780,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationview",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "bionicfixationview"
     },
     {
@@ -791,8 +791,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationviewstate",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_bionicfixationviewstate"
     },
     {
@@ -802,8 +802,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_text",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "text"
     },
     {
@@ -813,8 +813,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_fixationlevel",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_fixationlevel"
     },
     {
@@ -824,8 +824,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_fontsize",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_fontsize"
     },
     {
@@ -835,8 +835,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_createstate",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -846,8 +846,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_splitbionic",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_splitbionic"
     },
     {
@@ -857,8 +857,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_build",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 41,
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "build"
     },
     {
@@ -1209,8 +1209,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_rsvpcanvasview",
-      "community": 32,
-      "community_name": "State",
+      "community": 1,
+      "community_name": "rsvp_canvas.dart",
       "norm_label": "rsvpcanvasview"
     },
     {
@@ -1220,8 +1220,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_rsvpcanvasviewstate",
-      "community": 32,
-      "community_name": "State",
+      "community": 1,
+      "community_name": "rsvp_canvas.dart",
       "norm_label": "_rsvpcanvasviewstate"
     },
     {
@@ -1407,8 +1407,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "sync_view.dart"
     },
     {
@@ -1418,8 +1418,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncview",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "syncview"
     },
     {
@@ -1429,8 +1429,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncviewstate",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_syncviewstate"
     },
     {
@@ -1440,8 +1440,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_autosyncenabled",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_autosyncenabled"
     },
     {
@@ -1451,8 +1451,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_selectedprovider",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_selectedprovider"
     },
     {
@@ -1462,8 +1462,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_pendingoutboxcount",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_pendingoutboxcount"
     },
     {
@@ -1473,8 +1473,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_issyncing",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_issyncing"
     },
     {
@@ -1484,8 +1484,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_createstate",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -1495,8 +1495,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_triggersync",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "_triggersync"
     },
     {
@@ -1506,8 +1506,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_build",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 40,
+      "community_name": "sync_view.dart",
       "norm_label": "build"
     },
     {
@@ -1517,8 +1517,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_widget_test",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "widget_test.dart"
     },
     {
@@ -1528,8 +1528,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_widget_test_main",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "main"
     },
     {
@@ -1539,8 +1539,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_test_flutter_test_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_test/flutter_test.dart"
     },
     {
@@ -1550,8 +1550,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_app_app_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_client/src/app/app.dart"
     },
     {
@@ -1561,8 +1561,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_rsvp_canvas_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_client/src/features/reader/rsvp_canvas.dart"
     },
     {
@@ -1572,8 +1572,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_guided_highlight_view_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_client/src/features/reader/guided_highlight_view.dart"
     },
     {
@@ -1583,8 +1583,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_bionic_fixation_view_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_client/src/features/reader/bionic_fixation_view.dart"
     },
     {
@@ -1594,8 +1594,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_flashcards_flashcard_view_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_client/src/features/flashcards/flashcard_view.dart"
     },
     {
@@ -1605,8 +1605,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_sync_sync_view_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_client/src/features/sync/sync_view.dart"
     },
     {
@@ -1616,8 +1616,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_analytics_analytics_view_dart",
-      "community": 2,
-      "community_name": "reader_provider.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "package:flutter_client/src/features/analytics/analytics_view.dart"
     },
     {
@@ -2792,26 +2792,37 @@
       "norm_label": "4. branching, pr per feature & semantic commits"
     },
     {
-      "label": "5. Build, Testing & Code Linting Verification",
+      "label": "5. Interactive Requirement Alignment & Pre-Merge Confirmation Protocol",
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L43",
       "_origin": "ast",
-      "id": "claude_5_build_testing_code_linting_verification",
+      "id": "claude_5_interactive_requirement_alignment_pre_merge_confirmation_protocol",
       "community": 33,
       "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
-      "norm_label": "5. build, testing & code linting verification"
+      "norm_label": "5. interactive requirement alignment & pre-merge confirmation protocol"
     },
     {
-      "label": "6. Single Source of Truth (SSOT) Architecture References",
+      "label": "6. Build, Testing & Code Linting Verification",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L58",
+      "source_location": "L50",
       "_origin": "ast",
-      "id": "claude_6_single_source_of_truth_ssot_architecture_references",
+      "id": "claude_6_build_testing_code_linting_verification",
       "community": 33,
       "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
-      "norm_label": "6. single source of truth (ssot) architecture references"
+      "norm_label": "6. build, testing & code linting verification"
+    },
+    {
+      "label": "7. Single Source of Truth (SSOT) Architecture References",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "claude_7_single_source_of_truth_ssot_architecture_references",
+      "community": 33,
+      "community_name": "Agama Platform \u2014 Agent Guidelines & Memory Contract (CLAUDE.md)",
+      "norm_label": "7. single source of truth (ssot) architecture references"
     },
     {
       "label": "README.md",
@@ -10703,18 +10714,29 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "claude_agama_platform_agent_guidelines_memory_contract_claude_md",
-      "target": "claude_5_build_testing_code_linting_verification",
+      "target": "claude_5_interactive_requirement_alignment_pre_merge_confirmation_protocol",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L58",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "claude_agama_platform_agent_guidelines_memory_contract_claude_md",
-      "target": "claude_6_single_source_of_truth_ssot_architecture_references",
+      "target": "claude_6_build_testing_code_linting_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agama_platform_agent_guidelines_memory_contract_claude_md",
+      "target": "claude_7_single_source_of_truth_ssot_architecture_references",
       "confidence_score": 1.0
     },
     {
@@ -14146,5 +14168,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "924e5be7bdf64de3e9a42f14c66068e81588716d"
+  "built_at_commit": "203d4a3f4dff524eed49e8af9b4c68eb387701b3"
 }
