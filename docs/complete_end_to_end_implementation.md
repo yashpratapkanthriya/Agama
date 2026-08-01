@@ -403,6 +403,7 @@ zero-backend-agama/
 
 ## 10. Backward & Forward Document Linkage Matrix
 
+- **Forward Link to Internal User Manual:** [`docs/internal_user_manual.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/internal_user_manual.md) *(Internal Operational Manual & Use Cases)*
 - **Forward Link to Database Schema:** [`docs/schema.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/schema.md) *(Master Database Schema)*
 - **Forward Link to Decentralized Sync:** [`docs/decentralized_sync_architecture.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/decentralized_sync_architecture.md)
 - **Forward Link to SAD Document:** [`docs/SAD.md`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/SAD.md) *(Software Architecture Document)*

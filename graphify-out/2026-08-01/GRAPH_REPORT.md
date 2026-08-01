@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 47 files · ~39,640 words
+- 47 files · ~39,750 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 561 nodes · 658 edges · 41 communities (31 shown, 10 thin omitted)
+- 562 nodes · 659 edges · 40 communities (30 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e3a7c1d9`
+- Built from commit: `99553d8c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -54,7 +54,6 @@
 - Global Constraints
 - System Design Specification: Performance Benchmarks & Comprehension Analytics (CCI) Dashboard
 - Global Constraints
-- sync_view.dart
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
@@ -88,7 +87,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (41 total, 10 thin omitted)
+## Communities (40 total, 10 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -99,12 +98,12 @@ Cohesion: 0.11
 Nodes (18): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+10 more)
 
 ### Community 2 - "reader_provider.dart"
-Cohesion: 0.12
-Nodes (16): copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState (+8 more)
+Cohesion: 0.07
+Nodes (28): main, copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider (+20 more)
 
 ### Community 3 - "library_view.dart"
-Cohesion: 0.06
-Nodes (32): ../analytics/analytics_view.dart, ../annotations/annotation_view.dart, main, AgamaApp, build, AnalyticsView, build, build (+24 more)
+Cohesion: 0.07
+Nodes (29): ../analytics/analytics_view.dart, ../annotations/annotation_view.dart, AgamaApp, build, AnalyticsView, build, build, LibraryView (+21 more)
 
 ### Community 11 - "ai/mod.rs"
 Cohesion: 0.10
@@ -127,8 +126,8 @@ Cohesion: 0.04
 Nodes (48): ADR 001: Choice of Flutter for Cross-Platform Client, ADR 002: Next.js 15 App Router & Better Auth for Backend Architecture, Cache Invalidation Governance, Complete Prisma Schema Definition, Conflict Resolution Strategy: Optimistic Locking + Modified Field Level LWW, Core Architectural Guiding Principles, DFD Level 0 (Context Diagram), DFD Level 1 (Core Data Subsystems) (+40 more)
 
 ### Community 19 - "Agama"
-Cohesion: 0.12
-Nodes (16): 1. Build & Test Native Rust Engine Core, 1. Schema Versioning (`PRAGMA user_version`), 2. Generate Cross-Platform FFI Bindings (`flutter_rust_bridge` v2), 2. Pushing Schema Updates, 3. Data Rollbacks (Zero Data Loss), 3. Running & Testing by Platform Target, A. Web (Chrome / WebAssembly Target), Agama (+8 more)
+Cohesion: 0.11
+Nodes (17): 1. Build & Test Native Rust Engine Core, 1. Schema Versioning (`PRAGMA user_version`), 2. Generate Cross-Platform FFI Bindings (`flutter_rust_bridge` v2), 2. Pushing Schema Updates, 3. Data Rollbacks (Zero Data Loss), 3. Running & Testing by Platform Target, A. Web (Chrome / WebAssembly Target), Agama (+9 more)
 
 ### Community 20 - "flashcard_view.dart"
 Cohesion: 0.14
@@ -206,12 +205,8 @@ Nodes (6): 1. Overview & Objectives, 2.1 Performance Benchmarks (`native/rust_co
 Cohesion: 0.40
 Nodes (4): Global Constraints, Performance Benchmarks & Comprehension Analytics Implementation Plan, Task 1: Rust Engine Performance Benchmark Suite & CCI Helper, Task 2: Flutter Comprehension Analytics (CCI) Dashboard UI
 
-### Community 40 - "sync_view.dart"
-Cohesion: 0.22
-Nodes (9): _autoSyncEnabled, build, createState, _isSyncing, _pendingOutboxCount, _selectedProvider, SyncView, _SyncViewState (+1 more)
-
 ## Knowledge Gaps
-- **306 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+301 more)
+- **307 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+302 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -223,12 +218,12 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `build` to the rest of the system?**
-  _306 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _307 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `reader_provider.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.05855855855855856 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06628787878787878 - nodes in this community are weakly interconnected._

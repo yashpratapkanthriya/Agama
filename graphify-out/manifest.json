@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "docs/complete_end_to_end_implementation.md": {
-    "mtime": 1785571796.3310857,
-    "ast_hash": "bae26f7c78f05231b849b6134b78a138",
+    "mtime": 1785572305.8536963,
+    "ast_hash": "0ee762f224cc4008f14dcb936512d1d0",
     "semantic_hash": ""
   },
   "docs/decentralized_sync_architecture.md": {
@@ -237,6 +237,11 @@
   "docs/superpowers/specs/2026-08-01-performance-benchmarks-and-analytics-design.md": {
     "mtime": 1785571643.889646,
     "ast_hash": "b4fc3dccce5e40e72909e6163b66faec",
+    "semantic_hash": ""
+  },
+  "docs/internal_user_manual.md": {
+    "mtime": 1785572300.7669039,
+    "ast_hash": "414f395ee7848cba4b637b887deffdde",
     "semantic_hash": ""
   }
 }
