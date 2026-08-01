@@ -170,7 +170,7 @@ class OrpGuidePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      :color = accentColor.withOpacity(0.5)
+      ..color = accentColor.withOpacity(0.5)
       ..strokeWidth = 2;
 
     // Top vertical guide tick

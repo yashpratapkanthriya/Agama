@@ -70,13 +70,13 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
-    "mtime": 1785568083.8964434,
-    "ast_hash": "fdfa8e0e48e5b66a1946e27d3bc74057",
+    "mtime": 1785570067.4432645,
+    "ast_hash": "67bd7dbdb08d7f86488d4bf9f94eaf63",
     "semantic_hash": ""
   },
   "native/rust_core/src/ai/mod.rs": {
-    "mtime": 1785568058.3648517,
-    "ast_hash": "bf17a6b6644615d258e2de105850f2c4",
+    "mtime": 1785569984.7084634,
+    "ast_hash": "9c44b809f028707a8833d98742494878",
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
-    "mtime": 1785569930.897717,
-    "ast_hash": "1d4d5295d161a1baa65f8039eee64949",
+    "mtime": 1785570027.1271353,
+    "ast_hash": "c65f2970b1b410f5ee713f5687a5f256",
     "semantic_hash": ""
   },
   "native/rust_core/src/lib.rs": {
@@ -127,6 +127,11 @@
   "README.md": {
     "mtime": 1785569684.490921,
     "ast_hash": "71a5d0940129aba312dd4d0f581d5f54",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/widget_test.dart": {
+    "mtime": 1785569992.4482996,
+    "ast_hash": "8fe7cd64d437f799f9d05f3ba8fd0495",
     "semantic_hash": ""
   }
 }

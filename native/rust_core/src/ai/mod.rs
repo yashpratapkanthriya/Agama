@@ -60,3 +60,25 @@ impl AdaptivePacingEngine {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_orp_calculation() {
+        assert_eq!(AdaptivePacingEngine::calculate_orp("a"), 0);
+        assert_eq!(AdaptivePacingEngine::calculate_orp("read"), 1);
+        assert_eq!(AdaptivePacingEngine::calculate_orp("building"), 2);
+        assert_eq!(AdaptivePacingEngine::calculate_orp("architecture"), 3);
+    }
+
+    #[test]
+    fn test_word_delay_calculation() {
+        let engine = AdaptivePacingEngine::new();
+        let timing = engine.calculate_word_delay("hello.", 600, 1.0);
+        assert!(timing.is_punctuation_pause);
+        assert_eq!(timing.word, "hello.");
+        assert!(timing.delay_ms >= 450); // 100ms base + 350ms pause
+    }
+}

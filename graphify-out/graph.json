@@ -55,7 +55,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "main.dart"
     },
     {
@@ -66,7 +66,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main_main",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "main"
     },
     {
@@ -77,7 +77,7 @@
       "_origin": "ast",
       "id": "package_flutter_material_dart",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "package:flutter/material.dart"
     },
     {
@@ -88,7 +88,7 @@
       "_origin": "ast",
       "id": "package_flutter_riverpod_flutter_riverpod_dart",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
     },
     {
@@ -99,7 +99,7 @@
       "_origin": "ast",
       "id": "src_app_app_dart",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "src/app/app.dart"
     },
     {
@@ -110,7 +110,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "app.dart"
     },
     {
@@ -121,7 +121,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_agamaapp",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "agamaapp"
     },
     {
@@ -132,7 +132,7 @@
       "_origin": "ast",
       "id": "statelesswidget",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "statelesswidget"
     },
     {
@@ -143,7 +143,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_build",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "build"
     },
     {
@@ -154,7 +154,7 @@
       "_origin": "ast",
       "id": "package_google_fonts_google_fonts_dart",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "package:google_fonts/google_fonts.dart"
     },
     {
@@ -165,7 +165,7 @@
       "_origin": "ast",
       "id": "features_library_library_view_dart",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "../features/library/library_view.dart"
     },
     {
@@ -176,7 +176,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "library_view.dart"
     },
     {
@@ -187,7 +187,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_libraryview",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "libraryview"
     },
     {
@@ -198,7 +198,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_library_view_build",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "build"
     },
     {
@@ -209,7 +209,7 @@
       "_origin": "ast",
       "id": "materialpageroute",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "materialpageroute"
     },
     {
@@ -220,7 +220,7 @@
       "_origin": "ast",
       "id": "reader_rsvp_canvas_dart",
       "community": 3,
-      "community_name": "app.dart",
+      "community_name": "widget_test.dart",
       "norm_label": "../reader/rsvp_canvas.dart"
     },
     {
@@ -477,6 +477,61 @@
       "norm_label": "shouldrepaint"
     },
     {
+      "label": "widget_test.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_widget_test",
+      "community": 3,
+      "community_name": "widget_test.dart",
+      "norm_label": "widget_test.dart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_widget_test_main",
+      "community": 3,
+      "community_name": "widget_test.dart",
+      "norm_label": "main"
+    },
+    {
+      "label": "package:flutter_test/flutter_test.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_test_flutter_test_dart",
+      "community": 3,
+      "community_name": "widget_test.dart",
+      "norm_label": "package:flutter_test/flutter_test.dart"
+    },
+    {
+      "label": "package:flutter_client/src/app/app.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_client_src_app_app_dart",
+      "community": 3,
+      "community_name": "widget_test.dart",
+      "norm_label": "package:flutter_client/src/app/app.dart"
+    },
+    {
+      "label": "package:flutter_client/src/features/reader/rsvp_canvas.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_client_src_features_reader_rsvp_canvas_dart",
+      "community": 3,
+      "community_name": "widget_test.dart",
+      "norm_label": "package:flutter_client/src/features/reader/rsvp_canvas.dart"
+    },
+    {
       "label": "ai/mod.rs",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
@@ -565,14 +620,36 @@
       "norm_label": ".calculate_word_delay()"
     },
     {
+      "label": "test_orp_calculation()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_test_orp_calculation",
+      "community": 11,
+      "community_name": "AdaptivePacingEngine",
+      "norm_label": "test_orp_calculation()"
+    },
+    {
+      "label": "test_word_delay_calculation()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_test_word_delay_calculation",
+      "community": 11,
+      "community_name": "AdaptivePacingEngine",
+      "norm_label": "test_word_delay_calculation()"
+    },
+    {
       "label": "api/mod.rs",
       "file_type": "code",
       "source_file": "native/rust_core/src/api/mod.rs",
       "source_location": "L1",
       "_origin": "ast",
       "id": "native_rust_core_src_api_mod",
-      "community": 11,
-      "community_name": "AdaptivePacingEngine",
+      "community": 15,
+      "community_name": "WordTiming",
       "norm_label": "api/mod.rs"
     },
     {
@@ -582,8 +659,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "native_rust_core_src_api_mod_generate_rsvp_timings",
-      "community": 11,
-      "community_name": "AdaptivePacingEngine",
+      "community": 15,
+      "community_name": "WordTiming",
       "norm_label": "generate_rsvp_timings()"
     },
     {
@@ -593,8 +670,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "native_rust_core_src_api_mod_rs_string",
-      "community": 11,
-      "community_name": "AdaptivePacingEngine",
+      "community": 15,
+      "community_name": "WordTiming",
       "norm_label": "string"
     },
     {
@@ -604,8 +681,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "native_rust_core_src_api_mod_rs_vec",
-      "community": 11,
-      "community_name": "AdaptivePacingEngine",
+      "community": 15,
+      "community_name": "WordTiming",
       "norm_label": "vec"
     },
     {
@@ -725,9 +802,20 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "native_rust_core_src_db_mod_databaseengine_insert_document",
-      "community": 15,
-      "community_name": "models/mod.rs",
+      "community": 12,
+      "community_name": "DatabaseEngine",
       "norm_label": ".insert_document()"
+    },
+    {
+      "label": "test_db_init_and_document_insert()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/db/mod.rs",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "native_rust_core_src_db_mod_test_db_init_and_document_insert",
+      "community": 12,
+      "community_name": "DatabaseEngine",
+      "norm_label": "test_db_init_and_document_insert()"
     },
     {
       "label": "lib.rs",
@@ -748,7 +836,7 @@
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod",
       "community": 15,
-      "community_name": "models/mod.rs",
+      "community_name": "WordTiming",
       "norm_label": "models/mod.rs"
     },
     {
@@ -759,7 +847,7 @@
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_generate_histvon_timestamp",
       "community": 15,
-      "community_name": "models/mod.rs",
+      "community_name": "WordTiming",
       "norm_label": "generate_histvon_timestamp()"
     },
     {
@@ -770,7 +858,7 @@
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_rs_string",
       "community": 15,
-      "community_name": "models/mod.rs",
+      "community_name": "WordTiming",
       "norm_label": "string"
     },
     {
@@ -780,8 +868,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_document",
-      "community": 15,
-      "community_name": "models/mod.rs",
+      "community": 12,
+      "community_name": "DatabaseEngine",
       "norm_label": "document"
     },
     {
@@ -792,7 +880,7 @@
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_rs_option",
       "community": 15,
-      "community_name": "models/mod.rs",
+      "community_name": "WordTiming",
       "norm_label": "option"
     },
     {
@@ -803,7 +891,7 @@
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_documentchunk",
       "community": 15,
-      "community_name": "models/mod.rs",
+      "community_name": "WordTiming",
       "norm_label": "documentchunk"
     },
     {
@@ -814,7 +902,7 @@
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_highlight",
       "community": 15,
-      "community_name": "models/mod.rs",
+      "community_name": "WordTiming",
       "norm_label": "highlight"
     },
     {
@@ -824,8 +912,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_wordtiming",
-      "community": 11,
-      "community_name": "AdaptivePacingEngine",
+      "community": 15,
+      "community_name": "WordTiming",
       "norm_label": "wordtiming"
     },
     {
@@ -1732,6 +1820,28 @@
       "target": "package_flutter_material_dart"
     },
     {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -2098,6 +2208,50 @@
       "target": "custompainter"
     },
     {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "apps_flutter_client_test_widget_test_main"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "package_flutter_client_src_app_app_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "package_flutter_client_src_features_reader_rsvp_canvas_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/widget_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_widget_test",
+      "target": "package_flutter_test_flutter_test_dart"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
@@ -2106,6 +2260,28 @@
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
       "target": "native_rust_core_src_ai_mod_adaptivepacingengine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod",
+      "target": "native_rust_core_src_ai_mod_test_orp_calculation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod",
+      "target": "native_rust_core_src_ai_mod_test_word_delay_calculation",
       "confidence_score": 1.0
     },
     {
@@ -2216,6 +2392,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
+      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
@@ -2233,6 +2421,18 @@
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_word_delay",
       "target": "native_rust_core_src_models_mod_wordtiming",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
+      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_word_delay",
       "confidence_score": 1.0
     },
     {
@@ -2327,6 +2527,17 @@
       "_origin": "ast",
       "source": "native_rust_core_src_db_mod",
       "target": "native_rust_core_src_db_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/db/mod.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_db_mod",
+      "target": "native_rust_core_src_db_mod_test_db_init_and_document_insert",
       "confidence_score": 1.0
     },
     {
@@ -2433,6 +2644,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/db/mod.rs",
+      "source_location": "L152",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_db_mod_test_db_init_and_document_insert",
+      "target": "native_rust_core_src_db_mod_databaseengine_new_in_memory",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/db/mod.rs",
@@ -2484,6 +2707,18 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/db/mod.rs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_db_mod_test_db_init_and_document_insert",
+      "target": "native_rust_core_src_db_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/db/mod.rs",
       "source_location": "L17",
       "weight": 1.0,
       "context": "generic_arg",
@@ -2502,6 +2737,18 @@
       "_origin": "ast",
       "source": "native_rust_core_src_db_mod_databaseengine_new",
       "target": "native_rust_core_src_db_mod_databaseengine_init_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/db/mod.rs",
+      "source_location": "L163",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_db_mod_test_db_init_and_document_insert",
+      "target": "native_rust_core_src_db_mod_databaseengine_new",
       "confidence_score": 1.0
     },
     {
@@ -2529,6 +2776,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/db/mod.rs",
+      "source_location": "L169",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_db_mod_test_db_init_and_document_insert",
+      "target": "native_rust_core_src_db_mod_databaseengine_get_active_documents",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/db/mod.rs",
@@ -2551,6 +2810,18 @@
       "_origin": "ast",
       "source": "native_rust_core_src_db_mod_databaseengine_insert_document",
       "target": "native_rust_core_src_models_mod_generate_histvon_timestamp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/db/mod.rs",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_db_mod_test_db_init_and_document_insert",
+      "target": "native_rust_core_src_db_mod_databaseengine_insert_document",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3429,5 +3700,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "710c14a24d5063825f41fd7290ad8d0413687e09"
+  "built_at_commit": "65b677c344382bf370abdd0f2857f0c1a547b503"
 }

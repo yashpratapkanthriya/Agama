@@ -142,3 +142,37 @@ impl DatabaseEngine {
         Ok(())
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_db_init_and_document_insert() -> Result<()> {
+        let db = DatabaseEngine::new_in_memory()?;
+        
+        let doc = Document {
+            id: "doc_123".to_string(),
+            title: "Test Book".to_string(),
+            author: Some("Author Name".to_string()),
+            file_path: "/tmp/test.epub".to_string(),
+            mime_type: "application/epub+zip".to_string(),
+            word_count: 5000,
+            reading_progress: 0.25,
+            checksum: "abc123checksum".to_string(),
+            histvon: String::new(),
+            histbis: String::new(),
+        };
+
+        db.insert_document(doc)?;
+
+        let docs = db.get_active_documents()?;
+        assert_eq!(docs.len(), 1);
+        assert_eq!(docs[0].id, "doc_123");
+        assert_eq!(docs[0].title, "Test Book");
+        assert_eq!(docs[0].histbis, "9999");
+        assert_eq!(docs[0].histvon.len(), 17); // 17-char YYYYMMDDHHMMSSSSS timestamp
+
+        Ok(())
+    }
+}
