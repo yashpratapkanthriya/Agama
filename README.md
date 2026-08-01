@@ -11,6 +11,18 @@ Zero-Backend AI Speed Reading & Knowledge Platform.
 
 ---
 
+## Embedded Native Engine Runtime (Developer Note)
+
+> **Do I need to start or run a separate Rust process/server before testing the app?**
+>
+> **NO!** The Rust core engine is **embedded directly inside the Flutter application process**. You do **not** need to launch any background daemon, local HTTP server, or separate Rust process.
+>
+> When you run `flutter run`, Flutter automatically compiles and links the native Rust engine (`.wasm` for Web, `.so` for Android, `.a` static framework for iOS, `.dylib` for macOS) directly into the application package via `flutter_rust_bridge` v2.
+>
+> Simply run `./scripts/generate_frb.sh` once if native FFI signatures change, then execute `flutter run -d <target>`.
+
+---
+
 ## Cross-Platform Architecture Compatibility
 
 Agama is engineered for **100% Zero-Backend Cross-Platform Compatibility** across Web, Android, iOS, macOS, Windows, and Linux.

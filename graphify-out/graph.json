@@ -54,8 +54,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "main.dart"
     },
     {
@@ -65,8 +65,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main_main",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "main"
     },
     {
@@ -87,8 +87,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_riverpod_flutter_riverpod_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
     },
     {
@@ -98,8 +98,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "src_app_app_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "src/app/app.dart"
     },
     {
@@ -1407,8 +1407,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "sync_view.dart"
     },
     {
@@ -1418,8 +1418,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncview",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "syncview"
     },
     {
@@ -1429,8 +1429,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_syncviewstate",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_syncviewstate"
     },
     {
@@ -1440,8 +1440,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_autosyncenabled",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_autosyncenabled"
     },
     {
@@ -1451,8 +1451,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_selectedprovider",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_selectedprovider"
     },
     {
@@ -1462,8 +1462,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_pendingoutboxcount",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_pendingoutboxcount"
     },
     {
@@ -1473,8 +1473,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_issyncing",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_issyncing"
     },
     {
@@ -1484,8 +1484,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_createstate",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -1495,8 +1495,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_triggersync",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_triggersync"
     },
     {
@@ -1506,8 +1506,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_sync_sync_view_build",
-      "community": 40,
-      "community_name": "sync_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "build"
     },
     {
@@ -1517,8 +1517,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_widget_test",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "widget_test.dart"
     },
     {
@@ -1528,8 +1528,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_widget_test_main",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "main"
     },
     {
@@ -1539,8 +1539,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_test_flutter_test_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_test/flutter_test.dart"
     },
     {
@@ -1550,8 +1550,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_app_app_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_client/src/app/app.dart"
     },
     {
@@ -1561,8 +1561,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_rsvp_canvas_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_client/src/features/reader/rsvp_canvas.dart"
     },
     {
@@ -1572,8 +1572,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_guided_highlight_view_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_client/src/features/reader/guided_highlight_view.dart"
     },
     {
@@ -1583,8 +1583,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_bionic_fixation_view_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_client/src/features/reader/bionic_fixation_view.dart"
     },
     {
@@ -1594,8 +1594,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_flashcards_flashcard_view_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_client/src/features/flashcards/flashcard_view.dart"
     },
     {
@@ -1605,8 +1605,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_sync_sync_view_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_client/src/features/sync/sync_view.dart"
     },
     {
@@ -1616,8 +1616,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_analytics_analytics_view_dart",
-      "community": 3,
-      "community_name": "library_view.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "package:flutter_client/src/features/analytics/analytics_view.dart"
     },
     {
@@ -2847,10 +2847,21 @@
       "norm_label": "requirements"
     },
     {
-      "label": "Cross-Platform Architecture Compatibility",
+      "label": "Embedded Native Engine Runtime (Developer Note)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L14",
+      "_origin": "ast",
+      "id": "readme_embedded_native_engine_runtime_developer_note",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "embedded native engine runtime (developer note)"
+    },
+    {
+      "label": "Cross-Platform Architecture Compatibility",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "readme_cross_platform_architecture_compatibility",
       "community": 19,
@@ -2861,7 +2872,7 @@
       "label": "Quick Start & Multi-Platform Commands",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L27",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "readme_quick_start_multi_platform_commands",
       "community": 19,
@@ -2872,7 +2883,7 @@
       "label": "1. Build & Test Native Rust Engine Core",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L29",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "readme_1_build_test_native_rust_engine_core",
       "community": 19,
@@ -2883,7 +2894,7 @@
       "label": "2. Generate Cross-Platform FFI Bindings (`flutter_rust_bridge` v2)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L36",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "readme_2_generate_cross_platform_ffi_bindings_flutter_rust_bridge_v2",
       "community": 19,
@@ -2894,7 +2905,7 @@
       "label": "3. Running & Testing by Platform Target",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "readme_3_running_testing_by_platform_target",
       "community": 19,
@@ -2905,7 +2916,7 @@
       "label": "A. Web (Chrome / WebAssembly Target)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L45",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "readme_a_web_chrome_webassembly_target",
       "community": 19,
@@ -2916,7 +2927,7 @@
       "label": "B. Android Target (Device or Emulator)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L57",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "readme_b_android_target_device_or_emulator",
       "community": 19,
@@ -2927,7 +2938,7 @@
       "label": "C. iOS Target (iPhone Simulator or Physical Device - macOS only)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L75",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "readme_c_ios_target_iphone_simulator_or_physical_device_macos_only",
       "community": 19,
@@ -2938,7 +2949,7 @@
       "label": "D. Desktop Target (macOS / Windows / Linux)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L93",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "readme_d_desktop_target_macos_windows_linux",
       "community": 19,
@@ -2949,7 +2960,7 @@
       "label": "Database Versioning, Migrations & Rollback Workflow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L101",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "readme_database_versioning_migrations_rollback_workflow",
       "community": 19,
@@ -2960,7 +2971,7 @@
       "label": "1. Schema Versioning (`PRAGMA user_version`)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L105",
+      "source_location": "L117",
       "_origin": "ast",
       "id": "readme_1_schema_versioning_pragma_user_version",
       "community": 19,
@@ -2971,7 +2982,7 @@
       "label": "2. Pushing Schema Updates",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L109",
+      "source_location": "L121",
       "_origin": "ast",
       "id": "readme_2_pushing_schema_updates",
       "community": 19,
@@ -2982,7 +2993,7 @@
       "label": "3. Data Rollbacks (Zero Data Loss)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L127",
       "_origin": "ast",
       "id": "readme_3_data_rollbacks_zero_data_loss",
       "community": 19,
@@ -2993,7 +3004,7 @@
       "label": "Repository Structure",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L130",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "readme_repository_structure",
       "community": 19,
@@ -10512,7 +10523,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L14",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agama",
@@ -10523,7 +10534,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L101",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agama",
@@ -10534,7 +10545,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L27",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_agama",
+      "target": "readme_embedded_native_engine_runtime_developer_note",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agama",
@@ -10545,7 +10567,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L130",
+      "source_location": "L142",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agama",
@@ -10567,7 +10589,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L29",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_quick_start_multi_platform_commands",
@@ -10578,7 +10600,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L36",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_quick_start_multi_platform_commands",
@@ -10589,7 +10611,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_quick_start_multi_platform_commands",
@@ -10600,7 +10622,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L45",
+      "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_3_running_testing_by_platform_target",
@@ -10611,7 +10633,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L57",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_3_running_testing_by_platform_target",
@@ -10622,7 +10644,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L75",
+      "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_3_running_testing_by_platform_target",
@@ -10633,7 +10655,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L93",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_3_running_testing_by_platform_target",
@@ -10644,7 +10666,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L105",
+      "source_location": "L117",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_database_versioning_migrations_rollback_workflow",
@@ -10655,7 +10677,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L109",
+      "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_database_versioning_migrations_rollback_workflow",
@@ -10666,7 +10688,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L127",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_database_versioning_migrations_rollback_workflow",
@@ -13717,5 +13739,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "e3a7c1d9a07d9e694692197f378e71589c86602a"
+  "built_at_commit": "99553d8c0a96f1cb82545b68b095c33ca94c6a8c"
 }
