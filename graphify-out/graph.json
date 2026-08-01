@@ -1,0 +1,749 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "graphify_execution_pipeline",
+        "label": "Graphify Core Execution Steps",
+        "nodes": [
+          "_agents_skills_graphify_skill_detect_files",
+          "_agents_skills_graphify_skill_ast_extraction",
+          "_agents_skills_graphify_skill_semantic_extraction",
+          "_agents_skills_graphify_skill_community_clustering",
+          "_agents_skills_graphify_skill_community_labeling"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": ".agents/skills/graphify/SKILL.md"
+      },
+      {
+        "id": "graphify_query_ecosystem",
+        "label": "Graphify Knowledge Traversal and Memory System",
+        "nodes": [
+          "_agents_skills_graphify_references_query_constrained_vocabulary_expansion",
+          "_agents_skills_graphify_references_query_bfs_dfs_traversal",
+          "_agents_skills_graphify_references_query_self_improving_feedback_loop"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": ".agents/skills/graphify/references/query.md"
+      },
+      {
+        "id": "graphify_incremental_and_watch_system",
+        "label": "Incremental Rebuilding and Watching Architecture",
+        "nodes": [
+          "_agents_skills_graphify_references_add_watch_graphify_watch",
+          "_agents_skills_graphify_references_update_incremental_update",
+          "_agents_skills_graphify_references_hooks_git_commit_hook"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": ".agents/skills/graphify/SKILL.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "Graphify Always On Rule",
+      "file_type": "rationale",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_rules_graphify_always_on_rule",
+      "community": 1,
+      "norm_label": "graphify always on rule"
+    },
+    {
+      "label": "Graphify Full Pipeline",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_graphify_pipeline",
+      "community": 0,
+      "norm_label": "graphify full pipeline"
+    },
+    {
+      "label": "Graphify Fast Path",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_fast_path",
+      "community": 1,
+      "norm_label": "graphify fast path"
+    },
+    {
+      "label": "File Detection Step",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_detect_files",
+      "community": 0,
+      "norm_label": "file detection step"
+    },
+    {
+      "label": "AST Structural Extraction",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_ast_extraction",
+      "community": 0,
+      "norm_label": "ast structural extraction"
+    },
+    {
+      "label": "Semantic Extraction Subagents",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_semantic_extraction",
+      "community": 2,
+      "norm_label": "semantic extraction subagents"
+    },
+    {
+      "label": "Community Clustering Step",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_community_clustering",
+      "community": 0,
+      "norm_label": "community clustering step"
+    },
+    {
+      "label": "Community Labeling Step",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_community_labeling",
+      "community": 0,
+      "norm_label": "community labeling step"
+    },
+    {
+      "label": "Graph Health Check",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_skill_graph_health_check",
+      "community": 0,
+      "norm_label": "graph health check"
+    },
+    {
+      "label": "Graphify Ingestion (Add URL)",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/add-watch.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_add_watch_graphify_add",
+      "community": 0,
+      "norm_label": "graphify ingestion (add url)"
+    },
+    {
+      "label": "Graphify Watch Mode",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/add-watch.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_add_watch_graphify_watch",
+      "community": 4,
+      "norm_label": "graphify watch mode"
+    },
+    {
+      "label": "Obsidian Vault Export",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/exports.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_exports_obsidian_export",
+      "community": 0,
+      "norm_label": "obsidian vault export"
+    },
+    {
+      "label": "Neo4j Cypher Export",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/exports.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_exports_neo4j_export",
+      "community": 7,
+      "norm_label": "neo4j cypher export"
+    },
+    {
+      "label": "FalkorDB Export",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/exports.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_exports_falkordb_export",
+      "community": 5,
+      "norm_label": "falkordb export"
+    },
+    {
+      "label": "Graphify MCP Server",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/exports.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_exports_mcp_server",
+      "community": 6,
+      "norm_label": "graphify mcp server"
+    },
+    {
+      "label": "Token Reduction Benchmark",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/exports.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_exports_token_reduction_benchmark",
+      "community": 8,
+      "norm_label": "token reduction benchmark"
+    },
+    {
+      "label": "Semantic Extraction Specification",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/references/extraction-spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_extraction_spec_subagent_prompt_spec",
+      "community": 2,
+      "norm_label": "semantic extraction specification"
+    },
+    {
+      "label": "Confidence Score Rubric",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/references/extraction-spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_extraction_spec_confidence_rubric",
+      "community": 2,
+      "norm_label": "confidence score rubric"
+    },
+    {
+      "label": "Deterministic Node ID Format",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/references/extraction-spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_extraction_spec_node_id_format",
+      "community": 2,
+      "norm_label": "deterministic node id format"
+    },
+    {
+      "label": "Cross-Repo Graph Merge",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/github-and-merge.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_github_and_merge_cross_repo_merge",
+      "community": 0,
+      "norm_label": "cross-repo graph merge"
+    },
+    {
+      "label": "Monorepo Multi-Folder Merge",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/github-and-merge.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_github_and_merge_monorepo_merge",
+      "community": 9,
+      "norm_label": "monorepo multi-folder merge"
+    },
+    {
+      "label": "Git Post-Commit Hook",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/hooks.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_hooks_git_commit_hook",
+      "community": 0,
+      "norm_label": "git post-commit hook"
+    },
+    {
+      "label": "CLAUDE.md Native Integration",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/hooks.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_hooks_claude_md_integration",
+      "community": 1,
+      "norm_label": "claude.md native integration"
+    },
+    {
+      "label": "Constrained Vocabulary Expansion",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/references/query.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_query_constrained_vocabulary_expansion",
+      "community": 3,
+      "norm_label": "constrained vocabulary expansion"
+    },
+    {
+      "label": "Graph Traversal Modes",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/query.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_query_bfs_dfs_traversal",
+      "community": 3,
+      "norm_label": "graph traversal modes"
+    },
+    {
+      "label": "Self-Improving Feedback Loop",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/references/query.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_query_self_improving_feedback_loop",
+      "community": 3,
+      "norm_label": "self-improving feedback loop"
+    },
+    {
+      "label": "Whisper Video Audio Transcription",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/transcribe.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_transcribe_whisper_transcription",
+      "community": 0,
+      "norm_label": "whisper video audio transcription"
+    },
+    {
+      "label": "Incremental Update Pipeline",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/update.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_update_incremental_update",
+      "community": 1,
+      "norm_label": "incremental update pipeline"
+    },
+    {
+      "label": "Code-Only Update Fast Path",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/graphify/references/update.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_update_code_only_fast_path",
+      "community": 1,
+      "norm_label": "code-only update fast path"
+    },
+    {
+      "label": "Cluster Only Execution",
+      "file_type": "concept",
+      "source_file": ".agents/skills/graphify/references/update.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_skills_graphify_references_update_cluster_only",
+      "community": 10,
+      "norm_label": "cluster only execution"
+    },
+    {
+      "label": "Graphify Workflow Entrypoint",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_agents_workflows_graphify_graphify_workflow",
+      "community": 0,
+      "norm_label": "graphify workflow entrypoint"
+    }
+  ],
+  "links": [
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_rules_graphify_always_on_rule",
+      "target": "_agents_skills_graphify_references_hooks_claude_md_integration"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_rules_graphify_always_on_rule",
+      "target": "_agents_skills_graphify_references_query_bfs_dfs_traversal"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_rules_graphify_always_on_rule",
+      "target": "_agents_skills_graphify_references_update_incremental_update"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_fast_path",
+      "target": "_agents_skills_graphify_skill_graphify_pipeline"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_references_add_watch_graphify_add"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_references_exports_obsidian_export"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_references_github_and_merge_cross_repo_merge"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_references_hooks_git_commit_hook"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_references_query_bfs_dfs_traversal"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_references_transcribe_whisper_transcription"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_references_update_incremental_update"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_skill_ast_extraction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_skill_community_clustering"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_skill_community_labeling"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_skill_detect_files"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_skill_graph_health_check"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_graphify_pipeline",
+      "target": "_agents_skills_graphify_skill_semantic_extraction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_workflows_graphify_graphify_workflow",
+      "target": "_agents_skills_graphify_skill_graphify_pipeline"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_skill_fast_path",
+      "target": "_agents_skills_graphify_references_update_code_only_fast_path"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/references/extraction-spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_references_extraction_spec_subagent_prompt_spec",
+      "target": "_agents_skills_graphify_skill_semantic_extraction"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/references/extraction-spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_references_extraction_spec_confidence_rubric",
+      "target": "_agents_skills_graphify_references_extraction_spec_subagent_prompt_spec"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/references/extraction-spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_references_extraction_spec_node_id_format",
+      "target": "_agents_skills_graphify_references_extraction_spec_subagent_prompt_spec"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/references/query.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_references_query_constrained_vocabulary_expansion",
+      "target": "_agents_skills_graphify_references_query_bfs_dfs_traversal"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/references/query.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_references_query_self_improving_feedback_loop",
+      "target": "_agents_skills_graphify_references_query_bfs_dfs_traversal"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/references/update.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_agents_skills_graphify_references_update_code_only_fast_path",
+      "target": "_agents_skills_graphify_references_update_incremental_update"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "graphify_execution_pipeline",
+      "label": "Graphify Core Execution Steps",
+      "nodes": [
+        "_agents_skills_graphify_skill_detect_files",
+        "_agents_skills_graphify_skill_ast_extraction",
+        "_agents_skills_graphify_skill_semantic_extraction",
+        "_agents_skills_graphify_skill_community_clustering",
+        "_agents_skills_graphify_skill_community_labeling"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/SKILL.md"
+    },
+    {
+      "id": "graphify_query_ecosystem",
+      "label": "Graphify Knowledge Traversal and Memory System",
+      "nodes": [
+        "_agents_skills_graphify_references_query_constrained_vocabulary_expansion",
+        "_agents_skills_graphify_references_query_bfs_dfs_traversal",
+        "_agents_skills_graphify_references_query_self_improving_feedback_loop"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/graphify/references/query.md"
+    },
+    {
+      "id": "graphify_incremental_and_watch_system",
+      "label": "Incremental Rebuilding and Watching Architecture",
+      "nodes": [
+        "_agents_skills_graphify_references_add_watch_graphify_watch",
+        "_agents_skills_graphify_references_update_incremental_update",
+        "_agents_skills_graphify_references_hooks_git_commit_hook"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/graphify/SKILL.md"
+    }
+  ]
+}
