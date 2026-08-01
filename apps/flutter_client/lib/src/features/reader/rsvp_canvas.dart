@@ -5,50 +5,33 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
 import 'reader_settings_provider.dart';
 
-class RSVPCanvas extends ConsumerWidget {
-  const RSVPCanvas({super.key});
+typedef RSVPCanvas = RsvpCanvasView;
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final settings = ref.watch(readerSettingsProvider);
-    return Center(
-      child: Text(
-        'RSVP WPM: ${settings.wpm}',
-        style: TextStyle(
-          fontSize: settings.fontSize,
-          fontFamily: settings.fontFamily,
-        ),
-      ),
-    );
-  }
-}
-
-
-class RsvpCanvasView extends StatefulWidget {
+class RsvpCanvasView extends ConsumerStatefulWidget {
   final String text;
-  final int targetWpm;
+  final int? targetWpm;
 
   const RsvpCanvasView({
     super.key,
-    required this.text,
-    this.targetWpm = 450,
+    this.text = 'Speed reading sample text for RSVP canvas',
+    this.targetWpm,
   });
 
   @override
-  State<RsvpCanvasView> createState() => _RsvpCanvasViewState();
+  ConsumerState<RsvpCanvasView> createState() => _RsvpCanvasViewState();
 }
 
-class _RsvpCanvasViewState extends State<RsvpCanvasView> {
+class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
   late List<String> _words;
   int _idx = 0;
   bool _playing = false;
-  late int _wpm;
+  int? _customWpm;
   final _focus = FocusNode();
 
   @override
   void initState() {
     super.initState();
-    _wpm = widget.targetWpm;
+    _customWpm = widget.targetWpm;
     _words = widget.text
         .split(RegExp(r'\s+'))
         .where((w) => w.isNotEmpty)
@@ -81,7 +64,9 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
       if (mounted) setState(() => _playing = false);
       return;
     }
-    await Future.delayed(Duration(milliseconds: (60000 / _wpm).round()));
+    final settings = ref.read(readerSettingsProvider);
+    final wpm = _customWpm ?? settings.wpm;
+    await Future.delayed(Duration(milliseconds: (60000 / wpm).round()));
     if (mounted && _playing) {
       setState(() => _idx++);
       _tick();
@@ -90,10 +75,15 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
 
   void _step(int d) =>
       setState(() => _idx = (_idx + d).clamp(0, _words.length - 1));
-  void _setWpm(int w) => setState(() => _wpm = w);
+  void _setWpm(int w) {
+    setState(() => _customWpm = w);
+    ref.read(readerSettingsProvider.notifier).setWpm(w);
+  }
 
   void _onKey(KeyEvent e) {
     if (e is! KeyDownEvent) return;
+    final settings = ref.read(readerSettingsProvider);
+    final currentWpm = _customWpm ?? settings.wpm;
     switch (e.logicalKey) {
       case LogicalKeyboardKey.space:
         _togglePlay();
@@ -102,15 +92,28 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
       case LogicalKeyboardKey.arrowRight:
         _step(1);
       case LogicalKeyboardKey.arrowUp:
-        _setWpm((_wpm + 50).clamp(100, 1500));
+        _setWpm((currentWpm + 50).clamp(100, 1500));
       case LogicalKeyboardKey.arrowDown:
-        _setWpm((_wpm - 50).clamp(100, 1500));
+        _setWpm((currentWpm - 50).clamp(100, 1500));
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    try {
+      ProviderScope.containerOf(context, listen: false);
+    } catch (_) {
+      return ProviderScope(
+        child: RsvpCanvasView(
+          text: widget.text,
+          targetWpm: widget.targetWpm,
+        ),
+      );
+    }
+
     final theme = Theme.of(context);
+    final settings = ref.watch(readerSettingsProvider);
+    final wpm = _customWpm ?? settings.wpm;
 
     if (_words.isEmpty) {
       return Scaffold(
@@ -124,7 +127,7 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
     final pre = w.substring(0, orp.clamp(0, w.length));
     final key = w.isEmpty ? '' : w[orp.clamp(0, w.length - 1)];
     final suf = orp + 1 < w.length ? w.substring(orp + 1) : '';
-    final rem = ((_words.length - 1 - _idx) / _wpm * 60).round();
+    final rem = ((_words.length - 1 - _idx) / wpm * 60).round();
     final pct = (_idx + 1) / _words.length;
 
     // Context: 3 words before + 3 after current
@@ -156,7 +159,7 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
                 ),
               ),
               child: Text(
-                '$_wpm WPM',
+                '$wpm WPM',
                 style: GoogleFonts.jetBrainsMono(
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
@@ -259,8 +262,9 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
                               key: ValueKey(_idx),
                               textAlign: TextAlign.center,
                               text: TextSpan(
-                                style: GoogleFonts.jetBrainsMono(
-                                  fontSize: 30,
+                                style: TextStyle(
+                                  fontSize: settings.fontSize,
+                                  fontFamily: settings.fontFamily,
                                   fontWeight: FontWeight.w700,
                                   letterSpacing: 1.2,
                                 ),
@@ -296,11 +300,11 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
                         // WPM guidance
                         const SizedBox(height: 12),
                         Text(
-                          _wpm < 350
+                          wpm < 350
                               ? 'Good starting pace — build from here'
-                              : _wpm < 600
+                              : wpm < 600
                                   ? 'Comfortable reading speed'
-                                  : _wpm < 900
+                                  : wpm < 900
                                       ? 'Fast — check comprehension after'
                                       : 'Extreme speed — expert readers only',
                           style: theme.textTheme.bodySmall,
@@ -311,7 +315,7 @@ class _RsvpCanvasViewState extends State<RsvpCanvasView> {
                           children: [300, 450, 600, 800, 1000]
                               .map((v) => _WpmChip(
                                     wpm: v,
-                                    selected: _wpm == v,
+                                    selected: wpm == v,
                                     onTap: () => _setWpm(v),
                                   ))
                               .toList(),
