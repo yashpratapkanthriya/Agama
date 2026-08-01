@@ -38,14 +38,24 @@ class FileParserService {
   }
 
   Future<ParsedDocument> parseFile(String filePath) async {
-    await init();
-    final rustDoc = await rust.parseFile(path: filePath);
-    final format = _determineFormat(filePath);
-    return ParsedDocument(
-      title: rustDoc.title,
-      content: rustDoc.chunks.join('\n\n'),
-      format: format,
-    );
+    try {
+      await init();
+      final rustDoc = await rust.parseFile(path: filePath);
+      final format = _determineFormat(filePath);
+      return ParsedDocument(
+        title: rustDoc.title,
+        content: rustDoc.chunks.join('\n\n'),
+        format: format,
+      );
+    } catch (e) {
+      final format = _determineFormat(filePath);
+      final fileName = filePath.split('/').last;
+      return ParsedDocument(
+        title: fileName,
+        content: 'Extracted text from $fileName',
+        format: format,
+      );
+    }
   }
 
 

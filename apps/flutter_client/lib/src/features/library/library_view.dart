@@ -211,10 +211,10 @@ class _HeroSectionState extends State<_HeroSection> {
           _selectedFile = file;
         });
         ParsedDocument? parsed;
-        if (file.path != null) {
-          parsed = await _parser.parseFile(file.path!);
-        } else if (file.bytes != null) {
+        if (file.bytes != null) {
           parsed = _parser.parseBytes(file.bytes!, file.name);
+        } else if (file.path != null) {
+          parsed = await _parser.parseFile(file.path!);
         }
         if (!mounted) return;
 
