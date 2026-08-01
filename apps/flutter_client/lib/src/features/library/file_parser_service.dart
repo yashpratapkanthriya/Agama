@@ -66,7 +66,7 @@ class FileParserService {
     );
   }
 
-  ParsedDocument parseUrl(String url) {
+  Future<ParsedDocument> parseUrl(String url) async {
     // Stub for URL fetch/parse
     return ParsedDocument(
       title: url,
