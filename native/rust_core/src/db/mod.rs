@@ -474,5 +474,15 @@ mod tests {
 
         Ok(())
     }
+
+    #[test]
+    fn test_performance_benchmark_and_cci_math() -> Result<()> {
+        let start = std::time::Instant::now();
+        let cci = crate::api::calculate_cci_score(450, 0.85);
+        assert_eq!(cci, 382.5);
+        assert!(start.elapsed().as_millis() < 5);
+        Ok(())
+    }
 }
+
 

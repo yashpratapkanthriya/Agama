@@ -20,4 +20,9 @@ pub fn stream_rsvp_timings(text: String, target_wpm: u32, paragraph_complexity: 
     generate_rsvp_timings(text, target_wpm, paragraph_complexity)
 }
 
+pub fn calculate_cci_score(avg_wpm: i64, quiz_accuracy_fraction: f64) -> f64 {
+    (avg_wpm as f64) * quiz_accuracy_fraction.clamp(0.0, 1.0)
+}
+
+
 
