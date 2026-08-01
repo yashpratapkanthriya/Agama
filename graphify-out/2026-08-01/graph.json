@@ -2806,7 +2806,7 @@
       "label": "6. Build, Testing & Code Linting Verification",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L50",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "claude_6_build_testing_code_linting_verification",
       "community": 33,
@@ -2817,7 +2817,7 @@
       "label": "7. Single Source of Truth (SSOT) Architecture References",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L65",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "claude_7_single_source_of_truth_ssot_architecture_references",
       "community": 33,
@@ -10721,7 +10721,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "claude_agama_platform_agent_guidelines_memory_contract_claude_md",
@@ -10732,7 +10732,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L65",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
       "source": "claude_agama_platform_agent_guidelines_memory_contract_claude_md",
@@ -14168,5 +14168,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "203d4a3f4dff524eed49e8af9b4c68eb387701b3"
+  "built_at_commit": "0ff96165f1ffee2245d62ca53693d7b29f3699a0"
 }

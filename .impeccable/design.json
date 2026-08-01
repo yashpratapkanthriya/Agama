@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-01T14:49:15Z",
+  "title": "Design System: Agama Platform",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Indigo Accent", "canonical": "#6366f1", "tonalRamp": ["#312e81", "#3730a3", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#c7d2fe", "#e0e7ff"] },
+      "emerald": { "role": "secondary", "displayName": "Speed Emerald", "canonical": "#10b981", "tonalRamp": ["#064e3b", "#047857", "#059669", "#10b981", "#34d399", "#6ee7b7", "#a7f3d0", "#ecfdf5"] },
+      "crimson": { "role": "tertiary", "displayName": "ORP Crimson Anchor", "canonical": "#ef4444", "tonalRamp": ["#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444", "#f87171", "#fca5a5", "#fef2f2"] },
+      "neutral-bg": { "role": "neutral", "displayName": "Page Alabaster", "canonical": "#f8fafc", "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f8fafc"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Outfit", "purpose": "Hero headlines and page titles." },
+      "body": { "displayName": "Body Inter", "purpose": "Reading prose and manual text." },
+      "mono": { "displayName": "Telemetry Mono", "purpose": "WPM counters, CCI scores, and SQL snippets." }
+    },
+    "shadows": [
+      { "name": "subtle-elevation", "value": "0 4px 20px -2px rgba(15, 23, 42, 0.05)", "purpose": "Resting card elevation." },
+      { "name": "card-hover", "value": "0 10px 30px -4px rgba(15, 23, 42, 0.08)", "purpose": "Active card hover state." }
+    ],
+    "motion": [
+      { "name": "ease-out-cubic", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Smooth panel reveals and button hover transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action button with indigo accent fill and hover elevation.",
+      "html": "<button class=\"ds-btn-primary\">▶ PLAY READER</button>",
+      "css": ".ds-btn-primary { background: #6366f1; color: #ffffff; padding: 12px 24px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; border: none; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25); transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: #4f46e5; transform: translateY(-1px); }"
+    },
+    {
+      "name": "RSVP Redicle Viewport",
+      "kind": "custom",
+      "refersTo": "redicle-viewport",
+      "description": "High-contrast dark viewport for speed reading with Crimson ORP anchor letter.",
+      "html": "<div class=\"ds-redicle-box\"><span style=\"color:#fff;\">Ag</span><span style=\"color:#ef4444;font-weight:800;\">a</span><span style=\"color:#94a3b8;\">ma</span></div>",
+      "css": ".ds-redicle-box { background: #090d16; border: 1px solid #1e293b; border-radius: 14px; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; font-family: 'Inter', sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Precision Speed Reading Sanctuary",
+    "overview": "The Agama design system balances high-throughput visual speed reading efficiency with intentional, serene readability. Engineered with a crisp, light alabaster palette (#f8fafc), deep slate typography (#0f172a), vibrant indigo primary accents (#6366f1), and crimson ORP focus redicles (#ef4444), the interface minimizes visual noise while keeping reader focus anchored at 600+ WPM.",
+    "keyCharacteristics": [
+      "Crisp High-Contrast Light Mode with alabaster background and hairline slate borders.",
+      "Optimal Recognition Point (ORP) Redicle Focus highlighted in crimson.",
+      "Expressive Geometric Typography pairing Outfit display headings with Inter body copy."
+    ],
+    "rules": [
+      { "name": "The Single Focus Rule", "body": "Primary accent and crimson redicle highlights are reserved strictly for active reader focus and primary call-to-action buttons. No more than 10% of any viewport contains accent saturation.", "section": "colors" },
+      { "name": "The Flat-Border First Rule", "body": "Surfaces rely on hairline slate borders and tonal background separation at rest. Soft ambient shadows appear only on card hover and floating modal dialogs.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do maintain crisp high contrast between deep slate text (#0f172a) and alabaster/white backgrounds.",
+      "Do highlight the 35% word prefix ORP letter in crimson (#ef4444) during RSVP speed reading.",
+      "Do use JetBrains Mono for telemetry values (WPM, latency, CCI scores)."
+    ],
+    "donts": [
+      "Don't clutter the reading viewport with decorative drop shadows or saturated background gradients.",
+      "Don't use dark grey body text that fails WCAG AA contrast standards against light backgrounds.",
+      "Don't use generic default system fonts when Outfit and Inter font stacks are specified."
+    ]
+  }
+}
