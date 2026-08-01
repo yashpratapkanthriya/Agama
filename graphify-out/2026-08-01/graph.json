@@ -54,7 +54,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main",
-      "community": 58,
+      "community": 18,
       "community_name": "package:flutter/material.dart",
       "norm_label": "main.dart"
     },
@@ -65,7 +65,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main_main",
-      "community": 58,
+      "community": 18,
       "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
@@ -76,7 +76,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_material_dart",
-      "community": 58,
+      "community": 18,
       "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter/material.dart"
     },
@@ -88,7 +88,7 @@
       "_origin": "ast",
       "id": "package_flutter_riverpod_flutter_riverpod_dart",
       "community": 18,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
     },
     {
@@ -98,7 +98,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "src_app_app_dart",
-      "community": 58,
+      "community": 18,
       "community_name": "package:flutter/material.dart",
       "norm_label": "src/app/app.dart"
     },
@@ -109,8 +109,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "app.dart"
     },
     {
@@ -120,8 +120,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_agamaapp",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "agamaapp"
     },
     {
@@ -142,8 +142,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_thememodenotifier",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "thememodenotifier"
     },
     {
@@ -153,8 +153,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "valuenotifier",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "valuenotifier"
     },
     {
@@ -164,8 +164,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_getinitialhome",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "_getinitialhome"
     },
     {
@@ -175,8 +175,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_app_app_build",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "build"
     },
     {
@@ -186,8 +186,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "theme_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "theme.dart"
     },
     {
@@ -197,8 +197,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_library_library_view_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "../features/library/library_view.dart"
     },
     {
@@ -208,8 +208,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "features_annotations_annotation_view_dart",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "../features/annotations/annotation_view.dart"
     },
     {
@@ -219,8 +219,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "thememode",
-      "community": 44,
-      "community_name": "theme.dart",
+      "community": 66,
+      "community_name": "app.dart",
       "norm_label": "thememode"
     },
     {
@@ -539,7 +539,7 @@
       "_origin": "ast",
       "id": "package_google_fonts_google_fonts_dart",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "package:google_fonts/google_fonts.dart"
     },
     {
@@ -1110,8 +1110,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardview",
-      "community": 20,
-      "community_name": "flashcard_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "flashcardview"
     },
     {
@@ -1132,8 +1132,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardviewstate",
-      "community": 20,
-      "community_name": "flashcard_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_flashcardviewstate"
     },
     {
@@ -1495,8 +1495,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "dart_convert",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "dart:convert"
     },
     {
@@ -1506,8 +1506,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "dart_typed_data",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "dart:typed_data"
     },
     {
@@ -2343,7 +2343,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "bionic_fixation_view.dart"
     },
     {
@@ -2354,7 +2354,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationview",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "bionicfixationview"
     },
     {
@@ -2365,7 +2365,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationviewstate",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_bionicfixationviewstate"
     },
     {
@@ -2376,7 +2376,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_text",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "text"
     },
     {
@@ -2387,7 +2387,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_level",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_level"
     },
     {
@@ -2398,7 +2398,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_fontsize",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_fontsize"
     },
     {
@@ -2409,7 +2409,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_createstate",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -2420,7 +2420,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_split",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "_split"
     },
     {
@@ -2431,7 +2431,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_build",
       "community": 58,
-      "community_name": "package:flutter/material.dart",
+      "community_name": "bionic_fixation_view.dart",
       "norm_label": "build"
     },
     {
@@ -2804,8 +2804,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "reader_settings_provider.dart"
     },
     {
@@ -2815,8 +2815,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_readersettings",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "readersettings"
     },
     {
@@ -2826,8 +2826,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_readersettingsnotifier",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "readersettingsnotifier"
     },
     {
@@ -2837,8 +2837,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_wpm",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "wpm"
     },
     {
@@ -2848,8 +2848,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_fontsize",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "fontsize"
     },
     {
@@ -2859,8 +2859,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_fontfamily",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "fontfamily"
     },
     {
@@ -2870,8 +2870,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_operator",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "operator"
     },
     {
@@ -2881,8 +2881,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_hashcode",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "hashcode"
     },
     {
@@ -2903,8 +2903,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_copywith",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "copywith"
     },
     {
@@ -2914,8 +2914,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_setwpm",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "setwpm"
     },
     {
@@ -2925,8 +2925,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_setfontsize",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "setfontsize"
     },
     {
@@ -2936,8 +2936,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_setfontfamily",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "setfontfamily"
     },
     {
@@ -2947,8 +2947,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_updatesettings",
-      "community": 65,
-      "community_name": "models.dart",
+      "community": 2,
+      "community_name": "reader_provider.dart",
       "norm_label": "updatesettings"
     },
     {
@@ -6791,8 +6791,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_library_file_parser_service_test",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "file_parser_service_test.dart"
     },
     {
@@ -6802,8 +6802,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_library_file_parser_service_test_main",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -6813,8 +6813,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_test_flutter_test_dart",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_test/flutter_test.dart"
     },
     {
@@ -6824,8 +6824,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_library_file_parser_service_dart",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/library/file_parser_service.dart"
     },
     {
@@ -6880,7 +6880,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_reader_settings_provider_test",
       "community": 18,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "package:flutter/material.dart",
       "norm_label": "reader_settings_provider_test.dart"
     },
     {
@@ -6891,7 +6891,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_reader_settings_provider_test_main",
       "community": 18,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -6902,7 +6902,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_reader_settings_provider_dart",
       "community": 18,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/features/reader/reader_settings_provider.dart"
     },
     {
@@ -6913,7 +6913,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_rsvp_canvas_test",
       "community": 18,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "package:flutter/material.dart",
       "norm_label": "rsvp_canvas_test.dart"
     },
     {
@@ -6924,7 +6924,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_rsvp_canvas_test_main",
       "community": 18,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -6935,7 +6935,7 @@
       "_origin": "ast",
       "id": "richtext",
       "community": 18,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "package:flutter/material.dart",
       "norm_label": "richtext"
     },
     {
@@ -6945,8 +6945,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_ffi_bridge_test",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "ffi_bridge_test.dart"
     },
     {
@@ -6956,8 +6956,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_ffi_bridge_test_main",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -6967,8 +6967,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_core_ffi_bridge_dart",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/core/ffi_bridge.dart"
     },
     {
@@ -6978,8 +6978,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "file_parser_test.dart"
     },
     {
@@ -6989,8 +6989,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test_mockrustlibapi",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "mockrustlibapi"
     },
     {
@@ -7000,8 +7000,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "fake",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "fake"
     },
     {
@@ -7011,8 +7011,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test_parsefilecalled",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "parsefilecalled"
     },
     {
@@ -7022,8 +7022,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test_lastpathparsed",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "lastpathparsed"
     },
     {
@@ -7033,8 +7033,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test_main",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -7044,8 +7044,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_file_parser_test_crateapiparsefile",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "crateapiparsefile"
     },
     {
@@ -7055,8 +7055,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_rust_frb_generated_dart",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/rust/frb_generated.dart"
     },
     {
@@ -7066,8 +7066,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_rust_parser_dart",
-      "community": 67,
-      "community_name": "file_parser_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/rust/parser.dart"
     },
     {
@@ -7077,8 +7077,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_sync_transport_test",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "sync_transport_test.dart"
     },
     {
@@ -7088,8 +7088,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_sync_transport_test_main",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -7099,8 +7099,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_sync_sync_transport_dart",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/sync/sync_transport.dart"
     },
     {
@@ -7110,8 +7110,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_vector_search_test",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "vector_search_test.dart"
     },
     {
@@ -7121,8 +7121,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_vector_search_test_main",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "main"
     },
     {
@@ -7132,8 +7132,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_annotations_vector_search_service_dart",
-      "community": 66,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 45,
+      "community_name": "file_parser_service.dart",
       "norm_label": "package:flutter_client/src/features/annotations/vector_search_service.dart"
     },
     {
@@ -7555,10 +7555,32 @@
       "norm_label": "onnxinferenceengine"
     },
     {
-      "label": ".infer_complexity()",
+      "label": ".new()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
       "source_location": "L177",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": ".new()"
+    },
+    {
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_rs_result",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": "result"
+    },
+    {
+      "label": ".infer_complexity()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L181",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_onnxinferenceengine_infer_complexity",
       "community": 11,
@@ -7569,7 +7591,7 @@
       "label": ".generate_embedding()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L181",
+      "source_location": "L185",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
       "community": 11,
@@ -7580,7 +7602,7 @@
       "label": "test_orp_calculation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L192",
+      "source_location": "L196",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_orp_calculation",
       "community": 11,
@@ -7591,7 +7613,7 @@
       "label": "test_word_delay_calculation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L200",
+      "source_location": "L204",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_word_delay_calculation",
       "community": 11,
@@ -7602,7 +7624,7 @@
       "label": "test_complexity_and_embedding()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L209",
+      "source_location": "L213",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
       "community": 11,
@@ -7610,10 +7632,21 @@
       "norm_label": "test_complexity_and_embedding()"
     },
     {
+      "label": "test_real_embedding_vector_dimensions()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L225",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_test_real_embedding_vector_dimensions",
+      "community": 11,
+      "community_name": "ai/mod.rs",
+      "norm_label": "test_real_embedding_vector_dimensions()"
+    },
+    {
       "label": "test_bionic_fixation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L221",
+      "source_location": "L235",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_bionic_fixation",
       "community": 11,
@@ -7624,7 +7657,7 @@
       "label": "test_sm2_algorithm()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L228",
+      "source_location": "L242",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_sm2_algorithm",
       "community": 11,
@@ -13423,6 +13456,72 @@
       "norm_label": "task 3: generate bridge and connect dart"
     },
     {
+      "label": "2026-08-01-task3-vector-onnx.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_task3_vector_onnx",
+      "community": 69,
+      "community_name": "Global Constraints",
+      "norm_label": "2026-08-01-task3-vector-onnx.md"
+    },
+    {
+      "label": "Task 3: Local Vector Search (`sqlite-vec`) & ONNX ML Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_3_local_vector_search_sqlite_vec_onnx_ml_implementation_plan",
+      "community": 69,
+      "community_name": "Global Constraints",
+      "norm_label": "task 3: local vector search (`sqlite-vec`) & onnx ml implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_global_constraints",
+      "community": 69,
+      "community_name": "Global Constraints",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "Task 1: Rust ONNX Model Loader & Embedding Generator",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_1_rust_onnx_model_loader_embedding_generator",
+      "community": 69,
+      "community_name": "Global Constraints",
+      "norm_label": "task 1: rust onnx model loader & embedding generator"
+    },
+    {
+      "label": "Task 2: `sqlite-vec` Table DDL & KNN Vector Search",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_2_sqlite_vec_table_ddl_knn_vector_search",
+      "community": 69,
+      "community_name": "Global Constraints",
+      "norm_label": "task 2: `sqlite-vec` table ddl & knn vector search"
+    },
+    {
+      "label": "Task 3: Flutter FFI Bridge Wiring & Riverpod Search Provider",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L184",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_3_flutter_ffi_bridge_wiring_riverpod_search_provider",
+      "community": 69,
+      "community_name": "Global Constraints",
+      "norm_label": "task 3: flutter ffi bridge wiring & riverpod search provider"
+    },
+    {
       "label": "2026-08-01-vector-search-and-crdt-sync.md",
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-08-01-vector-search-and-crdt-sync.md",
@@ -13905,6 +14004,105 @@
       "community": 62,
       "community_name": "Rust Bridge Setup Design",
       "norm_label": "data flow"
+    },
+    {
+      "label": "2026-08-01-task3-vector-onnx-design.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "2026-08-01-task3-vector-onnx-design.md"
+    },
+    {
+      "label": "Task 3 Design Specification: Local Vector Search (`sqlite-vec`) & ONNX ML Engine",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_task_3_design_specification_local_vector_search_sqlite_vec_onnx_ml_engine",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "task 3 design specification: local vector search (`sqlite-vec`) & onnx ml engine"
+    },
+    {
+      "label": "1. Overview & Goals",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_1_overview_goals",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "1. overview & goals"
+    },
+    {
+      "label": "2. Architecture & Components",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_architecture_components",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "2. architecture & components"
+    },
+    {
+      "label": "2.1 Model & Tokenizer Assets (`assets/models/`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_1_model_tokenizer_assets_assets_models",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "2.1 model & tokenizer assets (`assets/models/`)"
+    },
+    {
+      "label": "2.2 Rust ONNX Inference Pipeline (`native/rust_core/src/ai/mod.rs`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_2_rust_onnx_inference_pipeline_native_rust_core_src_ai_mod_rs",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "2.2 rust onnx inference pipeline (`native/rust_core/src/ai/mod.rs`)"
+    },
+    {
+      "label": "2.3 `sqlite-vec` Vector Store (`native/rust_core/src/db/mod.rs`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_3_sqlite_vec_vector_store_native_rust_core_src_db_mod_rs",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "2.3 `sqlite-vec` vector store (`native/rust_core/src/db/mod.rs`)"
+    },
+    {
+      "label": "2.4 FFI API & Flutter State Integration (`apps/flutter_client`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_4_ffi_api_flutter_state_integration_apps_flutter_client",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "2.4 ffi api & flutter state integration (`apps/flutter_client`)"
+    },
+    {
+      "label": "3. Verification & Testing Strategy",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_3_verification_testing_strategy",
+      "community": 67,
+      "community_name": "2. Architecture & Components",
+      "norm_label": "3. verification & testing strategy"
     },
     {
       "label": "2026-08-01-vector-search-and-crdt-sync-design.md",
@@ -23604,7 +23802,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L221",
+      "source_location": "L235",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -23615,7 +23813,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L209",
+      "source_location": "L213",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -23626,7 +23824,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L192",
+      "source_location": "L196",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -23637,7 +23835,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L228",
+      "source_location": "L225",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod",
+      "target": "native_rust_core_src_ai_mod_test_real_embedding_vector_dimensions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L242",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -23648,7 +23857,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L200",
+      "source_location": "L204",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -23769,27 +23978,15 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L108",
+      "source_location": "L177",
       "weight": 1.0,
+      "context": "generic_arg",
       "_origin": "ast",
-      "source": "native_rust_core_src_ai_mod_bionicfixationengine_calculate_bionic_word",
-      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_new",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L201",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
-      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_new",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
+      "target": "native_rust_core_src_ai_mod_rs_self",
       "confidence_score": 1.0
     },
     {
@@ -23809,7 +24006,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L178",
+      "source_location": "L182",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_onnxinferenceengine_infer_complexity",
@@ -23821,7 +24018,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L210",
+      "source_location": "L214",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
@@ -23845,7 +24042,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L202",
+      "source_location": "L206",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
@@ -23880,9 +24077,9 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L181",
+      "source_location": "L185",
       "weight": 1.0,
-      "context": "return_type",
+      "context": "generic_arg",
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
       "target": "native_rust_core_src_ai_mod_rs_vec",
@@ -23908,6 +24105,18 @@
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_bionicfixationengine",
       "target": "native_rust_core_src_ai_mod_bionicfixationengine_format_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_bionicfixationengine_calculate_bionic_word",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
       "confidence_score": 1.0
     },
     {
@@ -23939,7 +24148,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L222",
+      "source_location": "L236",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_bionic_fixation",
@@ -23974,7 +24183,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L229",
+      "source_location": "L243",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_sm2_algorithm",
@@ -23985,7 +24194,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L181",
+      "source_location": "L185",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_onnxinferenceengine",
@@ -23996,7 +24205,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L177",
+      "source_location": "L181",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_onnxinferenceengine",
@@ -24004,14 +24213,133 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L177",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
+      "target": "native_rust_core_src_ai_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L177",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
+      "target": "native_rust_core_src_frb_generated_string",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L213",
+      "source_location": "L226",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_real_embedding_vector_dimensions",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L205",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L185",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
+      "target": "native_rust_core_src_ai_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L181",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_infer_complexity",
+      "target": "native_rust_core_src_ai_mod_rs_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L181",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_infer_complexity",
+      "target": "native_rust_core_src_frb_generated_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L185",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
+      "target": "native_rust_core_src_frb_generated_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L217",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
+      "target": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L227",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_real_embedding_vector_dimensions",
       "target": "native_rust_core_src_ai_mod_onnxinferenceengine_generate_embedding",
       "confidence_score": 1.0
     },
@@ -32293,6 +32621,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_task3_vector_onnx",
+      "target": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_3_local_vector_search_sqlite_vec_onnx_ml_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_3_local_vector_search_sqlite_vec_onnx_ml_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_1_rust_onnx_model_loader_embedding_generator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_2_sqlite_vec_table_ddl_knn_vector_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-08-01-task3-vector-onnx.md",
+      "source_location": "L184",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_global_constraints",
+      "target": "docs_superpowers_plans_2026_08_01_task3_vector_onnx_task_3_flutter_ffi_bridge_wiring_riverpod_search_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/superpowers/plans/2026-08-01-vector-search-and-crdt-sync.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -32706,6 +33089,94 @@
       "_origin": "ast",
       "source": "docs_superpowers_specs_2026_08_01_rust_bridge_design_rust_bridge_setup_design",
       "target": "docs_superpowers_specs_2026_08_01_rust_bridge_design_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_task_3_design_specification_local_vector_search_sqlite_vec_onnx_ml_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_task_3_design_specification_local_vector_search_sqlite_vec_onnx_ml_engine",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_1_overview_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_task_3_design_specification_local_vector_search_sqlite_vec_onnx_ml_engine",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_architecture_components",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_task_3_design_specification_local_vector_search_sqlite_vec_onnx_ml_engine",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_3_verification_testing_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_architecture_components",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_1_model_tokenizer_assets_assets_models",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_architecture_components",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_2_rust_onnx_inference_pipeline_native_rust_core_src_ai_mod_rs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_architecture_components",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_3_sqlite_vec_vector_store_native_rust_core_src_db_mod_rs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-08-01-task3-vector-onnx-design.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_architecture_components",
+      "target": "docs_superpowers_specs_2026_08_01_task3_vector_onnx_design_2_4_ffi_api_flutter_state_integration_apps_flutter_client",
       "confidence_score": 1.0
     },
     {
@@ -33310,5 +33781,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "ac7469d1c027d762a9094c489738533512962b2b"
+  "built_at_commit": "7eeebae4d8fd20271ac5e41dfe4b674f0ba3b068"
 }

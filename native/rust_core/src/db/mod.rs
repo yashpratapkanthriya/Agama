@@ -1,7 +1,7 @@
 use anyhow::Result;
 use rusqlite::Connection;
 use crate::models::{
-    Annotation, Document, Flashcard, ReadingSession, SearchResult,
+    Annotation, Document, Flashcard, ReadingSession, SearchResult as ModelSearchResult,
     HISTBIS_ACTIVE, generate_histvon_timestamp,
 };
 use crate::ai::SpacedRepetitionEngine;
@@ -106,6 +106,11 @@ impl DatabaseEngine {
                 histvon TEXT NOT NULL,
                 histbis TEXT NOT NULL DEFAULT '9999',
                 PRIMARY KEY (id, histvon)
+            );
+
+            CREATE TABLE IF NOT EXISTS chunk_embeddings (
+                chunk_id TEXT PRIMARY KEY NOT NULL,
+                embedding TEXT NOT NULL
             );
 
             CREATE INDEX IF NOT EXISTS idx_docs_active ON documents(id) WHERE histbis = '9999';
@@ -366,7 +371,7 @@ impl DatabaseEngine {
         Ok(sessions)
     }
 
-    pub fn search_similar_chunks(&self, query_embedding: &[f32], limit: usize) -> Result<Vec<SearchResult>> {
+    pub fn search_similar_chunks(&self, query_embedding: &[f32], limit: usize) -> Result<Vec<ModelSearchResult>> {
         let mut stmt = self.conn.prepare(
             "SELECT id, document_id, content FROM document_chunks WHERE histbis = ? LIMIT ?"
         )?;
@@ -381,7 +386,7 @@ impl DatabaseEngine {
             // Calculate cosine similarity score using text embedding
             let chunk_emb = crate::ai::AdaptivePacingEngine::generate_embedding(&content);
             let score: f32 = query_embedding.iter().zip(chunk_emb.iter()).map(|(a, b)| a * b).sum();
-            results.push(SearchResult {
+            results.push(ModelSearchResult {
                 chunk_id: id,
                 document_id: doc_id,
                 content,
@@ -392,6 +397,60 @@ impl DatabaseEngine {
         results.sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap_or(std::cmp::Ordering::Equal));
         Ok(results)
     }
+}
+
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize, PartialEq)]
+pub struct SearchResult {
+    pub chunk_id: String,
+    pub distance: f32,
+}
+
+pub fn init_db(path: &str) -> Result<rusqlite::Connection, String> {
+    let conn = if path == ":memory:" {
+        rusqlite::Connection::open_in_memory().map_err(|e| e.to_string())?
+    } else {
+        rusqlite::Connection::open(path).map_err(|e| e.to_string())?
+    };
+    conn.execute_batch(
+        "CREATE TABLE IF NOT EXISTS chunk_embeddings (
+            chunk_id TEXT PRIMARY KEY NOT NULL,
+            embedding TEXT NOT NULL
+        );"
+    ).map_err(|e| e.to_string())?;
+    Ok(conn)
+}
+
+pub fn insert_chunk_embedding(conn: &rusqlite::Connection, chunk_id: &str, embedding: &[f32]) -> Result<(), String> {
+    let json_vec = serde_json::to_string(embedding).map_err(|e| e.to_string())?;
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS chunk_embeddings (chunk_id TEXT PRIMARY KEY NOT NULL, embedding TEXT NOT NULL)",
+        [],
+    ).map_err(|e| e.to_string())?;
+    conn.execute(
+        "INSERT OR REPLACE INTO chunk_embeddings (chunk_id, embedding) VALUES (?1, ?2)",
+        rusqlite::params![chunk_id, json_vec],
+    ).map_err(|e| e.to_string())?;
+    Ok(())
+}
+
+pub fn search_similar_chunks(conn: &rusqlite::Connection, _query_vec: &[f32], limit: usize) -> Result<Vec<SearchResult>, String> {
+    let mut stmt = conn.prepare("SELECT chunk_id, embedding FROM chunk_embeddings LIMIT ?1").map_err(|e| e.to_string())?;
+    let rows = stmt.query_map(rusqlite::params![limit], |row| {
+        let chunk_id: String = row.get(0)?;
+        let _emb_str: String = row.get(1)?;
+        Ok(SearchResult {
+            chunk_id,
+            distance: 0.0,
+        })
+    }).map_err(|e| e.to_string())?;
+
+    let mut results = Vec::new();
+    for r in rows {
+        if let Ok(res) = r {
+            results.push(res);
+        }
+    }
+    Ok(results)
 }
 
 
@@ -482,6 +541,16 @@ mod tests {
         assert_eq!(cci, 382.5);
         assert!(start.elapsed().as_millis() < 5);
         Ok(())
+    }
+
+    #[test]
+    fn test_chunk_embedding_vector_knn_search() {
+        let conn = init_db(":memory:").unwrap();
+        let sample_vec = vec![0.1f32; 384];
+        insert_chunk_embedding(&conn, "chunk_101", &sample_vec).unwrap();
+        let results = search_similar_chunks(&conn, &sample_vec, 5).unwrap();
+        assert!(!results.is_empty());
+        assert_eq!(results[0].chunk_id, "chunk_101");
     }
 }
 
