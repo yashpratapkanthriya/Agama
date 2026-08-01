@@ -65,28 +65,28 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785568086.219532,
-    "ast_hash": "cbe67fa1526e227474939a75a06bb6ac",
+    "mtime": 1785570588.7839024,
+    "ast_hash": "b07c77c7d8e555d7d353723808d42e46",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
-    "mtime": 1785570092.5573483,
-    "ast_hash": "67bd7dbdb08d7f86488d4bf9f94eaf63",
+    "mtime": 1785570600.1373794,
+    "ast_hash": "515454ac24db5f6fe4b952d4d5b469ba",
     "semantic_hash": ""
   },
   "native/rust_core/src/ai/mod.rs": {
-    "mtime": 1785570256.7513871,
-    "ast_hash": "8da5b3c9024fe62719828574ca04856e",
+    "mtime": 1785570534.33572,
+    "ast_hash": "463c251274d493384dd50c10a4381071",
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
-    "mtime": 1785568064.2120988,
-    "ast_hash": "2c7db08effddb61059266a0d29af3fee",
+    "mtime": 1785570546.432118,
+    "ast_hash": "3950c74ac6ff42b3392c40ef35361776",
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
-    "mtime": 1785570092.560722,
-    "ast_hash": "c65f2970b1b410f5ee713f5687a5f256",
+    "mtime": 1785570570.664463,
+    "ast_hash": "bbd87d304b8652af18a10c54f8ed9b87",
     "semantic_hash": ""
   },
   "native/rust_core/src/lib.rs": {
@@ -95,8 +95,8 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/models/mod.rs": {
-    "mtime": 1785568053.3586738,
-    "ast_hash": "719c3f5b5126e7124649272db86abbf8",
+    "mtime": 1785570555.5674086,
+    "ast_hash": "280762ee438c2f09479ca6409404c00b",
     "semantic_hash": ""
   },
   "native/rust_core/src/parser/mod.rs": {
@@ -130,13 +130,68 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/test/widget_test.dart": {
-    "mtime": 1785570092.5578372,
-    "ast_hash": "8fe7cd64d437f799f9d05f3ba8fd0495",
+    "mtime": 1785570619.43911,
+    "ast_hash": "5edc495120044cf61190657fb7d1b4ad",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/reader_provider.dart": {
-    "mtime": 1785570249.535288,
+    "mtime": 1785570274.877734,
     "ast_hash": "14c3b79889a51951af8c5ae390540544",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/annotations/annotation_view.dart": {
+    "mtime": 1785570580.5193224,
+    "ast_hash": "840e0ce7f3995704006948fe05d889c3",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart": {
+    "mtime": 1785570583.776716,
+    "ast_hash": "03d98812be0adbb2d4bff4e4d46e7501",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/reader/bionic_fixation_view.dart": {
+    "mtime": 1785570576.9540079,
+    "ast_hash": "83ce76be056c299bbc6af0b872ffca29",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/reader/guided_highlight_view.dart": {
+    "mtime": 1785570574.0684025,
+    "ast_hash": "568dd14dc604d3b7d4281ef7cce704f5",
+    "semantic_hash": ""
+  },
+  "docs/SAD.md": {
+    "mtime": 1785567588.8517885,
+    "ast_hash": "0f8f7e4369dc1fcb1401ede87a05f0ad",
+    "semantic_hash": ""
+  },
+  "docs/Speed_Reading_Apps_Detailed_Market_Analysis.md": {
+    "mtime": 1785564530.4157894,
+    "ast_hash": "7cf5f4b5d5ea7ef3fa45e3767b4309b1",
+    "semantic_hash": ""
+  },
+  "docs/complete_end_to_end_implementation.md": {
+    "mtime": 1785570354.1461139,
+    "ast_hash": "d2c227421eb3acbea6ffda47b958bd07",
+    "semantic_hash": ""
+  },
+  "docs/decentralized_sync_architecture.md": {
+    "mtime": 1785567584.3616621,
+    "ast_hash": "b30982ae43941cd11ca2b817fd0e8e43",
+    "semantic_hash": ""
+  },
+  "docs/implementation_no_backend.md": {
+    "mtime": 1785569788.0555947,
+    "ast_hash": "4cf650739841ebdfe3f25e305085d9ef",
+    "semantic_hash": ""
+  },
+  "docs/implementation_plan_advance.md": {
+    "mtime": 1785567049.613964,
+    "ast_hash": "eb872914fbdd2d29248e4d05fd000902",
+    "semantic_hash": ""
+  },
+  "docs/schema.md": {
+    "mtime": 1785567286.5203414,
+    "ast_hash": "d02ecd6a3132f9b0152b0139382c7c2f",
     "semantic_hash": ""
   }
 }

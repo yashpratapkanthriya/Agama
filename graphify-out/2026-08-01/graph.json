@@ -224,6 +224,160 @@
       "norm_label": "../reader/rsvp_canvas.dart"
     },
     {
+      "label": "reader_provider.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "reader_provider.dart"
+    },
+    {
+      "label": "ReaderState",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readerstate",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "readerstate"
+    },
+    {
+      "label": "ReaderNotifier",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readernotifier",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "readernotifier"
+    },
+    {
+      "label": "StateNotifier",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "statenotifier",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "statenotifier"
+    },
+    {
+      "label": "targetWpm",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_targetwpm",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "targetwpm"
+    },
+    {
+      "label": "isPlaying",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_isplaying",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "isplaying"
+    },
+    {
+      "label": "currentWordIndex",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_currentwordindex",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "currentwordindex"
+    },
+    {
+      "label": "paragraphComplexity",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_paragraphcomplexity",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "paragraphcomplexity"
+    },
+    {
+      "label": "readerProvider",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readerprovider",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "readerprovider"
+    },
+    {
+      "label": "copyWith",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_copywith",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "copywith"
+    },
+    {
+      "label": "setWpm",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_setwpm",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "setwpm"
+    },
+    {
+      "label": "togglePlay",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_toggleplay",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "toggleplay"
+    },
+    {
+      "label": "setWordIndex",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_setwordindex",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "setwordindex"
+    },
+    {
+      "label": "setComplexity",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_provider_setcomplexity",
+      "community": 2,
+      "community_name": "reader_provider.dart",
+      "norm_label": "setcomplexity"
+    },
+    {
       "label": "rsvp_canvas.dart",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart",
@@ -609,10 +763,21 @@
       "norm_label": ".calculate_orp()"
     },
     {
-      "label": ".calculate_word_delay()",
+      "label": ".calculate_complexity_score()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
       "source_location": "L34",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_complexity_score",
+      "community": 11,
+      "community_name": "AdaptivePacingEngine",
+      "norm_label": ".calculate_complexity_score()"
+    },
+    {
+      "label": ".calculate_word_delay()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_word_delay",
       "community": 11,
@@ -620,10 +785,32 @@
       "norm_label": ".calculate_word_delay()"
     },
     {
+      "label": ".generate_embedding()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_adaptivepacingengine_generate_embedding",
+      "community": 11,
+      "community_name": "AdaptivePacingEngine",
+      "norm_label": ".generate_embedding()"
+    },
+    {
+      "label": "Vec",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_rs_vec",
+      "community": 11,
+      "community_name": "AdaptivePacingEngine",
+      "norm_label": "vec"
+    },
+    {
       "label": "test_orp_calculation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L69",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_orp_calculation",
       "community": 11,
@@ -634,12 +821,23 @@
       "label": "test_word_delay_calculation()",
       "file_type": "code",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L77",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "native_rust_core_src_ai_mod_test_word_delay_calculation",
       "community": 11,
       "community_name": "AdaptivePacingEngine",
       "norm_label": "test_word_delay_calculation()"
+    },
+    {
+      "label": "test_complexity_and_embedding()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
+      "community": 11,
+      "community_name": "AdaptivePacingEngine",
+      "norm_label": "test_complexity_and_embedding()"
     },
     {
       "label": "api/mod.rs",
@@ -868,8 +1066,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "native_rust_core_src_models_mod_document",
-      "community": 12,
-      "community_name": "DatabaseEngine",
+      "community": 15,
+      "community_name": "WordTiming",
       "norm_label": "document"
     },
     {
@@ -1834,6 +2032,17 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/test/widget_test.dart",
       "source_location": null,
       "weight": 1.0,
@@ -1951,6 +2160,160 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_library_library_view_build",
       "target": "materialpageroute"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_copywith"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_currentwordindex"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_isplaying"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_paragraphcomplexity"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_readernotifier"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_readerprovider"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_readerstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_setcomplexity"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_setwordindex"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_setwpm"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_targetwpm"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_toggleplay"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider_readernotifier",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_provider_readerstate"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_provider_readernotifier",
+      "target": "statenotifier"
     },
     {
       "relation": "defines",
@@ -2266,7 +2629,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L69",
+      "source_location": "L122",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod",
+      "target": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -2277,7 +2651,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L77",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod",
@@ -2300,6 +2674,17 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_adaptivepacingengine",
+      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_complexity_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
@@ -2311,7 +2696,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L34",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_adaptivepacingengine",
@@ -2327,6 +2712,17 @@
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_adaptivepacingengine",
       "target": "native_rust_core_src_ai_mod_adaptivepacingengine_default",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_adaptivepacingengine",
+      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_generate_embedding",
       "confidence_score": 1.0
     },
     {
@@ -2392,7 +2788,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L78",
+      "source_location": "L114",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
@@ -2404,7 +2800,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L58",
+      "source_location": "L77",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_word_delay",
@@ -2412,10 +2808,22 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
+      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_complexity_score",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L34",
+      "source_location": "L53",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -2428,11 +2836,35 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/ai/mod.rs",
-      "source_location": "L79",
+      "source_location": "L115",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_ai_mod_test_word_delay_calculation",
       "target": "native_rust_core_src_ai_mod_adaptivepacingengine_calculate_word_delay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L83",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_adaptivepacingengine_generate_embedding",
+      "target": "native_rust_core_src_ai_mod_rs_vec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/ai/mod.rs",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_ai_mod_test_complexity_and_embedding",
+      "target": "native_rust_core_src_ai_mod_adaptivepacingengine_generate_embedding",
       "confidence_score": 1.0
     },
     {
@@ -3700,5 +4132,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "65b677c344382bf370abdd0f2857f0c1a547b503"
+  "built_at_commit": "c686b9820c98b4ae86f16aa3619f97c59a868c2f"
 }
