@@ -3,6 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_client/src/app/app.dart';
 import 'package:flutter_client/src/features/reader/rsvp_canvas.dart';
+import 'package:flutter_client/src/features/reader/guided_highlight_view.dart';
+import 'package:flutter_client/src/features/reader/bionic_fixation_view.dart';
+import 'package:flutter_client/src/features/flashcards/flashcard_view.dart';
 
 void main() {
   testWidgets('AgamaApp launches LibraryView with title', (WidgetTester tester) async {
@@ -12,9 +15,9 @@ void main() {
       ),
     );
 
-    expect(find.text('Agama Library'), findsOneWidget);
-    expect(find.text('Zero-Backend AI Speed Reading'), findsOneWidget);
-    expect(find.byType(ListTile), findsOneWidget);
+    expect(find.text('Agama AI Platform'), findsOneWidget);
+    expect(find.text('Zero-Backend Speed Reader'), findsOneWidget);
+    expect(find.byType(Card), findsAtLeastNWidgets(3));
   });
 
   testWidgets('RsvpCanvasView renders ORP text redicle', (WidgetTester tester) async {
@@ -31,4 +34,43 @@ void main() {
     expect(find.text('Target Speed: 500 WPM'), findsOneWidget);
     expect(find.byType(Slider), findsOneWidget);
   });
+
+  testWidgets('GuidedHighlightView renders smooth sweep mode', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: GuidedHighlightView(
+          text: 'High performance local speed reading',
+          targetWpm: 400,
+        ),
+      ),
+    );
+
+    expect(find.text('Guided Highlighting Mode'), findsOneWidget);
+    expect(find.text('Guided Pacing: 400 WPM'), findsOneWidget);
+  });
+
+  testWidgets('BionicFixationView renders fixation controls', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: BionicFixationView(
+          text: 'Bionic reading fixation test text',
+        ),
+      ),
+    );
+
+    expect(find.text('Bionic Fixation Reading'), findsOneWidget);
+    expect(find.text('Fixation Level: F3'), findsOneWidget);
+  });
+
+  testWidgets('FlashcardView renders question and answer toggle', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: FlashcardView(),
+      ),
+    );
+
+    expect(find.text('SM-2 Active Recall Flashcards'), findsOneWidget);
+    expect(find.text('QUESTION'), findsOneWidget);
+  });
 }
+
