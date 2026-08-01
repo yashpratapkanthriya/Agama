@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "docs/complete_end_to_end_implementation.md": {
-    "mtime": 1785570856.7827137,
-    "ast_hash": "1f19495713c9f03ee6de57ea6f340438",
+    "mtime": 1785570995.5976436,
+    "ast_hash": "de2405e3d1d01d30b0b45c41df749f52",
     "semantic_hash": ""
   },
   "docs/decentralized_sync_architecture.md": {
@@ -192,6 +192,11 @@
   "docs/schema.md": {
     "mtime": 1785567286.5203414,
     "ast_hash": "d02ecd6a3132f9b0152b0139382c7c2f",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1785570989.9249785,
+    "ast_hash": "70296eefe2b5e9f61f7360cc9d7a742c",
     "semantic_hash": ""
   }
 }

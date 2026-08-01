@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 38 files · ~34,923 words
+- 39 files · ~35,322 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 469 nodes · 553 edges · 30 communities (20 shown, 10 thin omitted)
+- 477 nodes · 560 edges · 34 communities (24 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c2ce44fd`
+- Built from commit: `142b8175`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,6 +44,10 @@
 - annotation_view.dart
 - Decentralized Sync Architecture Specification
 - String?
+- guided_highlight_view.dart
+- bionic_fixation_view.dart
+- State
+- Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
@@ -77,7 +81,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (30 total, 10 thin omitted)
+## Communities (34 total, 10 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
@@ -120,8 +124,8 @@ Cohesion: 0.25
 Nodes (7): 1. Build Rust Engine, 2. Generate FFI Bindings, 3. Run Flutter Application, Agama, Quick Start, Requirements, Structure
 
 ### Community 20 - "flashcard_view.dart"
-Cohesion: 0.05
-Nodes (40): AnnotationView, _AnnotationViewState, answer, build, _cards, createState, _currentIndex, dueSeconds (+32 more)
+Cohesion: 0.14
+Nodes (13): answer, build, _cards, createState, _currentIndex, dueSeconds, ef, FlashcardItem (+5 more)
 
 ### Community 21 - "Speed Reading Apps: Comprehensive Analysis & Gap Assessment"
 Cohesion: 0.06
@@ -155,8 +159,24 @@ Nodes (15): _addAnnotation, AnnotationItem, _annotations, build, color, createSt
 Cohesion: 0.12
 Nodes (15): 1. Executive Summary & Core Principles, 2.1 The Cross-Platform Challenge, 2.2 The WebDAV Solution, 2.3 Channel Comparison Matrix, 2. Why WebDAV is the Primary Sync Channel, 3.1 End-to-End Encrypted WebDAV Sync Loop, 3. Sequence & Data Flow Specifications, 4.1 Encrypted Sync File Format (`.crdt`) (+7 more)
 
+### Community 30 - "guided_highlight_view.dart"
+Cohesion: 0.17
+Nodes (11): build, createState, _highlightedIndex, initState, _isPlaying, _startHighlightStream, targetWpm, text (+3 more)
+
+### Community 31 - "bionic_fixation_view.dart"
+Cohesion: 0.25
+Nodes (8): BionicFixationView, _BionicFixationViewState, build, createState, _fixationLevel, _fontSize, _splitBionic, text
+
+### Community 32 - "State"
+Cohesion: 0.32
+Nodes (8): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, GuidedHighlightView, _GuidedHighlightViewState, State, StatefulWidget
+
+### Community 33 - "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)"
+Cohesion: 0.25
+Nodes (7): 1. Process & Skill Activation Rules (Superpowers Plugin), 2. Token & Architecture Optimization Modes, 3. Knowledge Graph Navigation (Graphify), 4. Branching, PR per Feature & Semantic Commits, 5. Build, Testing & Code Linting Verification, 6. Single Source of Truth (SSOT) Architecture References, Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
+
 ## Knowledge Gaps
-- **258 isolated node(s):** `main`, `build`, `AnnotationItem`, `id`, `selectedText` (+253 more)
+- **264 isolated node(s):** `main`, `build`, `AnnotationItem`, `id`, `selectedText` (+259 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -164,11 +184,11 @@ Nodes (15): 1. Executive Summary & Core Principles, 2.1 The Cross-Platform Chall
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `AnnotationItem` to the rest of the system?**
-  _258 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _264 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**

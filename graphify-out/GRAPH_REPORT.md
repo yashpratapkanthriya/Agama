@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 39 files · ~35,322 words
+- 42 files · ~37,268 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 477 nodes · 560 edges · 34 communities (24 shown, 10 thin omitted)
+- 517 nodes · 610 edges · 36 communities (26 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `142b8175`
+- Built from commit: `9391fa55`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -46,20 +46,22 @@
 - String?
 - guided_highlight_view.dart
 - bionic_fixation_view.dart
-- State
+- sync_view.dart
 - Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
+- System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox
+- Global Constraints
 
 ## God Nodes (most connected - your core abstractions)
 1. `Production-Ready AI-First Platform: Master Technical Architecture & Specification` - 30 edges
 2. `Production-Ready Local-First Architecture: Zero-Backend Platform` - 18 edges
-3. `Graphify Full Pipeline` - 15 edges
-4. `DatabaseEngine` - 14 edges
+3. `DatabaseEngine` - 15 edges
+4. `Graphify Full Pipeline` - 15 edges
 5. `4. Key Architectural Decision Records (ADRs)` - 12 edges
 6. `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` - 12 edges
 7. `Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform` - 12 edges
 8. `test_annotations_and_flashcards_historization()` - 9 edges
 9. `AdaptivePacingEngine` - 8 edges
-10. `Software Architecture Document (SAD)` - 8 edges
+10. `SyncEngine` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Graphify Always On Rule` --semantically_similar_to--> `CLAUDE.md Native Integration`  [INFERRED] [semantically similar]
@@ -81,15 +83,15 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (34 total, 10 thin omitted)
+## Communities (36 total, 10 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
 Nodes (24): Graphify Always On Rule, Graphify Ingestion (Add URL), Obsidian Vault Export, Confidence Score Rubric, Deterministic Node ID Format, Semantic Extraction Specification, Cross-Repo Graph Merge, CLAUDE.md Native Integration (+16 more)
 
 ### Community 1 - "rsvp_canvas.dart"
-Cohesion: 0.11
-Nodes (18): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+10 more)
+Cohesion: 0.12
+Nodes (16): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+8 more)
 
 ### Community 2 - "reader_provider.dart"
 Cohesion: 0.15
@@ -97,7 +99,7 @@ Nodes (13): copyWith, currentWordIndex, isPlaying, paragraphComplexity, ReaderNo
 
 ### Community 3 - "library_view.dart"
 Cohesion: 0.07
-Nodes (26): ../annotations/annotation_view.dart, main, AgamaApp, build, build, LibraryView, sampleText, main (+18 more)
+Nodes (28): ../annotations/annotation_view.dart, main, AgamaApp, build, build, LibraryView, sampleText, main (+20 more)
 
 ### Community 11 - "ai/mod.rs"
 Cohesion: 0.11
@@ -108,8 +110,8 @@ Cohesion: 0.18
 Nodes (18): Connection, DatabaseEngine, Result, Self, Vec, test_annotations_and_flashcards_historization(), test_db_init_and_document_insert(), Annotation (+10 more)
 
 ### Community 13 - "SyncEngine"
-Cohesion: 0.28
-Nodes (5): Doc, Default, Self, Vec, SyncEngine
+Cohesion: 0.22
+Nodes (8): Doc, Default, Result, Self, String, Vec, SyncEngine, test_yrs_crdt_delta_generation_and_merge()
 
 ### Community 14 - "ParsedDocument"
 Cohesion: 0.26
@@ -120,12 +122,12 @@ Cohesion: 0.04
 Nodes (48): ADR 001: Choice of Flutter for Cross-Platform Client, ADR 002: Next.js 15 App Router & Better Auth for Backend Architecture, Cache Invalidation Governance, Complete Prisma Schema Definition, Conflict Resolution Strategy: Optimistic Locking + Modified Field Level LWW, Core Architectural Guiding Principles, DFD Level 0 (Context Diagram), DFD Level 1 (Core Data Subsystems) (+40 more)
 
 ### Community 19 - "Agama"
-Cohesion: 0.25
-Nodes (7): 1. Build Rust Engine, 2. Generate FFI Bindings, 3. Run Flutter Application, Agama, Quick Start, Requirements, Structure
+Cohesion: 0.17
+Nodes (11): 1. Build & Test Rust Engine, 1. Schema Versioning (`PRAGMA user_version`), 2. Generate FFI Bindings, 2. Pushing Schema Updates, 3. Analyze & Run Flutter Application, 3. Data Rollbacks (Zero Data Loss), Agama, Database Versioning, Migrations & Rollback Workflow (+3 more)
 
 ### Community 20 - "flashcard_view.dart"
-Cohesion: 0.14
-Nodes (13): answer, build, _cards, createState, _currentIndex, dueSeconds, ef, FlashcardItem (+5 more)
+Cohesion: 0.13
+Nodes (15): answer, build, _cards, createState, _currentIndex, dueSeconds, ef, FlashcardItem (+7 more)
 
 ### Community 21 - "Speed Reading Apps: Comprehensive Analysis & Gap Assessment"
 Cohesion: 0.06
@@ -148,8 +150,8 @@ Cohesion: 0.09
 Nodes (22): 1.1 Architectural Vision, 1. Executive Architecture Summary, 2.1 Logical View (Layered Architecture), 2. Architectural Representation & Views, 3.1 Historization Concept (`histvon` / `histbis`), 3. Data Architecture & Historization Pattern, 4. Key Architectural Decision Records (ADRs), 5. Backward & Forward Document Linkage Matrix (+14 more)
 
 ### Community 26 - "Agama Database Schema Specification"
-Cohesion: 0.11
-Nodes (17): 1. Executive Data Architecture Summary, 2.1 Timestamp Format Specification, 2.2 Standard Mutation Workflow Rules, 2. Historization Pattern & Specification (`histvon` / `histbis`), 3. Complete DDL Schema, 4.1 Table: `documents`, 4.2 Table: `document_chunks`, 4.3 Virtual Table: `chunk_embeddings` (`sqlite-vec`) (+9 more)
+Cohesion: 0.09
+Nodes (22): 1. Executive Data Architecture Summary, 1. Schema Version Tracking (`PRAGMA user_version`), 2.1 Timestamp Format Specification, 2.2 Standard Mutation Workflow Rules, 2.3 Database Schema Versioning, Upgrades & Rollback Procedures, 2. Historization Pattern & Specification (`histvon` / `histbis`), 2. Migration Execution Pipeline (`native/rust_core/src/db/mod.rs`), 3. Complete DDL Schema (+14 more)
 
 ### Community 27 - "annotation_view.dart"
 Cohesion: 0.12
@@ -160,23 +162,31 @@ Cohesion: 0.12
 Nodes (15): 1. Executive Summary & Core Principles, 2.1 The Cross-Platform Challenge, 2.2 The WebDAV Solution, 2.3 Channel Comparison Matrix, 2. Why WebDAV is the Primary Sync Channel, 3.1 End-to-End Encrypted WebDAV Sync Loop, 3. Sequence & Data Flow Specifications, 4.1 Encrypted Sync File Format (`.crdt`) (+7 more)
 
 ### Community 30 - "guided_highlight_view.dart"
-Cohesion: 0.17
-Nodes (11): build, createState, _highlightedIndex, initState, _isPlaying, _startHighlightStream, targetWpm, text (+3 more)
+Cohesion: 0.15
+Nodes (13): build, createState, GuidedHighlightView, _GuidedHighlightViewState, _highlightedIndex, initState, _isPlaying, _startHighlightStream (+5 more)
 
 ### Community 31 - "bionic_fixation_view.dart"
-Cohesion: 0.25
-Nodes (8): BionicFixationView, _BionicFixationViewState, build, createState, _fixationLevel, _fontSize, _splitBionic, text
+Cohesion: 0.16
+Nodes (14): AnnotationView, _AnnotationViewState, BionicFixationView, _BionicFixationViewState, build, createState, _fixationLevel, _fontSize (+6 more)
 
-### Community 32 - "State"
-Cohesion: 0.32
-Nodes (8): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, GuidedHighlightView, _GuidedHighlightViewState, State, StatefulWidget
+### Community 32 - "sync_view.dart"
+Cohesion: 0.22
+Nodes (9): _autoSyncEnabled, build, createState, _isSyncing, _pendingOutboxCount, _selectedProvider, SyncView, _SyncViewState (+1 more)
 
 ### Community 33 - "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)"
 Cohesion: 0.25
 Nodes (7): 1. Process & Skill Activation Rules (Superpowers Plugin), 2. Token & Architecture Optimization Modes, 3. Knowledge Graph Navigation (Graphify), 4. Branching, PR per Feature & Semantic Commits, 5. Build, Testing & Code Linting Verification, 6. Single Source of Truth (SSOT) Architecture References, Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
 
+### Community 34 - "System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox"
+Cohesion: 0.25
+Nodes (7): 1. Overview & Objectives, 2.1 Vector Similarity Search Engine, 2.2 Decentralized Yrs CRDT Sync Engine, 2. Technical Architecture & Components, 3. Data Flow & Sequence Diagram, 4. Verification & Testing Strategy, System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox
+
+### Community 35 - "Global Constraints"
+Cohesion: 0.40
+Nodes (4): Global Constraints, Task 1: Rust Vector Search & Yrs CRDT Engine Core, Task 2: Flutter Decentralized Sync View & Semantic Search UI, Vector Search & Yrs CRDT Sync Outbox Implementation Plan
+
 ## Knowledge Gaps
-- **264 isolated node(s):** `main`, `build`, `AnnotationItem`, `id`, `selectedText` (+259 more)
+- **285 isolated node(s):** `main`, `build`, `AnnotationItem`, `id`, `selectedText` (+280 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -184,16 +194,16 @@ Nodes (7): 1. Process & Skill Activation Rules (Superpowers Plugin), 2. Token & 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` connect `Speed Reading Apps: Comprehensive Analysis & Gap Assessment` to `2.1 Spreeder`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `AnnotationItem` to the rest of the system?**
-  _264 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _285 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.07126436781609195 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06653225806451613 - nodes in this community are weakly interconnected._
 - **Should `ai/mod.rs` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
