@@ -146,7 +146,8 @@ class _LibraryViewState extends State<LibraryView> {
 
 // ── Hero section with direct file & text input ───────────────────────────────
 class _HeroSection extends StatefulWidget {
-  const _HeroSection();
+  final ValueChanged<String>? onTextChanged;
+  const _HeroSection({this.onTextChanged});
 
   @override
   State<_HeroSection> createState() => _HeroSectionState();
@@ -158,7 +159,18 @@ class _HeroSectionState extends State<_HeroSection> {
   final FileParserService _parser = FileParserService();
 
   @override
+  void initState() {
+    super.initState();
+    _textController.addListener(_handleTextChange);
+  }
+
+  void _handleTextChange() {
+    widget.onTextChanged?.call(_textController.text);
+  }
+
+  @override
   void dispose() {
+    _textController.removeListener(_handleTextChange);
     _textController.dispose();
     super.dispose();
   }
@@ -170,6 +182,8 @@ class _HeroSectionState extends State<_HeroSection> {
         allowedExtensions: ['pdf', 'epub', 'md', 'txt'],
         withData: true,
       );
+      if (!mounted) return;
+
       if (result != null && result.files.isNotEmpty) {
         final file = result.files.single;
         setState(() {
@@ -181,12 +195,19 @@ class _HeroSectionState extends State<_HeroSection> {
         } else if (file.bytes != null) {
           parsed = _parser.parseBytes(file.bytes!, file.name);
         }
-        if (parsed != null && mounted) {
+        if (!mounted) return;
+
+        if (parsed != null) {
           _textController.text = parsed.content;
+          widget.onTextChanged?.call(parsed.content);
         }
       }
     } catch (e) {
-      debugPrint('File pick error: $e');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to load document: $e')),
+        );
+      }
     }
   }
 
@@ -197,7 +218,7 @@ class _HeroSectionState extends State<_HeroSection> {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: AgamaTheme.rsvpBg,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -230,7 +251,7 @@ class _HeroSectionState extends State<_HeroSection> {
                 side: const BorderSide(color: AgamaTheme.indigo, width: 1.5),
                 backgroundColor: AgamaTheme.indigo.withValues(alpha: 0.15),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(9),
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
               onPressed: _pickFile,
@@ -239,8 +260,8 @@ class _HeroSectionState extends State<_HeroSection> {
                 _selectedFile != null
                     ? _selectedFile!.name
                     : 'Select PDF, EPUB, or Markdown',
-                style: GoogleFonts.inter(
-                  fontSize: 14,
+                style: GoogleFonts.jetBrainsMono(
+                  fontSize: 13,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
@@ -261,13 +282,13 @@ class _HeroSectionState extends State<_HeroSection> {
               filled: true,
               fillColor: Colors.white.withValues(alpha: 0.05),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(9),
+                borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide(
                   color: Colors.white.withValues(alpha: 0.1),
                 ),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(9),
+                borderRadius: BorderRadius.circular(12),
                 borderSide: const BorderSide(
                   color: AgamaTheme.indigo,
                 ),
@@ -282,10 +303,17 @@ class _HeroSectionState extends State<_HeroSection> {
 }
 
 // ── Tab 0: Library + Engine picker ────────────────────────────────────────
-class _LibraryTab extends StatelessWidget {
+class _LibraryTab extends StatefulWidget {
   final List<_Doc> docs;
   final String sampleText;
   const _LibraryTab({required this.docs, required this.sampleText});
+
+  @override
+  State<_LibraryTab> createState() => _LibraryTabState();
+}
+
+class _LibraryTabState extends State<_LibraryTab> {
+  String _customText = '';
 
   void _navigate(BuildContext ctx, Widget page) =>
       Navigator.push(ctx, MaterialPageRoute(builder: (_) => page));
@@ -381,7 +409,7 @@ class _LibraryTab extends StatelessWidget {
                         }
                       }
                     } catch (e) {
-                      debugPrint('File pick error: \$e');
+                      debugPrint('File pick error: $e');
                     }
                   },
                   icon: const Icon(Icons.upload_file, color: AgamaTheme.indigo),
@@ -458,6 +486,8 @@ class _LibraryTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final activeText = _customText.trim().isNotEmpty ? _customText.trim() : widget.sampleText;
+
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Center(
@@ -467,14 +497,18 @@ class _LibraryTab extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // ── Hero — what is this app? ─────────────────────────────
-              const _HeroSection(),
+              _HeroSection(
+                onTextChanged: (text) {
+                  setState(() => _customText = text);
+                },
+              ),
 
               const SizedBox(height: 24),
 
               // ── Engine chooser with decision guide ───────────────────
               const _SectionLabel('CHOOSE YOUR METHOD'),
               const SizedBox(height: 10),
-              _EngineChooser(sampleText: sampleText),
+              _EngineChooser(sampleText: activeText),
 
               const SizedBox(height: 24),
 
@@ -497,11 +531,11 @@ class _LibraryTab extends StatelessWidget {
               ),
               const SizedBox(height: 10),
 
-              ...docs.map((d) => Padding(
+              ...widget.docs.map((d) => Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: _DocumentTile(
                   doc: d,
-                  onTap: () => _navigate(context, RsvpCanvasView(text: sampleText)),
+                  onTap: () => _navigate(context, RsvpCanvasView(text: activeText)),
                 ),
               )),
 
@@ -736,7 +770,10 @@ class _EngineChooserState extends State<_EngineChooser> {
                     ),
                     onPressed: () => _launch(context),
                     icon: const Icon(Icons.play_arrow_rounded, size: 16, color: Colors.white),
-                    label: Text('Try with sample text',
+                    label: Text(
+                      widget.sampleText == _LibraryViewState._sampleText
+                          ? 'Try with sample text'
+                          : 'Start Reading',
                       style: GoogleFonts.inter(
                         fontSize: 13, fontWeight: FontWeight.w600,
                         color: Colors.white)),

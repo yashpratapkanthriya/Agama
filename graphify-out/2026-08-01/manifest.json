@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785606394.3483415,
-    "ast_hash": "459c5ae83448ea335d30b5b08d49fa53",
+    "mtime": 1785607564.3517933,
+    "ast_hash": "b077fbd6228b407860edc19336ea7d96",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
@@ -512,6 +512,21 @@
   "native/rust_core/src/frb_generated.rs": {
     "mtime": 1785605340.9966908,
     "ast_hash": "5a3b8d238fb7d74fc5508c876cf1c311",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/features/library/library_view_test.dart": {
+    "mtime": 1785607545.6458733,
+    "ast_hash": "cbc36c011312b91e9d2b0f04c1a4beaf",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-01-library-ui-design.md": {
+    "mtime": 1785607403.8510125,
+    "ast_hash": "f3f3e37ca2cbd73faaec0a2bde9f29d7",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-01-library-ui-design.md": {
+    "mtime": 1785607354.6926038,
+    "ast_hash": "224b948990b4d1ec18227c5426ec3715",
     "semantic_hash": ""
   }
 }
