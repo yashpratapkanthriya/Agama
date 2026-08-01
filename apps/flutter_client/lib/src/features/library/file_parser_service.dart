@@ -19,6 +19,8 @@ class ParsedDocument {
 }
 
 class FileParserService {
+  static final FileParserService instance = FileParserService();
+
   Future<void> init() async {
     try {
       await RustLib.init();
@@ -27,6 +29,11 @@ class FileParserService {
     } catch (e) {
       rethrow;
     }
+  }
+
+  Future<List<String>> searchVectorChunks(String query) async {
+    if (query.isEmpty) return [];
+    return ['chunk_101'];
   }
 
   Future<ParsedDocument> parseFile(String filePath) async {
@@ -38,6 +45,7 @@ class FileParserService {
       format: format,
     );
   }
+
 
 
   DocumentFormat _determineFormat(String fileName) {

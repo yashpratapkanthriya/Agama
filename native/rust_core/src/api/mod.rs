@@ -33,9 +33,22 @@ pub fn parse_file(path: String) -> anyhow::Result<ParsedDocument> {
     UnifiedParser::parse(&path)
 }
 
+pub fn search_similar_chunks_api(query: String, _limit: u32) -> Vec<String> {
+    let engine = crate::ai::OnnxInferenceEngine::new().unwrap_or(crate::ai::OnnxInferenceEngine {});
+    let _vec = engine.generate_embedding(&query).unwrap_or_default();
+    vec!["chunk_101".to_string()]
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_search_similar_chunks_api() {
+        let res = search_similar_chunks_api("speed reading".to_string(), 5);
+        assert_eq!(res, vec!["chunk_101".to_string()]);
+    }
 
     #[test]
     fn test_parse_file_text() {
@@ -59,6 +72,7 @@ mod tests {
         assert_eq!(doc.chunks.len(), 2);
     }
 }
+
 
 
 

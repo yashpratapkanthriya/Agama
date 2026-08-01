@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/api/mod.rs": {
-    "mtime": 1785606151.1764994,
-    "ast_hash": "1ba6e61ece6c9f590e486646858683b2",
+    "mtime": 1785608957.5072255,
+    "ast_hash": "018dcd8ce6c46db218a7f3e0908a11f0",
     "semantic_hash": ""
   },
   "native/rust_core/src/db/mod.rs": {
@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/file_parser_service.dart": {
-    "mtime": 1785606397.483009,
-    "ast_hash": "8b8417b3a5acdc0b4267b43adea43eb3",
+    "mtime": 1785608947.1601596,
+    "ast_hash": "c3a61511abacb6291c1efba3423a3d0f",
     "semantic_hash": ""
   },
   "apps/flutter_client/test/file_parser_test.dart": {
@@ -455,8 +455,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/test/features/library/file_parser_service_test.dart": {
-    "mtime": 1785589463.696714,
-    "ast_hash": "e00a4ddd97691754c110a066d1ffd4ba",
+    "mtime": 1785608951.0867245,
+    "ast_hash": "3d8a3be160f963abe5c1d85e7bb6a89c",
     "semantic_hash": ""
   },
   "apps/flutter_client/test/features/reader/rsvp_canvas_test.dart": {
