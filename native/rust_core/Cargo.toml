@@ -23,7 +23,7 @@ aes-gcm = "0.10.3"
 
 # Document Parsers
 pdfium-render = "0.8.25"
-epub-parser = "0.6.0"
+epub-parser = "0.3.4"
 quick-xml = "0.31.0"
 tree-sitter = "0.22.6"
 tree-sitter-rust = "0.21.0"

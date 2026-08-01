@@ -942,7 +942,7 @@
       "label": "SyncEngine",
       "file_type": "code",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L3",
+      "source_location": "L4",
       "_origin": "ast",
       "id": "native_rust_core_src_sync_mod_syncengine",
       "community": 13,
@@ -975,7 +975,7 @@
       "label": ".default()",
       "file_type": "code",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "native_rust_core_src_sync_mod_syncengine_default",
       "community": 13,
@@ -997,7 +997,7 @@
       "label": ".new()",
       "file_type": "code",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "native_rust_core_src_sync_mod_syncengine_new",
       "community": 13,
@@ -1008,7 +1008,7 @@
       "label": ".encode_state_vector()",
       "file_type": "code",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "native_rust_core_src_sync_mod_syncengine_encode_state_vector",
       "community": 13,
@@ -1087,6 +1087,94 @@
       "norm_label": "generate_frb.sh script"
     },
     {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Agama",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_agama",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "agama"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "readme_requirements",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Quick Start",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "readme_quick_start",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "quick start"
+    },
+    {
+      "label": "1. Build Rust Engine",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "readme_1_build_rust_engine",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "1. build rust engine"
+    },
+    {
+      "label": "2. Generate FFI Bindings",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "readme_2_generate_ffi_bindings",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "2. generate ffi bindings"
+    },
+    {
+      "label": "3. Run Flutter Application",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "readme_3_run_flutter_application",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "3. run flutter application"
+    },
+    {
+      "label": "Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "readme_structure",
+      "community": 19,
+      "community_name": "Agama",
+      "norm_label": "structure"
+    },
+    {
       "label": "Graphify Always On Rule",
       "file_type": "rationale",
       "source_file": ".agents/rules/graphify.md",
@@ -1097,8 +1185,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "graphify always on rule",
-      "id": "_agents_rules_graphify_always_on_rule",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_rules_graphify_always_on_rule"
     },
     {
       "label": "Graphify Full Pipeline",
@@ -1111,8 +1199,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "graphify full pipeline",
-      "id": "_agents_skills_graphify_skill_graphify_pipeline",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_skill_graphify_pipeline"
     },
     {
       "label": "Graphify Fast Path",
@@ -1125,8 +1213,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "graphify fast path",
-      "id": "_agents_skills_graphify_skill_fast_path",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_skill_fast_path"
     },
     {
       "label": "File Detection Step",
@@ -1139,8 +1227,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "file detection step",
-      "id": "_agents_skills_graphify_skill_detect_files",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_skill_detect_files"
     },
     {
       "label": "AST Structural Extraction",
@@ -1153,8 +1241,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "ast structural extraction",
-      "id": "_agents_skills_graphify_skill_ast_extraction",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_skill_ast_extraction"
     },
     {
       "label": "Semantic Extraction Subagents",
@@ -1167,8 +1255,8 @@
       "contributor": null,
       "community": 2,
       "norm_label": "semantic extraction subagents",
-      "id": "_agents_skills_graphify_skill_semantic_extraction",
-      "community_name": "Semantic Extraction Specification"
+      "community_name": "Semantic Extraction Specification",
+      "id": "_agents_skills_graphify_skill_semantic_extraction"
     },
     {
       "label": "Community Clustering Step",
@@ -1181,8 +1269,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "community clustering step",
-      "id": "_agents_skills_graphify_skill_community_clustering",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_skill_community_clustering"
     },
     {
       "label": "Community Labeling Step",
@@ -1195,8 +1283,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "community labeling step",
-      "id": "_agents_skills_graphify_skill_community_labeling",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_skill_community_labeling"
     },
     {
       "label": "Graph Health Check",
@@ -1209,8 +1297,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "graph health check",
-      "id": "_agents_skills_graphify_skill_graph_health_check",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_skill_graph_health_check"
     },
     {
       "label": "Graphify Ingestion (Add URL)",
@@ -1223,8 +1311,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "graphify ingestion (add url)",
-      "id": "_agents_skills_graphify_references_add_watch_graphify_add",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_add_watch_graphify_add"
     },
     {
       "label": "Graphify Watch Mode",
@@ -1237,8 +1325,8 @@
       "contributor": null,
       "community": 4,
       "norm_label": "graphify watch mode",
-      "id": "_agents_skills_graphify_references_add_watch_graphify_watch",
-      "community_name": "Graphify Watch Mode"
+      "community_name": "Graphify Watch Mode",
+      "id": "_agents_skills_graphify_references_add_watch_graphify_watch"
     },
     {
       "label": "Obsidian Vault Export",
@@ -1251,8 +1339,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "obsidian vault export",
-      "id": "_agents_skills_graphify_references_exports_obsidian_export",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_exports_obsidian_export"
     },
     {
       "label": "Neo4j Cypher Export",
@@ -1265,8 +1353,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "neo4j cypher export",
-      "id": "_agents_skills_graphify_references_exports_neo4j_export",
-      "community_name": "Neo4j Cypher Export"
+      "community_name": "Neo4j Cypher Export",
+      "id": "_agents_skills_graphify_references_exports_neo4j_export"
     },
     {
       "label": "FalkorDB Export",
@@ -1279,8 +1367,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "falkordb export",
-      "id": "_agents_skills_graphify_references_exports_falkordb_export",
-      "community_name": "FalkorDB Export"
+      "community_name": "FalkorDB Export",
+      "id": "_agents_skills_graphify_references_exports_falkordb_export"
     },
     {
       "label": "Graphify MCP Server",
@@ -1293,8 +1381,8 @@
       "contributor": null,
       "community": 6,
       "norm_label": "graphify mcp server",
-      "id": "_agents_skills_graphify_references_exports_mcp_server",
-      "community_name": "Graphify MCP Server"
+      "community_name": "Graphify MCP Server",
+      "id": "_agents_skills_graphify_references_exports_mcp_server"
     },
     {
       "label": "Token Reduction Benchmark",
@@ -1307,8 +1395,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "token reduction benchmark",
-      "id": "_agents_skills_graphify_references_exports_token_reduction_benchmark",
-      "community_name": "Token Reduction Benchmark"
+      "community_name": "Token Reduction Benchmark",
+      "id": "_agents_skills_graphify_references_exports_token_reduction_benchmark"
     },
     {
       "label": "Semantic Extraction Specification",
@@ -1321,8 +1409,8 @@
       "contributor": null,
       "community": 2,
       "norm_label": "semantic extraction specification",
-      "id": "_agents_skills_graphify_references_extraction_spec_subagent_prompt_spec",
-      "community_name": "Semantic Extraction Specification"
+      "community_name": "Semantic Extraction Specification",
+      "id": "_agents_skills_graphify_references_extraction_spec_subagent_prompt_spec"
     },
     {
       "label": "Confidence Score Rubric",
@@ -1335,8 +1423,8 @@
       "contributor": null,
       "community": 2,
       "norm_label": "confidence score rubric",
-      "id": "_agents_skills_graphify_references_extraction_spec_confidence_rubric",
-      "community_name": "Semantic Extraction Specification"
+      "community_name": "Semantic Extraction Specification",
+      "id": "_agents_skills_graphify_references_extraction_spec_confidence_rubric"
     },
     {
       "label": "Deterministic Node ID Format",
@@ -1349,8 +1437,8 @@
       "contributor": null,
       "community": 2,
       "norm_label": "deterministic node id format",
-      "id": "_agents_skills_graphify_references_extraction_spec_node_id_format",
-      "community_name": "Semantic Extraction Specification"
+      "community_name": "Semantic Extraction Specification",
+      "id": "_agents_skills_graphify_references_extraction_spec_node_id_format"
     },
     {
       "label": "Cross-Repo Graph Merge",
@@ -1363,8 +1451,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "cross-repo graph merge",
-      "id": "_agents_skills_graphify_references_github_and_merge_cross_repo_merge",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_github_and_merge_cross_repo_merge"
     },
     {
       "label": "Monorepo Multi-Folder Merge",
@@ -1377,8 +1465,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "monorepo multi-folder merge",
-      "id": "_agents_skills_graphify_references_github_and_merge_monorepo_merge",
-      "community_name": "Monorepo Multi-Folder Merge"
+      "community_name": "Monorepo Multi-Folder Merge",
+      "id": "_agents_skills_graphify_references_github_and_merge_monorepo_merge"
     },
     {
       "label": "Git Post-Commit Hook",
@@ -1391,8 +1479,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "git post-commit hook",
-      "id": "_agents_skills_graphify_references_hooks_git_commit_hook",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_hooks_git_commit_hook"
     },
     {
       "label": "CLAUDE.md Native Integration",
@@ -1405,8 +1493,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "claude.md native integration",
-      "id": "_agents_skills_graphify_references_hooks_claude_md_integration",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_hooks_claude_md_integration"
     },
     {
       "label": "Constrained Vocabulary Expansion",
@@ -1419,8 +1507,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "constrained vocabulary expansion",
-      "id": "_agents_skills_graphify_references_query_constrained_vocabulary_expansion",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_query_constrained_vocabulary_expansion"
     },
     {
       "label": "Graph Traversal Modes",
@@ -1433,8 +1521,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "graph traversal modes",
-      "id": "_agents_skills_graphify_references_query_bfs_dfs_traversal",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_query_bfs_dfs_traversal"
     },
     {
       "label": "Self-Improving Feedback Loop",
@@ -1447,8 +1535,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "self-improving feedback loop",
-      "id": "_agents_skills_graphify_references_query_self_improving_feedback_loop",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_query_self_improving_feedback_loop"
     },
     {
       "label": "Whisper Video Audio Transcription",
@@ -1461,8 +1549,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "whisper video audio transcription",
-      "id": "_agents_skills_graphify_references_transcribe_whisper_transcription",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_transcribe_whisper_transcription"
     },
     {
       "label": "Incremental Update Pipeline",
@@ -1475,8 +1563,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "incremental update pipeline",
-      "id": "_agents_skills_graphify_references_update_incremental_update",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_update_incremental_update"
     },
     {
       "label": "Code-Only Update Fast Path",
@@ -1489,8 +1577,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "code-only update fast path",
-      "id": "_agents_skills_graphify_references_update_code_only_fast_path",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_skills_graphify_references_update_code_only_fast_path"
     },
     {
       "label": "Cluster Only Execution",
@@ -1503,8 +1591,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "cluster only execution",
-      "id": "_agents_skills_graphify_references_update_cluster_only",
-      "community_name": "Cluster Only Execution"
+      "community_name": "Cluster Only Execution",
+      "id": "_agents_skills_graphify_references_update_cluster_only"
     },
     {
       "label": "Graphify Workflow Entrypoint",
@@ -1517,8 +1605,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "graphify workflow entrypoint",
-      "id": "_agents_workflows_graphify_graphify_workflow",
-      "community_name": "Graphify Full Pipeline"
+      "community_name": "Graphify Full Pipeline",
+      "id": "_agents_workflows_graphify_graphify_workflow"
     }
   ],
   "links": [
@@ -2690,7 +2778,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_sync_mod",
@@ -2701,7 +2789,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
@@ -2713,7 +2801,7 @@
       "relation": "implements",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_sync_mod_syncengine",
@@ -2724,7 +2812,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_sync_mod_syncengine",
@@ -2735,7 +2823,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_sync_mod_syncengine",
@@ -2746,7 +2834,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_sync_mod_syncengine",
@@ -2757,7 +2845,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -2770,7 +2858,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_sync_mod_syncengine_default",
@@ -2781,7 +2869,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -2793,7 +2881,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/sync/mod.rs",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -2821,6 +2909,83 @@
       "_origin": "ast",
       "source": "scripts_generate_frb",
       "target": "scripts_generate_frb_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "readme_agama",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_agama",
+      "target": "readme_quick_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_agama",
+      "target": "readme_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_agama",
+      "target": "readme_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_1_build_rust_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_2_generate_ffi_bindings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_3_run_flutter_application",
       "confidence_score": 1.0
     },
     {
@@ -3117,5 +3282,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "ecb197fc395b32c4f2358a284b3ce55cca3c0e8c"
+  "built_at_commit": "e73b73086432bbed1275a322c5b2f0e7bf66c0d9"
 }

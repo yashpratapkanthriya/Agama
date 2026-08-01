@@ -17,5 +17,6 @@
   "15": "models/mod.rs",
   "16": "build_native_libs.sh",
   "17": "generate_frb.sh",
-  "18": "lib.rs"
+  "18": "lib.rs",
+  "19": "Agama"
 }

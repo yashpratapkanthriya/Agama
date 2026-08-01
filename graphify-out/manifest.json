@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "native/rust_core/src/sync/mod.rs": {
-    "mtime": 1785568062.776168,
-    "ast_hash": "74bf636ac5460f7698a4f406f2cf7d26",
+    "mtime": 1785569698.4151766,
+    "ast_hash": "4d9b69004dc1a4c5ac71dffd6c717d91",
     "semantic_hash": ""
   },
   "scripts/build_native_libs.sh": {
@@ -122,6 +122,11 @@
   "apps/flutter_client/pubspec.yaml": {
     "mtime": 1785568076.4062717,
     "ast_hash": "99bfaadefe4fa121410eed400065076b",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785569684.490921,
+    "ast_hash": "71a5d0940129aba312dd4d0f581d5f54",
     "semantic_hash": ""
   }
 }

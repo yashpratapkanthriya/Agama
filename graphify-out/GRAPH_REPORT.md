@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 24 files · ~12,681 words
+- 25 files · ~12,775 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 124 nodes · 139 edges · 19 communities (10 shown, 9 thin omitted)
+- 132 nodes · 146 edges · 20 communities (11 shown, 9 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ecb197fc`
+- Built from commit: `e73b7308`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,6 +33,7 @@
 - models/mod.rs
 - build_native_libs.sh
 - generate_frb.sh
+- Agama
 
 ## God Nodes (most connected - your core abstractions)
 1. `Graphify Full Pipeline` - 15 edges
@@ -43,8 +44,8 @@
 6. `Document` - 5 edges
 7. `ParsedDocument` - 5 edges
 8. `generate_rsvp_timings()` - 4 edges
-9. `Graph Traversal Modes` - 4 edges
-10. `RsvpCanvasView` - 3 edges
+9. `Agama` - 4 edges
+10. `Quick Start` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Graphify Always On Rule` --semantically_similar_to--> `CLAUDE.md Native Integration`  [INFERRED] [semantically similar]
@@ -66,7 +67,7 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (19 total, 9 thin omitted)
+## Communities (20 total, 9 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.11
@@ -104,8 +105,12 @@ Nodes (7): DocumentParser, ParsedDocument, Option, Result, String, Vec, TextPars
 Cohesion: 0.43
 Nodes (6): Document, DocumentChunk, generate_histvon_timestamp(), Highlight, Option, String
 
+### Community 19 - "Agama"
+Cohesion: 0.25
+Nodes (7): 1. Build Rust Engine, 2. Generate FFI Bindings, 3. Run Flutter Application, Agama, Quick Start, Requirements, Structure
+
 ## Knowledge Gaps
-- **36 isolated node(s):** `main`, `build`, `text`, `targetWpm`, `_words` (+31 more)
+- **41 isolated node(s):** `main`, `build`, `text`, `targetWpm`, `_words` (+36 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -113,13 +118,13 @@ Nodes (6): Document, DocumentChunk, generate_histvon_timestamp(), Highlight, Opt
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `WordTiming` connect `AdaptivePacingEngine` to `models/mod.rs`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Why does `Graphify Full Pipeline` connect `Graphify Full Pipeline` to `Semantic Extraction Specification`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Why does `Document` connect `models/mod.rs` to `DatabaseEngine`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `text` to the rest of the system?**
-  _36 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _41 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.11052631578947368 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**

@@ -1,4 +1,5 @@
-use yrs::{Doc, Transact};
+use yrs::{Doc, ReadTxn, Transact};
+use yrs::updates::encoder::Encode;
 
 pub struct SyncEngine {
     doc: Doc,
@@ -16,7 +17,8 @@ impl SyncEngine {
     }
 
     pub fn encode_state_vector(&self) -> Vec<u8> {
-        let txn = self.doc.transact_ref();
+        let txn = self.doc.transact();
         txn.state_vector().encode_v1()
     }
 }
+
