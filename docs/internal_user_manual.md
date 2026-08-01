@@ -1,6 +1,9 @@
 # Agama Platform: Internal User Manual & Operational Guide
 
 > **Internal Confidentiality Notice:** This document is prepared for internal engineering, product, and research teams operating the Agama Zero-Backend AI Speed Reading & Knowledge Management Platform.
+>
+> 🌐 **Interactive Web Manual Application:** Open [`docs/internal_manual.html`](file:///Users/yashpratap/Documents/GitHub/Agama/docs/internal_manual.html) in any browser for interactive RSVP Redicle, Bionic Fixation, CCI Calculator, and Vector Search sandboxes.
+
 
 ---
 

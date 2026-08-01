@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agama Platform — Interactive Internal User Manual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f1117;
+            --card-bg: #181b25;
+            --card-border: #262b3a;
+            --accent-primary: #7c4dff;
+            --accent-secondary: #00e676;
+            --accent-pink: #ff4081;
+            --text-primary: #f0f3fe;
+            --text-secondary: #94a3b8;
+            --orp-color: #ff3d00;
+            --sidebar-width: 280px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styling */
+        sidebar {
+            width: var(--sidebar-width);
+            background: #13151f;
+            border-right: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            padding: 24px 16px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+            padding: 0 8px;
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(124, 77, 255, 0.4);
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #fff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-group {
+            margin-bottom: 24px;
+        }
+
+        .nav-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #64748b;
+            margin-bottom: 8px;
+            padding: 0 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 4px;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+        }
+
+        .nav-item.active {
+            background: rgba(124, 77, 255, 0.15);
+            color: #a78bfa;
+            border-left: 3px solid var(--accent-primary);
+        }
+
+        /* Main Workspace Styling */
+        main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 36px 48px;
+        }
+
+        .tab-content {
+            display: none;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* RSVP Redicle Interactive Simulator */
+        .redicle-box {
+            background: #08090e;
+            border: 1px solid #1e2330;
+            border-radius: 12px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            position: relative;
+            user-select: none;
+            margin-bottom: 16px;
+        }
+
+        .redicle-box::before, .redicle-box::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .redicle-box::before { top: 12px; }
+        .redicle-box::after { bottom: 12px; }
+
+        .word-prefix { color: #fff; }
+        .word-orp { color: var(--orp-color); font-weight: 800; }
+        .word-suffix { color: #94a3b8; }
+
+        .control-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn {
+            background: var(--accent-primary);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            filter: brightness(1.15);
+            transform: translateY(-1px);
+        }
+
+        .slider-group {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            accent-color: var(--accent-primary);
+        }
+
+        /* Bionic Fixation Interactive Sandbox */
+        .bionic-preview {
+            background: #11131c;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin-top: 16px;
+        }
+
+        .bionic-preview b {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* CCI Calculator */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .calc-input {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .calc-input label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .calc-input input {
+            background: #0d0f17;
+            border: 1px solid var(--card-border);
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .result-box {
+            background: linear-gradient(135deg, rgba(124, 77, 255, 0.15), rgba(0, 230, 118, 0.1));
+            border: 1px solid rgba(124, 77, 255, 0.3);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .result-val {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: #0d0f17;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #a78bfa;
+            font-size: 13px;
+        }
+
+        pre {
+            background: #0d0f17;
+            border: 1px solid var(--card-border);
+            padding: 16px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <sidebar>
+        <div class="brand">
+            <div class="brand-logo">A</div>
+            <div class="brand-title">Agama Manual</div>
+        </div>
+
+        <div class="nav-group">
+            <div class="nav-label">Overview</div>
+            <div class="nav-item active" onclick="showTab('overview')">🚀 Platform Specs</div>
+            <div class="nav-item" onclick="showTab('usecases')">🎯 Core Use Cases</div>
+        </div>
+
+        <div class="nav-group">
+            <div class="nav-label">Interactive Simulators</div>
+            <div class="nav-item" onclick="showTab('rsvp-sim')">⚡ RSVP Speed Redicle</div>
+            <div class="nav-item" onclick="showTab('bionic-sim')">👁️ Bionic Fixation</div>
+            <div class="nav-item" onclick="showTab('cci-sim')">📊 CCI Calculator</div>
+            <div class="nav-item" onclick="showTab('vector-sim')">🔍 Vector Similarity Search</div>
+        </div>
+
+        <div class="nav-group">
+            <div class="nav-label">Architecture & Ops</div>
+            <div class="nav-item" onclick="showTab('sync')">☁️ Yrs CRDT Sync</div>
+            <div class="nav-item" onclick="showTab('db-rollback')">🛡️ DB Rollbacks</div>
+        </div>
+    </sidebar>
+
+    <!-- Main Workspace -->
+    <main>
+        <!-- Tab 1: Platform Overview -->
+        <div id="overview" class="tab-content active">
+            <h1>Platform Architecture & Operations</h1>
+            <div class="subtitle">Agama is an enterprise-grade local-first zero-backend speed reading system. PDF layout parsing, vector indexing (<code>sqlite-vec</code>), and ONNX token complexity inference run inside an embedded Rust core process.</div>
+
+            <div class="card">
+                <div class="card-header">⚡ Core Performance Targets (NFRs)</div>
+                <ul style="line-height: 2; padding-left: 20px; color: var(--text-secondary);">
+                    <li><strong style="color: #fff;">FFI Transfer Latency:</strong> &lt; 0.8 ms via <code>flutter_rust_bridge</code> v2 zero-copy stream sinks.</li>
+                    <li><strong style="color: #fff;">Vector Search Latency:</strong> &lt; 4.5 ms over 20,000 document chunk embeddings.</li>
+                    <li><strong style="color: #fff;">Privacy & Encryption:</strong> 256-bit AES SQLCipher encryption with zero external network telemetry.</li>
+                    <li><strong style="color: #fff;">Data Historization:</strong> 17-character <code>histvon</code>/<code>histbis</code> temporal primary keys for zero data loss.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tab 2: Core Use Cases -->
+        <div id="usecases" class="tab-content">
+            <h1>Internal Operational Use Cases</h1>
+            <div class="subtitle">Designed for high-throughput research, deep technical analysis, active recall study, and confidential reading.</div>
+
+            <div class="card">
+                <div class="card-header">📚 Use Case 1: Academic Literature Review</div>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Rapidly scan 50+ page PDFs at 450-600 WPM, taking inline marginalia notes and invoking vector similarity search across paper collections.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">💻 Use Case 2: Deep Technical & Code Spec Analysis</div>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Read dense technical specifications with Bionic Fixation (Levels F3-F5) bolding word prefixes to reduce visual saccade strain.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">🎴 Use Case 3: Active Recall Flashcard Prep</div>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Automatically extract flashcard pairs from highlights and train with the SuperMemo-2 (SM-2) algorithm for 90%+ long-term retention.</p>
+            </div>
+        </div>
+
+        <!-- Tab 3: Interactive RSVP Redicle Simulator -->
+        <div id="rsvp-sim" class="tab-content">
+            <h1>RSVP Redicle Speed Reader Simulator</h1>
+            <div class="subtitle">Test the Optimal Recognition Point (ORP) visual redicle and dynamic pacing algorithm in real-time.</div>
+
+            <div class="card">
+                <div class="redicle-box" id="redicle-box">
+                    <span class="word-prefix" id="w-prefix">Ag</span><span class="word-orp" id="w-orp">a</span><span class="word-suffix" id="w-suffix">ma</span>
+                </div>
+
+                <div class="control-row">
+                    <button class="btn" id="play-btn" onclick="togglePlay()">▶ Play Reader</button>
+                    <div class="slider-group">
+                        <span>Target Speed:</span>
+                        <input type="range" id="wpm-slider" min="100" max="900" step="50" value="450" oninput="updateWpm(this.value)">
+                        <strong id="wpm-val" style="color: var(--accent-secondary); font-family: monospace;">450 WPM</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 4: Bionic Fixation Sandbox -->
+        <div id="bionic-sim" class="tab-content">
+            <h1>Bionic Fixation Reading Sandbox</h1>
+            <div class="subtitle">Adjust the fixation intensity ($F1 \dots F5$) to observe prefix bolding over sample technical text.</div>
+
+            <div class="card">
+                <div class="slider-group" style="margin-bottom: 16px;">
+                    <span>Fixation Level:</span>
+                    <input type="range" id="bionic-slider" min="1" max="5" value="3" oninput="updateBionic(this.value)">
+                    <strong id="bionic-val" style="color: var(--accent-primary);">Level F3 (50%)</strong>
+                </div>
+
+                <div class="bionic-preview" id="bionic-text">
+                    The Agama Platform is engineered as a high-performance local-first speed reading system.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 5: CCI Calculator -->
+        <div id="cci-sim" class="tab-content">
+            <h1>Comprehension Calibration Index (CCI) Calculator</h1>
+            <div class="subtitle">Calculate score: $CCI = \text{Reading WPM} \times \text{Quiz Accuracy Fraction}$. Optimal range is 350 – 450.</div>
+
+            <div class="card">
+                <div class="calc-grid">
+                    <div class="calc-input">
+                        <label>Reading WPM</label>
+                        <input type="number" id="cci-wpm" value="480" oninput="calculateCCI()">
+                    </div>
+                    <div class="calc-input">
+                        <label>Quiz Accuracy (%)</label>
+                        <input type="number" id="cci-acc" value="88" min="0" max="100" oninput="calculateCCI()">
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <div style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase;">Calculated CCI Score</div>
+                    <div class="result-val" id="cci-result">422.4</div>
+                    <div style="font-size: 13px; color: var(--accent-secondary); margin-top: 4px;">✅ Optimal Speed-Retention Zone</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 6: Vector Search Sandbox -->
+        <div id="vector-sim" class="tab-content">
+            <h1>Vector Similarity Search Sandbox</h1>
+            <div class="subtitle">Simulate cosine similarity scoring over indexed document chunks using dense embeddings.</div>
+
+            <div class="card">
+                <input type="text" id="vector-query" placeholder="Type search query e.g. 'zero backend'..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); background: #0d0f17; color: #fff; font-size: 14px;" oninput="runVectorSearch(this.value)">
+                
+                <div id="search-results" style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+                    <div style="padding: 12px; background: #11131c; border-radius: 8px; border-left: 3px solid var(--accent-secondary);">
+                        <div style="font-size: 13px; font-weight: 700; color: #fff;">Agama Core Engine Specification</div>
+                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-secondary);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 7: Yrs CRDT Sync -->
+        <div id="sync" class="tab-content">
+            <h1>Decentralized Yrs CRDT Sync Protocol</h1>
+            <div class="subtitle">Zero-server synchronization using Yrs state vectors over WebDAV, iCloud, or local mDNS Wi-Fi P2P.</div>
+            <div class="card">
+                <pre><code>// Rust Yrs CRDT Delta Generation
+let txn = self.doc.transact();
+let delta_bytes = txn.encode_state_as_update_v1(&yrs::StateVector::default());
+
+// Remote Convergence Merge
+let mut txn = self.doc.transact_mut();
+txn.apply_update(remote_update);</code></pre>
+            </div>
+        </div>
+
+        <!-- Tab 8: DB Rollback Generator -->
+        <div id="db-rollback" class="tab-content">
+            <h1>Zero Data-Loss Database Rollbacks</h1>
+            <div class="subtitle">SQLCipher schema historization using 17-character <code>histvon</code>/<code>histbis</code> timestamps.</div>
+            <div class="card">
+                <pre><code>-- 1. Deactivate current row version
+UPDATE documents 
+SET histbis = '20260801120000000' 
+WHERE id = 'doc_99' AND histbis = '9999';
+
+-- 2. Reactivate target historical state
+UPDATE documents 
+SET histbis = '9999' 
+WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // RSVP Redicle Simulator JS
+        const words = ["The", "Agama", "Platform", "is", "engineered", "as", "a", "high-performance", "local-first", "zero-backend", "speed", "reader."];
+        let wIdx = 0;
+        let isPlaying = false;
+        let timer = null;
+        let wpm = 450;
+
+        function updateRedicle() {
+            const word = words[wIdx];
+            const orpIdx = Math.floor(word.length * 0.35);
+            document.getElementById('w-prefix').textContent = word.slice(0, orpIdx);
+            document.getElementById('w-orp').textContent = word[orpIdx] || '';
+            document.getElementById('w-suffix').textContent = word.slice(orpIdx + 1);
+            wIdx = (wIdx + 1) % words.length;
+        }
+
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('play-btn');
+            if (isPlaying) {
+                btn.textContent = '⏸ Pause Reader';
+                btn.style.background = '#ff4081';
+                const intervalMs = 60000 / wpm;
+                timer = setInterval(updateRedicle, intervalMs);
+            } else {
+                btn.textContent = '▶ Play Reader';
+                btn.style.background = 'var(--accent-primary)';
+                clearInterval(timer);
+            }
+        }
+
+        function updateWpm(val) {
+            wpm = parseInt(val);
+            document.getElementById('wpm-val').textContent = `${wpm} WPM`;
+            if (isPlaying) {
+                clearInterval(timer);
+                timer = setInterval(updateRedicle, 60000 / wpm);
+            }
+        }
+
+        // Bionic Fixation Simulator JS
+        function updateBionic(level) {
+            const levelNames = ["Level F1 (30%)", "Level F2 (40%)", "Level F3 (50%)", "Level F4 (60%)", "Level F5 (70%)"];
+            const ratios = [0.3, 0.4, 0.5, 0.6, 0.7];
+            document.getElementById('bionic-val').textContent = levelNames[level - 1];
+            
+            const rawText = "The Agama Platform is engineered as a high-performance local-first speed reading system.";
+            const ratio = ratios[level - 1];
+            const formatted = rawText.split(' ').map(w => {
+                const len = Math.max(1, Math.floor(w.length * ratio));
+                return `<b>${w.slice(0, len)}</b>${w.slice(len)}`;
+            }).join(' ');
+            
+            document.getElementById('bionic-text').innerHTML = formatted;
+        }
+
+        // CCI Calculator JS
+        function calculateCCI() {
+            const w = parseFloat(document.getElementById('cci-wpm').value) || 0;
+            const acc = (parseFloat(document.getElementById('cci-acc').value) || 0) / 100;
+            const score = w * acc;
+            document.getElementById('cci-result').textContent = score.toFixed(1);
+        }
+
+        // Vector Search Simulator JS
+        function runVectorSearch(query) {
+            const container = document.getElementById('search-results');
+            if (!query.trim()) {
+                container.innerHTML = `<div style="padding: 12px; background: #11131c; border-radius: 8px; border-left: 3px solid var(--accent-secondary);"><div style="font-size: 13px; font-weight: 700; color: #fff;">Agama Core Engine Specification</div><div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-secondary);">0.942</strong> • Matched: "high-performance local-first zero-backend speed reader"</div></div>`;
+                return;
+            }
+            const sim = (0.75 + Math.random() * 0.23).toFixed(3);
+            container.innerHTML = `<div style="padding: 12px; background: #11131c; border-radius: 8px; border-left: 3px solid var(--accent-secondary);"><div style="font-size: 13px; font-weight: 700; color: #fff;">QueryResult for "${query}"</div><div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Cosine Similarity: <strong style="color: var(--accent-secondary);">${sim}</strong> • Matched chunk embedding over 384 dimensions</div></div>`;
+        }
+
+        // Initial setup
+        updateBionic(3);
+    </script>
+</body>
+</html>

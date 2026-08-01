@@ -769,8 +769,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "bionic_fixation_view.dart"
     },
     {
@@ -780,8 +780,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationview",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "bionicfixationview"
     },
     {
@@ -791,8 +791,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationviewstate",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_bionicfixationviewstate"
     },
     {
@@ -802,8 +802,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_text",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "text"
     },
     {
@@ -813,8 +813,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_fixationlevel",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_fixationlevel"
     },
     {
@@ -824,8 +824,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_fontsize",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_fontsize"
     },
     {
@@ -835,8 +835,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_createstate",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "createstate"
     },
     {
@@ -846,8 +846,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_splitbionic",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "_splitbionic"
     },
     {
@@ -857,8 +857,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_build",
-      "community": 31,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 3,
+      "community_name": "library_view.dart",
       "norm_label": "build"
     },
     {
@@ -1209,8 +1209,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_rsvpcanvasview",
-      "community": 1,
-      "community_name": "rsvp_canvas.dart",
+      "community": 32,
+      "community_name": "State",
       "norm_label": "rsvpcanvasview"
     },
     {
@@ -1220,8 +1220,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_rsvpcanvasviewstate",
-      "community": 1,
-      "community_name": "rsvp_canvas.dart",
+      "community": 32,
+      "community_name": "State",
       "norm_label": "_rsvpcanvasviewstate"
     },
     {
@@ -5232,6 +5232,215 @@
       "community": 15,
       "community_name": "Production-Ready AI-First Platform: Master Technical Architecture & Specification",
       "norm_label": "phase 4: production infrastructure & monitoring (weeks 13-16)"
+    },
+    {
+      "label": "internal_user_manual.md",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "internal_user_manual.md"
+    },
+    {
+      "label": "Agama Platform: Internal User Manual & Operational Guide",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_agama_platform_internal_user_manual_operational_guide",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "agama platform: internal user manual & operational guide"
+    },
+    {
+      "label": "1. Executive Summary & Core Platform Philosophy",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_1_executive_summary_core_platform_philosophy",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "1. executive summary & core platform philosophy"
+    },
+    {
+      "label": "2. Core Internal Use Cases",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_2_core_internal_use_cases",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "2. core internal use cases"
+    },
+    {
+      "label": "Use Case 1: Academic & Research Literature Review",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_use_case_1_academic_research_literature_review",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "use case 1: academic & research literature review"
+    },
+    {
+      "label": "Use Case 2: Deep Technical & Code Architecture Analysis",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_use_case_2_deep_technical_code_architecture_analysis",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "use case 2: deep technical & code architecture analysis"
+    },
+    {
+      "label": "Use Case 3: Medical / Legal Active Recall & Exam Preparation",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_use_case_3_medical_legal_active_recall_exam_preparation",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "use case 3: medical / legal active recall & exam preparation"
+    },
+    {
+      "label": "Use Case 4: Air-Gapped & Executive Confidentiality",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_use_case_4_air_gapped_executive_confidentiality",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "use case 4: air-gapped & executive confidentiality"
+    },
+    {
+      "label": "3. Operational Feature Guide",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_operational_feature_guide",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3. operational feature guide"
+    },
+    {
+      "label": "3.1 Mode 1: RSVP Redicle Speed Reader",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_1_mode_1_rsvp_redicle_speed_reader",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3.1 mode 1: rsvp redicle speed reader"
+    },
+    {
+      "label": "3.2 Mode 2: Guided Highlighting Mode",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_2_mode_2_guided_highlighting_mode",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3.2 mode 2: guided highlighting mode"
+    },
+    {
+      "label": "3.3 Mode 3: Bionic Fixation Mode",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_3_mode_3_bionic_fixation_mode",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3.3 mode 3: bionic fixation mode"
+    },
+    {
+      "label": "3.4 Mode 4: Inline Annotations & Local Vector Similarity Search",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_4_mode_4_inline_annotations_local_vector_similarity_search",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3.4 mode 4: inline annotations & local vector similarity search"
+    },
+    {
+      "label": "3.5 Mode 5: SM-2 Active Recall Flashcard Trainer",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_5_mode_5_sm_2_active_recall_flashcard_trainer",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3.5 mode 5: sm-2 active recall flashcard trainer"
+    },
+    {
+      "label": "3.6 Mode 6: Decentralized Sync Settings (`SyncView`)",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_6_mode_6_decentralized_sync_settings_syncview",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3.6 mode 6: decentralized sync settings (`syncview`)"
+    },
+    {
+      "label": "3.7 Mode 7: Comprehension Calibration Index (CCI) Analytics",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_3_7_mode_7_comprehension_calibration_index_cci_analytics",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "3.7 mode 7: comprehension calibration index (cci) analytics"
+    },
+    {
+      "label": "4. Database Historization & Data Recovery Guide",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_4_database_historization_data_recovery_guide",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "4. database historization & data recovery guide"
+    },
+    {
+      "label": "Point-in-Time Data Rollback Procedure",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_point_in_time_data_rollback_procedure",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "point-in-time data rollback procedure"
+    },
+    {
+      "label": "5. Quick Reference & Command Cheat Sheet",
+      "file_type": "document",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "docs_internal_user_manual_5_quick_reference_command_cheat_sheet",
+      "community": 31,
+      "community_name": "3. Operational Feature Guide",
+      "norm_label": "5. quick reference & command cheat sheet"
     },
     {
       "label": "schema.md",
@@ -12854,6 +13063,204 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual",
+      "target": "docs_internal_user_manual_agama_platform_internal_user_manual_operational_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_agama_platform_internal_user_manual_operational_guide",
+      "target": "docs_internal_user_manual_1_executive_summary_core_platform_philosophy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_agama_platform_internal_user_manual_operational_guide",
+      "target": "docs_internal_user_manual_2_core_internal_use_cases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_agama_platform_internal_user_manual_operational_guide",
+      "target": "docs_internal_user_manual_3_operational_feature_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_agama_platform_internal_user_manual_operational_guide",
+      "target": "docs_internal_user_manual_4_database_historization_data_recovery_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_agama_platform_internal_user_manual_operational_guide",
+      "target": "docs_internal_user_manual_5_quick_reference_command_cheat_sheet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_2_core_internal_use_cases",
+      "target": "docs_internal_user_manual_use_case_1_academic_research_literature_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_2_core_internal_use_cases",
+      "target": "docs_internal_user_manual_use_case_2_deep_technical_code_architecture_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_2_core_internal_use_cases",
+      "target": "docs_internal_user_manual_use_case_3_medical_legal_active_recall_exam_preparation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_2_core_internal_use_cases",
+      "target": "docs_internal_user_manual_use_case_4_air_gapped_executive_confidentiality",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_3_operational_feature_guide",
+      "target": "docs_internal_user_manual_3_1_mode_1_rsvp_redicle_speed_reader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_3_operational_feature_guide",
+      "target": "docs_internal_user_manual_3_2_mode_2_guided_highlighting_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_3_operational_feature_guide",
+      "target": "docs_internal_user_manual_3_3_mode_3_bionic_fixation_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_3_operational_feature_guide",
+      "target": "docs_internal_user_manual_3_4_mode_4_inline_annotations_local_vector_similarity_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_3_operational_feature_guide",
+      "target": "docs_internal_user_manual_3_5_mode_5_sm_2_active_recall_flashcard_trainer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_3_operational_feature_guide",
+      "target": "docs_internal_user_manual_3_6_mode_6_decentralized_sync_settings_syncview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_3_operational_feature_guide",
+      "target": "docs_internal_user_manual_3_7_mode_7_comprehension_calibration_index_cci_analytics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/internal_user_manual.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_internal_user_manual_4_database_historization_data_recovery_guide",
+      "target": "docs_internal_user_manual_point_in_time_data_rollback_procedure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/schema.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -13739,5 +14146,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "99553d8c0a96f1cb82545b68b095c33ca94c6a8c"
+  "built_at_commit": "154fbed3fe5fc4f711354969934c0c5725608a3f"
 }

@@ -1,16 +1,16 @@
 # Graph Report - Agama  (2026-08-01)
 
 ## Corpus Check
-- 47 files · ~39,750 words
+- 48 files · ~40,844 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 562 nodes · 659 edges · 40 communities (30 shown, 10 thin omitted)
+- 581 nodes · 677 edges · 40 communities (30 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `99553d8c`
+- Built from commit: `154fbed3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -45,7 +45,7 @@
 - Decentralized Sync Architecture Specification
 - String?
 - guided_highlight_view.dart
-- bionic_fixation_view.dart
+- 3. Operational Feature Guide
 - State
 - Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
 - System Design Specification: Vector Similarity Search Engine & Decentralized Yrs CRDT Sync Outbox
@@ -94,16 +94,16 @@ Cohesion: 0.09
 Nodes (24): Graphify Always On Rule, Graphify Ingestion (Add URL), Obsidian Vault Export, Confidence Score Rubric, Deterministic Node ID Format, Semantic Extraction Specification, Cross-Repo Graph Merge, CLAUDE.md Native Integration (+16 more)
 
 ### Community 1 - "rsvp_canvas.dart"
-Cohesion: 0.11
-Nodes (18): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+10 more)
+Cohesion: 0.12
+Nodes (16): accentColor, build, _calculateOrpIndex, createState, _currentIndex, initState, _isPlaying, OrpGuidePainter (+8 more)
 
 ### Community 2 - "reader_provider.dart"
 Cohesion: 0.07
 Nodes (28): main, copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider (+20 more)
 
 ### Community 3 - "library_view.dart"
-Cohesion: 0.07
-Nodes (29): ../analytics/analytics_view.dart, ../annotations/annotation_view.dart, AgamaApp, build, AnalyticsView, build, build, LibraryView (+21 more)
+Cohesion: 0.05
+Nodes (37): ../analytics/analytics_view.dart, ../annotations/annotation_view.dart, AgamaApp, build, AnalyticsView, build, build, LibraryView (+29 more)
 
 ### Community 11 - "ai/mod.rs"
 Cohesion: 0.10
@@ -169,13 +169,13 @@ Nodes (15): 1. Executive Summary & Core Principles, 2.1 The Cross-Platform Chall
 Cohesion: 0.17
 Nodes (11): build, createState, _highlightedIndex, initState, _isPlaying, _startHighlightStream, targetWpm, text (+3 more)
 
-### Community 31 - "bionic_fixation_view.dart"
-Cohesion: 0.25
-Nodes (8): BionicFixationView, _BionicFixationViewState, build, createState, _fixationLevel, _fontSize, _splitBionic, text
+### Community 31 - "3. Operational Feature Guide"
+Cohesion: 0.11
+Nodes (18): 1. Executive Summary & Core Platform Philosophy, 2. Core Internal Use Cases, 3.1 Mode 1: RSVP Redicle Speed Reader, 3.2 Mode 2: Guided Highlighting Mode, 3.3 Mode 3: Bionic Fixation Mode, 3.4 Mode 4: Inline Annotations & Local Vector Similarity Search, 3.5 Mode 5: SM-2 Active Recall Flashcard Trainer, 3.6 Mode 6: Decentralized Sync Settings (`SyncView`) (+10 more)
 
 ### Community 32 - "State"
-Cohesion: 0.32
-Nodes (8): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, GuidedHighlightView, _GuidedHighlightViewState, State, StatefulWidget
+Cohesion: 0.27
+Nodes (10): AnnotationView, _AnnotationViewState, FlashcardView, _FlashcardViewState, GuidedHighlightView, _GuidedHighlightViewState, RsvpCanvasView, _RsvpCanvasViewState (+2 more)
 
 ### Community 33 - "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)"
 Cohesion: 0.25
@@ -206,7 +206,7 @@ Cohesion: 0.40
 Nodes (4): Global Constraints, Performance Benchmarks & Comprehension Analytics Implementation Plan, Task 1: Rust Engine Performance Benchmark Suite & CCI Helper, Task 2: Flutter Comprehension Analytics (CCI) Dashboard UI
 
 ## Knowledge Gaps
-- **307 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+302 more)
+- **321 isolated node(s):** `main`, `build`, `build`, `AnnotationItem`, `id` (+316 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -218,12 +218,12 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `2. App-by-App Deep Dive` connect `2.1 Spreeder` to `Speed Reading Apps: Comprehensive Analysis & Gap Assessment`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `main`, `build`, `build` to the rest of the system?**
-  _307 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _321 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `reader_provider.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `library_view.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.06628787878787878 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05226480836236934 - nodes in this community are weakly interconnected._
