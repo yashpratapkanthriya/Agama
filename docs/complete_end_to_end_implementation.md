@@ -405,7 +405,7 @@ zero-backend-agama/
 
 | Module | Implemented UI / Logic | Operational Gaps | Target Remediation |
 | :--- | :--- | :--- | :--- |
-| **Document Ingestion** | Paste-text import sheet | Missing native PDF / EPUB file parsing & file_picker integration | Add file parser bindings & picker UI |
+| **Document Ingestion** | Hero section direct file/text input | Missing native PDF / EPUB file parsing & file_picker integration | Add file parser bindings & picker UI |
 | **Rust Engine FFI** | `native/rust_core` library (9 unit tests pass) | Flutter UI using Dart fallback; `flutter_rust_bridge` stripped | Wire C-FFI / `flutter_rust_bridge` to Flutter shell |
 | **Vector Search & ML** | Mock ONNX complexity calculator in Rust | Real `sqlite-vec` index & local ONNX embedding load missing | Link `sqlite-vec` C-extension & ONNX Runtime model |
 | **Reading Engines** | RSVP (ORP redicle + context strip), Bionic Fixation, Guided Highlighting | Fully functional in Flutter UI | Complete |

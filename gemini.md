@@ -89,7 +89,7 @@ All unused native deps stripped (flutter_rust_bridge, flutter_secure_storage, fi
 
 ### Navigation architecture
 - **Root:** `LibraryView` (StatefulWidget) with `NavigationBar` — 3 tabs: Library · Knowledge · Analytics
-- **Library tab:** paste-text import sheet → engine chooser → push reader route
+- **Library tab:** hero section direct file/text input → engine chooser → push reader route
 - **Knowledge tab:** Highlights (`AnnotationView`) + Flashcards (`FlashcardView`)
 - **Analytics tab:** inline `AnalyticsView` (no push)
 - All reader routes: push from Library tab via `Navigator.push`

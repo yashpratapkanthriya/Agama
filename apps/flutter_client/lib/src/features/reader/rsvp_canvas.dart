@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
 import 'reader_settings_provider.dart';
 import '../annotations/annotation_view.dart';
+import '../../rust/api.dart' as rust_api;
+import '../../rust/models.dart';
 
 typedef RSVPCanvas = RsvpCanvasView;
 
@@ -29,6 +31,15 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
   int? _customWpm;
   final _focus = FocusNode();
 
+  /// Rust-computed timings; null until loaded or on web fallback.
+  List<WordTiming>? _rustTimings;
+
+  /// Resolved WPM from custom override or provider settings.
+  int get _wpm {
+    final settings = ref.read(readerSettingsProvider);
+    return _customWpm ?? settings.wpm;
+  }
+
   @override
   void initState() {
     super.initState();
@@ -37,6 +48,25 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
         .split(RegExp(r'\s+'))
         .where((w) => w.isNotEmpty)
         .toList();
+    _loadRustTimings();
+  }
+
+  /// Loads Rust-computed RSVP timings for the current text and WPM.
+  /// Silently falls back to Dart-computed timing on failure (e.g., web
+  /// without SharedArrayBuffer / COOP headers).
+  Future<void> _loadRustTimings() async {
+    try {
+      final timings = await rust_api.generateRsvpTimings(
+        text: widget.text,
+        targetWpm: _wpm,
+        paragraphComplexity: 0.5,
+      );
+      if (mounted) {
+        setState(() => _rustTimings = timings);
+      }
+    } catch (_) {
+      // Web COOP / SharedArrayBuffer not available — use Dart fallback.
+    }
   }
 
   @override
@@ -76,9 +106,14 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
       if (mounted) setState(() => _playing = false);
       return;
     }
-    final settings = ref.read(readerSettingsProvider);
-    final wpm = _customWpm ?? settings.wpm;
-    final delayMs = _delayForWord(_words[_idx], wpm);
+    final int delayMs;
+    if (_rustTimings != null && _idx < _rustTimings!.length) {
+      delayMs = _rustTimings![_idx].delayMs.toInt();
+    } else {
+      final settings = ref.read(readerSettingsProvider);
+      final wpm = _customWpm ?? settings.wpm;
+      delayMs = _delayForWord(_words[_idx], wpm);
+    }
     await Future.delayed(Duration(milliseconds: delayMs));
     if (mounted && _playing) {
       setState(() => _idx++);

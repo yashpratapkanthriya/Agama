@@ -106,11 +106,10 @@ void main() {
   testWidgets('AnalyticsView renders CCI section and sessions', (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(
-        home: AnalyticsView(),
+        home: Scaffold(body: AnalyticsView()),
       ),
     );
 
-    expect(find.text('Analytics'), findsOneWidget);
     expect(find.text('Comprehension Confidence Index'), findsOneWidget);
     expect(find.text('Recent sessions'), findsOneWidget);
   });

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'theme.dart';
 import '../features/library/library_view.dart';
-import '../features/annotations/annotation_view.dart';
 
 final ValueNotifier<ThemeMode> themeModeNotifier =
     ValueNotifier<ThemeMode>(ThemeMode.light);
@@ -15,7 +14,7 @@ class AgamaApp extends StatelessWidget {
     final fragment = uri.fragment;
 
     if (path.contains('highlights') || fragment.contains('highlights')) {
-      return const AnnotationView();
+      return const LibraryView(initialTab: 1);
     }
     if (path.contains('knowledge') || fragment.contains('knowledge')) {
       return const LibraryView(initialTab: 1);
@@ -46,7 +45,7 @@ class AgamaApp extends StatelessWidget {
               return MaterialPageRoute(builder: (_) => const LibraryView(initialTab: 2), settings: settings);
             }
             if (name.contains('highlights')) {
-              return MaterialPageRoute(builder: (_) => const AnnotationView(), settings: settings);
+              return MaterialPageRoute(builder: (_) => const LibraryView(initialTab: 1), settings: settings);
             }
             return MaterialPageRoute(builder: (_) => const LibraryView(initialTab: 0), settings: settings);
           },

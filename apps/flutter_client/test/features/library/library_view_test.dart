@@ -42,8 +42,12 @@ void main() {
     await tester.pumpWidget(const ProviderScope(child: MaterialApp(home: LibraryView())));
     await tester.tap(find.text('RSVP'));
     await tester.pump();
-    await tester.pump(const Duration(milliseconds: 500));
-    expect(find.text('Please select a file or paste text first'), findsOneWidget);
+    // Tap Start Reading with no input to trigger inline error
+    final startBtn = find.text('Start Reading');
+    await tester.ensureVisible(startBtn);
+    await tester.tap(startBtn);
+    await tester.pump();
+    expect(find.text('Add text or select a file above first'), findsOneWidget);
   });
 
   testWidgets('Tapping document tile launches RSVP reader with document text', (WidgetTester tester) async {

@@ -38,7 +38,7 @@ class FlashcardStore {
       id: 'c2',
       question:
           'What marks an active row in the Agama bi-temporal schema (histbis)?',
-      answer: "histvon = '9999' — a sentinel timestamp meaning 'still active'",
+      answer: "histbis = '9999' marks active rows; histvon is the creation timestamp.",
     ),
     FlashcardItem(
       id: 'c3',
@@ -54,6 +54,7 @@ class _FlashcardViewState extends State<FlashcardView> {
 
   int _idx = 0;
   bool _revealed = false;
+  String? _nextReviewText;
 
   void _rate(int q) {
     final c = _cards[_idx];
@@ -67,18 +68,11 @@ class _FlashcardViewState extends State<FlashcardView> {
     setState(() {
       c.ef = newEf;
       c.interval = newInterval;
+      _nextReviewText =
+          'Next review: $newInterval day${newInterval == 1 ? '' : 's'} (EF ${newEf.toStringAsFixed(2)})';
       _revealed = false;
       _idx = (_idx + 1) % _cards.length;
     });
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          'Rated $clamped/5 — next in $newInterval day${newInterval == 1 ? '' : 's'} (EF ${newEf.toStringAsFixed(2)})',
-        ),
-        duration: const Duration(seconds: 2),
-      ),
-    );
   }
 
   @override
@@ -217,7 +211,7 @@ class _FlashcardViewState extends State<FlashcardView> {
                                       _RateBtn(
                                           label: 'Again',
                                           sub: '0',
-                                          color: AgamaTheme.crimson,
+                                          color: const Color(0xFFDC2626),
                                           onTap: () => _rate(0)),
                                       const SizedBox(width: 8),
                                       _RateBtn(
@@ -242,6 +236,21 @@ class _FlashcardViewState extends State<FlashcardView> {
                                 )
                               : const SizedBox.shrink(),
                         ),
+
+                        // Inline SM-2 review feedback
+                        if (_nextReviewText != null)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8),
+                            child: Text(
+                              _nextReviewText!,
+                              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withAlpha(120),
+                              ),
+                            ),
+                          ),
                       ],
                     ),
                   ),

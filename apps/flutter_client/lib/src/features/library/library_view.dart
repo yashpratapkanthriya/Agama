@@ -471,6 +471,7 @@ class _EngineChooser extends StatefulWidget {
 
 class _EngineChooserState extends State<_EngineChooser> {
   int _selected = 0; // 0=RSVP, 1=Sweep, 2=Bionic
+  bool _showInputError = false;
 
   static const _engines = [
     _EngineInfo(
@@ -503,23 +504,18 @@ class _EngineChooserState extends State<_EngineChooser> {
   ];
 
   void _selectEngine(int index) {
-    setState(() => _selected = index);
-    if (widget.customText.isEmpty) {
-      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please select a file or paste text first')),
-      );
-    }
+    setState(() {
+      _selected = index;
+      _showInputError = false;
+    });
   }
 
   void _launch(BuildContext context) {
     if (widget.customText.isEmpty) {
-      ScaffoldMessenger.of(context).hideCurrentSnackBar();
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please select a file or paste text first')),
-      );
+      setState(() => _showInputError = true);
       return;
     }
+    setState(() => _showInputError = false);
     final text = widget.customText;
     Widget page = switch (_selected) {
       0 => RsvpCanvasView(text: text),
@@ -618,7 +614,7 @@ class _EngineChooserState extends State<_EngineChooser> {
                   width: double.infinity,
                   child: FilledButton.icon(
                     style: FilledButton.styleFrom(
-                      backgroundColor: e.accent,
+                      backgroundColor: _showInputError ? AgamaTheme.crimson : e.accent,
                       padding: const EdgeInsets.symmetric(vertical: 11),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(9)),
@@ -632,6 +628,18 @@ class _EngineChooserState extends State<_EngineChooser> {
                         color: Colors.white)),
                   ),
                 ),
+                if (_showInputError) ...[
+                  const SizedBox(height: 8),
+                  Text(
+                    'Add text or select a file above first',
+                    style: GoogleFonts.inter(
+                      fontSize: 12,
+                      color: AgamaTheme.crimson,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ],
             ),
           ),

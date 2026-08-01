@@ -24,10 +24,8 @@ class FileParserService {
   Future<void> init() async {
     try {
       await RustLib.init();
-    } on StateError catch (_) {
-      // Safe no-op if already initialized
     } catch (e) {
-      // Graceful fallback for flutter test unit test runner without native dylib
+      // Safe no-op on web / test targets where /pkg/rust_core.js is absent
     }
   }
 
