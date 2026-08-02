@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../core/app_tokens.dart';
 
 class ScholarlyTheme {
   static const Color primary = Color(0xFF1A2E35);
@@ -25,6 +26,17 @@ class ScholarlyTheme {
         onSurfaceVariant: onSurfaceVariant,
         outline: outline,
       ),
+      cardTheme: CardThemeData(
+        elevation: AppTokens.elevationSm,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppTokens.radiusMd),
+        ),
+      ),
+      dialogTheme: DialogThemeData(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppTokens.radiusLg),
+        ),
+      ),
       textTheme: TextTheme(
         headlineLarge: GoogleFonts.sourceSerif4(fontSize: 32, fontWeight: FontWeight.w600, color: onSurface),
         headlineMedium: GoogleFonts.sourceSerif4(fontSize: 24, fontWeight: FontWeight.w600, color: onSurface),
@@ -47,6 +59,17 @@ class ScholarlyTheme {
         onSurface: Color(0xFF111C2C),
         onSurfaceVariant: Color(0xFF42484A),
         outline: Color(0xFF73787A),
+      ),
+      cardTheme: CardThemeData(
+        elevation: AppTokens.elevationSm,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppTokens.radiusMd),
+        ),
+      ),
+      dialogTheme: DialogThemeData(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppTokens.radiusLg),
+        ),
       ),
       textTheme: TextTheme(
         headlineLarge: GoogleFonts.sourceSerif4(fontSize: 32, fontWeight: FontWeight.w600, color: const Color(0xFF111C2C)),
