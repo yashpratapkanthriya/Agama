@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import '../../rust/api.dart' as rust;
 import '../../rust/frb_generated.dart';
 
@@ -22,10 +23,13 @@ class FileParserService {
   static final FileParserService instance = FileParserService();
 
   Future<void> init() async {
+    // Skip Rust init on web — WASM artifact (pkg/rust_core.js) is not
+    // compiled/served in dev mode. All Rust API calls have Dart fallbacks.
+    if (kIsWeb) return;
     try {
       await RustLib.init();
-    } catch (e) {
-      // Safe no-op on web / test targets where /pkg/rust_core.js is absent
+    } catch (_) {
+      // No-op on test targets
     }
   }
 
@@ -36,24 +40,25 @@ class FileParserService {
   }
 
   Future<ParsedDocument> parseFile(String filePath) async {
-    try {
-      await init();
-      final rustDoc = await rust.parseFile(path: filePath);
-      final format = _determineFormat(filePath);
-      return ParsedDocument(
-        title: rustDoc.title,
-        content: rustDoc.chunks.join('\n\n'),
-        format: format,
-      );
-    } catch (e) {
-      final format = _determineFormat(filePath);
-      final fileName = filePath.split('/').last;
-      return ParsedDocument(
-        title: fileName,
-        content: 'Extracted text from $fileName',
-        format: format,
-      );
+    if (!kIsWeb) {
+      try {
+        await init();
+        final rustDoc = await rust.parseFile(path: filePath);
+        final format = _determineFormat(filePath);
+        return ParsedDocument(
+          title: rustDoc.title,
+          content: rustDoc.chunks.join('\n\n'),
+          format: format,
+        );
+      } catch (_) {}
     }
+    final format = _determineFormat(filePath);
+    final fileName = filePath.split('/').last;
+    return ParsedDocument(
+      title: fileName,
+      content: 'Extracted text from $fileName',
+      format: format,
+    );
   }
 
 

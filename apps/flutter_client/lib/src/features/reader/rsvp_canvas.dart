@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -55,6 +56,7 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
   /// Silently falls back to Dart-computed timing on failure (e.g., web
   /// without SharedArrayBuffer / COOP headers).
   Future<void> _loadRustTimings() async {
+    if (kIsWeb) return;
     try {
       final timings = await rust_api.generateRsvpTimings(
         text: widget.text,

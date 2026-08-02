@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart'
@@ -82,19 +83,26 @@ class _FlashcardViewState extends State<FlashcardView> {
     final c = _cards[_idx];
     int newInterval = c.interval;
     double newEf = c.ef;
-    try {
-      final nowSec = PlatformInt64Util.from(
-          DateTime.now().millisecondsSinceEpoch ~/ 1000);
-      final result = await rust_api.calculateSm2Review(
-        quality: q.clamp(0, 5),
-        currentInterval: PlatformInt64Util.from(c.interval),
-        currentEf: c.ef,
-        currentTimeSec: nowSec,
-      );
-      newInterval = result.$1;
-      newEf = result.$2;
-    } catch (_) {
-      // Fallback: pure-Dart SM-2
+    if (!kIsWeb) {
+      try {
+        final nowSec = PlatformInt64Util.from(
+            DateTime.now().millisecondsSinceEpoch ~/ 1000);
+        final result = await rust_api.calculateSm2Review(
+          quality: q.clamp(0, 5),
+          currentInterval: PlatformInt64Util.from(c.interval),
+          currentEf: c.ef,
+          currentTimeSec: nowSec,
+        );
+        newInterval = result.$1.toInt();
+        newEf = result.$2;
+      } catch (_) {
+        final clamped = q.clamp(0, 5);
+        newEf = (c.ef + (0.1 - (5 - clamped) * (0.08 + (5 - clamped) * 0.02)))
+            .clamp(1.3, 3.5);
+        newInterval =
+            clamped >= 3 ? (c.interval <= 1 ? 6 : (c.interval * newEf).round()) : 1;
+      }
+    } else {
       final clamped = q.clamp(0, 5);
       newEf = (c.ef + (0.1 - (5 - clamped) * (0.08 + (5 - clamped) * 0.02)))
           .clamp(1.3, 3.5);

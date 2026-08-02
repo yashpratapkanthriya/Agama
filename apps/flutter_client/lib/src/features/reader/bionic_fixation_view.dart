@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
@@ -24,6 +25,7 @@ class _BionicFixationViewState extends State<BionicFixationView> {
   }
 
   void _loadRustBionicWords() async {
+    if (kIsWeb) return;
     try {
       final words = await rust_api.generateBionicWords(
         text: widget.text,
