@@ -59,6 +59,7 @@ class _AnnotationViewState extends State<AnnotationView> {
   final _textCtrl = TextEditingController();
   final _noteCtrl = TextEditingController();
   String _query = '';
+  String? _lastSavedFlashcard; // tracks which annotation just had a card created
 
   @override
   void initState() {
@@ -309,24 +310,28 @@ class _AnnotationViewState extends State<AnnotationView> {
           ],
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
           FilledButton(
             onPressed: () {
-              FlashcardStore.items.add(FlashcardItem(
-                id: DateTime.now().millisecondsSinceEpoch.toString(),
-                question: qCtrl.text,
-                answer: aCtrl.text,
-              ));
-              Navigator.pop(ctx);
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Flashcard created for active recall!')),
+              FlashcardStore.addFromHighlight(
+                id: a.id,
+                text: qCtrl.text,
+                note: aCtrl.text,
               );
+              Navigator.pop(ctx, true);
             },
             child: const Text('Save'),
           ),
         ],
       ),
-    );
+    ).then((saved) {
+      if (saved == true && mounted) {
+        setState(() => _lastSavedFlashcard = a.id);
+        Future.delayed(const Duration(seconds: 2), () {
+          if (mounted) setState(() => _lastSavedFlashcard = null);
+        });
+      }
+    });
   }
 
   @override
@@ -475,12 +480,25 @@ class _AnnotationViewState extends State<AnnotationView> {
                                         ),
                                       ),
                                     ),
-                                    IconButton(
-                                      icon: const Icon(Icons.style_outlined, size: 20),
-                                      tooltip: 'Create Flashcard',
-                                      color: theme.colorScheme.onSurfaceVariant,
-                                      onPressed: () => _showFlashcardDialog(a),
-                                    ),
+                                    if (_lastSavedFlashcard == a.id)
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                                        child: Text(
+                                          'Saved ✓',
+                                          style: GoogleFonts.inter(
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.w600,
+                                            color: AgamaTheme.emerald,
+                                          ),
+                                        ),
+                                      )
+                                    else
+                                      IconButton(
+                                        icon: const Icon(Icons.style_outlined, size: 20),
+                                        tooltip: 'Create Flashcard',
+                                        color: theme.colorScheme.onSurfaceVariant,
+                                        onPressed: () => _showFlashcardDialog(a),
+                                      ),
                                   ],
                                 ),
                               ),

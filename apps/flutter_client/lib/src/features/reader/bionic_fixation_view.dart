@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
+import '../../rust/api.dart' as rust_api;
+import '../../rust/models.dart';
 
 class BionicFixationView extends StatefulWidget {
   final String text;
@@ -13,6 +15,25 @@ class BionicFixationView extends StatefulWidget {
 class _BionicFixationViewState extends State<BionicFixationView> {
   int _level = 3;
   double _fontSize = 18;
+  List<BionicWord>? _rustWords;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadRustBionicWords();
+  }
+
+  void _loadRustBionicWords() async {
+    try {
+      final words = await rust_api.generateBionicWords(
+        text: widget.text,
+        level: _level,
+      );
+      if (mounted) setState(() => _rustWords = words);
+    } catch (_) {
+      // Fallback to Dart _split() — no-op
+    }
+  }
 
   ({String bold, String light}) _split(String word) {
     final len = word.length;
@@ -72,34 +93,33 @@ class _BionicFixationViewState extends State<BionicFixationView> {
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 8,
-                      children: words.map((w) {
-                        final p = _split(w);
+                      children: List.generate(words.length, (i) {
+                        final w = words[i];
+                        final useRust = _rustWords != null && i < _rustWords!.length;
+                        final boldPart = useRust ? _rustWords![i].prefix : _split(w).bold;
+                        final lightPart = useRust ? _rustWords![i].suffix : _split(w).light;
                         return RichText(
                           text: TextSpan(
-                            style: GoogleFonts.inter(
-                              fontSize: _fontSize,
-                              height: 1.65,
-                            ),
+                            style: GoogleFonts.inter(fontSize: _fontSize, height: 1.65),
                             children: [
                               TextSpan(
-                                text: p.bold,
+                                text: boldPart,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w800,
                                   color: theme.colorScheme.onSurface,
                                 ),
                               ),
                               TextSpan(
-                                text: p.light,
+                                text: lightPart,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
-                                  color:
-                                      theme.colorScheme.onSurfaceVariant,
+                                  color: theme.colorScheme.onSurfaceVariant,
                                 ),
                               ),
                             ],
                           ),
                         );
-                      }).toList(),
+                      }),
                     ),
                   ),
                 ),
@@ -137,7 +157,10 @@ class _BionicFixationViewState extends State<BionicFixationView> {
                         child: Padding(
                           padding: EdgeInsets.only(right: i < 4 ? 6 : 0),
                           child: GestureDetector(
-                            onTap: () => setState(() => _level = l),
+                            onTap: () {
+                              setState(() => _level = l);
+                              _loadRustBionicWords();
+                            },
                             child: AnimatedContainer(
                               duration: const Duration(milliseconds: 120),
                               height: 36,

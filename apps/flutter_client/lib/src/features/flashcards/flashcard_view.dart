@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
+import '../../rust/api.dart' as rust_api;
 
 class FlashcardItem {
   final String id;
@@ -47,6 +48,25 @@ class FlashcardStore {
       answer: 'SuperMemo SM-2 — interval × EF after each quality rating 0–5',
     ),
   ];
+
+  /// Auto-generates a flashcard from a highlight/annotation.
+  /// Safe to call from annotation_view.dart — no circular import.
+  static void addFromHighlight({
+    required String id,
+    required String text,
+    required String? note,
+  }) {
+    if (items.any((c) => c.id == 'ann_$id')) return; // deduplicate
+    items.insert(
+      0,
+      FlashcardItem(
+        id: 'ann_$id',
+        question:
+            'Recall: "${text.length > 80 ? '${text.substring(0, 80)}\u2026' : text}"',
+        answer: note ?? 'Review the original highlight.',
+      ),
+    );
+  }
 }
 
 class _FlashcardViewState extends State<FlashcardView> {
@@ -56,15 +76,29 @@ class _FlashcardViewState extends State<FlashcardView> {
   bool _revealed = false;
   String? _nextReviewText;
 
-  void _rate(int q) {
+  void _rate(int q) async {
     final c = _cards[_idx];
-    final clamped = q.clamp(0, 5);
-    final newEf =
-        (c.ef + (0.1 - (5 - clamped) * (0.08 + (5 - clamped) * 0.02)))
-            .clamp(1.3, 3.5);
-    final newInterval =
-        clamped >= 3 ? (c.interval <= 1 ? 6 : (c.interval * newEf).round()) : 1;
-
+    int newInterval = c.interval;
+    double newEf = c.ef;
+    try {
+      final nowSec = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+      final result = await rust_api.calculateSm2Review(
+        quality: q.clamp(0, 5),
+        currentInterval: c.interval,
+        currentEf: c.ef,
+        currentTimeSec: nowSec,
+      );
+      newInterval = result.$1.toInt();
+      newEf = result.$2;
+    } catch (_) {
+      // Fallback: pure-Dart SM-2
+      final clamped = q.clamp(0, 5);
+      newEf = (c.ef + (0.1 - (5 - clamped) * (0.08 + (5 - clamped) * 0.02)))
+          .clamp(1.3, 3.5);
+      newInterval =
+          clamped >= 3 ? (c.interval <= 1 ? 6 : (c.interval * newEf).round()) : 1;
+    }
+    if (!mounted) return;
     setState(() {
       c.ef = newEf;
       c.interval = newInterval;
