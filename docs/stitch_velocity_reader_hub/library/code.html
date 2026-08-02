@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scholarly - Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400..700;1,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-high": "#dee8ff", "inverse-surface": "#263142", "surface-container": "#e7eeff", "on-tertiary-fixed-variant": "#454748", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#364a51", "surface-dim": "#cfdaf1", "surface-container-low": "#f0f3ff", "primary-fixed": "#d0e6ef", "on-primary-container": "#81969e", "inverse-primary": "#b4cad3", "inverse-on-surface": "#ebf1ff", "surface-container-highest": "#d8e3fa", "on-tertiary-fixed": "#191c1d", "on-secondary-fixed-variant": "#783200", secondary: "#9d4300", "on-error-container": "#93000a", error: "#ba1a1a", "on-error": "#ffffff", "secondary-fixed-dim": "#ffb690", outline: "#73787a", tertiary: "#151819", "primary-container": "#1a2e35", "tertiary-fixed": "#e1e3e4", "surface-variant": "#d8e3fa", primary: "#041920", "secondary-fixed": "#ffdbca", "on-background": "#111c2c", "error-container": "#ffdad6", "tertiary-container": "#292c2d", surface: "#f9f9ff", "on-primary-fixed": "#091e25", "on-primary": "#ffffff", "primary-fixed-dim": "#b4cad3", "tertiary-fixed-dim": "#c5c7c8", "on-secondary-fixed": "#341100", "on-tertiary-container": "#919394", "surface-bright": "#f9f9ff", "surface-tint": "#4d6169", "outline-variant": "#c2c7ca", "on-surface-variant": "#42484a", "surface-container-lowest": "#ffffff", "on-secondary-container": "#5c2400", background: "#f9f9ff", "secondary-container": "#fd761a", "on-surface": "#111c2c", "on-secondary": "#ffffff"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "24px", "container-max": "800px", unit: "8px", "margin-desktop": "64px", "margin-mobile": "16px", "reading-padding": "40px"}, fontFamily: {"display-reading": ["Literata"], "headline-md": ["\"Source Serif 4\""], "stats-num": ["Inter"], "label-caps": ["Inter"], "body-lg": ["Literata"], "body-md": ["Literata"], "headline-lg": ["\"Source Serif 4\""], headline: ["\"Source Serif 4\""], display: ["\"Source Serif 4\""], body: ["Literata"], label: ["Inter"]}, fontSize: {"display-reading": ["40px", {lineHeight: "56px", letterSpacing: "-0.01em", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "stats-num": ["24px", {lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "500"}], "label-caps": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "30px", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "26px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .book-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .book-card:active {
+            transform: scale(0.98);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim w-full top-0 sticky z-40 border-b border-outline-variant dark:border-outline">
+<div class="flex items-center justify-between px-gutter h-16 w-full max-w-container-max mx-auto">
+<div class="cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">menu</span>
+</div>
+<h1 class="Scholarly font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">Scholarly</h1>
+<div class="cursor-pointer active:opacity-70">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional, minimalist studio portrait of a young academic woman with a neutral expression, wearing thin-framed glasses and a black turtleneck. The lighting is soft and directional against a clean, off-white background. The aesthetic is scholarly, disciplined, and calm, echoing the Scholarly brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKywpFyoHqw7hzmKnrXdHf3pPKZtUJKl38q5LDtV42PITE4GtcinDxIVUv6cE-s3H5XMbDD08FCpYTiZpdLLEMJeJpUz91BOgEbi6LgO8a0x3R2lUSpgvqcdDcKoyes77Fbp11XuhxRf_2BqYJfZZ4_Q92v-HCMG3vV5vBtnaG1mXawGhgBkWg2DQ66XgfIO4TbvxD7rJedFmB2uFO670QxFtQd9vgp7Jx0Kwx36-doDWNp6SY-Adg"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-0 pt-8">
+<!-- Recent Reads Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-primary">Recent Reads</h2>
+<button class="font-label-caps text-label-caps text-secondary uppercase tracking-widest hover:opacity-70 transition-opacity">View All</button>
+</div>
+<div class="flex overflow-x-auto gap-6 no-scrollbar pb-4 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<!-- Book Item 1 -->
+<div class="flex-none w-48 book-card cursor-pointer">
+<div class="aspect-[2/3] bg-surface-container-low border border-outline-variant rounded mb-4 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="The book cover for 'The Republic' by Plato. A minimalist, scholarly design featuring a single geometric marble pillar icon centered on a deep slate gray background. The typography is elegant, using a refined serif font in a light cream color. The lighting on the pillar is subtle and atmospheric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8woKT685oNF3uISW-Yv6NhI0N14sQfMsi3gXIwjMZOe1cH8lSF5Isi6uHJO52Y-2B3qP60F_XRokY4tTPhiknKkeyw4y2Slgo9WZkaklKObU2CVAg-aAN_cvH14I3bGii0i3tO3Cc4W_xn73wo91RGef1jGbUCmJhtG5_-yrl9-A8Q1tnDtAMPqTgQFwJtRp0PStiiSQgtn6RN4-uhFbndbZeAcxVi9e4Sa26ps6wqEwSXahUTn6B"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-primary line-clamp-1">The Republic</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Plato</p>
+<div class="pt-2">
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 65%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Book Item 2 -->
+<div class="flex-none w-48 book-card cursor-pointer">
+<div class="aspect-[2/3] bg-surface-container-low border border-outline-variant rounded mb-4 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="The book cover for 'Meditations' by Marcus Aurelius. A clean, intellectual aesthetic with a central illustration of a laurel wreath in Scholarly Blue. The background is a textured off-white paper. Typography is a classic, high-contrast serif font, conveying academic rigor and calm discipline." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOIYG3tb0gFTQji6EJV7fBH3ug5k6jQf0uaN5maMfsEsLF6y6tLG3i9c_DPAA2hPwrBX759mzi5Ob1VJKSItrXyOMPkkIC4S7_qxPUWpaF-0W4DCs9GJVRexINc05k29Ji8Ggl91LejJ_NgBb0dgHJ3WlN6zSY9oT9Hc0zkZKKFmiQTYgqGkvxloFuZzwa-jyvsIyxYJhK9yAg6-UgkpWds0MX6xc0lbJDZ7jF3JC3A14XH9xM6298"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-primary line-clamp-1">Meditations</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Marcus Aurelius</p>
+<div class="pt-2">
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 22%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Book Item 3 -->
+<div class="flex-none w-48 book-card cursor-pointer">
+<div class="aspect-[2/3] bg-surface-container-low border border-outline-variant rounded mb-4 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A scholarly PDF cover for a research paper titled 'Quantum Entanglement in Macroscopic Systems'. The layout is strictly minimalist, resembling a university press journal. White background with sharp black typography and a small, complex technical diagram in the lower third using thin Scholarly Blue lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGaqyXFmoZJ5GJNJPw9yqlnIqzqxjYHWXYjB7FGs1A-9oeD7156t9WIYM5nOb5RpsC366pU5fkG2sq8lHnnrgIX24jriVV50g0PTsbcg7RM_5zs-Lp0XU7eaGpGIkyX5c1gHmiaww0NZ3hNVxnRqFyPpZJL0zyeE8zSO-OowxZxC3y1hwazMZRzk36umxwwG1ljz4XxtQ4YL8tpzNS_fq_pFNKTihTXh1Ci6psyQySNQLRJIszdJjy"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-primary line-clamp-1">Quantum Entanglement</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Dr. Elias Vance</p>
+<div class="pt-2">
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- My Collection Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-primary">My Collection</h2>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">grid_view</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">filter_list</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6">
+<!-- Grid Item 1 -->
+<div class="book-card cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low border border-outline-variant rounded mb-3 overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="A book cover for 'Beyond Good and Evil' by Friedrich Nietzsche. Minimalist graphic of a scale tipped to one side. Deep Teal background with cream text. High-end, intellectual design focused on structural whitespace and precise typography for the Scholarly app library." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD69OuLwg4Pgah_ayxm0Rn2QKkagx7CRbc0Y_pzNPCQmBLtwsRCE1phdZ1ccMvt3ccD3LdQ6EuQcvi4UgdSwRcau5Mp2VXtUBuu8zYyWN3atZS9ixaD4f_SGqPqx9ipkC_dVLuXORocolyLNVBIQUZTpo9HK9wDpua0wSNQMPXCOC1dHPCMLvdWiIgWMBSFwQRjfj_U83SiYiKkzzbuF6uRFqgk6v3f5UvX44Ej1TZsY0F2L9GWV_Mx"/>
+<div class="absolute top-2 right-2 bg-primary/80 text-white px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter">EPUB</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-md text-primary line-clamp-1">Beyond Good and Evil</h3>
+<p class="font-body-md text-on-surface-variant text-xs">F. Nietzsche</p>
+</div>
+</div>
+<!-- Grid Item 2 -->
+<div class="book-card cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low border border-outline-variant rounded mb-3 overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="A modern academic book cover for 'Digital Ethics in AI'. Featuring a clean, abstract pattern of intersecting lines in soft blue and gray tones. The title is set in a bold, disciplined sans-serif font. The layout is balanced and calm, representing the intellectual rigor of the Scholarly platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbFmcCSrcZ_4YV7ygaX2Ez6kgonlvYif-R4TshrpZsrIhGGhwL8DAAjnqH0blr38CZR_t-N35PzEq9HoHGdKEBpeAi0cqTr5HVFKqqWXj5oAcy8Dqj3lNxFz5ejVGGjtbGQ5hAGq_chlkUfOd1qXVaEORsQbZmHJtAGodtOcol_TZ3FitnFVYYdmo5pIdq2-DXeowHxlGsPYSCqwI9jQgCho_gDktmaLe6OhVvtLe5CDXC4ze4UW8p"/>
+<div class="absolute top-2 right-2 bg-error/80 text-white px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter">PDF</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-md text-primary line-clamp-1">Digital Ethics in AI</h3>
+<p class="font-body-md text-on-surface-variant text-xs">Sarah Jenkins</p>
+</div>
+</div>
+<!-- Grid Item 3 -->
+<div class="book-card cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low border border-outline-variant rounded mb-3 overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="Book cover for 'The Art of War' by Sun Tzu. Minimalist brush-stroke calligraphy of a dragon in deep slate on a light gray paper texture background. The title is vertical on the left side in an elegant serif font. The overall look is disciplined and high-end minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD69eHtEatnB578iVF5NVBU27AqYtUVKVbv9LKH0u2DUZnm3ab0LvwHenQx619Osc6VSe05ofqdr9dhcdzog2a2sGMis8KMMYhOkzgOdZEpFTZBK38hV5neTCePkZfMthEP3S5S7kmgaMXkiANzoyjCxulfAdRfnGBjcwfjnmM-vznKWtMAU_MkW-rEhARt7WOlOdm-ST6hXeOD03fBSpho3TxlVye8HcAQWiXEIBwA5tr6m5s9jFf"/>
+<div class="absolute top-2 right-2 bg-primary/80 text-white px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter">EPUB</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-md text-primary line-clamp-1">The Art of War</h3>
+<p class="font-body-md text-on-surface-variant text-xs">Sun Tzu</p>
+</div>
+</div>
+<!-- Grid Item 4 -->
+<div class="book-card cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low border border-outline-variant rounded mb-3 overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="A research journal cover 'Neuroscience Today'. A microscopic view of a single neuron rendered as clean, high-contrast digital art in Scholarly Blue. Typography is technical and precise. The composition is airy and sophisticated, fitting a scholarly speed-reading app's minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmW-CXvDzt9RjpA88DbuXZSP_ajvYKAYTsjnlvwoYoAq_QtC4zj4NbjuAMz6BOgFfmY2NIw3ltg2oGSYhcrX4iLR5zLYRk_oMMBa2P47VPVYbDzn-MMPGn929D6pAPOcb4NaP1dSd9Lep7n8PDuLfc3rZ0EOcZl8BAq2JKl4vU0IzMivF_lwe58tK_EIg62YW5lDhr6Gd1lbucT62DkR4Lb6l-t7CBEW0dIFWZZxTMLLhWGern19-l"/>
+<div class="absolute top-2 right-2 bg-error/80 text-white px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter">PDF</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-md text-primary line-clamp-1">Neuroscience Today</h3>
+<p class="font-body-md text-on-surface-variant text-xs">Academic Press</p>
+</div>
+</div>
+<!-- Grid Item 5 -->
+<div class="book-card cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low border border-outline-variant rounded mb-3 overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="The book cover for 'Pragmatism' by William James. A single, perfectly centered circle divided into tonal layers of Scholarly Blue. Minimalist white typography. The design feels intellectual, calm, and grounded, using structural whitespace to guide the viewer's focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgB-BoVH8b1YYQOwYUfcsMMu_TKr-HeiR8rtbpEjQBoglTqcfR3z3blOJ1mFCLS2jno_FcFBuhE1CKMw6OWIF6roSNePbH7Z1Izxw2ocPAkKVaJZkJzmRNOE6FUxcOuk1tFx4KC2s-uRTlaMRqNlBialzO-hyt857n5PC5SEw4vFxciruqak9Bg6S0eXVmlMMzxSRfFRwdp3MjyImHb_0gji2eWDowbygHZ8YWHPI_G4V1YN1BpJ9p"/>
+<div class="absolute top-2 right-2 bg-primary/80 text-white px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter">EPUB</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-md text-primary line-clamp-1">Pragmatism</h3>
+<p class="font-body-md text-on-surface-variant text-xs">William James</p>
+</div>
+</div>
+<!-- Grid Item 6 -->
+<div class="book-card cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low border border-outline-variant rounded mb-3 flex flex-col items-center justify-center p-6 text-center group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline mb-2 group-hover:scale-110 transition-transform">add_circle</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Import New File</p>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-md text-primary opacity-0">-</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-20 right-6 md:right-12 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-surface dark:bg-surface-dim px-margin-mobile border-t border-outline-variant dark:border-outline">
+<!-- Library (Active) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">local_library</span>
+<span class="font-label-caps text-label-caps">Library</span>
+</a>
+<!-- Speed -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-label-caps text-label-caps">Speed</span>
+</a>
+<!-- Classic -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-caps text-label-caps">Classic</span>
+</a>
+<!-- Stats -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-label-caps text-label-caps">Stats</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interactions for the cards
+        document.querySelectorAll('.book-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Future navigation logic would go here
+                console.log('Opening reader for item');
+            });
+        });
+
+        // FAB ripple/scale effect on scroll (optional atmospheric touch)
+        let lastScrollTop = 0;
+        const fab = document.querySelector('button.fixed');
+        window.addEventListener('scroll', () => {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop) {
+                // Scrolling down
+                fab.style.transform = 'translateY(100px)';
+                fab.style.opacity = '0';
+            } else {
+                // Scrolling up
+                fab.style.transform = 'translateY(0)';
+                fab.style.opacity = '1';
+            }
+            lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
+    </script>
+</body></html>

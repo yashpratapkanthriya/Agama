@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scholarly - Upload &amp; Discover</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Source+Serif+4:ital,opsz,wght@0,200..900;1,200..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-high": "#dee8ff", "inverse-surface": "#263142", "surface-container": "#e7eeff", "on-tertiary-fixed-variant": "#454748", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#364a51", "surface-dim": "#cfdaf1", "surface-container-low": "#f0f3ff", "primary-fixed": "#d0e6ef", "on-primary-container": "#81969e", "inverse-primary": "#b4cad3", "inverse-on-surface": "#ebf1ff", "surface-container-highest": "#d8e3fa", "on-tertiary-fixed": "#191c1d", "on-secondary-fixed-variant": "#783200", secondary: "#9d4300", "on-error-container": "#93000a", error: "#ba1a1a", "on-error": "#ffffff", "secondary-fixed-dim": "#ffb690", outline: "#73787a", tertiary: "#151819", "primary-container": "#1a2e35", "tertiary-fixed": "#e1e3e4", "surface-variant": "#d8e3fa", primary: "#041920", "secondary-fixed": "#ffdbca", "on-background": "#111c2c", "error-container": "#ffdad6", "tertiary-container": "#292c2d", surface: "#f9f9ff", "on-primary-fixed": "#091e25", "on-primary": "#ffffff", "primary-fixed-dim": "#b4cad3", "tertiary-fixed-dim": "#c5c7c8", "on-secondary-fixed": "#341100", "on-tertiary-container": "#919394", "surface-bright": "#f9f9ff", "surface-tint": "#4d6169", "outline-variant": "#c2c7ca", "on-surface-variant": "#42484a", "surface-container-lowest": "#ffffff", "on-secondary-container": "#5c2400", background: "#f9f9ff", "secondary-container": "#fd761a", "on-surface": "#111c2c", "on-secondary": "#ffffff"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "24px", "container-max": "800px", unit: "8px", "margin-desktop": "64px", "margin-mobile": "16px", "reading-padding": "40px"}, fontFamily: {"display-reading": ["Literata"], "headline-md": ["\"Source Serif 4\""], "stats-num": ["Inter"], "label-caps": ["Inter"], "body-lg": ["Literata"], "body-md": ["Literata"], "headline-lg": ["\"Source Serif 4\""], headline: ["\"Source Serif 4\""], display: ["\"Source Serif 4\""], body: ["Literata"], label: ["Inter"]}, fontSize: {"display-reading": ["40px", {lineHeight: "56px", letterSpacing: "-0.01em", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "stats-num": ["24px", {lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "500"}], "label-caps": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "30px", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "26px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-item .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            background-color: #f9f9ff;
+            color: #111c2c;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c2c7ca;
+            border-radius: 10px;
+        }
+        .drag-active {
+            border-color: #026783 !important;
+            background-color: #e7eeff !important;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline z-50">
+<div class="flex items-center justify-between px-gutter h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">menu</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">Scholarly</h1>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">person</span>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-8 pb-32">
+<!-- Upload Section -->
+<section class="mb-12">
+<div class="flex flex-col gap-2 mb-6">
+<h2 class="font-headline-md text-headline-md text-primary">Import Documents</h2>
+<p class="text-on-surface-variant font-body-md opacity-80">Add PDFs, ePubs, or text files to your scholarly library.</p>
+</div>
+<div class="relative group cursor-pointer border-2 border-dashed border-outline-variant bg-surface-container-lowest rounded-xl p-12 transition-all duration-300 hover:border-secondary hover:bg-surface-container-low flex flex-col items-center justify-center text-center" id="drop-zone">
+<input accept=".pdf,.epub,.txt" class="absolute inset-0 opacity-0 cursor-pointer" multiple="" type="file"/>
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">upload_file</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Drag and drop files here</h3>
+<p class="text-on-surface-variant font-body-md">or tap to browse your system</p>
+<div class="mt-6 flex gap-4">
+<span class="flex items-center gap-1 text-label-caps font-label-caps text-outline"><span class="material-symbols-outlined text-xs">check_circle</span> PDF</span>
+<span class="flex items-center gap-1 text-label-caps font-label-caps text-outline"><span class="material-symbols-outlined text-xs">check_circle</span> EPUB</span>
+<span class="flex items-center gap-1 text-label-caps font-label-caps text-outline"><span class="material-symbols-outlined text-xs">check_circle</span> TXT</span>
+</div>
+</div>
+</section>
+<!-- Discovery Section -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-md text-headline-md text-primary">Discover</h2>
+<p class="text-on-surface-variant font-body-md opacity-80">Public domain classics and research papers.</p>
+</div>
+<button class="flex items-center gap-2 text-secondary font-label-caps text-label-caps hover:underline">
+                    EXPLORE ALL <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Bento-ish Grid for Discover -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Recommendation Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group cursor-pointer transition-colors hover:bg-surface-container">
+<div class="h-48 relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A minimalist and high-contrast digital painting of an ancient Greek philosopher's marble bust set against a deep scholarly blue background. The lighting is dramatic and moody, casting sharp shadows and highlighting the texture of the stone. The style is academic, serene, and intellectual, echoing a premium digital library aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBfCl_3b8Ac7Ub-mCtJvxyl1XReRb6er8wo1NZe305LuvJEvKkGq0KTThhvJ4_kvlQvB0dDhv-2o2me_NvV4lrtb9o08BjoyCkP4NHcEBdYqTvUatXy8UibNRXa9Yobp24ACh-wpW2FC1yMcugz56u9N6ZK2F3p1NmuK6QCy93f06N5s4gbHPFqLuus9eoFa5gbh5nWKcY8EJ_WcSNV1TRhYK7tQRlSn4jh_IZXLkLDlzhQZb2gc3e')"></div>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-caps font-label-caps text-secondary bg-secondary-container px-2 py-0.5 rounded">PHILOSOPHY</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary">file_download</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">The Republic</h4>
+<p class="text-on-surface-variant font-body-md line-clamp-2">Plato's seminal work on justice, the order and character of the just city-state, and the just man.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant flex items-center gap-4 text-outline font-label-caps text-label-caps">
+<span>284 PAGES</span>
+<span>•</span>
+<span>PD CLASSIC</span>
+</div>
+</div>
+</div>
+<!-- Recommendation Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group cursor-pointer transition-colors hover:bg-surface-container">
+<div class="h-48 relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="An abstract visualization of cosmic structures and light waves, featuring delicate thin lines and deep teal nebula-like gradients. The visual is precise and scientific, mimicking high-resolution telescope data. The aesthetic is modern, scholarly, and deeply focused, designed for an intellectual reading environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRSjyGugLXlhU0OyVVgRIR6wRgLGnelaAGTlkJIxcwjJV0bTYQtBMyL5kAeNdJB6aVtWpMs30QPrh4Aa9-vypmZbjlbY2wgKwqdGdjWD2EFpoIrYNb6B2f3gt83cXWwMLRl6jpf2Ybxn5mygINTG0VYXUsZ-uHBK5Kv1-7-PQWM1hrysVizyBSBhP2zOU-cauKGqEgBfbi2oNWyqzqnj92VH1pvAr2FzX2DfKM07WOapmOjsJyR87X')"></div>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-caps font-label-caps text-secondary bg-secondary-container px-2 py-0.5 rounded">ASTRONOMY</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary">file_download</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Sidereus Nuncius</h4>
+<p class="text-on-surface-variant font-body-md line-clamp-2">Galileo Galilei's short astronomical treatise published in New Latin in March 1610.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant flex items-center gap-4 text-outline font-label-caps text-label-caps">
+<span>142 PAGES</span>
+<span>•</span>
+<span>HISTORICAL</span>
+</div>
+</div>
+</div>
+<!-- List Item 1 -->
+<div class="md:col-span-2 flex items-center gap-6 p-4 bg-surface-container-low border border-outline-variant rounded-lg hover:border-secondary transition-colors cursor-pointer group">
+<div class="w-16 h-20 bg-surface-container-highest flex-shrink-0 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-primary opacity-30 text-3xl">menu_book</span>
+</div>
+<div class="flex-grow">
+<h5 class="font-headline-md text-headline-md text-primary leading-tight group-hover:text-secondary transition-colors">Meditationes de Prima Philosophia</h5>
+<p class="text-on-surface-variant font-body-md opacity-70">René Descartes (1641)</p>
+</div>
+<div class="hidden sm:flex flex-col items-end gap-2 pr-4">
+<span class="font-label-caps text-label-caps text-outline">LATIN EPUB</span>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-secondary transition-all">
+<span class="material-symbols-outlined text-xl">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="md:col-span-2 flex items-center gap-6 p-4 bg-surface-container-low border border-outline-variant rounded-lg hover:border-secondary transition-colors cursor-pointer group">
+<div class="w-16 h-20 bg-surface-container-highest flex-shrink-0 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-primary opacity-30 text-3xl">article</span>
+</div>
+<div class="flex-grow">
+<h5 class="font-headline-md text-headline-md text-primary leading-tight group-hover:text-secondary transition-colors">On the Origin of Species</h5>
+<p class="text-on-surface-variant font-body-md opacity-70">Charles Darwin (1859)</p>
+</div>
+<div class="hidden sm:flex flex-col items-end gap-2 pr-4">
+<span class="font-label-caps text-label-caps text-outline">ENGLISH PDF</span>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-secondary transition-all">
+<span class="material-symbols-outlined text-xl">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-surface dark:bg-surface-dim px-margin-mobile border-t border-outline-variant dark:border-outline">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">local_library</span>
+<span class="font-label-caps text-label-caps">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-label-caps text-label-caps">Speed</span>
+</a>
+<a class="active-nav-item flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-caps text-label-caps">Classic</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-label-caps text-label-caps">Stats</span>
+</a>
+</nav>
+<script>
+        const dropZone = document.getElementById('drop-zone');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => {
+                dropZone.classList.add('drag-active');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => {
+                dropZone.classList.remove('drag-active');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            // Functional UI logic for visual feedback
+            if (files.length > 0) {
+                const headline = dropZone.querySelector('h3');
+                headline.innerText = `${files.length} file(s) ready for processing`;
+                headline.classList.add('text-secondary');
+            }
+        }
+    </script>
+</body></html>

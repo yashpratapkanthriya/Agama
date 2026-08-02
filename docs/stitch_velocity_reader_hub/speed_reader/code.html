@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Literata:ital,wght@0,400;0,500;0,600;1,400&amp;family=Source+Serif+4:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Literata:wght@100..900&amp;family=Source+Serif+4:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-word-highlight {
+            position: relative;
+        }
+        .active-word-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #026783;
+            opacity: 0.3;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            background: #d8e3fa;
+            border-radius: 2px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #026783;
+            margin-top: -6px;
+            cursor: pointer;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-high": "#dee8ff", "inverse-surface": "#263142", "surface-container": "#e7eeff", "on-tertiary-fixed-variant": "#454748", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#364a51", "surface-dim": "#cfdaf1", "surface-container-low": "#f0f3ff", "primary-fixed": "#d0e6ef", "on-primary-container": "#81969e", "inverse-primary": "#b4cad3", "inverse-on-surface": "#ebf1ff", "surface-container-highest": "#d8e3fa", "on-tertiary-fixed": "#191c1d", "on-secondary-fixed-variant": "#783200", secondary: "#9d4300", "on-error-container": "#93000a", error: "#ba1a1a", "on-error": "#ffffff", "secondary-fixed-dim": "#ffb690", outline: "#73787a", tertiary: "#151819", "primary-container": "#1a2e35", "tertiary-fixed": "#e1e3e4", "surface-variant": "#d8e3fa", primary: "#041920", "secondary-fixed": "#ffdbca", "on-background": "#111c2c", "error-container": "#ffdad6", "tertiary-container": "#292c2d", surface: "#f9f9ff", "on-primary-fixed": "#091e25", "on-primary": "#ffffff", "primary-fixed-dim": "#b4cad3", "tertiary-fixed-dim": "#c5c7c8", "on-secondary-fixed": "#341100", "on-tertiary-container": "#919394", "surface-bright": "#f9f9ff", "surface-tint": "#4d6169", "outline-variant": "#c2c7ca", "on-surface-variant": "#42484a", "surface-container-lowest": "#ffffff", "on-secondary-container": "#5c2400", background: "#f9f9ff", "secondary-container": "#fd761a", "on-surface": "#111c2c", "on-secondary": "#ffffff"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "24px", "container-max": "800px", unit: "8px", "margin-desktop": "64px", "margin-mobile": "16px", "reading-padding": "40px"}, fontFamily: {"display-reading": ["Literata"], "headline-md": ["\"Source Serif 4\""], "stats-num": ["Inter"], "label-caps": ["Inter"], "body-lg": ["Literata"], "body-md": ["Literata"], "headline-lg": ["\"Source Serif 4\""], headline: ["\"Source Serif 4\""], display: ["\"Source Serif 4\""], body: ["Literata"], label: ["Inter"]}, fontSize: {"display-reading": ["40px", {lineHeight: "56px", letterSpacing: "-0.01em", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "stats-num": ["24px", {lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "500"}], "label-caps": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "30px", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "26px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline z-50">
+<div class="flex items-center justify-between px-gutter h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">menu</span>
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">Scholarly</h1>
+</div>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant cursor-pointer active:opacity-70">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist studio portrait of a professional scholar with soft side lighting, using a muted tonal palette of greys and deep blues. The style is sophisticated and academic, with a shallow depth of field focusing on the subject's thoughtful expression, perfectly matching the Scholarly Minimalist brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcEqFD_4XvY9d3eHPptroo2ojZdxlnFuByuuoyFKIFsl2Bh4nySeMpDl2rFAstt8Y-CdC4d4_JlqTNuikxj2FvzvSTdvf1ZbpbJRk50bOb5-lD6V4LsdcwpPjo4CYEDdw8wkUSjHwQ41ZAHaG-ZhN3yoaQeA-sTAVeMRJVzG-s7o46xRXVwkZCqfip7ltE1oQV6a_bbi85QcjQmzKyawQfeAcH0V59F8is0oF1vN3VBhUspPBKVz4p"/>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+<!-- RSVP Reading Interface Container -->
+<div class="w-full relative flex flex-col items-center space-y-16">
+<!-- Book Metadata -->
+<div class="text-center space-y-1">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Currently Reading</p>
+<h2 class="font-headline-md text-headline-md text-primary">The Architecture of Intelligence</h2>
+</div>
+<!-- RSVP Word Display Box -->
+<div class="relative w-full aspect-[21/9] flex items-center justify-center bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden group">
+<!-- Visual Anchor Points (Subtle markers for eye focus) -->
+<div class="absolute top-0 bottom-0 left-1/2 w-px bg-secondary/10 -translate-x-1/2"></div>
+<div class="relative z-10 text-center transition-all duration-75" id="rsvp-container">
+<span class="font-display-reading text-display-reading text-primary active-word-highlight" id="current-word">Welcome</span>
+</div>
+<!-- Reading Progress Bar (Contextual to word area) -->
+<div class="absolute bottom-0 left-0 w-full h-1 bg-surface-container">
+<div class="h-full bg-secondary transition-all duration-300" id="reading-progress" style="width: 34%;"></div>
+</div>
+</div>
+<!-- Reading Controls Cluster -->
+<div class="w-full max-w-md space-y-10">
+<!-- Transport Controls -->
+<div class="flex items-center justify-between px-8">
+<button class="p-4 rounded-full text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-all active:scale-90" id="btn-rewind">
+<span class="material-symbols-outlined text-3xl">replay_10</span>
+</button>
+<button class="p-6 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-all active:scale-95 shadow-sm" id="btn-play-pause">
+<span class="material-symbols-outlined text-4xl" id="play-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<button class="p-4 rounded-full text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-all active:scale-90" id="btn-ff">
+<span class="material-symbols-outlined text-3xl">forward_10</span>
+</button>
+</div>
+<!-- WPM Controller -->
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Reading Speed</label>
+<div class="flex items-baseline gap-1">
+<span class="font-stats-num text-stats-num text-primary" id="wpm-value">450</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">WPM</span>
+</div>
+</div>
+<input class="w-full cursor-pointer" id="wpm-slider" max="1000" min="200" step="50" type="range" value="450"/>
+<div class="flex justify-between text-[10px] font-label-caps text-outline uppercase tracking-tighter">
+<span>Academic (200)</span>
+<span>Skimming (1000)</span>
+</div>
+</div>
+</div>
+<!-- Reading Stats / Context -->
+<div class="grid grid-cols-3 gap-8 w-full py-6 border-t border-outline-variant/20">
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1">REMAINING</span>
+<span class="font-stats-num text-xl text-primary">14:20</span>
+</div>
+<div class="flex flex-col items-center border-x border-outline-variant/20">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1">CHAPTER</span>
+<span class="font-stats-num text-xl text-primary">04</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1">FOCUS LEVEL</span>
+<span class="font-stats-num text-xl text-primary">82%</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-surface dark:bg-surface-dim px-margin-mobile border-t border-outline-variant dark:border-outline">
+<!-- Library -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">local_library</span>
+<span class="font-label-caps text-label-caps mt-1">Library</span>
+</a>
+<!-- Speed (Active) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-caps text-label-caps mt-1">Speed</span>
+</a>
+<!-- Classic -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-caps text-label-caps mt-1">Classic</span>
+</a>
+<!-- Stats -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-label-caps text-label-caps mt-1">Stats</span>
+</a>
+</nav>
+<script>
+        const words = "In the heart of the digital age, the concept of intelligence has undergone a profound transformation. We are no longer mere observers of information but active architects of our own cognitive environments. The speed at which we process data determines our ability to synthesize knowledge and create meaning. Scholarly is designed to facilitate this flow state, where words become thoughts and thoughts become insights without the friction of traditional reading barriers.".split(" ");
+        
+        let currentIndex = 0;
+        let isPlaying = false;
+        let timer = null;
+        let wpm = 450;
+
+        const wordDisplay = document.getElementById('current-word');
+        const playBtn = document.getElementById('btn-play-pause');
+        const playIcon = document.getElementById('play-icon');
+        const progressBar = document.getElementById('reading-progress');
+        const wpmSlider = document.getElementById('wpm-slider');
+        const wpmValue = document.getElementById('wpm-value');
+        const rewindBtn = document.getElementById('btn-rewind');
+        const ffBtn = document.getElementById('btn-ff');
+
+        function updateWord() {
+            if (currentIndex >= words.length) {
+                pause();
+                currentIndex = 0;
+                return;
+            }
+            wordDisplay.textContent = words[currentIndex];
+            const progress = ((currentIndex + 1) / words.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            currentIndex++;
+        }
+
+        function play() {
+            isPlaying = true;
+            playIcon.textContent = 'pause';
+            const interval = (60 / wpm) * 1000;
+            timer = setInterval(updateWord, interval);
+        }
+
+        function pause() {
+            isPlaying = false;
+            playIcon.textContent = 'play_arrow';
+            clearInterval(timer);
+        }
+
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) pause();
+            else play();
+        });
+
+        wpmSlider.addEventListener('input', (e) => {
+            wpm = e.target.value;
+            wpmValue.textContent = wpm;
+            if (isPlaying) {
+                pause();
+                play();
+            }
+        });
+
+        rewindBtn.addEventListener('click', () => {
+            currentIndex = Math.max(0, currentIndex - 10);
+            updateWord();
+        });
+
+        ffBtn.addEventListener('click', () => {
+            currentIndex = Math.min(words.length - 1, currentIndex + 10);
+            updateWord();
+        });
+
+        // Initialize first word
+        wordDisplay.textContent = words[0];
+    </script>
+</body></html>

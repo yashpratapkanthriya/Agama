@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'theme.dart';
+import 'scholarly_theme.dart';
 import '../features/library/library_view.dart';
 
 final ValueNotifier<ThemeMode> themeModeNotifier =
-    ValueNotifier<ThemeMode>(ThemeMode.light);
+    ValueNotifier<ThemeMode>(ThemeMode.dark);
 
 class AgamaApp extends StatelessWidget {
   const AgamaApp({super.key});
@@ -22,6 +22,9 @@ class AgamaApp extends StatelessWidget {
     if (path.contains('analytics') || fragment.contains('analytics')) {
       return const LibraryView(initialTab: 2);
     }
+    if (path.contains('settings') || fragment.contains('settings')) {
+      return const LibraryView(initialTab: 3);
+    }
     return const LibraryView(initialTab: 0);
   }
 
@@ -34,8 +37,8 @@ class AgamaApp extends StatelessWidget {
           title: 'Agama',
           debugShowCheckedModeBanner: false,
           themeMode: currentMode,
-          theme: AgamaTheme.light(),
-          darkTheme: AgamaTheme.dark(),
+          theme: ScholarlyTheme.light(),
+          darkTheme: ScholarlyTheme.dark(),
           onGenerateRoute: (settings) {
             final name = settings.name ?? '';
             if (name.contains('knowledge')) {

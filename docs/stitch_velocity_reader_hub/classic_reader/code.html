@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scholarly - Classic Reader</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:opsz,wght@7..72,400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reader-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* Custom smooth transition for controls overlay */
+        .controls-overlay {
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hidden-controls {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-8px);
+        }
+        .hidden-nav {
+            opacity: 0;
+            pointer-events: none;
+        }
+        /* Notebook style inputs as per design system */
+        .notebook-input {
+            border: none;
+            border-bottom: 1px solid #c2c7ca;
+            background: transparent;
+            border-radius: 0;
+        }
+        .notebook-input:focus {
+            outline: none;
+            border-bottom-color: #041920;
+            box-shadow: none;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-high": "#dee8ff", "inverse-surface": "#263142", "surface-container": "#e7eeff", "on-tertiary-fixed-variant": "#454748", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#364a51", "surface-dim": "#cfdaf1", "surface-container-low": "#f0f3ff", "primary-fixed": "#d0e6ef", "on-primary-container": "#81969e", "inverse-primary": "#b4cad3", "inverse-on-surface": "#ebf1ff", "surface-container-highest": "#d8e3fa", "on-tertiary-fixed": "#191c1d", "on-secondary-fixed-variant": "#783200", secondary: "#9d4300", "on-error-container": "#93000a", error: "#ba1a1a", "on-error": "#ffffff", "secondary-fixed-dim": "#ffb690", outline: "#73787a", tertiary: "#151819", "primary-container": "#1a2e35", "tertiary-fixed": "#e1e3e4", "surface-variant": "#d8e3fa", primary: "#041920", "secondary-fixed": "#ffdbca", "on-background": "#111c2c", "error-container": "#ffdad6", "tertiary-container": "#292c2d", surface: "#f9f9ff", "on-primary-fixed": "#091e25", "on-primary": "#ffffff", "primary-fixed-dim": "#b4cad3", "tertiary-fixed-dim": "#c5c7c8", "on-secondary-fixed": "#341100", "on-tertiary-container": "#919394", "surface-bright": "#f9f9ff", "surface-tint": "#4d6169", "outline-variant": "#c2c7ca", "on-surface-variant": "#42484a", "surface-container-lowest": "#ffffff", "on-secondary-container": "#5c2400", background: "#f9f9ff", "secondary-container": "#fd761a", "on-surface": "#111c2c", "on-secondary": "#ffffff"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "24px", "container-max": "800px", unit: "8px", "margin-desktop": "64px", "margin-mobile": "16px", "reading-padding": "40px"}, fontFamily: {"display-reading": ["Literata"], "headline-md": ["\"Source Serif 4\""], "stats-num": ["Inter"], "label-caps": ["Inter"], "body-lg": ["Literata"], "body-md": ["Literata"], "headline-lg": ["\"Source Serif 4\""], headline: ["\"Source Serif 4\""], display: ["\"Source Serif 4\""], body: ["Literata"], label: ["Inter"]}, fontSize: {"display-reading": ["40px", {lineHeight: "56px", letterSpacing: "-0.01em", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "stats-num": ["24px", {lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "500"}], "label-caps": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "30px", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "26px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface transition-colors duration-500 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline transition-opacity duration-300" id="top-app-bar">
+<div class="flex items-center justify-between px-gutter h-16 w-full max-w-container-max mx-auto">
+<div class="cursor-pointer active:opacity-70 flex items-center">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="menu">menu</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">Scholarly</h1>
+<div class="cursor-pointer active:opacity-70">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional, high-contrast profile portrait of a researcher in a minimalist studio. The lighting is soft and academic, emphasizing the scholarly theme. The background is a clean, neutral gray to match the Scholarly Minimalist design system. The overall aesthetic is calm, intellectual, and high-end digital design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDddLH5FkcfkT0O_9Z4clp6OuUpcPUaEEzNehK1CcuRNc76os20zneU6Re4olsvrMaqwx-CEdgDkN6uSEns434ndxvJeliC8S1-fdTAC0StsCDeUKENPYoFDi3q5M_PFlCCA0phB9v3DoS9TlpPLBkSJs4pPP5xFjPrMygr6I0zQKGWG_TtuDv2ZHTfMqGWQ1O7xyah50NTyMrgAtdjh6gEmwcnjHQjOnMx2YMeXA1ASuwI1JGe_zqa"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Reading Progress Indicator (Fixed Top) -->
+<div class="fixed top-16 left-0 w-full h-1 bg-surface-container-low z-40">
+<div class="h-full bg-secondary transition-all duration-300" id="reading-progress" style="width: 35%;"></div>
+</div>
+<!-- Reading Canvas -->
+<main class="reader-container pt-margin-desktop pb-32 cursor-pointer" id="reader-canvas" onclick="toggleControls()">
+<article class="max-w-prose mx-auto">
+<header class="mb-12">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase">Chapter IV: The Architecture of Thought</p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Cognitive Load and the Digital Page</h2>
+<div class="flex items-center gap-4 text-on-surface-variant italic">
+<span class="font-body-md text-body-md">By Dr. Alistair Vance</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-body-md text-body-md">12 min read</span>
+</div>
+</header>
+<div class="space-y-8 text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<p class="font-body-lg text-body-lg first-letter:text-5xl first-letter:font-headline-lg first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-primary">
+                    To understand the modern reader, one must first dismantle the illusion of infinite attention. In the digital landscape, the page is no longer a static rectangle of fiber; it is a dynamic field of competing stimuli. The scholarly minimalist approach seeks to rectify this by stripping the interface of all but the essential. 
+                </p>
+<p class="font-body-lg text-body-lg">
+                    The history of typography is a history of constraint. From the meticulously carved stone of Trajan’s column to the leaden weight of Gutenberg’s press, the physical medium dictated the rhythm of reading. Today, the screen offers a deceptive freedom. We are unburdened by the cost of ink, yet we pay a higher price in cognitive exhaustion.
+                </p>
+<blockquote class="pl-6 border-l-2 border-secondary italic my-10 py-2">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        "The interface is a bridge, but too often we build it so heavily that the traveler is more focused on the architecture than the destination."
+                    </p>
+</blockquote>
+<p class="font-body-lg text-body-lg">
+                    When we design for deep reading, we are designing for a neurobiological state. The saccadic movement of the eyes—those rapid, jerky shifts from one fixation point to the next—requires a stable typographic environment to maintain flow. Variations in line height, column width, and contrast are not merely aesthetic choices; they are ergonomic interventions.
+                </p>
+<div class="my-12 flex justify-center">
+<div class="w-full h-[400px] bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" data-alt="A highly detailed, minimalist architectural photograph of a spiral staircase in a modern, light-filled library. The lighting is ethereal and soft, creating clean shadows that emphasize the geometric precision. The color palette is composed of soft whites, pale grays, and deep slate accents, perfectly aligning with the Scholarly app's intellectual and calm personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeRDenUk5cdH7sJ_yl_BH6MwS8VD4e_UkFQ82VtBsKwKJHtu-j9mIzvyO7iSz73jNMqEDDVleMHfboabmIvC1lK2YIomgs1cCDEGVAWr9avEB1yaDTY_dbOrXbzbB6Z0Tbv43mz_SN-5BFuuCn1LUbsQw0RJ43sHgQPFPkLSDri7BYDQ-3O3CJDAz_pRnoCcDUsuph6D4Krgy6lGbZaf9rDFVJPNt5NCSdTTaTzCvRW8BrAKYddgh_"/>
+</div>
+</div>
+<p class="font-body-lg text-body-lg">
+                    Consider the "Goldilocks Zone" of line length: 45 to 75 characters per line. Too short, and the eye tires from the frequent return to the left margin; too long, and the eye struggles to find the next line upon its return. This classic reader leverages these ancient principles to foster a state of "focused flow."
+                </p>
+<p class="font-body-lg text-body-lg">
+                    As we transition further into the era of hyper-information, the value of the quiet page only increases. It becomes a sanctuary for the mind—a place where the noise of the world is filtered into the singular, focused stream of a well-articulated thought.
+                </p>
+</div>
+<!-- Page Number / Progress -->
+<footer class="mt-20 pt-10 border-t border-outline-variant flex justify-between items-center text-on-surface-variant font-label-caps text-label-caps">
+<span>SECTION 4 OF 12</span>
+<span>PAGE 142</span>
+</footer>
+</article>
+</main>
+<!-- Floating Minimal Controls Overlay (Revealed on Tap) -->
+<div class="fixed inset-0 z-[60] pointer-events-none" id="reader-controls">
+<!-- Top Toolbar -->
+<div class="controls-overlay hidden-controls absolute top-0 left-0 w-full bg-surface shadow-md p-gutter pointer-events-auto border-b border-outline-variant" id="top-toolbar">
+<div class="max-w-container-max mx-auto flex items-center justify-between">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary" onclick="toggleControls()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+<span class="font-label-caps text-label-caps">CLOSE READER</span>
+</button>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="bookmark">bookmark</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<!-- Bottom Settings Panel -->
+<div class="controls-overlay hidden-controls absolute bottom-20 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-[500px] bg-surface border border-outline-variant rounded-xl shadow-xl p-6 pointer-events-auto" id="settings-panel">
+<div class="space-y-8">
+<!-- Text Settings -->
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-4 uppercase">Appearance</label>
+<div class="flex items-center justify-between gap-4">
+<div class="flex-1 flex items-center justify-around bg-surface-container-low rounded-lg p-2 border border-outline-variant">
+<button class="w-10 h-10 flex items-center justify-center font-headline-md text-headline-md text-on-surface-variant" onclick="adjustSize(-1)">A</button>
+<div class="w-px h-6 bg-outline-variant"></div>
+<button class="w-10 h-10 flex items-center justify-center font-headline-md text-headline-md text-primary" onclick="adjustSize(1)">A</button>
+</div>
+<div class="flex gap-2">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-primary cursor-pointer ring-2 ring-offset-2 ring-transparent"></div>
+<div class="w-10 h-10 rounded-full bg-[#F4F1EA] border border-outline-variant cursor-pointer" onclick="setTheme('sepia')"></div>
+<div class="w-10 h-10 rounded-full bg-[#1A1C1E] border border-outline-variant cursor-pointer" onclick="setTheme('dark')"></div>
+</div>
+</div>
+</div>
+<!-- Brightness Slider -->
+<div>
+<div class="flex items-center justify-between mb-4">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Brightness</label>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="light_mode">light_mode</span>
+</div>
+<input class="w-full h-1 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+</div>
+<!-- Navigation Tabs -->
+<div class="grid grid-cols-3 gap-2 pt-4 border-t border-outline-variant">
+<button class="flex flex-col items-center gap-1 p-2 rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="list">list</span>
+<span class="font-label-caps text-label-caps text-[10px]">CONTENTS</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="history">history</span>
+<span class="font-label-caps text-label-caps text-[10px]">RECENT</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+<span class="font-label-caps text-label-caps text-[10px]">SEARCH</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 transition-opacity duration-300" id="bottom-nav">
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-surface dark:bg-surface-dim px-margin-mobile border-t border-outline-variant dark:border-outline">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-label-caps text-label-caps">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-label-caps text-label-caps">Speed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-label-caps text-label-caps">Classic</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant opacity-60 hover:opacity-100 transition-opacity tap-highlight-transparent active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-label-caps text-label-caps">Stats</span>
+</a>
+</div>
+</nav>
+<script>
+        let controlsVisible = false;
+        const controls = document.getElementById('reader-controls');
+        const topToolbar = document.getElementById('top-toolbar');
+        const settingsPanel = document.getElementById('settings-panel');
+        const topAppBar = document.getElementById('top-app-bar');
+        const bottomNav = document.getElementById('bottom-nav');
+
+        function toggleControls() {
+            controlsVisible = !controlsVisible;
+            if (controlsVisible) {
+                topToolbar.classList.remove('hidden-controls');
+                settingsPanel.classList.remove('hidden-controls');
+                topAppBar.classList.add('hidden-nav');
+                bottomNav.classList.add('hidden-nav');
+            } else {
+                topToolbar.classList.add('hidden-controls');
+                settingsPanel.classList.add('hidden-controls');
+                topAppBar.classList.remove('hidden-nav');
+                bottomNav.classList.remove('hidden-nav');
+            }
+        }
+
+        function adjustSize(delta) {
+            const article = document.querySelector('article div.space-y-8');
+            const currentSize = parseFloat(window.getComputedStyle(article.children[0]).fontSize);
+            article.style.fontSize = (currentSize + delta) + 'px';
+        }
+
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.style.backgroundColor = '#1A1C1E';
+                document.body.style.color = '#E2E2E6';
+            } else if (theme === 'sepia') {
+                document.documentElement.classList.remove('dark');
+                document.body.style.backgroundColor = '#F4F1EA';
+                document.body.style.color = '#43474E';
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.body.style.backgroundColor = '#f9f9ff';
+                document.body.style.color = '#111c2c';
+            }
+            toggleControls();
+        }
+
+        // Update progress bar on scroll
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('reading-progress').style.width = scrolled + '%';
+        });
+
+        // Close controls on key escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && controlsVisible) toggleControls();
+        });
+    </script>
+</body></html>

@@ -9,8 +9,8 @@ import '../reader/guided_highlight_view.dart';
 import '../reader/bionic_fixation_view.dart';
 import '../annotations/annotation_view.dart';
 import '../flashcards/flashcard_view.dart';
-import '../sync/sync_view.dart';
 import '../analytics/analytics_view.dart';
+import '../settings/user_settings_view.dart';
 import 'file_parser_service.dart';
 
 // ── Root scaffold with persistent bottom nav ───────────────────────────────
@@ -36,6 +36,8 @@ class _LibraryViewState extends State<LibraryView> {
       _tab = 1;
     } else if (path.contains('analytics') || fragment.contains('analytics')) {
       _tab = 2;
+    } else if (path.contains('settings') || fragment.contains('settings')) {
+      _tab = 3;
     } else {
       _tab = widget.initialTab;
     }
@@ -46,6 +48,7 @@ class _LibraryViewState extends State<LibraryView> {
     final routeName = switch (i) {
       1 => '/knowledge',
       2 => '/analytics',
+      3 => '/settings',
       _ => '/library',
     };
     SystemNavigator.routeInformationUpdated(uri: Uri.parse(routeName));
@@ -90,6 +93,7 @@ class _LibraryViewState extends State<LibraryView> {
       _LibraryTab(docs: _docs, sampleText: _sampleText),
       const _KnowledgeTab(),
       const AnalyticsView(),
+      const UserSettingsView(),
     ];
 
     return Scaffold(
@@ -108,7 +112,7 @@ class _LibraryViewState extends State<LibraryView> {
                 child: Text('A',
                   style: GoogleFonts.jetBrainsMono(
                     fontSize: 14, fontWeight: FontWeight.w800,
-                    color: AgamaTheme.crimson,
+                    color: const Color(0xFFFD761A),
                   )),
               ),
             ),
@@ -120,16 +124,29 @@ class _LibraryViewState extends State<LibraryView> {
           ],
         ),
         actions: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            margin: const EdgeInsets.only(right: 6),
+            decoration: BoxDecoration(
+              color: const Color(0xFFFD761A).withValues(alpha: 0.12),
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: const Color(0xFFFD761A).withValues(alpha: 0.3)),
+            ),
+            child: Text(
+              '🔥 5-Day Streak · ⚡ 450 WPM',
+              style: GoogleFonts.inter(
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFFFD761A),
+              ),
+            ),
+          ),
           _AppBarBtn(
             icon: isDark ? Icons.wb_sunny_outlined : Icons.dark_mode_outlined,
             tooltip: isDark ? 'Light mode' : 'Dark mode',
             onTap: () {
               themeModeNotifier.value = isDark ? ThemeMode.light : ThemeMode.dark;
             },
-          ),
-          _AppBarBtn(
-            icon: Icons.cloud_sync_outlined, tooltip: 'Sync',
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SyncView())),
           ),
           const SizedBox(width: 4),
         ],
@@ -140,7 +157,7 @@ class _LibraryViewState extends State<LibraryView> {
         onDestinationSelected: _onTabSelected,
         backgroundColor: theme.colorScheme.surface,
         surfaceTintColor: Colors.transparent,
-        indicatorColor: AgamaTheme.indigoLight,
+        indicatorColor: const Color(0xFFFD761A).withValues(alpha: 0.2),
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         height: 62,
         destinations: const [
@@ -158,6 +175,11 @@ class _LibraryViewState extends State<LibraryView> {
             icon: Icon(Icons.query_stats_outlined),
             selectedIcon: Icon(Icons.query_stats),
             label: 'Analytics',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.settings_outlined),
+            selectedIcon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
       ),
@@ -477,17 +499,17 @@ class _EngineChooserState extends State<_EngineChooser> {
     _EngineInfo(
       label: 'RSVP Redicle',
       icon: Icons.remove_red_eye_outlined,
-      accent: AgamaTheme.indigo,
-      tagline: 'Fastest — one word at a time',
+      accent: Color(0xFFFD761A),
+      tagline: '⚡ MAX SPEED — One word at a time in center focus',
       bestFor: 'Articles, reports, anything you want to read quickly.',
-      tradeoff: 'You lose visual context. Good once you\'re comfortable.',
+      tradeoff: 'Single-word focus stage with ORP highlight.',
       wpmRange: '400–1000+ WPM',
     ),
     _EngineInfo(
       label: 'Guided Sweep',
       icon: Icons.highlight_alt_rounded,
-      accent: AgamaTheme.emerald,
-      tagline: 'Natural — full text with moving focus',
+      accent: Color(0xFF10B981),
+      tagline: '📖 DEEP STUDY — Full text with moving focus cursor',
       bestFor: 'Complex or technical content where you may re-read.',
       tradeoff: 'Slower than RSVP, but comprehension stays higher.',
       wpmRange: '250–600 WPM',
@@ -495,8 +517,8 @@ class _EngineChooserState extends State<_EngineChooser> {
     _EngineInfo(
       label: 'Bionic Fixation',
       icon: Icons.format_bold_rounded,
-      accent: AgamaTheme.amber,
-      tagline: 'Hybrid — full text, key letters bolded',
+      accent: Color(0xFFF59E0B),
+      tagline: '🧠 FOCUS AID — Full text, initial letters bolded',
       bestFor: 'Beginners, or when reading on a small screen.',
       tradeoff: 'Speed gain is modest (~15%). Good habit builder.',
       wpmRange: '200–450 WPM',
@@ -589,8 +611,12 @@ class _EngineChooserState extends State<_EngineChooser> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(e.tagline,
-                      style: theme.textTheme.titleSmall?.copyWith(color: e.accent)),
+                    Expanded(
+                      child: Text(e.tagline,
+                        style: theme.textTheme.titleSmall?.copyWith(color: e.accent),
+                        overflow: TextOverflow.ellipsis),
+                    ),
+                    const SizedBox(width: 8),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
