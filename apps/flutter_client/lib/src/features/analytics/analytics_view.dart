@@ -68,6 +68,14 @@ class AnalyticsView extends StatelessWidget {
                     accent: AgamaTheme.amber,
                   ),
                 ),
+                const SizedBox(width: 10),
+                const Expanded(
+                  child: _MetricCard(
+                    label: 'SRS Mastery',
+                    value: '94%',
+                    accent: Color(0xFF7C3AED),
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 24),

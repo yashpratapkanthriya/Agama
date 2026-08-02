@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
 import 'sync_transport.dart';
+import 'conflict_resolution_dialog.dart';
 
 class SyncView extends StatefulWidget {
   const SyncView({super.key});
@@ -183,16 +184,32 @@ class _SyncViewState extends State<SyncView> {
               ),
 
               const SizedBox(height: 20),
-              SizedBox(
-                width: double.infinity,
-                child: _syncing
-                    ? const Center(child: CircularProgressIndicator())
-                    : FilledButton.icon(
-                        onPressed: _sync,
-                        icon: const Icon(Icons.cloud_upload_outlined,
-                            size: 18),
-                        label: const Text('Replicate via CRDT'),
-                      ),
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (_) => const ConflictResolutionDialog(),
+                        );
+                      },
+                      icon: const Icon(Icons.alt_route, size: 18),
+                      label: const Text('Conflicts'),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _syncing
+                        ? const Center(child: CircularProgressIndicator())
+                        : FilledButton.icon(
+                            onPressed: _sync,
+                            icon: const Icon(Icons.cloud_upload_outlined,
+                                size: 18),
+                            label: const Text('Replicate'),
+                          ),
+                  ),
+                ],
               ),
             ],
           ),

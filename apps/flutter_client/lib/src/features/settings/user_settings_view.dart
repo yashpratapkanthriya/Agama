@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../sync/conflict_resolution_dialog.dart';
 
 class UserSettingsView extends StatelessWidget {
   const UserSettingsView({super.key});
@@ -87,19 +88,34 @@ class UserSettingsView extends StatelessWidget {
                     Text('Paired Local Nodes: 2 devices (MacBook, iPad)',
                         style: GoogleFonts.inter(fontSize: 12, color: theme.colorScheme.onSurfaceVariant)),
                     const SizedBox(height: 14),
-                    FilledButton.icon(
-                      style: FilledButton.styleFrom(
-                        backgroundColor: const Color(0xFF1A2E35),
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-                      ),
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('P2P Sync initiated with connected local nodes.')),
-                        );
-                      },
-                      icon: const Icon(Icons.sync, size: 16),
-                      label: Text('Trigger P2P Sync Now', style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600)),
+                    Wrap(
+                      spacing: 8,
+                      children: [
+                        FilledButton.icon(
+                          style: FilledButton.styleFrom(
+                            backgroundColor: const Color(0xFF1A2E35),
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                          ),
+                          onPressed: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('P2P Sync initiated with connected local nodes.')),
+                            );
+                          },
+                          icon: const Icon(Icons.sync, size: 16),
+                          label: Text('Trigger P2P Sync Now', style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600)),
+                        ),
+                        OutlinedButton.icon(
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) => const ConflictResolutionDialog(),
+                            );
+                          },
+                          icon: const Icon(Icons.alt_route, size: 16),
+                          label: Text('Resolve Conflicts', style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600)),
+                        ),
+                      ],
                     ),
                   ],
                 ),

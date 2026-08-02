@@ -5,6 +5,7 @@ import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart'
     show PlatformInt64Util;
 import '../../app/theme.dart';
 import '../../rust/api.dart' as rust_api;
+import 'deck_manager_view.dart';
 
 class FlashcardItem {
   final String id;
@@ -130,6 +131,15 @@ class _FlashcardViewState extends State<FlashcardView> {
       appBar: AppBar(
         title: Text('Flashcards', style: theme.textTheme.titleMedium),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.folder_special_outlined),
+            tooltip: 'Decks',
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => const DeckManagerView(),
+              ));
+            },
+          ),
           Container(
             margin: const EdgeInsets.only(right: 16),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

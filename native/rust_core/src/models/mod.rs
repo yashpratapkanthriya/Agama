@@ -139,3 +139,28 @@ pub struct SearchResult {
     pub score: f64,
 }
 
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AiChatMessageModel {
+    pub id: String,
+    pub text: String,
+    pub is_user: bool,
+    pub timestamp_sec: i64,
+    pub histvon: String,
+    pub histbis: String,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_histvon_generator() {
+        let ts1 = generate_histvon_timestamp();
+        let ts2 = generate_histvon_timestamp();
+        assert_eq!(ts1.len(), 17);
+        assert_eq!(ts2.len(), 17);
+        assert!(ts2 > ts1);
+    }
+}
+
+

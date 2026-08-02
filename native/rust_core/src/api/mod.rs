@@ -39,10 +39,34 @@ pub fn search_similar_chunks_api(query: String, _limit: u32) -> Vec<String> {
     vec!["chunk_101".to_string()]
 }
 
+pub fn generate_ai_chat_response(query: String, context_chunk: String) -> String {
+    format!("AI Assistant Response for '{}' using context: '{}'", query, context_chunk)
+}
+
+pub fn resolve_crdt_conflict_api(local_timestamp: String, remote_timestamp: String) -> String {
+    if local_timestamp >= remote_timestamp {
+        "keep_local".to_string()
+    } else {
+        "keep_remote".to_string()
+    }
+}
+
 
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_generate_ai_chat_response() {
+        let resp = generate_ai_chat_response("What is RSVP?".to_string(), "RSVP speed reading".to_string());
+        assert!(resp.contains("What is RSVP?"));
+    }
+
+    #[test]
+    fn test_resolve_crdt_conflict_api() {
+        let res = resolve_crdt_conflict_api("20260802140000000".to_string(), "20260802130000000".to_string());
+        assert_eq!(res, "keep_local");
+    }
 
     #[test]
     fn test_search_similar_chunks_api() {

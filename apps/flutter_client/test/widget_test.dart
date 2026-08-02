@@ -26,8 +26,8 @@ void main() {
 
     // New UI: compact logo + 'Agama' wordmark in AppBar
     expect(find.text('Agama'), findsAtLeastNWidgets(1));
-    // Engine chooser first tab label (truncated to first word)
-    expect(find.text('RSVP'), findsAtLeastNWidgets(1));
+    // Engine chooser first tab label
+    expect(find.text('RSVP Redicle'), findsAtLeastNWidgets(1));
     // Document library section
     expect(find.text('YOUR LIBRARY'), findsOneWidget);
   });

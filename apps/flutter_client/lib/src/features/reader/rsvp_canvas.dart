@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
 import 'reader_settings_provider.dart';
 import '../annotations/annotation_view.dart';
+import '../knowledge/ai_chat_view.dart';
 import '../../rust/api.dart' as rust_api;
 import '../../rust/models.dart';
 
@@ -217,6 +218,15 @@ class _RsvpCanvasViewState extends ConsumerState<RsvpCanvasView> {
             style: theme.textTheme.titleMedium,
           ),
           actions: [
+            IconButton(
+              icon: const Icon(Icons.smart_toy_outlined),
+              tooltip: 'AI Assistant',
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => const AiChatView(),
+                ));
+              },
+            ),
             Container(
               margin: const EdgeInsets.only(right: 16),
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

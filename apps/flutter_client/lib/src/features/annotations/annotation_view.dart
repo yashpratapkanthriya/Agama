@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme.dart';
 import 'vector_search_service.dart';
 import '../flashcards/flashcard_view.dart';
+import '../knowledge/ai_chat_view.dart';
 
 class AnnotationItem {
   final String id;
@@ -364,6 +365,15 @@ class _AnnotationViewState extends State<AnnotationView> {
       appBar: AppBar(
         title: Text('Highlights', style: theme.textTheme.titleMedium),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.smart_toy_outlined),
+            tooltip: 'AI Chat',
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => const AiChatView(),
+              ));
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.add),
             tooltip: 'Add highlight',
