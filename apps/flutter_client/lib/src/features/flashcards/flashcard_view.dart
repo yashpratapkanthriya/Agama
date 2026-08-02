@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart'
+    show PlatformInt64Util;
 import '../../app/theme.dart';
 import '../../rust/api.dart' as rust_api;
 
@@ -81,14 +83,15 @@ class _FlashcardViewState extends State<FlashcardView> {
     int newInterval = c.interval;
     double newEf = c.ef;
     try {
-      final nowSec = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+      final nowSec = PlatformInt64Util.from(
+          DateTime.now().millisecondsSinceEpoch ~/ 1000);
       final result = await rust_api.calculateSm2Review(
         quality: q.clamp(0, 5),
-        currentInterval: c.interval,
+        currentInterval: PlatformInt64Util.from(c.interval),
         currentEf: c.ef,
         currentTimeSec: nowSec,
       );
-      newInterval = result.$1.toInt();
+      newInterval = result.$1;
       newEf = result.$2;
     } catch (_) {
       // Fallback: pure-Dart SM-2
