@@ -54,8 +54,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main",
-      "community": 104,
-      "community_name": "main.dart",
+      "community": 103,
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "main.dart"
     },
     {
@@ -65,8 +65,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_main_main",
-      "community": 104,
-      "community_name": "main.dart",
+      "community": 103,
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "main"
     },
     {
@@ -87,7 +87,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_riverpod_flutter_riverpod_dart",
-      "community": 65,
+      "community": 103,
       "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
     },
@@ -98,8 +98,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "src_app_app_dart",
-      "community": 104,
-      "community_name": "main.dart",
+      "community": 103,
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "src/app/app.dart"
     },
     {
@@ -109,8 +109,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "src_features_library_file_parser_service_dart",
-      "community": 104,
-      "community_name": "main.dart",
+      "community": 103,
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "src/features/library/file_parser_service.dart"
     },
     {
@@ -494,7 +494,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "core_app_tokens_dart",
-      "community": 103,
+      "community": 94,
       "community_name": "../../core/app_tokens.dart",
       "norm_label": "../../core/app_tokens.dart"
     },
@@ -989,8 +989,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_core_command_palette_commandpalettemodal",
-      "community": 57,
-      "community_name": "State",
+      "community": 101,
+      "community_name": "command_palette.dart",
       "norm_label": "commandpalettemodal"
     },
     {
@@ -1011,8 +1011,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_core_command_palette_commandpalettemodalstate",
-      "community": 57,
-      "community_name": "State",
+      "community": 101,
+      "community_name": "command_palette.dart",
       "norm_label": "_commandpalettemodalstate"
     },
     {
@@ -1264,8 +1264,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_analytics_analytics_view_analyticsview",
-      "community": 14,
-      "community_name": "analytics_view.dart",
+      "community": 48,
+      "community_name": "StatelessWidget",
       "norm_label": "analyticsview"
     },
     {
@@ -1275,8 +1275,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_analytics_analytics_view_metriccard",
-      "community": 48,
-      "community_name": "StatelessWidget",
+      "community": 14,
+      "community_name": "analytics_view.dart",
       "norm_label": "_metriccard"
     },
     {
@@ -1682,8 +1682,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_annotations_annotation_view_build",
-      "community": 27,
-      "community_name": "annotation_view.dart",
+      "community": 96,
+      "community_name": "MaterialPageRoute",
       "norm_label": "build"
     },
     {
@@ -1707,6 +1707,17 @@
       "community": 27,
       "community_name": "annotation_view.dart",
       "norm_label": "../flashcards/flashcard_view.dart"
+    },
+    {
+      "label": "../knowledge/ai_chat_view.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "knowledge_ai_chat_view_dart",
+      "community": 27,
+      "community_name": "annotation_view.dart",
+      "norm_label": "../knowledge/ai_chat_view.dart"
     },
     {
       "label": "vector_search_service.dart",
@@ -1782,7 +1793,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "auth_provider.dart"
     },
     {
@@ -1793,7 +1804,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_userprofile",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "userprofile"
     },
     {
@@ -1804,7 +1815,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_authnotifier",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "authnotifier"
     },
     {
@@ -1815,7 +1826,7 @@
       "_origin": "ast",
       "id": "statenotifier",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "statenotifier"
     },
     {
@@ -1826,7 +1837,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_name",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "name"
     },
     {
@@ -1837,7 +1848,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_email",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "email"
     },
     {
@@ -1848,7 +1859,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_isguest",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "isguest"
     },
     {
@@ -1859,7 +1870,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_issyncenabled",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "issyncenabled"
     },
     {
@@ -1870,7 +1881,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_streakdays",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "streakdays"
     },
     {
@@ -1881,7 +1892,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_operator",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "operator"
     },
     {
@@ -1892,7 +1903,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_hashcode",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "hashcode"
     },
     {
@@ -1903,7 +1914,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_authprovider",
       "community": 103,
-      "community_name": "../../core/app_tokens.dart",
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "authprovider"
     },
     {
@@ -1914,7 +1925,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_copywith",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "copywith"
     },
     {
@@ -1925,7 +1936,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_togglesync",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "togglesync"
     },
     {
@@ -1936,7 +1947,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_setsyncenabled",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "setsyncenabled"
     },
     {
@@ -1947,7 +1958,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_auth_provider_updateprofile",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "updateprofile"
     },
     {
@@ -1958,7 +1969,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_profile_view",
       "community": 103,
-      "community_name": "../../core/app_tokens.dart",
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "profile_view.dart"
     },
     {
@@ -1969,7 +1980,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_profile_view_profileview",
       "community": 103,
-      "community_name": "../../core/app_tokens.dart",
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "profileview"
     },
     {
@@ -1980,7 +1991,7 @@
       "_origin": "ast",
       "id": "consumerwidget",
       "community": 103,
-      "community_name": "../../core/app_tokens.dart",
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "consumerwidget"
     },
     {
@@ -1991,7 +2002,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_auth_profile_view_build",
       "community": 103,
-      "community_name": "../../core/app_tokens.dart",
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "build"
     },
     {
@@ -2002,8 +2013,239 @@
       "_origin": "ast",
       "id": "auth_provider_dart",
       "community": 103,
-      "community_name": "../../core/app_tokens.dart",
+      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "auth_provider.dart"
+    },
+    {
+      "label": "deck_manager_view.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "deck_manager_view.dart"
+    },
+    {
+      "label": "DeckManagerView",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerview",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "deckmanagerview"
+    },
+    {
+      "label": "_DeckManagerViewState",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerviewstate",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "_deckmanagerviewstate"
+    },
+    {
+      "label": "_decks",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_decks",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "_decks"
+    },
+    {
+      "label": "createState",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_createstate",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "createstate"
+    },
+    {
+      "label": "_addDeck",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_adddeck",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "_adddeck"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_build",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "build"
+    },
+    {
+      "label": "deck_model.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "deck_model_dart",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "deck_model.dart"
+    },
+    {
+      "label": "flashcard_view.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "flashcard_view_dart",
+      "community": 107,
+      "community_name": "deck_manager_view.dart",
+      "norm_label": "flashcard_view.dart"
+    },
+    {
+      "label": "deck_model.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "deck_model.dart"
+    },
+    {
+      "label": "SrsCard",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_srscard",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "srscard"
+    },
+    {
+      "label": "FlashcardDeck",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_flashcarddeck",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "flashcarddeck"
+    },
+    {
+      "label": "id",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_id",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "id"
+    },
+    {
+      "label": "front",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_front",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "front"
+    },
+    {
+      "label": "back",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_back",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "back"
+    },
+    {
+      "label": "intervalDays",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_intervaldays",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "intervaldays"
+    },
+    {
+      "label": "easeFactor",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_easefactor",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "easefactor"
+    },
+    {
+      "label": "repetitionCount",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_repetitioncount",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "repetitioncount"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_name",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "name"
+    },
+    {
+      "label": "cards",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_cards",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "cards"
+    },
+    {
+      "label": "calculateNextInterval",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_flashcards_deck_model_calculatenextinterval",
+      "community": 106,
+      "community_name": "deck_model.dart",
+      "norm_label": "calculatenextinterval"
     },
     {
       "label": "flashcard_view.dart",
@@ -2276,8 +2518,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_build",
-      "community": 20,
-      "community_name": "flashcard_view.dart",
+      "community": 96,
+      "community_name": "MaterialPageRoute",
       "norm_label": "build"
     },
     {
@@ -2314,13 +2556,167 @@
       "norm_label": "../../rust/api.dart"
     },
     {
+      "label": "deck_manager_view.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "deck_manager_view_dart",
+      "community": 20,
+      "community_name": "flashcard_view.dart",
+      "norm_label": "deck_manager_view.dart"
+    },
+    {
+      "label": "ai_chat_view.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "ai_chat_view.dart"
+    },
+    {
+      "label": "AiChatMessage",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatmessage",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "aichatmessage"
+    },
+    {
+      "label": "AiChatView",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatview",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "aichatview"
+    },
+    {
+      "label": "_AiChatViewState",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatviewstate",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "_aichatviewstate"
+    },
+    {
+      "label": "text",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_text",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "text"
+    },
+    {
+      "label": "isUser",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_isuser",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "isuser"
+    },
+    {
+      "label": "timestamp",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_timestamp",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "timestamp"
+    },
+    {
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "datetime",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "datetime"
+    },
+    {
+      "label": "_messages",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_messages",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "_messages"
+    },
+    {
+      "label": "_inputController",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_inputcontroller",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "_inputcontroller"
+    },
+    {
+      "label": "createState",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_createstate",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "createstate"
+    },
+    {
+      "label": "_sendMessage",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_sendmessage",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "_sendmessage"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_build",
+      "community": 104,
+      "community_name": "ai_chat_view.dart",
+      "norm_label": "build"
+    },
+    {
       "label": "document_detail_view.dart",
       "file_type": "code",
       "source_file": "apps/flutter_client/lib/src/features/library/document_detail_view.dart",
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_document_detail_view",
-      "community": 103,
+      "community": 94,
       "community_name": "../../core/app_tokens.dart",
       "norm_label": "document_detail_view.dart"
     },
@@ -2331,7 +2727,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_document_detail_view_documentdetailview",
-      "community": 103,
+      "community": 94,
       "community_name": "../../core/app_tokens.dart",
       "norm_label": "documentdetailview"
     },
@@ -2342,7 +2738,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_document_detail_view_documenttitle",
-      "community": 103,
+      "community": 94,
       "community_name": "../../core/app_tokens.dart",
       "norm_label": "documenttitle"
     },
@@ -2353,7 +2749,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_document_detail_view_content",
-      "community": 103,
+      "community": 94,
       "community_name": "../../core/app_tokens.dart",
       "norm_label": "content"
     },
@@ -2364,7 +2760,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_library_document_detail_view_build",
-      "community": 103,
+      "community": 94,
       "community_name": "../../core/app_tokens.dart",
       "norm_label": "build"
     },
@@ -3783,8 +4179,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationview",
-      "community": 70,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "bionicfixationview"
     },
     {
@@ -3794,8 +4190,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_bionic_fixation_view_bionicfixationviewstate",
-      "community": 70,
-      "community_name": "bionic_fixation_view.dart",
+      "community": 57,
+      "community_name": "State",
       "norm_label": "_bionicfixationviewstate"
     },
     {
@@ -4158,7 +4554,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "reader_provider.dart"
     },
     {
@@ -4169,7 +4565,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readerstate",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "readerstate"
     },
     {
@@ -4180,7 +4576,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readernotifier",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "readernotifier"
     },
     {
@@ -4191,7 +4587,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_targetwpm",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "targetwpm"
     },
     {
@@ -4202,7 +4598,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_isplaying",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "isplaying"
     },
     {
@@ -4213,7 +4609,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_currentwordindex",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "currentwordindex"
     },
     {
@@ -4224,7 +4620,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_paragraphcomplexity",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "paragraphcomplexity"
     },
     {
@@ -4235,7 +4631,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readerprovider",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "readerprovider"
     },
     {
@@ -4246,7 +4642,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_readerstreamprovider",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "readerstreamprovider"
     },
     {
@@ -4257,7 +4653,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_notifier",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "notifier"
     },
     {
@@ -4268,7 +4664,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_copywith",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "copywith"
     },
     {
@@ -4279,7 +4675,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_setwpm",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "setwpm"
     },
     {
@@ -4290,7 +4686,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_toggleplay",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "toggleplay"
     },
     {
@@ -4301,7 +4697,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_setwordindex",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "setwordindex"
     },
     {
@@ -4312,7 +4708,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_setcomplexity",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "setcomplexity"
     },
     {
@@ -4323,7 +4719,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_provider_streamwordtimings",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "streamwordtimings"
     },
     {
@@ -4334,7 +4730,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "reader_settings_provider.dart"
     },
     {
@@ -4345,7 +4741,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_readersettings",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "readersettings"
     },
     {
@@ -4356,7 +4752,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_readersettingsnotifier",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "readersettingsnotifier"
     },
     {
@@ -4367,7 +4763,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_wpm",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "wpm"
     },
     {
@@ -4378,7 +4774,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_fontsize",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "fontsize"
     },
     {
@@ -4389,8 +4785,19 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_fontfamily",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "fontfamily"
+    },
+    {
+      "label": "bionicMode",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_settings_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_bionicmode",
+      "community": 2,
+      "community_name": "reader_settings_provider.dart",
+      "norm_label": "bionicmode"
     },
     {
       "label": "operator",
@@ -4400,7 +4807,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_operator",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "operator"
     },
     {
@@ -4411,7 +4818,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_hashcode",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "hashcode"
     },
     {
@@ -4433,7 +4840,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_copywith",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "copywith"
     },
     {
@@ -4444,7 +4851,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_setwpm",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "setwpm"
     },
     {
@@ -4455,7 +4862,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_setfontsize",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "setfontsize"
     },
     {
@@ -4466,8 +4873,19 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_setfontfamily",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "setfontfamily"
+    },
+    {
+      "label": "toggleBionicMode",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_settings_provider.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_togglebionicmode",
+      "community": 2,
+      "community_name": "reader_settings_provider.dart",
+      "norm_label": "togglebionicmode"
     },
     {
       "label": "updateSettings",
@@ -4477,7 +4895,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_updatesettings",
       "community": 2,
-      "community_name": "auth_provider.dart",
+      "community_name": "reader_settings_provider.dart",
       "norm_label": "updatesettings"
     },
     {
@@ -4950,7 +5368,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_settings_keyboard_shortcuts_view",
       "community": 94,
-      "community_name": "keyboard_shortcuts_view.dart",
+      "community_name": "../../core/app_tokens.dart",
       "norm_label": "keyboard_shortcuts_view.dart"
     },
     {
@@ -4961,7 +5379,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_settings_keyboard_shortcuts_view_keyboardshortcutsview",
       "community": 94,
-      "community_name": "keyboard_shortcuts_view.dart",
+      "community_name": "../../core/app_tokens.dart",
       "norm_label": "keyboardshortcutsview"
     },
     {
@@ -4972,7 +5390,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_settings_keyboard_shortcuts_view_shortcutgroups",
       "community": 94,
-      "community_name": "keyboard_shortcuts_view.dart",
+      "community_name": "../../core/app_tokens.dart",
       "norm_label": "_shortcutgroups"
     },
     {
@@ -4983,7 +5401,7 @@
       "_origin": "ast",
       "id": "static_const_list",
       "community": 94,
-      "community_name": "keyboard_shortcuts_view.dart",
+      "community_name": "../../core/app_tokens.dart",
       "norm_label": "static const list"
     },
     {
@@ -4994,7 +5412,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_lib_src_features_settings_keyboard_shortcuts_view_build",
       "community": 94,
-      "community_name": "keyboard_shortcuts_view.dart",
+      "community_name": "../../core/app_tokens.dart",
       "norm_label": "build"
     },
     {
@@ -5061,6 +5479,116 @@
       "id": "apps_flutter_client_lib_src_features_settings_user_settings_view_build",
       "community": 48,
       "community_name": "StatelessWidget",
+      "norm_label": "build"
+    },
+    {
+      "label": "../sync/conflict_resolution_dialog.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "sync_conflict_resolution_dialog_dart",
+      "community": 48,
+      "community_name": "StatelessWidget",
+      "norm_label": "../sync/conflict_resolution_dialog.dart"
+    },
+    {
+      "label": "conflict_resolution_dialog.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "conflict_resolution_dialog.dart"
+    },
+    {
+      "label": "ConflictResolutionChoice",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_conflictresolutionchoice",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "conflictresolutionchoice"
+    },
+    {
+      "label": "ConflictResolutionDialog",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_conflictresolutiondialog",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "conflictresolutiondialog"
+    },
+    {
+      "label": "title",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_title",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "title"
+    },
+    {
+      "label": "localVersion",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_localversion",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "localversion"
+    },
+    {
+      "label": "remoteVersion",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_remoteversion",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "remoteversion"
+    },
+    {
+      "label": "localTimestamp",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_localtimestamp",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "localtimestamp"
+    },
+    {
+      "label": "remoteTimestamp",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_remotetimestamp",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
+      "norm_label": "remotetimestamp"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_build",
+      "community": 108,
+      "community_name": "conflict_resolution_dialog.dart",
       "norm_label": "build"
     },
     {
@@ -5238,6 +5766,17 @@
       "community": 41,
       "community_name": "sync_view.dart",
       "norm_label": "sync_transport.dart"
+    },
+    {
+      "label": "conflict_resolution_dialog.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "conflict_resolution_dialog_dart",
+      "community": 41,
+      "community_name": "sync_view.dart",
+      "norm_label": "conflict_resolution_dialog.dart"
     },
     {
       "label": "api.dart",
@@ -8441,7 +8980,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_auth_profile_test",
-      "community": 65,
+      "community": 103,
       "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "auth_profile_test.dart"
     },
@@ -8452,7 +8991,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_auth_profile_test_main",
-      "community": 65,
+      "community": 103,
       "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "main"
     },
@@ -8474,7 +9013,7 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_features_auth_profile_view_dart",
-      "community": 65,
+      "community": 103,
       "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
       "norm_label": "package:flutter_client/src/features/auth/profile_view.dart"
     },
@@ -8485,8 +9024,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_command_palette_test",
-      "community": 90,
-      "community_name": "package:flutter/material.dart",
+      "community": 18,
+      "community_name": "package:flutter_test/flutter_test.dart",
       "norm_label": "command_palette_test.dart"
     },
     {
@@ -8496,8 +9035,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_command_palette_test_main",
-      "community": 90,
-      "community_name": "package:flutter/material.dart",
+      "community": 18,
+      "community_name": "package:flutter_test/flutter_test.dart",
       "norm_label": "main"
     },
     {
@@ -8507,8 +9046,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_core_command_palette_dart",
-      "community": 90,
-      "community_name": "package:flutter/material.dart",
+      "community": 18,
+      "community_name": "package:flutter_test/flutter_test.dart",
       "norm_label": "package:flutter_client/src/core/command_palette.dart"
     },
     {
@@ -8662,7 +9201,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_rsvp_canvas_dart",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "package:flutter_client/src/features/reader/rsvp_canvas.dart"
     },
     {
@@ -8673,7 +9212,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_reader_settings_provider_test",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "reader_settings_provider_test.dart"
     },
     {
@@ -8684,7 +9223,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_reader_settings_provider_test_main",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "main"
     },
     {
@@ -8695,7 +9234,7 @@
       "_origin": "ast",
       "id": "package_flutter_client_src_features_reader_reader_settings_provider_dart",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "package:flutter_client/src/features/reader/reader_settings_provider.dart"
     },
     {
@@ -8706,7 +9245,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_rsvp_canvas_test",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "reader/rsvp_canvas_test.dart"
     },
     {
@@ -8717,7 +9256,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_features_reader_rsvp_canvas_test_main",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "main"
     },
     {
@@ -8728,8 +9267,52 @@
       "_origin": "ast",
       "id": "richtext",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "richtext"
+    },
+    {
+      "label": "features_complete_test.dart",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/features_complete_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_features_complete_test",
+      "community": 18,
+      "community_name": "package:flutter_test/flutter_test.dart",
+      "norm_label": "features_complete_test.dart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "apps/flutter_client/test/features_complete_test.dart",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "apps_flutter_client_test_features_complete_test_main",
+      "community": 18,
+      "community_name": "package:flutter_test/flutter_test.dart",
+      "norm_label": "main"
+    },
+    {
+      "label": "package:flutter_client/src/features/knowledge/ai_chat_view.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_client_src_features_knowledge_ai_chat_view_dart",
+      "community": 18,
+      "community_name": "package:flutter_test/flutter_test.dart",
+      "norm_label": "package:flutter_client/src/features/knowledge/ai_chat_view.dart"
+    },
+    {
+      "label": "package:flutter_client/src/features/flashcards/deck_model.dart",
+      "file_type": "code",
+      "source_file": null,
+      "source_location": null,
+      "_origin": "ast",
+      "id": "package_flutter_client_src_features_flashcards_deck_model_dart",
+      "community": 18,
+      "community_name": "package:flutter_test/flutter_test.dart",
+      "norm_label": "package:flutter_client/src/features/flashcards/deck_model.dart"
     },
     {
       "label": "ffi_bridge_test.dart",
@@ -8937,7 +9520,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_rsvp_canvas_test",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "test/rsvp_canvas_test.dart"
     },
     {
@@ -8948,7 +9531,7 @@
       "_origin": "ast",
       "id": "apps_flutter_client_test_rsvp_canvas_test_main",
       "community": 65,
-      "community_name": "package:flutter_riverpod/flutter_riverpod.dart",
+      "community_name": "reader/rsvp_canvas_test.dart",
       "norm_label": "main"
     },
     {
@@ -8958,8 +9541,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_scholarly_theme_test",
-      "community": 18,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 90,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "scholarly_theme_test.dart"
     },
     {
@@ -8969,8 +9552,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "apps_flutter_client_test_scholarly_theme_test_main",
-      "community": 18,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 90,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "main"
     },
     {
@@ -8980,8 +9563,8 @@
       "source_location": null,
       "_origin": "ast",
       "id": "package_flutter_client_src_app_scholarly_theme_dart",
-      "community": 18,
-      "community_name": "package:flutter_test/flutter_test.dart",
+      "community": 90,
+      "community_name": "package:flutter/material.dart",
       "norm_label": "package:flutter_client/src/app/scholarly_theme.dart"
     },
     {
@@ -9744,10 +10327,54 @@
       "norm_label": "search_similar_chunks_api()"
     },
     {
+      "label": "generate_ai_chat_response()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "native_rust_core_src_api_mod_generate_ai_chat_response",
+      "community": 12,
+      "community_name": "String",
+      "norm_label": "generate_ai_chat_response()"
+    },
+    {
+      "label": "resolve_crdt_conflict_api()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "native_rust_core_src_api_mod_resolve_crdt_conflict_api",
+      "community": 12,
+      "community_name": "String",
+      "norm_label": "resolve_crdt_conflict_api()"
+    },
+    {
+      "label": "test_generate_ai_chat_response()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "native_rust_core_src_api_mod_test_generate_ai_chat_response",
+      "community": 12,
+      "community_name": "String",
+      "norm_label": "test_generate_ai_chat_response()"
+    },
+    {
+      "label": "test_resolve_crdt_conflict_api()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "native_rust_core_src_api_mod_test_resolve_crdt_conflict_api",
+      "community": 12,
+      "community_name": "String",
+      "norm_label": "test_resolve_crdt_conflict_api()"
+    },
+    {
       "label": "test_search_similar_chunks_api()",
       "file_type": "code",
       "source_file": "native/rust_core/src/api/mod.rs",
-      "source_location": "L48",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "native_rust_core_src_api_mod_test_search_similar_chunks_api",
       "community": 12,
@@ -9758,7 +10385,7 @@
       "label": "test_parse_file_text()",
       "file_type": "code",
       "source_file": "native/rust_core/src/api/mod.rs",
-      "source_location": "L54",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "native_rust_core_src_api_mod_test_parse_file_text",
       "community": 12,
@@ -11205,6 +11832,28 @@
       "community": 12,
       "community_name": "String",
       "norm_label": "searchresult"
+    },
+    {
+      "label": "AiChatMessageModel",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/models/mod.rs",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "native_rust_core_src_models_mod_aichatmessagemodel",
+      "community": 12,
+      "community_name": "String",
+      "norm_label": "aichatmessagemodel"
+    },
+    {
+      "label": "test_histvon_generator()",
+      "file_type": "code",
+      "source_file": "native/rust_core/src/models/mod.rs",
+      "source_location": "L157",
+      "_origin": "ast",
+      "id": "native_rust_core_src_models_mod_test_histvon_generator",
+      "community": 12,
+      "community_name": "String",
+      "norm_label": "test_histvon_generator()"
     },
     {
       "label": "parser/mod.rs",
@@ -18570,11 +19219,33 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart",
       "source_location": null,
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_flashcards_flashcard_view",
+      "target": "package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
       "target": "package_flutter_material_dart"
     },
     {
@@ -18691,6 +19362,17 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/sync/sync_view.dart",
       "source_location": null,
       "weight": 1.0,
@@ -18740,6 +19422,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_test_document_pipeline_test",
+      "target": "package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/features_complete_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_features_complete_test",
       "target": "package_flutter_material_dart"
     },
     {
@@ -19340,6 +20033,17 @@
       "target": "statelesswidget"
     },
     {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_conflictresolutiondialog",
+      "target": "statelesswidget"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -19373,6 +20077,42 @@
       "context": "route_object",
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_app_app_opencommandpalette",
+      "target": "materialpageroute"
+    },
+    {
+      "relation": "navigates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/annotations/annotation_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "route_object",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_annotations_annotation_view_build",
+      "target": "materialpageroute"
+    },
+    {
+      "relation": "navigates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "route_object",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_build",
+      "target": "materialpageroute"
+    },
+    {
+      "relation": "navigates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "route_object",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_build",
       "target": "materialpageroute"
     },
     {
@@ -19433,6 +20173,18 @@
       "context": "route_object",
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_onboarding_onboarding_view_build",
+      "target": "materialpageroute"
+    },
+    {
+      "relation": "navigates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "route_object",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_rsvp_canvas_build",
       "target": "materialpageroute"
     },
     {
@@ -19771,6 +20523,28 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "core_app_tokens_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "core_app_tokens_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/library/document_detail_view.dart",
       "source_location": null,
       "weight": 1.0,
@@ -19820,6 +20594,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_settings_keyboard_shortcuts_view",
+      "target": "core_app_tokens_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
       "target": "core_app_tokens_dart"
     },
     {
@@ -20447,11 +21232,33 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerview",
+      "target": "statefulwidget"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart",
       "source_location": null,
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardview",
+      "target": "statefulwidget"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatview",
       "target": "statefulwidget"
     },
     {
@@ -20579,11 +21386,33 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerviewstate",
+      "target": "state"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart",
       "source_location": null,
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_flashcards_flashcard_view_flashcardviewstate",
+      "target": "state"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatviewstate",
       "target": "state"
     },
     {
@@ -20689,6 +21518,18 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "variable_type",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "texteditingcontroller"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/library/library_view.dart",
       "source_location": null,
       "weight": 1.0,
@@ -20713,12 +21554,48 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "variable_type",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "list"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "variable_type",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "list"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart",
       "source_location": null,
       "weight": 1.0,
       "context": "variable_type",
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_flashcards_flashcard_view",
+      "target": "list"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "variable_type",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
       "target": "list"
     },
     {
@@ -21584,6 +22461,17 @@
       "target": "flashcards_flashcard_view_dart"
     },
     {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/annotations/annotation_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_annotations_annotation_view",
+      "target": "knowledge_ai_chat_view_dart"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -21651,6 +22539,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_library_library_view",
       "target": "flashcards_flashcard_view_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_rsvp_canvas",
+      "target": "knowledge_ai_chat_view_dart"
     },
     {
       "relation": "defines",
@@ -21977,6 +22876,226 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_adddeck"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_createstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerview"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerviewstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_decks"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "deck_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view",
+      "target": "flashcard_view_dart"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_manager_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerviewstate",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_manager_view_deckmanagerview"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_back"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_calculatenextinterval"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_cards"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_easefactor"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_flashcarddeck"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_front"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_id"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_intervaldays"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_name"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_repetitioncount"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/deck_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_deck_model",
+      "target": "apps_flutter_client_lib_src_features_flashcards_deck_model_srscard"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart",
       "source_location": null,
       "weight": 1.0,
@@ -22235,6 +23354,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_flashcards_flashcard_view",
+      "target": "deck_manager_view_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/flashcards/flashcard_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_flashcards_flashcard_view",
       "target": "package_flutter_foundation_dart"
     },
     {
@@ -22427,6 +23557,150 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_rsvp_canvas",
       "target": "rust_api_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatmessage"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatview"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatviewstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_createstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_inputcontroller"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_isuser"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_messages"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_sendmessage"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_text"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_timestamp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "context": "variable_type",
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view",
+      "target": "datetime"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/knowledge/ai_chat_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatviewstate",
+      "target": "apps_flutter_client_lib_src_features_knowledge_ai_chat_view_aichatview"
     },
     {
       "relation": "defines",
@@ -24617,6 +25891,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_reader_settings_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_bionicmode"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_settings_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_settings_provider",
       "target": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_copywith"
     },
     {
@@ -24728,6 +26013,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_reader_reader_settings_provider",
       "target": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_setwpm"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/reader/reader_settings_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_reader_reader_settings_provider",
+      "target": "apps_flutter_client_lib_src_features_reader_reader_settings_provider_togglebionicmode"
     },
     {
       "relation": "defines",
@@ -25399,6 +26695,105 @@
       "target": "apps_flutter_client_lib_src_features_settings_user_settings_view_usersettingsview"
     },
     {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/settings/user_settings_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_settings_user_settings_view",
+      "target": "sync_conflict_resolution_dialog_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_conflictresolutionchoice"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_conflictresolutiondialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_localtimestamp"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_localversion"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_remotetimestamp"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_remoteversion"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/conflict_resolution_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog",
+      "target": "apps_flutter_client_lib_src_features_sync_conflict_resolution_dialog_title"
+    },
+    {
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -25552,6 +26947,17 @@
       "_origin": "ast",
       "source": "apps_flutter_client_lib_src_features_sync_sync_view",
       "target": "apps_flutter_client_lib_src_features_sync_sync_view_transportadapter"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/lib/src/features/sync/sync_view.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_lib_src_features_sync_sync_view",
+      "target": "conflict_resolution_dialog_dart"
     },
     {
       "relation": "imports",
@@ -29139,6 +30545,17 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/features_complete_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_features_complete_test",
+      "target": "package_flutter_test_flutter_test_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "apps/flutter_client/test/features/library/file_parser_service_test.dart",
       "source_location": null,
       "weight": 1.0,
@@ -29542,6 +30959,39 @@
       "_origin": "ast",
       "source": "apps_flutter_client_test_features_reader_rsvp_canvas_test",
       "target": "richtext"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/features_complete_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_features_complete_test",
+      "target": "apps_flutter_client_test_features_complete_test_main"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/features_complete_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_features_complete_test",
+      "target": "package_flutter_client_src_features_flashcards_deck_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flutter_client/test/features_complete_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_flutter_client_test_features_complete_test",
+      "target": "package_flutter_client_src_features_knowledge_ai_chat_view_dart"
     },
     {
       "relation": "defines",
@@ -30599,6 +32049,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod",
+      "target": "native_rust_core_src_api_mod_generate_ai_chat_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
@@ -30632,6 +32093,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod",
+      "target": "native_rust_core_src_api_mod_resolve_crdt_conflict_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
@@ -30654,7 +32126,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
-      "source_location": "L54",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod",
+      "target": "native_rust_core_src_api_mod_test_generate_ai_chat_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod",
@@ -30665,7 +32148,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
-      "source_location": "L48",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod",
+      "target": "native_rust_core_src_api_mod_test_resolve_crdt_conflict_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod",
@@ -30857,7 +32351,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
-      "source_location": "L68",
+      "source_location": "L92",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod_test_parse_file_text",
@@ -30881,11 +32375,59 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/api/mod.rs",
-      "source_location": "L49",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_api_mod_test_search_similar_chunks_api",
       "target": "native_rust_core_src_api_mod_search_similar_chunks_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L42",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_generate_ai_chat_response",
+      "target": "native_rust_core_src_frb_generated_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_test_generate_ai_chat_response",
+      "target": "native_rust_core_src_api_mod_generate_ai_chat_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_resolve_crdt_conflict_api",
+      "target": "native_rust_core_src_frb_generated_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/api/mod.rs",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_api_mod_test_resolve_crdt_conflict_api",
+      "target": "native_rust_core_src_api_mod_resolve_crdt_conflict_api",
       "confidence_score": 1.0
     },
     {
@@ -33268,6 +34810,18 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/models/mod.rs",
+      "source_location": "L149",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "source": "native_rust_core_src_models_mod_aichatmessagemodel",
+      "target": "native_rust_core_src_frb_generated_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/models/mod.rs",
       "source_location": "L88",
       "weight": 1.0,
       "context": "field",
@@ -34810,6 +36364,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/models/mod.rs",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_models_mod",
+      "target": "native_rust_core_src_models_mod_aichatmessagemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/models/mod.rs",
       "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
@@ -34909,11 +36474,34 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "native/rust_core/src/models/mod.rs",
+      "source_location": "L157",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_models_mod",
+      "target": "native_rust_core_src_models_mod_test_histvon_generator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/models/mod.rs",
       "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "source": "native_rust_core_src_models_mod",
       "target": "native_rust_core_src_models_mod_wordtiming",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "native/rust_core/src/models/mod.rs",
+      "source_location": "L158",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "native_rust_core_src_models_mod_test_histvon_generator",
+      "target": "native_rust_core_src_models_mod_generate_histvon_timestamp",
       "confidence_score": 1.0
     },
     {
@@ -41735,5 +43323,5 @@
       "source_file": ".agents/skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "e2b6c7504f14926c90c316586ef456713a7dc74c"
+  "built_at_commit": "dfd32eca9c0b2525eaa7eef42a929b7ffae1c195"
 }
