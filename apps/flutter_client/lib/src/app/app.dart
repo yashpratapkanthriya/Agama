@@ -4,6 +4,7 @@ import 'scholarly_theme.dart';
 import '../features/library/library_view.dart';
 import '../core/command_palette.dart';
 import '../features/settings/keyboard_shortcuts_view.dart';
+import '../features/onboarding/onboarding_view.dart';
 
 final ValueNotifier<ThemeMode> themeModeNotifier =
     ValueNotifier<ThemeMode>(ThemeMode.dark);
@@ -16,6 +17,9 @@ class AgamaApp extends StatelessWidget {
     final path = uri.path;
     final fragment = uri.fragment;
 
+    if (path.contains('onboarding') || fragment.contains('onboarding')) {
+      return const OnboardingView();
+    }
     if (path.contains('highlights') || fragment.contains('highlights')) {
       return const LibraryView(initialTab: 1);
     }
@@ -49,6 +53,12 @@ class AgamaApp extends StatelessWidget {
           },
           onGenerateRoute: (settings) {
             final name = settings.name ?? '';
+            if (name.contains('onboarding')) {
+              return MaterialPageRoute(
+                builder: (_) => const OnboardingView(),
+                settings: settings,
+              );
+            }
             if (name.contains('shortcuts')) {
               return MaterialPageRoute(
                 builder: (_) => const KeyboardShortcutsView(),
