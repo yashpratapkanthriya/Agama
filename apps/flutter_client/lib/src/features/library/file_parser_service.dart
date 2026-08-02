@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import '../../rust/api.dart' as rust;
 import '../../rust/frb_generated.dart';
+import 'url_import_service.dart';
 
 enum DocumentFormat { txt, markdown, pdf, epub }
 
@@ -114,12 +115,7 @@ class FileParserService {
   }
 
   Future<ParsedDocument> parseUrl(String url) async {
-    // Stub for URL fetch/parse
-    return ParsedDocument(
-      title: url,
-      content: 'Extracted content from $url',
-      format: DocumentFormat.markdown,
-    );
+    return UrlImportService.instance.fetchAndParseUrl(url);
   }
 }
 

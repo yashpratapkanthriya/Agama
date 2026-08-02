@@ -60,13 +60,13 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/app/app.dart": {
-    "mtime": 1785654732.779331,
-    "ast_hash": "cfc7101bffd87954bfacdcf6b2560ed0",
+    "mtime": 1785660049.7847984,
+    "ast_hash": "5b0bed893ebfd67552e14b981627873e",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/library_view.dart": {
-    "mtime": 1785654832.1449728,
-    "ast_hash": "73a85eaa1988c9293aec6bdc5e50944a",
+    "mtime": 1785660431.5495386,
+    "ast_hash": "b7478c776cfe3f79b57b62103a54cece",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/test/widget_test.dart": {
-    "mtime": 1785610852.208127,
-    "ast_hash": "7a29d4a94004d30bf033fad6afdc0364",
+    "mtime": 1785658795.1271114,
+    "ast_hash": "3f9848e3a97ce85e6519035f5cec0898",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/reader/reader_provider.dart": {
@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/library/file_parser_service.dart": {
-    "mtime": 1785652359.9424157,
-    "ast_hash": "211dd24abbd28844493aa575f21d031d",
+    "mtime": 1785660340.6262774,
+    "ast_hash": "42dbcda7cfe78c0f68262867fa11d37f",
     "semantic_hash": ""
   },
   "apps/flutter_client/test/file_parser_test.dart": {
@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/test/features/library/library_view_test.dart": {
-    "mtime": 1785610840.2318382,
-    "ast_hash": "e97eaffb8005cbab70e0906cb86a200d",
+    "mtime": 1785660405.3911033,
+    "ast_hash": "94017324f37afeb600c7c3dfdd1b1bf2",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-01-library-ui-design.md": {
@@ -550,8 +550,8 @@
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/app/scholarly_theme.dart": {
-    "mtime": 1785654727.158555,
-    "ast_hash": "d1ee5ec43e01b2a7bd2613a189284edc",
+    "mtime": 1785659878.526027,
+    "ast_hash": "5731cdb8ee7d95c277e115ebaf4692b4",
     "semantic_hash": ""
   },
   "apps/flutter_client/lib/src/features/settings/user_settings_view.dart": {
@@ -647,6 +647,111 @@
   "docs/stitch_velocity_reader_hub/upload_discover/screen.png": {
     "mtime": 1785654575.243341,
     "ast_hash": "dd964b6d20766d65533bf8c2115e15ab",
+    "semantic_hash": ""
+  },
+  "docs/UIUX_FLOW_AND_VISUAL_GUIDE.md": {
+    "mtime": 1785659206.9308436,
+    "ast_hash": "a32ce44e345655ea000f066b62b4e857",
+    "semantic_hash": ""
+  },
+  "docs/new_feature_diagram.md": {
+    "mtime": 1785659523.9245949,
+    "ast_hash": "bc0c197383226294f507241d7ef21cc6",
+    "semantic_hash": ""
+  },
+  "docs/new_nfeatures.md": {
+    "mtime": 1785659387.1516318,
+    "ast_hash": "5268ee27c8ce2cc8fd6544a9e21f4c04",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-02-new-features-implementation-plan.md": {
+    "mtime": 1785659637.1592216,
+    "ast_hash": "8b8e37d8a96b02c522a308b5241d050c",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-02-new-features-implementation-plan.md": {
+    "mtime": 1785659767.6684706,
+    "ast_hash": "b649132a7485bf975e41151d959fd6a9",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/core/app_tokens.dart": {
+    "mtime": 1785659874.6176116,
+    "ast_hash": "bd698c095fd9f72aa4a586eb8140a15d",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/core/empty_state_widget.dart": {
+    "mtime": 1785659876.1869009,
+    "ast_hash": "da1042529ce6807a82984dd0bd44dbec",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/core_tokens_test.dart": {
+    "mtime": 1785659849.6707413,
+    "ast_hash": "3e508804dd6f123918271f5f5d9be885",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/core/command_palette.dart": {
+    "mtime": 1785659980.894214,
+    "ast_hash": "e4bca1123ee326845ae3627199c49811",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/settings/keyboard_shortcuts_view.dart": {
+    "mtime": 1785659982.376525,
+    "ast_hash": "ab3d00503647546dc837e7b107ac3aa5",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/command_palette_test.dart": {
+    "mtime": 1785659958.2459478,
+    "ast_hash": "5a504d2d8d2a6306bca44870aa71fbbf",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/onboarding/calibration_view.dart": {
+    "mtime": 1785660041.0612063,
+    "ast_hash": "94aafe7cf5f1685e03343392a8208022",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/onboarding/onboarding_view.dart": {
+    "mtime": 1785660044.1803908,
+    "ast_hash": "520ea4a081909d18da645e72a0b754af",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/onboarding_test.dart": {
+    "mtime": 1785660030.0398226,
+    "ast_hash": "452a36466b05b752df54c04bb151c198",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/auth/auth_provider.dart": {
+    "mtime": 1785660138.3414998,
+    "ast_hash": "b01d06e706ab680ab6cccdb0840ebede",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/auth/profile_view.dart": {
+    "mtime": 1785660141.21123,
+    "ast_hash": "8717f8e9265cac5c864581b29a1d853c",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/auth_profile_test.dart": {
+    "mtime": 1785660124.99216,
+    "ast_hash": "ebe65aac84fff66315467438edd9d821",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/library/document_detail_view.dart": {
+    "mtime": 1785660320.0235014,
+    "ast_hash": "4d7007c153c9c9c86fb94c07f5f4f923",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/library/document_processing_modal.dart": {
+    "mtime": 1785660322.2322037,
+    "ast_hash": "dcaa0d84d00f773532e9e046312f0db0",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/lib/src/features/library/url_import_service.dart": {
+    "mtime": 1785660402.2063963,
+    "ast_hash": "ee50457f26c7ae3e20271fb4e976787c",
+    "semantic_hash": ""
+  },
+  "apps/flutter_client/test/document_pipeline_test.dart": {
+    "mtime": 1785660309.6281836,
+    "ast_hash": "cdb4e1a5170aa7dba777e931bd5f313f",
     "semantic_hash": ""
   }
 }
