@@ -104,18 +104,18 @@ class _HomeTabViewState extends ConsumerState<HomeTabView> {
                 ],
               ),
               const SizedBox(height: 10),
-              Row(
+              const Row(
                 children: [
                   Expanded(
                     child: _StatCard(
                       icon: Icons.local_fire_department_rounded,
-                      iconColor: const Color(0xFFFD761A),
+                      iconColor: Color(0xFFFD761A),
                       value: '7 Days',
                       label: 'Reading Streak',
                       badge: 'Active 🔥',
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: 10),
                   Expanded(
                     child: _StatCard(
                       icon: Icons.speed_rounded,
@@ -125,7 +125,7 @@ class _HomeTabViewState extends ConsumerState<HomeTabView> {
                       badge: '+34% gain',
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: 10),
                   Expanded(
                     child: _StatCard(
                       icon: Icons.menu_book_rounded,

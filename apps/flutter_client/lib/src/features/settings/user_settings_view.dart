@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../sync/conflict_resolution_dialog.dart';
+import '../auth/profile_view.dart';
+import '../onboarding/onboarding_view.dart';
+import '../settings/keyboard_shortcuts_view.dart';
+import '../../core/command_palette.dart';
 
 class UserSettingsView extends StatelessWidget {
   const UserSettingsView({super.key});
@@ -55,6 +59,17 @@ class UserSettingsView extends StatelessWidget {
                     const SizedBox(height: 12),
                     Text('Total Words Speed-Read: 142,500 words',
                         style: GoogleFonts.inter(fontSize: 13, color: theme.colorScheme.onSurfaceVariant)),
+                    const SizedBox(height: 12),
+                    OutlinedButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const ProfileView()),
+                        );
+                      },
+                      icon: const Icon(Icons.person_outline, size: 16),
+                      label: Text('Manage Account & Sync Profile', style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600)),
+                    ),
                   ],
                 ),
               ),
@@ -123,7 +138,7 @@ class UserSettingsView extends StatelessWidget {
               const SizedBox(height: 14),
               // Bento Tile 3: Engine Defaults & Customization
               _BentoTile(
-                title: 'ENGINE DEFAULTS & CUSTOMIZATION',
+                title: 'ENGINE DEFAULTS & NAVIGATION',
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -132,6 +147,49 @@ class UserSettingsView extends StatelessWidget {
                     Text('Default Speed Target: 450 WPM', style: GoogleFonts.inter(fontSize: 13, color: theme.colorScheme.onSurfaceVariant)),
                     const SizedBox(height: 4),
                     Text('ORP Focus Highlight: Energetic Orange (#FD761A)', style: GoogleFonts.inter(fontSize: 13, color: const Color(0xFFFD761A))),
+                    const SizedBox(height: 14),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: [
+                        OutlinedButton.icon(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (_) => const OnboardingView()),
+                            );
+                          },
+                          icon: const Icon(Icons.speed, size: 16),
+                          label: Text('Re-Calibrate Speed / Tour', style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600)),
+                        ),
+                        OutlinedButton.icon(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (_) => const KeyboardShortcutsView()),
+                            );
+                          },
+                          icon: const Icon(Icons.keyboard_outlined, size: 16),
+                          label: Text('Keyboard Shortcuts', style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600)),
+                        ),
+                        OutlinedButton.icon(
+                          onPressed: () async {
+                            final result = await showDialog<String>(
+                              context: context,
+                              builder: (_) => const CommandPaletteModal(),
+                            );
+                            if (result != null && result == 'View Keyboard Shortcuts' && context.mounted) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (_) => const KeyboardShortcutsView()),
+                              );
+                            }
+                          },
+                          icon: const Icon(Icons.search_rounded, size: 16),
+                          label: Text('Command Palette (⌘K)', style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600)),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),

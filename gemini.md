@@ -1,4 +1,4 @@
-# Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
+# Agama Platform — Agent Guidelines & Memory Contract (GEMINI.md)
 
 This file defines the mandatory workflows, agent behaviors, coding rules, and verification standards for all AI agent sessions working on the Agama platform.
 
@@ -76,7 +76,7 @@ flutter test
 ## 8. Platform & Build State (current)
 
 ### Supported Platforms
-- **web** (`web/`) — Chrome via `flutter run -d chrome`
+- **web** (`web/`) — Chrome via `flutter run -d chrome` or `flutter run -d web-server --web-port 8080`
 - **macOS** (`macos/`) — requires Xcode; `flutter run -d macos`
 - Android / iOS: platform dirs not yet scaffolded
 

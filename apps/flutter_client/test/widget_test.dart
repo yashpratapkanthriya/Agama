@@ -12,24 +12,24 @@ import 'package:flutter_client/src/features/analytics/analytics_view.dart';
 
 void main() {
   testWidgets('AgamaApp launches LibraryView with title', (WidgetTester tester) async {
-    // Wrap LibraryView directly to avoid ProviderScope timer complications
-    // with the live RSVP demo animation in tests.
     await tester.pumpWidget(
-      MaterialApp(
-        theme: AgamaTheme.light(),
-        home: const LibraryView(),
+      ProviderScope(
+        child: MaterialApp(
+          theme: AgamaTheme.light(),
+          home: const LibraryView(),
+        ),
       ),
     );
 
-    // Pump one frame — RSVP demo uses Future.delayed (real async), so this is safe
-    await tester.pump();
+    // Pump one frame
+    await tester.pump(const Duration(milliseconds: 100));
 
     // New UI: compact logo + 'Agama' wordmark in AppBar
     expect(find.text('Agama'), findsAtLeastNWidgets(1));
     // Engine chooser first tab label
     expect(find.text('RSVP Redicle'), findsAtLeastNWidgets(1));
-    // Document library section
-    expect(find.text('YOUR LIBRARY'), findsOneWidget);
+    // Continue reading section on Home tab
+    expect(find.text('CONTINUE READING'), findsOneWidget);
   });
 
 
