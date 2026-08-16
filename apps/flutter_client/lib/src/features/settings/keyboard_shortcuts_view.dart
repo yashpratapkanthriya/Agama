@@ -9,10 +9,11 @@ class KeyboardShortcutsView extends StatelessWidget {
       'category': 'General & Navigation',
       'shortcuts': [
         {'action': 'Open Command Palette', 'keys': '⌘K / Ctrl+K'},
-        {'action': 'Go to Library Tab', 'keys': '⌘1'},
-        {'action': 'Go to Knowledge Tab', 'keys': '⌘2'},
-        {'action': 'Go to Analytics Tab', 'keys': '⌘3'},
-        {'action': 'Go to Settings Tab', 'keys': '⌘4'},
+        {'action': 'Go to Home Tab', 'keys': '⌘1'},
+        {'action': 'Go to Library Tab', 'keys': '⌘2'},
+        {'action': 'Go to Knowledge Tab', 'keys': '⌘3'},
+        {'action': 'Go to Analytics Tab', 'keys': '⌘4'},
+        {'action': 'Go to Settings Tab', 'keys': '⌘5'},
       ],
     },
     {

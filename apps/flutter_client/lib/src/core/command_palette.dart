@@ -13,10 +13,11 @@ class _CommandPaletteModalState extends State<CommandPaletteModal> {
   String _query = '';
 
   final List<Map<String, String>> _commands = const [
-    {'title': 'Go to Library', 'category': 'Navigation', 'shortcut': '⌘1'},
-    {'title': 'Go to Knowledge', 'category': 'Navigation', 'shortcut': '⌘2'},
-    {'title': 'Go to Analytics', 'category': 'Navigation', 'shortcut': '⌘3'},
-    {'title': 'Go to Settings', 'category': 'Navigation', 'shortcut': '⌘4'},
+    {'title': 'Go to Home', 'category': 'Navigation', 'shortcut': '⌘1'},
+    {'title': 'Go to Library', 'category': 'Navigation', 'shortcut': '⌘2'},
+    {'title': 'Go to Knowledge', 'category': 'Navigation', 'shortcut': '⌘3'},
+    {'title': 'Go to Analytics', 'category': 'Navigation', 'shortcut': '⌘4'},
+    {'title': 'Go to Settings', 'category': 'Navigation', 'shortcut': '⌘5'},
     {'title': 'Import Text / Document', 'category': 'Action', 'shortcut': '⌘I'},
     {'title': 'View Keyboard Shortcuts', 'category': 'Help', 'shortcut': '?'},
   ];
