@@ -7,7 +7,7 @@ import '../features/settings/keyboard_shortcuts_view.dart';
 import '../features/onboarding/onboarding_view.dart';
 
 final ValueNotifier<ThemeMode> themeModeNotifier =
-    ValueNotifier<ThemeMode>(ThemeMode.dark);
+    ValueNotifier<ThemeMode>(ThemeMode.light);
 
 class AgamaApp extends StatelessWidget {
   const AgamaApp({super.key});

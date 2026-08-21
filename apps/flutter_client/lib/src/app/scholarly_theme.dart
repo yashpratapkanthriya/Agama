@@ -22,6 +22,7 @@ class ScholarlyTheme {
         primary: primary,
         secondary: secondary,
         surface: surfaceContainer,
+        surfaceContainerHighest: surfaceContainerHigh,
         onSurface: onSurface,
         onSurfaceVariant: onSurfaceVariant,
         outline: outline,
@@ -48,35 +49,64 @@ class ScholarlyTheme {
   }
 
   static ThemeData light() {
+    const lightBg = Color(0xFFF6F8FC);
+    const lightSurface = Color(0xFFFFFFFF);
+    const lightSurfaceContainer = Color(0xFFF1F5F9);
+    const lightOnSurface = Color(0xFF0F172A);
+    const lightOnSurfaceVariant = Color(0xFF64748B);
+    const lightOutline = Color(0xFFE2E8F0);
+    const lightPrimary = Color(0xFF4F46E5);
+
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: const Color(0xFFF9F9FF),
+      scaffoldBackgroundColor: lightBg,
       colorScheme: const ColorScheme.light(
-        primary: Color(0xFF041920),
-        secondary: Color(0xFFFD761A),
-        surface: Color(0xFFE7EEFF),
-        onSurface: Color(0xFF111C2C),
-        onSurfaceVariant: Color(0xFF42484A),
-        outline: Color(0xFF73787A),
+        primary: lightPrimary,
+        secondary: secondary,
+        surface: lightSurface,
+        surfaceContainer: lightSurfaceContainer,
+        surfaceContainerHighest: Color(0xFFEAEFF8),
+        onSurface: lightOnSurface,
+        onSurfaceVariant: lightOnSurfaceVariant,
+        outline: lightOutline,
+      ),
+      appBarTheme: AppBarTheme(
+        backgroundColor: lightSurface,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        foregroundColor: lightOnSurface,
+        centerTitle: false,
+        titleTextStyle: GoogleFonts.outfit(
+          fontSize: 17,
+          fontWeight: FontWeight.w700,
+          color: lightOnSurface,
+          letterSpacing: -0.3,
+        ),
+        shape: const Border(
+          bottom: BorderSide(color: lightOutline, width: 1),
+        ),
       ),
       cardTheme: CardThemeData(
+        color: lightSurface,
         elevation: AppTokens.elevationSm,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppTokens.radiusMd),
+          side: const BorderSide(color: lightOutline, width: 1),
         ),
       ),
       dialogTheme: DialogThemeData(
+        backgroundColor: lightSurface,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppTokens.radiusLg),
         ),
       ),
       textTheme: TextTheme(
-        headlineLarge: GoogleFonts.sourceSerif4(fontSize: 32, fontWeight: FontWeight.w600, color: const Color(0xFF111C2C)),
-        headlineMedium: GoogleFonts.sourceSerif4(fontSize: 24, fontWeight: FontWeight.w600, color: const Color(0xFF111C2C)),
-        bodyLarge: GoogleFonts.literata(fontSize: 18, fontWeight: FontWeight.w400, color: const Color(0xFF111C2C)),
-        bodyMedium: GoogleFonts.literata(fontSize: 16, fontWeight: FontWeight.w400, color: const Color(0xFF42484A)),
-        labelLarge: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600, letterSpacing: 0.5, color: const Color(0xFF111C2C)),
+        headlineLarge: GoogleFonts.sourceSerif4(fontSize: 32, fontWeight: FontWeight.w600, color: lightOnSurface),
+        headlineMedium: GoogleFonts.sourceSerif4(fontSize: 24, fontWeight: FontWeight.w600, color: lightOnSurface),
+        bodyLarge: GoogleFonts.literata(fontSize: 18, fontWeight: FontWeight.w400, color: lightOnSurface),
+        bodyMedium: GoogleFonts.literata(fontSize: 16, fontWeight: FontWeight.w400, color: lightOnSurfaceVariant),
+        labelLarge: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600, letterSpacing: 0.5, color: lightOnSurface),
       ),
     );
   }
