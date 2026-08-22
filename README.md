@@ -55,14 +55,17 @@ cargo build --release
 ### 3. Running & Testing by Platform Target
 
 #### A. Web (Chrome / WebAssembly Target)
-Test and launch the application in Google Chrome:
+Test and launch the application in Google Chrome or via local web server:
 ```bash
 cd apps/flutter_client
 
 # 1. Run Flutter Web application in Chrome
 flutter run -d chrome
 
-# 2. Build Web production distribution bundle
+# 2. Run Web application on custom port (e.g. port 8080)
+flutter run -d web-server --web-port 8080
+
+# 3. Build Web production distribution bundle
 flutter build web --release
 ```
 

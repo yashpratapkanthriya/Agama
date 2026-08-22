@@ -1,23 +1,23 @@
-# Graph Report - Agama  (2026-08-02)
+# Graph Report - Agama  (2026-08-16)
 
 ## Corpus Check
-- 129 files · ~170,796 words
+- 137 files · ~175,503 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1719 nodes · 2166 edges · 109 communities (97 shown, 12 thin omitted)
+- 1792 nodes · 2279 edges · 125 communities (111 shown, 14 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dfd32eca`
+- Built from commit: `b5312178`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Graphify Full Pipeline
 - rsvp_canvas.dart
-- reader_settings_provider.dart
+- reader_provider.dart
 - library_view.dart
 - Graphify Watch Mode
 - FalkorDB Export
@@ -68,10 +68,10 @@
 - manifest.json
 - .sse_decode
 - flutter_client
-- sync_transport.dart
+- List
 - vector_search_service.dart
 - Global Constraints
-- Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)
+- Agama Platform — Agent Guidelines & Memory Contract (GEMINI.md)
 - State
 - Agama UI Redesign Spec — "Scholarly Minimalist"
 - Design Spec: Agama Sub-project 1 — Document Ingestion & Reading Engine Overhaul
@@ -104,7 +104,7 @@
 - new_feature_diagram.md
 - Global Constraints
 - 3. Step-by-Step Implementation Roadmap
-- package:flutter/material.dart
+- package:flutter_riverpod/flutter_riverpod.dart
 - app_tokens.dart
 - empty_state_widget.dart
 - app.dart
@@ -117,12 +117,28 @@
 - url_import_service.dart
 - command_palette.dart
 - widget_test.dart
-- package:flutter_riverpod/flutter_riverpod.dart
+- main.dart
 - ai_chat_view.dart
-- core_tokens_test.dart
+- auth_provider.dart
 - deck_model.dart
 - deck_manager_view.dart
 - conflict_resolution_dialog.dart
+- reader_settings_provider.dart
+- user_settings_view.dart
+- parser.dart
+- package:flutter/material.dart
+- features_complete_test.dart
+- home_tab_view.dart
+- document_repository.dart
+- scholarly_theme.dart
+- 3. Component & State Design
+- _HomeTabViewState
+- readerSettingsProvider
+- Global Constraints
+- document_detail_view.dart
+- core_tokens_test.dart
+- home_tab_view_test.dart
+- OrpGuidePainter
 
 ## God Nodes (most connected - your core abstractions)
 1. `_` - 73 edges
@@ -137,16 +153,16 @@
 10. `Complete End-to-End Implementation Specification: Zero-Backend AI Speed Reading & Knowledge Platform` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `SyncEngine` --references--> `_Doc`  [EXTRACTED]
-  native/rust_core/src/sync/mod.rs → apps/flutter_client/lib/src/features/library/library_view.dart
 - `Graphify Always On Rule` --semantically_similar_to--> `CLAUDE.md Native Integration`  [INFERRED] [semantically similar]
   .agents/rules/graphify.md → .agents/skills/graphify/references/hooks.md
 - `Graphify Fast Path` --semantically_similar_to--> `Code-Only Update Fast Path`  [INFERRED] [semantically similar]
   .agents/skills/graphify/SKILL.md → .agents/skills/graphify/references/update.md
-- `_onKey` --references--> `readerSettingsProvider`  [EXTRACTED]
-  apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart → apps/flutter_client/lib/src/features/reader/reader_settings_provider.dart
-- `_setWpm` --references--> `readerSettingsProvider`  [EXTRACTED]
-  apps/flutter_client/lib/src/features/reader/rsvp_canvas.dart → apps/flutter_client/lib/src/features/reader/reader_settings_provider.dart
+- `_HomeTabViewState` --references--> `documentListProvider`  [EXTRACTED]
+  apps/flutter_client/lib/src/features/home/home_tab_view.dart → apps/flutter_client/lib/src/features/library/document_repository.dart
+- `build` --references--> `documentListProvider`  [EXTRACTED]
+  apps/flutter_client/lib/src/features/home/home_tab_view.dart → apps/flutter_client/lib/src/features/library/document_repository.dart
+- `_LibraryTabState` --references--> `documentListProvider`  [EXTRACTED]
+  apps/flutter_client/lib/src/features/library/library_view.dart → apps/flutter_client/lib/src/features/library/document_repository.dart
 
 ## Import Cycles
 - None detected.
@@ -156,23 +172,23 @@
 - **Graphify Knowledge Traversal and Memory System** — _agents_skills_graphify_references_query_constrained_vocabulary_expansion, _agents_skills_graphify_references_query_bfs_dfs_traversal, _agents_skills_graphify_references_query_self_improving_feedback_loop [EXTRACTED 1.00]
 - **Incremental Rebuilding and Watching Architecture** — _agents_skills_graphify_references_add_watch_graphify_watch, _agents_skills_graphify_references_update_incremental_update, _agents_skills_graphify_references_hooks_git_commit_hook [INFERRED 0.85]
 
-## Communities (109 total, 12 thin omitted)
+## Communities (125 total, 14 thin omitted)
 
 ### Community 0 - "Graphify Full Pipeline"
 Cohesion: 0.09
 Nodes (24): Graphify Always On Rule, Graphify Ingestion (Add URL), Obsidian Vault Export, Confidence Score Rubric, Deterministic Node ID Format, Semantic Extraction Specification, Cross-Repo Graph Merge, CLAUDE.md Native Integration (+16 more)
 
 ### Community 1 - "rsvp_canvas.dart"
-Cohesion: 0.06
-Nodes (40): readerSettingsProvider, accentColor, build, createState, _customWpm, _delayForWord, dispose, _focus (+32 more)
+Cohesion: 0.07
+Nodes (28): accentColor, createState, _customWpm, _delayForWord, dispose, _focus, icon, _idx (+20 more)
 
-### Community 2 - "reader_settings_provider.dart"
-Cohesion: 0.05
-Nodes (43): AuthNotifier, copyWith, email, hashCode, isGuest, isSyncEnabled, name, operator (+35 more)
+### Community 2 - "reader_provider.dart"
+Cohesion: 0.13
+Nodes (15): copyWith, currentWordIndex, isPlaying, notifier, paragraphComplexity, ReaderNotifier, readerProvider, ReaderState (+7 more)
 
 ### Community 3 - "library_view.dart"
-Cohesion: 0.04
-Nodes (51): ../analytics/analytics_view.dart, Animation, AnimationController, ../../app/app.dart, _ac, accent, _anim, color (+43 more)
+Cohesion: 0.06
+Nodes (33): ../analytics/analytics_view.dart, Animation, AnimationController, ../../app/app.dart, _ac, accent, _anim, createState (+25 more)
 
 ### Community 11 - "ai/mod.rs"
 Cohesion: 0.12
@@ -184,27 +200,27 @@ Nodes (45): Connection, ModelSearchResult, calculate_orp_index(), generate_ai_ch
 
 ### Community 13 - "SyncEngine"
 Cohesion: 0.24
-Nodes (7): _Doc, Default, Result, Self, Vec, SyncEngine, test_yrs_crdt_delta_generation_and_merge()
+Nodes (7): Doc, Default, Result, Self, Vec, SyncEngine, test_yrs_crdt_delta_generation_and_merge()
 
 ### Community 14 - "analytics_view.dart"
-Cohesion: 0.13
-Nodes (14): accent, _avgCci, _avgWpmDemo, build, label, _MetricCard, _peers, _quizAccuracy (+6 more)
+Cohesion: 0.12
+Nodes (15): accent, AnalyticsView, _avgCci, _avgWpmDemo, build, label, _MetricCard, _peers (+7 more)
 
 ### Community 15 - "Production-Ready AI-First Platform: Master Technical Architecture & Specification"
 Cohesion: 0.04
 Nodes (48): ADR 001: Choice of Flutter for Cross-Platform Client, ADR 002: Next.js 15 App Router & Better Auth for Backend Architecture, Cache Invalidation Governance, Complete Prisma Schema Definition, Conflict Resolution Strategy: Optimistic Locking + Modified Field Level LWW, Core Architectural Guiding Principles, DFD Level 0 (Context Diagram), DFD Level 1 (Core Data Subsystems) (+40 more)
 
 ### Community 18 - "package:flutter_test/flutter_test.dart"
-Cohesion: 0.10
-Nodes (15): main, main, main, main, main, main, package:flutter_client/src/core/command_palette.dart, package:flutter_client/src/core/ffi_bridge.dart (+7 more)
+Cohesion: 0.13
+Nodes (10): main, main, main, main, main, package:flutter_client/src/core/ffi_bridge.dart, package:flutter_client/src/features/annotations/vector_search_service.dart, package:flutter_client/src/features/library/document_repository.dart (+2 more)
 
 ### Community 19 - "Agama"
 Cohesion: 0.11
 Nodes (17): 1. Build & Test Native Rust Engine Core, 1. Schema Versioning (`PRAGMA user_version`), 2. Generate Cross-Platform FFI Bindings (`flutter_rust_bridge` v2), 2. Pushing Schema Updates, 3. Data Rollbacks (Zero Data Loss), 3. Running & Testing by Platform Target, A. Web (Chrome / WebAssembly Target), Agama (+9 more)
 
 ### Community 20 - "flashcard_view.dart"
-Cohesion: 0.09
-Nodes (22): addFromHighlight, answer, _cards, color, createState, ef, FlashcardItem, FlashcardStore (+14 more)
+Cohesion: 0.10
+Nodes (20): addFromHighlight, answer, _cards, color, createState, ef, FlashcardItem, FlashcardStore (+12 more)
 
 ### Community 21 - "Speed Reading Apps: Comprehensive Analysis & Gap Assessment"
 Cohesion: 0.18
@@ -283,8 +299,8 @@ Cohesion: 0.29
 Nodes (6): Design Health Score, Design Specificity Verdict, Impeccable Design Critique Snapshot: Agama Internal Manual, Overall Impression, Persona Red Flags, Priority Issues
 
 ### Community 41 - "sync_view.dart"
-Cohesion: 0.17
-Nodes (12): ../../app/theme.dart, build, createState, _outbox, _sync, _syncing, SyncView, _SyncViewState (+4 more)
+Cohesion: 0.18
+Nodes (10): ../../app/theme.dart, build, createState, _outbox, _sync, _syncing, _transportAdapter, conflict_resolution_dialog.dart (+2 more)
 
 ### Community 42 - "Design System: Agama Platform"
 Cohesion: 0.08
@@ -295,8 +311,8 @@ Cohesion: 0.15
 Nodes (12): Accessibility & Inclusion, Brand Commitments, Capabilities and Constraints, Evidence on Hand, Operating Context, Platform, Positioning, Product (+4 more)
 
 ### Community 44 - "theme.dart"
-Cohesion: 0.05
-Nodes (39): background, dark, light, onSurface, onSurfaceVariant, orpHighlight, outline, primary (+31 more)
+Cohesion: 0.07
+Nodes (26): AgamaTheme, amber, bg, border, borderStrong, _buildTextTheme, crimson, dark (+18 more)
 
 ### Community 45 - "file_parser_service.dart"
 Cohesion: 0.06
@@ -311,8 +327,8 @@ Cohesion: 0.11
 Nodes (15): RegisterGeneratedPlugins(), AppDelegate, MainFlutterWindow, RunnerTests, Bool, Cocoa, file_picker, FlutterAppDelegate (+7 more)
 
 ### Community 48 - "StatelessWidget"
-Cohesion: 0.11
-Nodes (18): AnalyticsView, _RateBtn, _AppBarBtn, _DocumentTile, _EngineRow, _KnowledgeTab, _KnowledgeTile, _SectionLabel (+10 more)
+Cohesion: 0.14
+Nodes (14): _RateBtn, _EngineBullet, _RecentDocCard, _SectionLabel, _StatCard, _AppBarBtn, _DocumentGridCard, _DocumentTile (+6 more)
 
 ### Community 49 - "Global Constraints"
 Cohesion: 0.40
@@ -326,9 +342,9 @@ Nodes (10): background_color, description, display, icons, name, orientation, pr
 Cohesion: 0.06
 Nodes (43): DartAbi, IntoDart, IntoDartExceptPrimitive, IntoIntoDart, MessagePort, (), bool, crate::models::BionicWord (+35 more)
 
-### Community 53 - "sync_transport.dart"
-Cohesion: 0.29
-Nodes (6): bytes, isEncrypted, packageDelta, SyncPayload, SyncTransportAdapter, List
+### Community 53 - "List"
+Cohesion: 0.25
+Nodes (7): DocumentNotifier, bytes, isEncrypted, packageDelta, SyncPayload, SyncTransportAdapter, List
 
 ### Community 54 - "vector_search_service.dart"
 Cohesion: 0.33
@@ -338,13 +354,13 @@ Nodes (5): score, search, SearchResult, text, VectorSearchService
 Cohesion: 0.25
 Nodes (7): Feature Gap Remediation Implementation Plan, Global Constraints, Task 1: Native Document File Parser Integration, Task 2: Flutter-Rust FFI Core Binding Foundation, Task 3: Local Vector Index & Semantic Search Abstraction, Task 4: WebDAV & P2P Sync Transport Adapter, Task 5: Final Graphify Topology & Test Verification
 
-### Community 56 - "Agama Platform — Agent Guidelines & Memory Contract (CLAUDE.md)"
+### Community 56 - "Agama Platform — Agent Guidelines & Memory Contract (GEMINI.md)"
 Cohesion: 0.13
 Nodes (14): 1. Process & Skill Activation Rules (Superpowers Plugin), 2. Token & Architecture Optimization Modes, 3. Knowledge Graph Navigation (Graphify), 4. Branching, PR per Feature & Semantic Commits, 5. Interactive Requirement Alignment & Pre-Merge Confirmation Protocol, 6. Build, Testing & Code Linting Verification, 7. Single Source of Truth (SSOT) Architecture References, 8. Platform & Build State (current) (+6 more)
 
 ### Community 57 - "State"
-Cohesion: 0.18
-Nodes (15): _LibraryTab, _LibraryTabState, LibraryView, _LibraryViewState, _LivePulse, _LivePulseState, _RsvpGifPreview, _RsvpGifPreviewState (+7 more)
+Cohesion: 0.21
+Nodes (13): FlashcardView, _FlashcardViewState, _RsvpGifPreview, _RsvpGifPreviewState, _LivePulse, _LivePulseState, BionicFixationView, _BionicFixationViewState (+5 more)
 
 ### Community 58 - "Agama UI Redesign Spec — "Scholarly Minimalist""
 Cohesion: 0.17
@@ -368,11 +384,11 @@ Nodes (4): Architecture & Components, Data Flow, Purpose, Rust Bridge Setup Desi
 
 ### Community 63 - "frb_generated.io.dart"
 Cohesion: 0.03
-Nodes (63): dco_decode_AnyhowException, dco_decode_bionic_word, dco_decode_bool, dco_decode_f_64, dco_decode_i_64, dco_decode_list_bionic_word, dco_decode_list_prim_u_8_strict, dco_decode_list_String (+55 more)
+Nodes (63): api.dart, dco_decode_AnyhowException, dco_decode_bionic_word, dco_decode_bool, dco_decode_f_64, dco_decode_i_64, dco_decode_list_bionic_word, dco_decode_list_prim_u_8_strict (+55 more)
 
 ### Community 64 - "_"
 Cohesion: 0.03
-Nodes (64): api.dart, _, dco_decode_AnyhowException, dco_decode_bionic_word, dco_decode_bool, dco_decode_f_64, dco_decode_i_64, dco_decode_list_bionic_word (+56 more)
+Nodes (63): _, dco_decode_AnyhowException, dco_decode_bionic_word, dco_decode_bool, dco_decode_f_64, dco_decode_i_64, dco_decode_list_bionic_word, dco_decode_list_prim_u_8_strict (+55 more)
 
 ### Community 65 - "reader/rsvp_canvas_test.dart"
 Cohesion: 0.22
@@ -466,9 +482,9 @@ Nodes (9): Agama Platform — Master Implementation Plan (New Features & Flow Ga
 Cohesion: 0.17
 Nodes (11): 1. Executive Summary & Context Topology, 2. File Change Inventory & Architecture Breakdown, 3. Step-by-Step Implementation Roadmap, 4. Single Source of Truth (SSOT) Synchronization, Agama Platform — Comprehensive Master Implementation Plan (New Features & Flow Gaps), Phase 1: Foundation, Design Tokens & Component Library (Files 1-3), Phase 2: First-Time Experience, Auth & User Profile (Files 4-7, 16), Phase 3: Document Lifecycle, Processing Pipeline & Import Options (Files 8-10, 18-19) (+3 more)
 
-### Community 90 - "package:flutter/material.dart"
-Cohesion: 0.20
-Nodes (8): main, main, main, main, package:flutter_client/src/app/scholarly_theme.dart, package:flutter_client/src/features/library/document_detail_view.dart, package:flutter_client/src/features/library/library_view.dart, package:flutter/material.dart
+### Community 90 - "package:flutter_riverpod/flutter_riverpod.dart"
+Cohesion: 0.24
+Nodes (7): main, main, main, main, package:flutter_client/src/features/library/document_detail_view.dart, package:flutter_client/src/features/library/library_view.dart, package:flutter_riverpod/flutter_riverpod.dart
 
 ### Community 91 - "app_tokens.dart"
 Cohesion: 0.12
@@ -479,28 +495,28 @@ Cohesion: 0.22
 Nodes (8): action, build, EmptyStateWidget, icon, subtitle, title, IconData, Widget
 
 ### Community 93 - "app.dart"
-Cohesion: 0.13
-Nodes (14): AgamaApp, build, child, _getInitialHome, GlobalKeyboardShortcutWrapper, themeModeNotifier, ../core/command_palette.dart, ../features/library/library_view.dart (+6 more)
+Cohesion: 0.14
+Nodes (13): AgamaApp, build, child, _getInitialHome, GlobalKeyboardShortcutWrapper, themeModeNotifier, ../features/library/library_view.dart, ../features/onboarding/onboarding_view.dart (+5 more)
 
 ### Community 94 - "../../core/app_tokens.dart"
 Cohesion: 0.18
-Nodes (9): build, content, DocumentDetailView, documentTitle, build, KeyboardShortcutsView, _shortcutGroups, ../../core/app_tokens.dart (+1 more)
+Nodes (10): authProvider, build, ProfileView, build, KeyboardShortcutsView, _shortcutGroups, auth_provider.dart, ConsumerWidget (+2 more)
 
 ### Community 95 - "calibration_view.dart"
 Cohesion: 0.20
 Nodes (10): build, CalibrationView, _CalibrationViewState, createState, _currentWordIndex, _isTesting, _runWordLoop, _sampleWords (+2 more)
 
 ### Community 96 - "MaterialPageRoute"
-Cohesion: 0.17
-Nodes (11): _openCommandPalette, build, build, build, _importUrl, _launch, _pickFile, build (+3 more)
+Cohesion: 0.13
+Nodes (16): _openCommandPalette, build, build, build, _launchReader, _openDoc, documentListProvider, build (+8 more)
 
 ### Community 97 - "document_processing_modal.dart"
 Cohesion: 0.25
 Nodes (7): build, currentStep, DocumentProcessingModal, onCancel, progress, title, VoidCallback
 
 ### Community 98 - "models.dart"
-Cohesion: 0.09
-Nodes (23): BionicWord, boldLength, delayMs, fullWord, hashCode, isPunctuationPause, operator, orpIndex (+15 more)
+Cohesion: 0.15
+Nodes (12): BionicWord, boldLength, delayMs, fullWord, hashCode, isPunctuationPause, operator, orpIndex (+4 more)
 
 ### Community 99 - "api.dart"
 Cohesion: 0.18
@@ -518,17 +534,17 @@ Nodes (10): app_tokens.dart, build, CommandPaletteModal, _CommandPaletteModalSta
 Cohesion: 0.25
 Nodes (7): main, package:flutter_client/src/app/theme.dart, package:flutter_client/src/features/analytics/analytics_view.dart, package:flutter_client/src/features/flashcards/flashcard_view.dart, package:flutter_client/src/features/reader/bionic_fixation_view.dart, package:flutter_client/src/features/reader/guided_highlight_view.dart, package:flutter_client/src/features/sync/sync_view.dart
 
-### Community 103 - "package:flutter_riverpod/flutter_riverpod.dart"
-Cohesion: 0.15
-Nodes (11): main, authProvider, build, ProfileView, main, auth_provider.dart, ConsumerWidget, package:flutter_client/src/features/auth/profile_view.dart (+3 more)
+### Community 103 - "main.dart"
+Cohesion: 0.50
+Nodes (3): main, src/app/app.dart, src/features/library/file_parser_service.dart
 
 ### Community 104 - "ai_chat_view.dart"
 Cohesion: 0.17
 Nodes (12): AiChatMessage, AiChatView, _AiChatViewState, build, createState, _inputController, isUser, _messages (+4 more)
 
-### Community 105 - "core_tokens_test.dart"
-Cohesion: 0.50
-Nodes (3): main, package:flutter_client/src/core/app_tokens.dart, package:flutter_client/src/core/empty_state_widget.dart
+### Community 105 - "auth_provider.dart"
+Cohesion: 0.13
+Nodes (15): AuthNotifier, copyWith, email, hashCode, isGuest, isSyncEnabled, name, operator (+7 more)
 
 ### Community 106 - "deck_model.dart"
 Cohesion: 0.17
@@ -542,25 +558,81 @@ Nodes (8): _addDeck, build, createState, DeckManagerView, _DeckManagerViewState,
 Cohesion: 0.22
 Nodes (8): build, ConflictResolutionChoice, ConflictResolutionDialog, localTimestamp, localVersion, remoteTimestamp, remoteVersion, title
 
+### Community 109 - "reader_settings_provider.dart"
+Cohesion: 0.14
+Nodes (14): bionicMode, copyWith, fontFamily, fontSize, hashCode, operator, ReaderSettings, ReaderSettingsNotifier (+6 more)
+
+### Community 110 - "user_settings_view.dart"
+Cohesion: 0.18
+Nodes (10): _BentoTile, child, title, UserSettingsView, ../auth/profile_view.dart, ../../core/command_palette.dart, ../onboarding/onboarding_view.dart, package:google_fonts/google_fonts.dart (+2 more)
+
+### Community 111 - "parser.dart"
+Cohesion: 0.18
+Nodes (10): author, chunks, hashCode, mimeType, operator, ParsedDocument, title, wordCount (+2 more)
+
+### Community 112 - "package:flutter/material.dart"
+Cohesion: 0.14
+Nodes (10): main, main, main, main, package:flutter_client/src/app/scholarly_theme.dart, package:flutter_client/src/core/command_palette.dart, package:flutter_client/src/features/auth/profile_view.dart, package:flutter_client/src/features/onboarding/calibration_view.dart (+2 more)
+
+### Community 113 - "features_complete_test.dart"
+Cohesion: 0.50
+Nodes (3): main, package:flutter_client/src/features/flashcards/deck_model.dart, package:flutter_client/src/features/knowledge/ai_chat_view.dart
+
+### Community 114 - "home_tab_view.dart"
+Cohesion: 0.06
+Nodes (34): accent, badge, bestFor, color, createState, dispose, doc, _EngineInfo (+26 more)
+
+### Community 115 - "document_repository.dart"
+Cohesion: 0.12
+Nodes (16): addDocument, color, colorValue, content, copyWith, DocumentItem, format, id (+8 more)
+
+### Community 116 - "scholarly_theme.dart"
+Cohesion: 0.14
+Nodes (13): background, dark, light, onSurface, onSurfaceVariant, orpHighlight, outline, primary (+5 more)
+
+### Community 117 - "3. Component & State Design"
+Cohesion: 0.20
+Nodes (9): 1. Overview & Goals, 2. Navigation Architecture (5 Persistent Tabs), 3.1 Document State Management (`DocumentProvider`), 3.2 Home Tab View (`_HomeTab`), 3.3 Library Tab View (`_LibraryTab`), 3.4 Ingestion & Flow, 3. Component & State Design, 4. Verification & Testing Gate (+1 more)
+
+### Community 118 - "_HomeTabViewState"
+Cohesion: 0.32
+Nodes (8): HomeTabView, _HomeTabViewState, _LibraryTab, _LibraryTabState, LibraryView, _LibraryViewState, ConsumerState, ConsumerStatefulWidget
+
+### Community 119 - "readerSettingsProvider"
+Cohesion: 0.25
+Nodes (8): readerSettingsProvider, build, _onKey, RSVPCanvas, RsvpCanvasView, _RsvpCanvasViewState, _setWpm, _tick
+
+### Community 120 - "Global Constraints"
+Cohesion: 0.25
+Nodes (7): Global Constraints, Home Dashboard, Persistent Library Grid/List & Ingestion Implementation Plan, Task 1: Document State Repository & Model, Task 2: Build Home Tab Dashboard with Recent Reads & Hero Reader, Task 3: Library Tab with Grid & List View Toggle and Ingestion Pipeline, Task 4: 5-Tab Navigation & Route Integration, Task 5: Static Analysis, Full Test Suite & Graph Update
+
+### Community 121 - "document_detail_view.dart"
+Cohesion: 0.40
+Nodes (4): build, content, DocumentDetailView, documentTitle
+
+### Community 122 - "core_tokens_test.dart"
+Cohesion: 0.50
+Nodes (3): main, package:flutter_client/src/core/app_tokens.dart, package:flutter_client/src/core/empty_state_widget.dart
+
 ## Knowledge Gaps
-- **1030 isolated node(s):** `main`, `themeModeNotifier`, `child`, `_getInitialHome`, `build` (+1025 more)
+- **1071 isolated node(s):** `main`, `themeModeNotifier`, `child`, `_getInitialHome`, `build` (+1066 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `String` connect `String` to `.sse_decode`, `ParsedDocument`, `ai/mod.rs`, `SyncEngine`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
-- **Why does `_` connect `_` to `models.dart`, `api.dart`, `file_parser_service.dart`, `RustLibApiImplPlatform`, `RustLibWasmModule`, `RustLibWire`, `frb_generated.io.dart`?**
-  _High betweenness centrality (0.059) - this node is a cross-community bridge._
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
+- **Why does `_` connect `_` to `api.dart`, `file_parser_service.dart`, `RustLibApiImplPlatform`, `RustLibWasmModule`, `RustLibWire`, `home_tab_view.dart`, `parser.dart`, `frb_generated.io.dart`?**
+  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+- **Why does `ParsedDocument` connect `ParsedDocument` to `String`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **What connects `main`, `themeModeNotifier`, `child` to the rest of the system?**
-  _1030 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1071 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Full Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._
 - **Should `rsvp_canvas.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.05609756097560976 - nodes in this community are weakly interconnected._
-- **Should `reader_settings_provider.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.0463768115942029 - nodes in this community are weakly interconnected._
-- **Should `library_view.dart` be split into smaller, more focused modules?**
-  _Cohesion score 0.038461538461538464 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
+- **Should `reader_provider.dart` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._

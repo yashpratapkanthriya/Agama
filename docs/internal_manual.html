@@ -467,10 +467,11 @@
                 <div class="nav-label">Architecture & Ops</div>
                 <button class="nav-item" role="tab" aria-selected="false" id="tab-sync" onclick="showTab('sync', this)">☁️ Yrs CRDT Sync</button>
                 <button class="nav-item" role="tab" aria-selected="false" id="tab-db-rollback" onclick="showTab('db-rollback', this)">🛡️ DB Rollbacks</button>
+                <button class="nav-item" role="tab" aria-selected="false" id="tab-faq" onclick="showTab('faq', this)">❓ Architecture FAQ</button>
             </div>
         </nav>
         
-        <div class="shortcut-hint">💡 Hotkeys: Space (Play), ↑/↓ (WPM), 1-8 (Tabs)</div>
+        <div class="shortcut-hint">💡 Hotkeys: Space (Play), ↑/↓ (WPM), 1-9 (Tabs)</div>
     </aside>
 
     <!-- Main Content -->
@@ -641,10 +642,91 @@ SET histbis = '9999'
 WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
             </div>
         </section>
+
+        <!-- Tab 9: Architecture FAQ -->
+        <section id="faq" class="tab-content" role="tabpanel" aria-labelledby="tab-faq">
+            <div class="page-header">
+                <h1>Architecture & Technical FAQ</h1>
+                <div class="subtitle">Frequently asked questions regarding core engine technology choices, performance targets, and system design rationale.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">❓ Why do we use Rust for the Agama Core Engine?</div>
+                <p style="color: var(--text-muted); line-height: 1.65; margin-bottom: 20px;">
+                    Agama is built as a <strong>Local-First, Zero-Backend Speed Reading and Knowledge Platform</strong>. The core engine is implemented as an embedded Rust crate (<code>rust_core</code>) compiled into native binaries bound to a Flutter shell via FFI. Rust was chosen to meet strict performance, privacy, and architectural invariants:
+                </p>
+
+                <div style="display: grid; gap: 16px;">
+                    <div style="background: #f8fafc; border: 1px solid var(--card-border); padding: 18px; border-radius: var(--radius-md);">
+                        <h4 style="color: var(--text-main); font-size: 15px; margin-bottom: 6px;">1. High-Frequency 120 FPS Rendering & Thread Isolation (<a href="SAD.md#L103" style="color: var(--accent-primary);">ADR-01</a>)</h4>
+                        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">High-speed RSVP reading engines demand sustained 120 FPS rendering at speeds up to 1,000+ WPM. CPU-heavy document parsing, vector indexing, and neural network inference would block the main Dart UI thread. Rust executes background thread workers natively without UI frame drops.</p>
+                    </div>
+
+                    <div style="background: #f8fafc; border: 1px solid var(--card-border); padding: 18px; border-radius: var(--radius-md);">
+                        <h4 style="color: var(--text-main); font-size: 15px; margin-bottom: 6px;">2. Zero-Copy FFI Inter-Process Communication (<a href="SAD.md#L108" style="color: var(--accent-primary);">ADR-02</a>)</h4>
+                        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Streaming hundreds of word tokens per second using traditional JSON string FFI introduces high memory allocations and garbage collector pauses. Rust leverages <code>flutter_rust_bridge</code> v2 with Simple Serialized Extension (SSE) binary codecs for zero-copy streaming into Dart memory.</p>
+                    </div>
+
+                    <div style="background: #f8fafc; border: 1px solid var(--card-border); padding: 18px; border-radius: var(--radius-md);">
+                        <h4 style="color: var(--text-main); font-size: 15px; margin-bottom: 6px;">3. On-Device Encrypted RAG & Vector Search (<a href="SAD.md#L113" style="color: var(--accent-primary);">ADR-03</a>)</h4>
+                        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">To guarantee zero-backend privacy without relying on cloud vector DBs, Rust directly embeds <code>SQLCipher</code> (AES-256 encrypted SQLite) and <code>sqlite-vec</code> for fast, local vector similarity search over document chunks.</p>
+                    </div>
+
+                    <div style="background: #f8fafc; border: 1px solid var(--card-border); padding: 18px; border-radius: var(--radius-md);">
+                        <h4 style="color: var(--text-main); font-size: 15px; margin-bottom: 6px;">4. Hardware-Accelerated Local AI Inference (<a href="SAD.md#L118" style="color: var(--accent-primary);">ADR-04</a>)</h4>
+                        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Adaptive Intelligent Pacing (AIP) dynamically adjusts WPM based on paragraph complexity. Rust runs quantized ONNX models via the <code>ort</code> crate bound to local NPU/GPU execution providers (CoreML, DirectML, NNAPI) with zero cloud network latency.</p>
+                    </div>
+
+                    <div style="background: #f8fafc; border: 1px solid var(--card-border); padding: 18px; border-radius: var(--radius-md);">
+                        <h4 style="color: var(--text-main); font-size: 15px; margin-bottom: 6px;">5. Decentralized CRDT Sync & E2EE (<a href="SAD.md#L123" style="color: var(--accent-primary);">ADR-05</a>)</h4>
+                        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Agama eliminates central account databases by using state-based CRDTs (via the <code>Yrs</code> Rust library) encrypted with AES-GCM-256 E2EE deltas over user-owned storage (WebDAV, iCloud, P2P).</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--card-border); color: var(--text-main);">
+                                <th style="padding: 10px;">ADR ID</th>
+                                <th style="padding: 10px;">Architecture Target</th>
+                                <th style="padding: 10px;">Rust Engine Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: var(--text-muted);">
+                            <tr style="border-bottom: 1px solid var(--card-border);">
+                                <td style="padding: 10px;"><code>ADR-01</code></td>
+                                <td style="padding: 10px;">120 FPS RSVP Engine</td>
+                                <td style="padding: 10px;">Offloads CPU tasks from UI thread, preventing frame drops</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--card-border);">
+                                <td style="padding: 10px;"><code>ADR-02</code></td>
+                                <td style="padding: 10px;">Zero-Copy FFI Stream</td>
+                                <td style="padding: 10px;">SSE binary codecs eliminate JSON string serialization overhead</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--card-border);">
+                                <td style="padding: 10px;"><code>ADR-03</code></td>
+                                <td style="padding: 10px;">On-Device RAG Search</td>
+                                <td style="padding: 10px;">Embeds <code>SQLCipher</code> + <code>sqlite-vec</code> for &lt;4.5ms search</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--card-border);">
+                                <td style="padding: 10px;"><code>ADR-04</code></td>
+                                <td style="padding: 10px;">Local ONNX Inference</td>
+                                <td style="padding: 10px;">Leverages hardware NPU/GPU providers without cloud latency</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;"><code>ADR-05</code></td>
+                                <td style="padding: 10px;">Decentralized CRDT Sync</td>
+                                <td style="padding: 10px;">High-performance <code>Yrs</code> state vector resolution with E2EE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script>
-        const tabIds = ['overview', 'usecases', 'rsvp-sim', 'bionic-sim', 'cci-sim', 'vector-sim', 'sync', 'db-rollback'];
+        const tabIds = ['overview', 'usecases', 'rsvp-sim', 'bionic-sim', 'cci-sim', 'vector-sim', 'sync', 'db-rollback', 'faq'];
 
         function showTab(tabId, el) {
             document.querySelectorAll('.tab-content').forEach(item => {
@@ -665,7 +747,7 @@ WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
             }
         }
 
-        // Global Keyboard Shortcut Navigation (Space, Arrow keys, 1-8)
+        // Global Keyboard Shortcut Navigation (Space, Arrow keys, 1-9)
         document.addEventListener('keydown', function(e) {
             if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
             
@@ -680,7 +762,7 @@ WHERE id = 'doc_99' AND histvon = '20260801100000000';</code></pre>
                 e.preventDefault();
                 updateWpm(Math.max(100, wpm - 25));
                 document.getElementById('wpm-slider').value = wpm;
-            } else if (e.key >= '1' && e.key <= '8') {
+            } else if (e.key >= '1' && e.key <= '9') {
                 const idx = parseInt(e.key) - 1;
                 if (tabIds[idx]) showTab(tabIds[idx]);
             }
